@@ -1,0 +1,327 @@
+{
+    "id": "backstop_textArea",
+    "viewports": [
+        {
+            "label": "phone",
+            "width": 320,
+            "height": 480
+        },
+        {
+            "label": "tablet",
+            "width": 1024,
+            "height": 768
+        },
+        {
+            "label": "desktop",
+            "width": 1920,
+            "height": 10000
+        }
+    ],
+    "onBeforeScript": "puppet/onBefore.js",
+    "onReadyScript": "puppet/onReady.js",
+  "scenarios": [
+    {
+      "label": "1. NCK text_area - default display",
+      "url": "http://localhost:8080/#/textArea?hideCursor=1",
+      "misMatchThreshold": 0.02,
+      "requireSameDimensions": true,
+      "description": "display the default state of all the elements on the full",
+      "selectors": [ "#app" ]
+    },
+    {
+      "label": "2.1 NCK text_area - HOVER Test case 0",
+      "url": "http://localhost:8080/#/textArea?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the TC0 area",
+      "hoverSelector": "[data-test-case=\"0\"] .nck-text-area",
+      "selectors": [
+        "[data-test-case=\"0\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "2.2 NCK text_area - HOVER Test case 2",
+      "url": "http://localhost:8080/#/textArea?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the TC2 area",
+      "hoverSelector": "[data-test-case=\"2\"] .nck-text-area",
+      "selectors": [
+        "[data-test-case=\"2\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "3.1 NCK text_area - FOCUS Test case 1 area",
+      "url": "http://localhost:8080/#/textArea?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the TC 1 area field",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"1\"] .nck-text-area",
+      "selectors": [
+        "[data-test-case=\"1\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "3.2 NCK text_area - FOCUS Test case 0 area",
+      "url": "http://localhost:8080/#/textArea?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the TC 0 area field",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"0\"] .nck-text-area",
+      "selectors": [
+        "[data-test-case=\"0\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "3.3 NCK text_area - FOCUS Test case 4 area",
+      "url": "http://localhost:8080/#/textArea?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the TC 4  area",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"4\"] .nck-text-area",
+      "clickSelectors": [
+        "[data-test-case=\"4\"] .validate-area",
+        "[data-test-case=\"4\"] .nck-text-area"
+      ],
+      "selectors": [
+        "[data-test-case=\"4\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "3.4 NCK text_area - Click TC5 area (read-only and required), then outside",
+      "url": "http://localhost:8080/#/textArea?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on the TC 5 area, and click out",
+      "onReadyScript": "clickAndMoveMouseAndClick.js",
+      "clickSelector": "[data-test-case=\"5\"] .nck-text-area",
+      "selectors": [
+        "[data-test-case=\"5\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "4.1 NCK text_area - CLICK Test case 1 area",
+      "url": "http://localhost:8080/#/textArea?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on the TC 1 area field",
+      "clickSelector": "[data-test-case=\"1\"] .nck-text-area",
+      "selectors": [
+        "[data-test-case=\"1\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "4.2 NCK text_area - CLICK Test case 0 area then outside",
+      "url": "http://localhost:8080/#/textArea?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on the TC 0 area field then click outside it",
+      "onReadyScript": "clickAndMoveMouseAndClick.js",
+      "clickSelector": "[data-test-case=\"0\"] .nck-text-area",
+      "selectors": [
+        "[data-test-case=\"0\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "4.3 NCK text_area - CLICK Test case 4 area then outside",
+      "url": "http://localhost:8080/#/textArea?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on the TC 4 area field then click outside it",
+      "onReadyScript": "clickAndMoveMouseAndClick.js",
+      "clickSelector": "[data-test-case=\"4\"] .nck-text-area",
+      "selectors": [
+        "[data-test-case=\"4\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "4.4 NCK text_area - CLICK Test case 6 area then outside",
+      "url": "http://localhost:8080/#/textArea?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on the TC 6 area field then click outside it",
+      "onReadyScript": "clickAndMoveMouseAndClick.js",
+      "clickSelector": "[data-test-case=\"6\"] .nck-text-area",
+      "selectors": [
+        "[data-test-case=\"6\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "4.5 NCK text_area - CLICK TC 7 area(read-only and required), then outside",
+      "url": "http://localhost:8080/#/textArea?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on the TC 7 area field, then click outside it",
+      "onReadyScript": "clickAndMoveMouseAndClick.js",
+      "clickSelector": "[data-test-case=\"7\"] .nck-text-area",
+      "selectors": [
+        "[data-test-case=\"7\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "5.1 NCK text_area - INSERT CONTENT Test case 0 area",
+      "url": "http://localhost:8080/#/textArea?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "insert aa in the TC0 area field then press the validate button",
+      "keyPressSelector": {
+        "selector": "[data-test-case=\"0\"] .nck-text-area",
+        "keyPress": "aa"
+      },
+      "clickSelector": "[data-test-case=\"0\"] .validate-input",
+      "selectors": [
+        "[data-test-case=\"0\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "5.2 NCK text_area - INSERT CONTENT Test case 0 area",
+      "url": "http://localhost:8080/#/textArea?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "insert aaz in the TC0 area field then blur by clicking outside then press the validate button",
+      "selectors": "[data-test-case=\"0\"]",
+      "selectorExpansion": true,
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .nck-text-area"
+        },
+        {
+          "type": "type",
+          "text": "aaz"
+        },
+        {
+          "type": "clickAtPosition",
+          "coordinate": {
+            "x": 5,
+            "y": 5
+          }
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .validate-input"
+        }
+      ]
+    },
+    {
+      "label": "5.3 NCK text_area - INSERT CONTENT Test case 0 area",
+      "url": "http://localhost:8080/#/textArea?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "insert 22 in the TC0 area field then blur by clicking outside then press the validate button",
+      "selectors": "[data-test-case=\"0\"]",
+      "selectorExpansion": true,
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .nck-text-area"
+        },
+        {
+          "type": "type",
+          "text": "22"
+        },
+        {
+          "type": "clickAtPosition",
+          "coordinate": {
+            "x": 5,
+            "y": 5
+          }
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .validate-input"
+        }
+      ]
+    },
+    {
+      "label": "5.5 NCK text_area - INSERT CONTENT Test case 9 area",
+      "url": "http://localhost:8080/#/textArea?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "insert aa in the TC9 area field which is Disabled",
+      "keyPressSelector": {
+        "selector": "[data-test-case=\"9\"] .nck-text-area",
+        "keyPress": "aa"
+      },
+      "selectors": [
+        "[data-test-case=\"9\"]"
+      ],
+      "selectorExpansion": true
+    },
+
+
+    {
+      "label": "6.1 NCK text_area - CLICK TC0 Focus button",
+      "url": "http://localhost:8080/#/textArea?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "CLICK TC0 Focus button",
+      "clickSelector": "[data-test-case=\"0\"] [data-focus-input]",
+      "selectors": [
+        "[data-test-case=\"0\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "6.2 NCK text_area - CLICK TC2 Focus button",
+      "url": "http://localhost:8080/#/textArea?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "CLICK TC2 Focus button",
+      "clickSelector": "[data-test-case=\"2\"] [data-focus-input]",
+      "selectors": [
+        "[data-test-case=\"2\"]"
+      ],
+      "selectorExpansion": true
+    }
+  ],
+    "paths": {
+        "bitmaps_reference": "backstop_data/bitmaps_reference",
+        "bitmaps_test": "backstop_data/bitmaps_test",
+        "engine_scripts": "backstop_data/engine_scripts",
+        "html_report": "backstop_data/html_report",
+        "ci_report": "backstop_data/ci_report"
+    },
+    "report": [
+        "CI"
+    ],
+    "engine": "puppeteer",
+    "engineOptions": {
+        "args": [
+          "--no-sandbox",
+          "--disable-setuid-sandbox",
+          "--disable-dev-shm-usage",
+          "--disable-accelerated-2d-canvas",
+          "--no-first-run",
+          "--no-zygote",
+
+          "--disable-gpu"
+        ],
+        "ignoreDefaultArgs": [
+            "--hide-scrollbars"
+        ],
+        "protocolTimeout": 960000,
+        "timeout": 0
+    },
+    "asyncCaptureLimit": 3,
+    "asyncCompareLimit": 50,
+    "debug": false,
+    "debugWindow": false
+}

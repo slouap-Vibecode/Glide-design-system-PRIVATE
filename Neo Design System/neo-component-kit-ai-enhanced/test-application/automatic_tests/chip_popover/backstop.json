@@ -1,0 +1,586 @@
+{
+  "id": "backstop_chip_popover",
+  "viewports": [
+    {
+      "label": "phone",
+      "width": 380,
+      "height": 9500
+    },
+    {
+      "label": "tablet",
+      "width": 1024,
+      "height": 8500
+    },
+    {
+      "label": "desktop",
+      "width": 1920,
+      "height": 8500
+    }
+  ],
+  "onBeforeScript": "puppet/onBefore.js",
+  "onReadyScript": "puppet/onReady.js",
+  "scenarios": [
+    {
+      "label": "1. NCK chip popover - default display.",
+      "url": "http://localhost:8080/#/chip-popover",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "display the default state of all chip popover"
+    },
+    {
+      "label": "2.0. chip popover - CLICK - TC0",
+      "url": "http://localhost:8080/#/chip-popover",
+      "misMatchThreshold": 0.01,
+      "requireSameDimensions": true,
+      "description": "Click on TC0 the dropdown is displayed below with all the contents and the arrow in the chip is at the top.",
+      "clickSelector": "[data-test-case=\"0\"] .nck-chip-popover .nck-chip button",
+      "selectors": [
+        "[data-test-case=\"0\"]"
+      ],
+      "selectorExpansion": true,
+      "postInteractionWait": 1000
+    },
+    {
+      "label": "2.1. chip popover - CLICK - TC1",
+      "url": "http://localhost:8080/#/chip-popover",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC1 nothing happens is disabled.",
+      "clickSelector": "[data-test-case=\"1\"] .nck-chip-popover .nck-chip button",
+      "selectors": [
+        "[data-test-case=\"1\"]"
+      ],
+      "selectorExpansion": true,
+      "postInteractionWait": 1000
+    },
+    {
+      "label": "2.2. chip popover - CLICK - TC2",
+      "url": "http://localhost:8080/#/chip-popover",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC2 the dropdown is dipslayed below the chip with all contents.",
+      "clickSelector": "[data-test-case=\"2\"] .nck-chip-popover .nck-chip button",
+      "selectors": [
+        "[data-test-case=\"2\"]"
+      ],
+      "selectorExpansion": true,
+      "postInteractionWait": 1000
+    },
+    {
+      "label": "2.3. chip popover - CLICK - TC4",
+      "url": "http://localhost:8080/#/chip-popover",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC4 the dropdown is dipslayed below the chip with all contents.",
+      "clickSelector": "[data-test-case=\"4\"] .nck-chip-popover .nck-chip button",
+      "selectors": [
+        "[data-test-case=\"4\"]"
+      ],
+      "selectorExpansion": true,
+      "postInteractionWait": 1000
+    },
+    {
+      "label": "2.4. chip popover - CLICK - TC5",
+      "url": "http://localhost:8080/#/chip-popover",
+      "misMatchThreshold": 0.1,
+      "requireSameDimensions": true,
+      "description": "Click on TC5 the dropdown is displayed below with all the contents and the arrow in the chip is at the top.",
+      "clickSelector": "[data-test-case=\"5\"] .nck-chip-popover .nck-chip button",
+      "selectors": [
+        "[data-test-case=\"5\"]"
+      ],
+      "selectorExpansion": true,
+      "postInteractionWait": 1000
+    },
+    {
+      "label": "2.5. chip popover - CLICK - TC11",
+      "url": "http://localhost:8080/#/chip-popover",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC11 the dropdown is displayed below with all the contents.",
+      "clickSelector": "[data-test-case=\"11\"] .nck-chip-popover .nck-chip button",
+      "selectors": [
+        "[data-test-case=\"11\"]"
+      ],
+      "selectorExpansion": true,
+      "postInteractionWait": 1000
+    },
+    {
+      "label": "2.6. chip popover - CLICK - TC12",
+      "url": "http://localhost:8080/#/chip-popover",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC12 the dropdown is displayed below with all the contents and the arrow in the chip is at the top.",
+      "clickSelector": "[data-test-case=\"12\"] .nck-chip-popover .nck-chip button",
+      "selectors": [
+        "[data-test-case=\"12\"]"
+      ],
+      "selectorExpansion": true,
+      "postInteractionWait": 1000
+    },
+    {
+      "label": "2.7. chip popover - CLICK - TC14",
+      "url": "http://localhost:8080/#/chip-popover",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC14 the dropdown is displayed below with all the contents and the arrow in the chip is at the top.",
+      "clickSelector": "[data-test-case=\"14\"] .nck-chip-popover .nck-chip button",
+      "selectors": [
+        "[data-test-case=\"14\"]"
+      ],
+      "selectorExpansion": true,
+      "postInteractionWait": 1000
+    },
+    {
+      "label": "2.9. chip popover - CLICK - TC16",
+      "url": "http://localhost:8080/#/chip-popover",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC16 the dropdown is displayed below with all the contents and the arrow in the chip is at the top.",
+      "clickSelector": "[data-test-case=\"16\"] .nck-chip-popover .nck-chip button",
+      "selectors": [
+        "[data-test-case=\"16\"]"
+      ],
+      "selectorExpansion": true,
+      "postInteractionWait": 1000
+    },
+    {
+      "label": "2.10. chip popover - CLICK+CLOSE on the chip - TC17",
+      "url": "http://localhost:8080/#/chip-popover",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC17 the dropdown is displayed below with all the contents.",
+      "selectors": "[data-test-case=\"17\"]",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"19\"] .nck-chip-popover .nck-chip button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"17\"] .close-icon"
+        }
+      ],
+      "postInteractionWait": 350
+    },
+    {
+      "label": "2.11. chip popover - CLICK+CLICK outside - TC19",
+      "url": "http://localhost:8080/#/chip-popover",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC19 the dropdown is displayed below with all the contents.",
+      "selectors": "[data-test-case=\"19\"]",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"19\"] .nck-chip-popover .nck-chip button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"19\"] .test-app-style"
+        },
+        {
+          "type": "waitForTimeout",
+          "delay": 450
+        }
+      ],
+      "postInteractionWait": 1000
+    },
+    {
+      "label": "2.12. chip popover - CLICK+CLOSE on the dropdown- TC22",
+      "url": "http://localhost:8080/#/chip-popover",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC22 on the chip popover then click on button close on the dropdown below the chip.",
+      "selectors": "[data-test-case=\"22\"]",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"22\"] .nck-chip-popover .nck-chip button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"22\"] .nck-popover-close"
+        },
+        {
+          "type": "waitForTimeout",
+          "delay": 450
+        }
+      ],
+      "postInteractionWait": 2000
+    },
+    {
+      "label": "2.13. chip popover - CLICK+CLICK outside - TC24",
+      "url": "http://localhost:8080/#/chip-popover",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC19 the dropdown is displayed below with all the contents.",
+      "selectors": "[data-test-case=\"24\"]",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"24\"] .nck-chip-popover .nck-chip button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"24\"] .test-app-style"
+        },
+        {
+          "type": "waitForTimeout",
+          "delay": 450
+        }
+      ]
+    },
+    {
+      "label": "2.14 chip popover - CLICK - TC27",
+      "url": "http://localhost:8080/#/chip-popover",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC27 chip to open the popover",
+      "clickSelector": "[data-test-case=\"27\"] .nck-chip-popover .nck-chip button",
+      "selectors": [
+        "[data-test-case=\"27\"]"
+      ],
+      "selectorExpansion": true,
+      "postInteractionWait": 1000
+    },
+    {
+      "label": "2.15 chip popover - CLICK - TC28",
+      "url": "http://localhost:8080/#/chip-popover",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC28 chip to open the popover",
+      "clickSelector": "[data-test-case=\"28\"] .nck-chip-popover .nck-chip button",
+      "selectors": [
+        "[data-test-case=\"28\"]"
+      ],
+      "selectorExpansion": true,
+      "postInteractionWait": 1000
+    },
+    {
+      "label": "2.16 chip popover - CLICK - TC24",
+      "url": "http://localhost:8080/#/chip-popover",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC24 chip to open the popover",
+      "clickSelector": "[data-test-case=\"24\"] .nck-chip-popover .nck-chip button",
+      "selectors": [
+        "[data-test-case=\"24\"]"
+      ],
+      "selectorExpansion": true,
+      "postInteractionWait": 1000
+    },
+    {
+      "label": "2.17 chip popover - CLICK - TC25",
+      "url": "http://localhost:8080/#/chip-popover",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC25 chip to open the popover",
+      "clickSelector": "[data-test-case=\"25\"] .nck-chip-popover .nck-chip button",
+      "selectors": [
+        "[data-test-case=\"25\"]"
+      ],
+      "selectorExpansion": true,
+      "postInteractionWait": 1000
+    },
+    {
+      "label": "2.18 chip popover - CLICK - TC26",
+      "url": "http://localhost:8080/#/chip-popover",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC26 chip to open the popover",
+      "clickSelector": "[data-test-case=\"26\"] .nck-chip-popover .nck-chip button",
+      "selectors": [
+        "[data-test-case=\"26\"]"
+      ],
+      "selectorExpansion": true,
+      "postInteractionWait": 1000
+    },
+
+    {
+      "label": "3.0 NCK chip popover - FOCUS - TC0",
+      "url": "http://localhost:8080/#/chip-popover",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the TC0 chip-popover",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"0\"] .nck-chip-popover .nck-chip button",
+      "selectors": [
+        "[data-test-case=\"0\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "3.1 NCK chip popover - FOCUS - TC2",
+      "url": "http://localhost:8080/#/chip-popover",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the TC2 chip-popover",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"2\"] .nck-chip-popover .nck-chip button",
+      "selectors": [
+        "[data-test-case=\"2\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "3.2 NCK chip popover - FOCUS - TC2",
+      "url": "http://localhost:8080/#/chip-popover",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the close X on the chip-popover TC2",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"2\"] .close-icon",
+      "selectors": [
+        "[data-test-case=\"2\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "3.21 NCK chip popover - Close and display the wording - TC2",
+      "url": "http://localhost:8080/#/chip-popover",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on the close X, on the chip-popover TC2, and display the wording",
+      "clickSelector": "[data-test-case=\"2\"] .close-icon",
+      "selectors": [
+        "[data-test-case=\"2\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "3.22 NCK chip popover - Close and enable the chip - TC2",
+      "url": "http://localhost:8080/#/chip-popover",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on the close X to display the wording, and again enable it",
+      "selectors": "[data-test-case=\"2\"]",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"2\"] .close-icon"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-enable-chip-popover]"
+        }
+      ]
+    },
+    {
+      "label": "3.3 NCK chip popover - FOCUS Chip - TC24",
+      "url": "http://localhost:8080/#/chip-popover",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the TC24 chip-popover",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"24\"] .nck-chip-popover .nck-chip button",
+      "selectors": [
+        "[data-test-case=\"24\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "3.4 NCK chip popover - FOCUS the Close button - TC24",
+      "url": "http://localhost:8080/#/chip-popover",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the close X on the chip-popover TC24",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"24\"] .close-icon",
+      "selectors": [
+        "[data-test-case=\"24\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "3.5 NCK chip popover - Click TC2 Focus button",
+      "url": "http://localhost:8080/#/chip-popover",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on the TC2 focus button",
+      "clickSelector": "[data-test-focus-chip-popover]",
+      "selectors": [
+        "[data-test-case=\"2\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "4.0 NCK chip popover  - HOVER - TC4",
+      "url": "http://localhost:8080/#/chip-popover",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Hover upon the TC4 chip-popover",
+      "hoverSelector": "[data-test-case=\"4\"] .nck-chip-popover .nck-chip button",
+      "selectors": [
+        "[data-test-case=\"4\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "4.1 NCK chip popover  - HOVER - TC5",
+      "url": "http://localhost:8080/#/chip-popover",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Hover upon the TC5 chip-popover",
+      "hoverSelector": "[data-test-case=\"5\"] .nck-chip-popover .nck-chip button",
+      "selectors": [
+        "[data-test-case=\"5\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "4.2 NCK chip popover  - HOVER - TC24",
+      "url": "http://localhost:8080/#/chip-popover",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Hover upon the TC24 chip-popover",
+      "hoverSelector": "[data-test-case=\"24\"] .nck-chip-popover .nck-chip button",
+      "selectors": [
+        "[data-test-case=\"24\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "5.0 NCK chip popover - FOCUS+ENTER TC11",
+      "url": "http://localhost:8080/#/chip-popover",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Focus and press Enter on the TC11 chip-popover ",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"11\"] .nck-chip-popover .nck-chip button",
+      "selectors": [
+        "[data-test-case=\"11\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "5.1 NCK chip popover - FOCUS+ENTER TC12",
+      "url": "http://localhost:8080/#/chip-popover",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Focus and press Enter on the TC12 chip-popover ",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"12\"] .nck-chip-popover .nck-chip button",
+      "selectors": [
+        "[data-test-case=\"12\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "5.2 NCK chip popover - FOCUS+ENTER TC24",
+      "url": "http://localhost:8080/#/chip-popover",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Focus and press Enter on the TC24 chip-popover ",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"24\"] .nck-chip-popover .nck-chip button",
+      "selectors": [
+        "[data-test-case=\"24\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "6.0. NCK chip popover - FOCUS+SPACE- TC14",
+      "url": "http://localhost:8080/#/chip-popover",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus+space on TC14 chip-popover",
+      "onReadyScript": "focusAndPressSpace.js",
+      "focusAndPressSpaceSelector": "[data-test-case=\"14\"]  .nck-chip-popover .nck-chip button",
+      "selectors": [
+        "[data-test-case=\"14\"]"
+      ]
+    },
+    {
+      "label": "6.1. NCK chip popover - FOCUS+SPACE- TC16",
+      "url": "http://localhost:8080/#/chip-popover",
+      "misMatchThreshold": 0.01,
+      "requireSameDimensions": true,
+      "description": "focus+space on TC16 chip-popover",
+      "postInteractionWait": 50,
+      "onReadyScript": "focusAndPressSpace.js",
+      "focusAndPressSpaceSelector": "[data-test-case=\"16\"]  .nck-chip-popover .nck-chip button",
+      "selectors": [
+        "[data-test-case=\"16\"]"
+      ]
+    },
+    {
+      "label": "6.2. NCK chip popover - FOCUS+SPACE- TC24",
+      "url": "http://localhost:8080/#/chip-popover",
+      "misMatchThreshold": 0.01,
+      "requireSameDimensions": true,
+      "description": "focus+space on TC24 chip-popover",
+      "postInteractionWait": 50,
+      "onReadyScript": "focusAndPressSpace.js",
+      "focusAndPressSpaceSelector": "[data-test-case=\"24\"]  .nck-chip-popover .nck-chip button",
+      "selectors": [
+        "[data-test-case=\"24\"]"
+      ]
+    },
+    {
+      "label": "7.0 NCK chip popover - HOVER+DOWN TC17",
+      "url": "http://localhost:8080/#/chip-popover",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover and press left mouse click on the TC17 chip popover",
+      "onReadyScript": "hoverAndPressMouseSelector.js",
+      "hoverAndPressMouseSelector": "[data-test-case=\"17\"] .nck-chip-popover .nck-chip button",
+      "selectors": [
+        "[data-test-case=\"17\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "7.1 NCK chip popover - HOVER+DOWN TC19",
+      "url": "http://localhost:8080/#/chip-popover",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover and press left mouse click on the TC19 chip popover",
+      "onReadyScript": "hoverAndPressMouseSelector.js",
+      "hoverAndPressMouseSelector": "[data-test-case=\"19\"] .nck-chip-popover .nck-chip button",
+      "selectors": [
+        "[data-test-case=\"19\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "7.2 NCK chip popover - HOVER+DOWN TC24",
+      "url": "http://localhost:8080/#/chip-popover",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover and press left mouse click on the TC24 chip popover",
+      "onReadyScript": "hoverAndPressMouseSelector.js",
+      "hoverAndPressMouseSelector": "[data-test-case=\"24\"] .nck-chip-popover .nck-chip button",
+      "selectors": [
+        "[data-test-case=\"24\"]"
+      ],
+      "selectorExpansion": true
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "report": [
+    "CI"
+  ],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args": [
+      "--no-sandbox"
+    ],
+    "protocolTimeout": 960000
+  },
+  "asyncCaptureLimit": 3,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false
+}

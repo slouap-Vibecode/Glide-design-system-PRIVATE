@@ -1,0 +1,144 @@
+{
+  "version": "16.1.0",
+  "generatedAt": "2026-02-17T00:00:00Z",
+  "description": "AI-optimized metadata for Neo Component Kit - Enhanced developer experience for AI-assisted development",
+
+  "componentCategories": {
+    "action": {
+      "description": "Interactive components that trigger actions",
+      "components": ["nck-button", "nck-menu"],
+      "usageContext": "Use for user interactions, form submissions, navigation triggers"
+    },
+    "form": {
+      "description": "Form input and validation components",
+      "components": ["nck-text-input", "nck-text-area", "nck-checkbox", "nck-dropdown", "nck-form"],
+      "usageContext": "Use for data collection, user input, form validation"
+    },
+    "layout": {
+      "description": "Structural and container components",
+      "components": ["nck-card", "nck-header", "nck-drawer"],
+      "usageContext": "Use for organizing content, creating visual hierarchy"
+    },
+    "overlay": {
+      "description": "Components that appear over other content",
+      "components": ["nck-modal", "nck-popover", "nck-toast"],
+      "usageContext": "Use for confirmations, additional information, notifications"
+    },
+    "navigation": {
+      "description": "Components for site and page navigation",
+      "components": ["nck-breadcrumb", "nck-tabs", "nck-pagination"],
+      "usageContext": "Use for site navigation, content organization, data browsing"
+    },
+    "data-display": {
+      "description": "Components for displaying data and information",
+      "components": ["nck-table", "nck-list", "nck-badge", "nck-timeline"],
+      "usageContext": "Use for showing data, status information, content lists"
+    }
+  },
+
+  "smartDefaults": {
+    "buttons": {
+      "primary": { "type": "filled", "color": "primary", "size": "m" },
+      "secondary": { "type": "outline", "color": "secondary", "size": "m" },
+      "tertiary": { "type": "ghost", "color": "secondary", "size": "m" },
+      "danger": { "type": "filled", "color": "danger", "size": "m" }
+    },
+    "formFields": {
+      "email": { "type": "email", "rules": "required|email", "placeholder": "Enter email address" },
+      "password": { "type": "password", "rules": "required|min:8", "placeholder": "Enter password" },
+      "search": { "type": "text", "placeholder": "Search...", "leadingIcon": "search" }
+    },
+    "icons": {
+      "success": { "iconName": "check-filled", "primaryColor": "green-300" },
+      "error": { "iconName": "cancel-circle-filled", "primaryColor": "red-300" },
+      "warning": { "iconName": "warning-filled", "primaryColor": "orange-300" },
+      "info": { "iconName": "info-support-filled", "primaryColor": "bright-blue-300" }
+    }
+  },
+
+  "commonPatterns": {
+    "formActions": {
+      "template": "<div class=\"form-actions\"><nck-button label=\"Save\" type=\"filled\" /><nck-button label=\"Cancel\" type=\"outline\" /></div>",
+      "description": "Standard save/cancel button group for forms",
+      "usageContext": "End of forms, modal dialogs"
+    },
+    "dataTableWithPagination": {
+      "template": "<div><nck-table :columns=\"columns\" :data=\"data\" /><nck-pagination :total=\"total\" /></div>",
+      "description": "Data table with pagination controls",
+      "usageContext": "Displaying large datasets, search results"
+    },
+    "confirmationDialog": {
+      "template": "<nck-modal title=\"Confirm Action\"><p>Are you sure?</p><template #actions><nck-button label=\"Confirm\" type=\"filled\" color=\"danger\" /><nck-button label=\"Cancel\" type=\"outline\" /></template></nck-modal>",
+      "description": "Standard confirmation modal for destructive actions",
+      "usageContext": "Delete operations, irreversible actions"
+    },
+    "userProfileCard": {
+      "template": "<nck-card><template #header><h2>User Profile</h2></template><div>User information</div><template #actions><nck-button label=\"Edit\" type=\"outline\" /></template></nck-card>",
+      "description": "User profile display with edit capabilities",
+      "usageContext": "User management, profile pages"
+    }
+  },
+
+  "aiGuidance": {
+    "componentSelection": {
+      "forDataEntry": ["nck-form", "nck-text-input", "nck-dropdown", "nck-checkbox"],
+      "forUserFeedback": ["nck-toast", "nck-banner", "nck-modal", "nck-badge"],
+      "forNavigation": ["nck-breadcrumb", "nck-tabs", "nck-button", "nck-menu"],
+      "forDataDisplay": ["nck-table", "nck-card", "nck-list", "nck-timeline"]
+    },
+    "usageRecommendations": {
+      "nck-button": {
+        "do": ["Use descriptive labels", "Provide loading states", "Use appropriate types (filled, outline, ghost)"],
+        "dont": [
+          "Use generic labels like 'Click here'",
+          "Stack multiple primary buttons",
+          "Forget loading states for async actions"
+        ]
+      },
+      "nck-text-input": {
+        "do": ["Provide clear labels", "Use validation rules", "Add helpful placeholder text"],
+        "dont": [
+          "Use placeholder as label replacement",
+          "Skip error handling",
+          "Make all fields required unnecessarily"
+        ]
+      },
+      "nck-modal": {
+        "do": ["Use descriptive titles", "Provide clear actions", "Handle escape key"],
+        "dont": ["Create modal chains", "Forget close functionality", "Use for complex forms without proper sizing"]
+      }
+    },
+    "accessibilityReminders": {
+      "alwaysProvide": ["Proper labels", "Alt text for icons", "Keyboard navigation", "Focus indicators"],
+      "neverForget": ["Screen reader support", "Color contrast", "Error announcements", "Loading state communication"]
+    }
+  },
+
+  "templateLibrary": {
+    "loginForm": "Complete user authentication form with email/password fields and validation",
+    "registrationForm": "User registration form with required fields and confirmation",
+    "contactForm": "Contact form with name, email, message fields and validation",
+    "searchInterface": "Search input with results display and pagination",
+    "dataManagement": "CRUD interface with table, actions, and confirmation modals",
+    "userProfile": "Profile display and editing interface with form validation",
+    "settingsPage": "Settings interface with grouped options and save functionality",
+    "dashboard": "Dashboard layout with cards, charts, and navigation"
+  },
+
+  "integrationPoints": {
+    "iconKit": {
+      "totalIcons": 833,
+      "integration": "via nck-icon component",
+      "smartSuggestions": "Context-aware icon recommendations based on component usage"
+    },
+    "designTokens": {
+      "colors": "38 semantic color tokens with reactive theming support",
+      "spacing": "Consistent rem-based spacing system",
+      "typography": "Font size and weight tokens integrated with components"
+    },
+    "accessibility": {
+      "standard": "WCAG AA compliance built into all components",
+      "features": ["Keyboard navigation", "Screen reader support", "Focus management", "Color contrast"]
+    }
+  }
+}

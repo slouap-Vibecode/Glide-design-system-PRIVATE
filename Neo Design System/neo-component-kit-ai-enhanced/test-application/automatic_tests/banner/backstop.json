@@ -1,0 +1,268 @@
+{
+    "id": "backstop_banner",
+    "viewports": [
+        {
+            "label": "phone",
+            "width": 320,
+            "height": 2237
+        },
+        {
+            "label": "tablet",
+            "width": 1024,
+            "height": 1409
+        },
+        {
+            "label": "desktop",
+            "width": 1920,
+            "height": 1337
+        }
+    ],
+    "onBeforeScript": "puppet/onBefore.js",
+    "onReadyScript": "puppet/onReady.js",
+    "paths": {
+        "bitmaps_reference": "backstop_data/bitmaps_reference",
+        "bitmaps_test": "backstop_data/bitmaps_test",
+        "engine_scripts": "backstop_data/engine_scripts",
+        "html_report": "backstop_data/html_report",
+        "ci_report": "backstop_data/ci_report"
+    },
+    "report": [
+        "CI"
+    ],
+    "engine": "puppeteer",
+    "engineOptions": {
+        "args": [
+            "--no-sandbox",
+            "--disable-setuid-sandbox",
+            "--disable-dev-shm-usage",
+            "--disable-accelerated-2d-canvas",
+            "--no-first-run",
+            "--no-zygote",
+            "--disable-gpu"
+        ],
+        "protocolTimeout": 960000
+    },
+    "asyncCaptureLimit": 3,
+    "asyncCompareLimit": 50,
+    "debug": false,
+    "debugWindow": false,
+    "scenarios": [
+        {
+            "label": "1. DISPLAY all banners",
+            "url": "http://localhost:8080/#/banner",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "verify the display of all the banners"
+        },
+        {
+            "label": "2. CLICK on TC1 dismiss cross",
+            "url": "http://localhost:8080/#/banner",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click on the dismiss cross of the TC1",
+            "clickSelector": "[data-test-case=\"1\"] .nck-banner-dismiss",
+            "selectors": [
+                "[data-test-case=\"1\"]"
+            ]
+        },
+        {
+            "label": "2.1 CLICK on TC8 dismiss cross of banner without radius",
+            "url": "http://localhost:8080/#/banner",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click on the dismiss cross of the TC8",
+            "clickSelector": "[data-test-case=\"8\"] .nck-banner-dismiss",
+            "selectors": [
+                "[data-test-case=\"8\"]"
+            ]
+        },
+        {
+            "label": "3. CLICK on TC6 heading item link-button",
+            "url": "http://localhost:8080/#/banner",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click on TC6 heading item link(aria role:button)",
+            "clickSelector": "[data-test-case=\"6\"] .nck-banner .nck-banner-heading .nck-link",
+            "selectors": [
+                "[data-test-case=\"6\"]"
+            ]
+        },
+        {
+            "label": "3.1 CLICK on TC5 heading item link",
+            "url": "http://localhost:8080/#/banner",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click on TC5 heading item link(aria role:link)",
+            "clickSelector": "[data-test-case=\"5\"] .nck-banner .nck-banner-heading .nck-link",
+            "selectors": [
+                "[data-test-case=\"5\"]"
+            ]
+        },
+        {
+            "label": "3.2 CLICK on TC6 body item link",
+            "url": "http://localhost:8080/#/banner",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click TC6 body item link(aria role:link)",
+            "clickSelector": "[data-test-case=\"6\"] .nck-banner .nck-banner-list .nck-link",
+            "selectors": [
+                "[data-test-case=\"6\"]"
+            ]
+        },
+        {
+            "label": "3.3 CLICK on TC6 body item link-button",
+            "url": "http://localhost:8080/#/banner",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click on TC6 body item link(aria role:button)",
+            "clickSelector": "[data-test-case=\"6\"] .nck-banner .nck-banner-list li:nth-child(3) .nck-link",
+            "selectors": [
+                "[data-test-case=\"6\"]"
+            ]
+        },
+        {
+            "label": "4. HOVER on TC6 heading link-button",
+            "url": "http://localhost:8080/#/banner",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "hover on the TC6 heading link(aria role:button)",
+            "hoverSelector": "[data-test-case=\"6\"] .nck-banner .nck-banner-heading .nck-link",
+            "selectors": [
+                "[data-test-case=\"6\"]"
+            ]
+        },
+        {
+            "label": "4.1 HOVER on TC6 body item link",
+            "url": "http://localhost:8080/#/banner",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "hover on TC6 body item link(aria role:link)",
+            "hoverSelector": "[data-test-case=\"6\"] .nck-banner .nck-banner-list .nck-link",
+            "selectors": [
+                "[data-test-case=\"6\"]"
+            ]
+        },
+        {
+            "label": "4.2 HOVER on TC6 body item link-button",
+            "url": "http://localhost:8080/#/banner",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "hover on TC6 body item link(aria role:button)",
+            "hoverSelector": "[data-test-case=\"6\"] .nck-banner .nck-banner-list li:nth-child(3) .nck-link",
+            "selectors": [
+                "[data-test-case=\"6\"]"
+            ]
+        },
+        {
+            "label": "5. FOCUS on TC6 heading link-button",
+            "url": "http://localhost:8080/#/banner",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus on the TC6 heading link(aria role:button)",
+            "onReadyScript": "focus.js",
+            "focusSelector": "[data-test-case=\"6\"] .nck-banner .nck-banner-heading .nck-link",
+            "selectors": [
+                "[data-test-case=\"6\"]"
+            ]
+        },
+        {
+            "label": "5.1 FOCUS on TC6 body item link",
+            "url": "http://localhost:8080/#/banner",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus on TC6 body item link(aria role:link)",
+            "onReadyScript": "focus.js",
+            "focusSelector": "[data-test-case=\"6\"] .nck-banner .nck-banner-list .nck-link",
+            "selectors": [
+                "[data-test-case=\"6\"]"
+            ]
+        },
+        {
+            "label": "5.2 FOCUS on TC6 body item link-button",
+            "url": "http://localhost:8080/#/banner",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus on TC6 body item link(aria role:button)",
+            "onReadyScript": "focus.js",
+            "focusSelector": "[data-test-case=\"6\"] .nck-banner .nck-banner-list li:nth-child(3) .nck-link",
+            "selectors": [
+                "[data-test-case=\"6\"]"
+            ]
+        },
+
+
+
+        {
+            "label": "6. FOCUS+ENTER on TC6 heading link-button",
+            "url": "http://localhost:8080/#/banner",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus+enter on the TC6 heading link(aria role:button)",
+            "onReadyScript": "focusAndPressEnter.js",
+            "focusAndPressEnterSelector": "[data-test-case=\"6\"] .nck-banner .nck-banner-heading .nck-link",
+            "selectors": [
+                "[data-test-case=\"6\"]"
+            ]
+        },
+        {
+            "label": "6.1 FOCUS+SPACE on TC6 heading link-button",
+            "url": "http://localhost:8080/#/banner",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus+space on the TC6 heading link(aria role:button)",
+            "onReadyScript": "focusAndPressSpace.js",
+            "focusAndPressSpaceSelector": "[data-test-case=\"6\"] .nck-banner .nck-banner-heading .nck-link",
+            "selectors": [
+                "[data-test-case=\"6\"]"
+            ]
+        },
+        {
+            "label": "6.2 FOCUS+ENTER on TC5 heading link",
+            "url": "http://localhost:8080/#/banner",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus+enter on the TC5 heading link(aria role:link)",
+            "onReadyScript": "focusAndPressEnter.js",
+            "focusAndPressEnterSelector": "[data-test-case=\"5\"] .nck-banner .nck-banner-heading .nck-link",
+            "selectors": [
+                "[data-test-case=\"5\"]"
+            ]
+        },
+        {
+            "label": "6.3 FOCUS+ENTER on TC6 body link",
+            "url": "http://localhost:8080/#/banner",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus+enter on TC6 body item link(aria role:link)",
+            "onReadyScript": "focusAndPressEnter.js",
+            "focusAndPressEnterSelector": "[data-test-case=\"6\"] .nck-banner .nck-banner-list .nck-link",
+            "selectors": [
+                "[data-test-case=\"6\"]"
+            ]
+        },
+        {
+            "label": "6.4 FOCUS+SPACE on TC6 body link-button",
+            "url": "http://localhost:8080/#/banner",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus+space on TC6 body item link(aria role:button)",
+            "onReadyScript": "focusAndPressSpace.js",
+            "focusAndPressSpaceSelector": "[data-test-case=\"6\"] .nck-banner .nck-banner-list li:nth-child(3) .nck-link",
+            "selectors": [
+                "[data-test-case=\"6\"]"
+            ]
+        },
+        {
+            "label": "6.5 FOCUS+ENTER on TC6 body link-button",
+            "url": "http://localhost:8080/#/banner",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus+enter on TC6 body item link(aria role:button)",
+            "onReadyScript": "focusAndPressEnter.js",
+            "focusAndPressEnterSelector": "[data-test-case=\"6\"] .nck-banner .nck-banner-list li:nth-child(3) .nck-link",
+            "selectors": [
+                "[data-test-case=\"6\"]"
+            ]
+        }
+    ]
+}

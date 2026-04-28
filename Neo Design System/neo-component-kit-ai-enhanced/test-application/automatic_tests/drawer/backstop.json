@@ -1,0 +1,285 @@
+{
+    "id": "backstop_drawer",
+    "viewports": [
+        {
+            "label": "phone",
+            "width": 320,
+            "height": 1480
+        },
+        {
+            "label": "tablet",
+            "width": 1024,
+            "height": 2300
+        },
+        {
+            "label": "desktop",
+            "width": 1920,
+            "height": 2300
+        }
+    ],
+    "onBeforeScript": "puppet/onBefore.js",
+    "onReadyScript": "puppet/onReady.js",
+    "scenarios": [
+        {
+            "label": "1. NCK drawer - default display of the page",
+            "url": "http://localhost:8080/#/drawer",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "display the default state of the drawer page"
+        },
+        {
+            "label": "2.1 NCK drawer - CLICK TC0 drawer",
+            "url": "http://localhost:8080/#/drawer",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click TC0 drawer",
+            "clickSelector": "[data-test-case=\"0\"] .outside-focus",
+            "selectorExpansion": false,
+            "selectors": [
+                "body"
+            ]
+        },
+        {
+            "label": "2.2 NCK drawer - CLICK TC0 drawer then click close button X",
+            "url": "http://localhost:8080/#/drawer",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "to dismiss-click on the X of the TC0 drawer",
+            "clickSelectors": [
+                "[data-test-case=\"0\"] .outside-focus",
+                ".nck-drawer .outside-focus"
+            ],
+            "postInteractionWait": 250,
+            "selectors": [
+                "body"
+            ]
+        },
+        {
+            "label": "2.3 NCK drawer- CLICK outside of the TC0 drawer",
+            "url": "http://localhost:8080/#/drawer",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "to dismiss-click outside of the TC0 drawer",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"0\"] .outside-focus"
+                },
+                {
+                    "type": "waitForTimeout",
+                    "delay": 250
+                },
+                {
+                    "type": "clickAtPosition",
+                    "coordinate": {
+                        "x": 5,
+                        "y": 5
+                    }
+                },
+                {
+                    "type": "waitForTimeout",
+                    "delay": 250
+                }
+
+            ],
+            "selectors": [
+                "body"
+            ]
+        },
+
+        {
+            "label": "2.4 NCK drawer- ESC on the TC1 drawer",
+            "url": "http://localhost:8080/#/drawer",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "to dismiss-esc on the TC1 drawer",
+            "onReadyScript": "clickAndPressEsc.js",
+            "clickSelector": "[data-test-case=\"1\"] button",
+            "selectors": [
+                "body"
+            ]
+        },
+        {
+            "label": "3 NCK drawer - CLICK TC1 drawer",
+            "url": "http://localhost:8080/#/drawer",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click TC1 drawer",
+            "clickSelector": "[data-test-case=\"1\"] .outside-focus",
+            "selectorExpansion": false,
+            "selectors": [
+                "body"
+            ]
+        },
+        {
+            "label": "4 NCK drawer - CLICK TC2 drawer",
+            "url": "http://localhost:8080/#/drawer",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click TC2 drawer",
+            "clickSelector": "[data-test-case=\"2\"] .outside-focus",
+            "selectorExpansion": false,
+            "selectors": [
+                "body"
+            ]
+        },
+        {
+            "label": "5 NCK drawer - Click + Scroll TC2",
+            "url": "http://localhost:8080/#/drawer",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "Click and scroll down in the window of the drawer of the TC2",
+            "onReadyScript": "clickAndScroll.js",
+            "clickSelector": "[data-test-case=\"2\"]  .outside-focus",
+            "scrollSelector": ".nck-drawer-body",
+            "yScroll": 9000,
+            "selectors": [
+                "body"
+            ]
+        },
+        {
+            "label": "6 NCK drawer - Click TC3 Drawer",
+            "url": "http://localhost:8080/#/drawer",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click TC3 drawer",
+            "clickSelector": "[data-test-case=\"3\"] .outside-focus",
+            "selectorExpansion": false,
+            "selectors": [
+                "body"
+            ]
+        },
+        {
+            "label": "7 NCK drawer - CLICK TC4 drawer",
+            "url": "http://localhost:8080/#/drawer",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click TC4 drawer",
+            "clickSelector": "[data-test-case=\"4\"] .outside-focus",
+            "selectorExpansion": false,
+            "selectors": [
+                "body"
+            ]
+        },
+        {
+            "label": "7.1 NCK drawer - CLICK TC4 drawer then click close button X",
+            "url": "http://localhost:8080/#/drawer",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "to dismiss-click on the X of the TC4 drawer",
+            "clickSelectors": [
+                "[data-test-case=\"4\"] .outside-focus",
+                ".nck-drawer .outside-focus"
+            ],
+            "postInteractionWait": 250,
+            "selectors": [
+                "body"
+            ]
+        },
+
+        {
+            "label": "8 NCK drawer - CLICK TC5 drawer",
+            "url": "http://localhost:8080/#/drawer",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click TC5 drawer",
+            "clickSelector": "[data-test-case=\"5\"] .outside-focus",
+            "selectorExpansion": false,
+            "selectors": [
+                "body"
+            ]
+        },
+        {
+            "label": "8.1 NCK drawer - CLICK TC5 drawer then click close button X",
+            "url": "http://localhost:8080/#/drawer",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "to dismiss-click on the X of the TC5 drawer",
+            "clickSelectors": [
+                "[data-test-case=\"5\"] .outside-focus",
+                ".nck-drawer .outside-focus"
+            ],
+            "postInteractionWait": 250,
+            "selectors": [
+                "body"
+            ]
+        },
+
+        {
+            "label": "9 NCK drawer - CLICK TC6 drawer",
+            "url": "http://localhost:8080/#/drawer",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click TC6 drawer",
+            "clickSelector": "[data-test-case=\"6\"] .outside-focus",
+            "selectorExpansion": false,
+            "selectors": [
+                "body"
+            ]
+        },
+        {
+            "label": "9.1 NCK drawer - CLICK TC6 drawer then click close button X",
+            "url": "http://localhost:8080/#/drawer",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "to dismiss-click on the X of the TC6 drawer",
+            "clickSelectors": [
+                "[data-test-case=\"6\"] .outside-focus",
+                ".nck-drawer .outside-focus"
+            ],
+            "postInteractionWait": 250,
+            "selectors": [
+                "body"
+            ]
+        },
+        {
+            "label": "9.2 NCK drawer - Click + Scroll TC6",
+            "url": "http://localhost:8080/#/drawer",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "Click and scroll down in the window of the drawer of the TC6",
+            "onReadyScript": "clickAndScroll.js",
+            "clickSelector": "[data-test-case=\"6\"]  .outside-focus",
+            "scrollSelector": ".nck-drawer-body",
+            "yScroll": 9000,
+            "selectors": [
+                "body"
+            ]
+        }
+
+    ],
+    "paths": {
+        "bitmaps_reference": "backstop_data/bitmaps_reference",
+        "bitmaps_test": "backstop_data/bitmaps_test",
+        "engine_scripts": "backstop_data/engine_scripts",
+        "html_report": "backstop_data/html_report",
+        "ci_report": "backstop_data/ci_report"
+    },
+    "report": [
+        "CI"
+    ],
+    "engine": "puppeteer",
+    "engineOptions": {
+        "args": [
+    "--no-sandbox",
+    "--disable-setuid-sandbox",
+    "--disable-dev-shm-usage",
+    "--disable-accelerated-2d-canvas",
+    "--no-first-run",
+    "--no-zygote",
+
+    "--disable-gpu"
+  ],
+        "ignoreDefaultArgs": [
+            "--hide-scrollbars"
+        ],
+        "protocolTimeout": 960000
+    },
+    "asyncCaptureLimit": 3,
+    "asyncCompareLimit": 50,
+    "debug": false,
+    "debugWindow": false
+}

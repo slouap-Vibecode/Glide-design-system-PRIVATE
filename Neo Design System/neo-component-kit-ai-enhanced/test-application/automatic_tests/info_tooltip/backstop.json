@@ -1,0 +1,1263 @@
+{
+  "id": "backstop_info_tooltip",
+  "viewports": [
+    {
+      "label": "phone",
+      "width": 320,
+      "height": 10000
+    },
+    {
+      "label": "tablet",
+      "width": 1024,
+      "height": 10000
+    },
+    {
+      "label": "desktop",
+      "width": 1920,
+      "height": 10000
+    }
+  ],
+  "onBeforeScript": "puppet/onBefore.js",
+  "onReadyScript": "puppet/onReady.js",
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "report": ["CI"],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args":[
+    "--no-sandbox",
+    "--disable-setuid-sandbox",
+    "--disable-dev-shm-usage",
+    "--disable-accelerated-2d-canvas",
+    "--no-first-run",
+    "--no-zygote",
+
+    "--disable-gpu"
+  ],
+    "protocolTimeout": 960000
+  },
+  "asyncCaptureLimit": 3,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false,
+  "scenarios": [
+    {
+      "label": "1. NCK info_tooltip - default",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "display the text and icons, without triggering their tooltips"
+    },
+    {
+      "label": "1.1 NCK info_tooltip - HOVER Test case 0",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "hover upon the Test case 0 tooltip - Trigger (span)",
+      "hoverSelector": "[data-test-case=\"0\"] .trigger",
+      "onReadyScript": "hoverWithDelay.js",
+      "selectors": ["[data-test-case=\"0\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "1.2 NCK info_tooltip - HOVER Test case 1",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "hover upon the Test case 1 tooltip - Trigger (span)",
+      "hoverSelector": "[data-test-case=\"1\"] .trigger .trigger-inner",
+      "onReadyScript": "hoverWithDelay.js",
+      "selectors": ["[data-test-case=\"1\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "1.3 NCK info_tooltip - HOVER Test case 2",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "hover upon the Test case 2 tooltip - Trigger (span)",
+      "hoverSelector": "[data-test-case=\"2\"] .trigger",
+      "onReadyScript": "hoverWithDelay.js",
+      "selectors": ["[data-test-case=\"2\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "1.4 NCK info_tooltip - HOVER Test case 3",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "hover upon the Test case 3 tooltip - Trigger (span)",
+      "hoverSelector": "[data-test-case=\"3\"] .trigger",
+      "onReadyScript": "hoverWithDelay.js",
+      "selectors": ["[data-test-case=\"3\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "1.5 NCK info_tooltip - HOVER Test case 4",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "hover upon the Test case 4 tooltip - Trigger (span)",
+      "hoverSelector": "[data-test-case=\"4\"] .trigger",
+      "onReadyScript": "hoverWithDelay.js",
+      "selectors": ["[data-test-case=\"4\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "1.6 NCK info_tooltip - HOVER Test case 5",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "hover upon the Test case 5 tooltip - Trigger (span)",
+      "hoverSelector": "[data-test-case=\"5\"] .trigger",
+      "onReadyScript": "hoverWithDelay.js",
+      "selectors": ["[data-test-case=\"5\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "1.7 NCK info_tooltip - HOVER Test case 6",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "hover upon the Test case 6 tooltip - Trigger (span)",
+      "hoverSelector": "[data-test-case=\"6\"] .trigger",
+      "onReadyScript": "hoverWithDelay.js",
+      "selectors": ["[data-test-case=\"6\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "1.8 NCK info_tooltip - HOVER Test case 7",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "hover upon the Test case 7 tooltip - Trigger (span)",
+      "hoverSelector": "[data-test-case=\"7\"] .trigger",
+      "onReadyScript": "hoverWithDelay.js",
+      "selectors": ["[data-test-case=\"7\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "1.9 NCK info_tooltip - HOVER Test case 8",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "hover upon the Test case 8 tooltip - Trigger (span)",
+      "hoverSelector": "[data-test-case=\"8\"] .trigger",
+      "onReadyScript": "hoverWithDelay.js",
+      "selectors": ["[data-test-case=\"8\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "1.10 NCK info_tooltip - HOVER Test case 9",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "hover upon the Test case 9 tooltip - Trigger (span)",
+      "hoverSelector": "[data-test-case=\"9\"] .trigger",
+      "onReadyScript": "hoverWithinIframe.js",
+      "iframeSelector": "iframe",
+      "selectors": ["iframe"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "1.11 NCK info_tooltip - HOVER Test case 10",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "hover upon the Test case 10 tooltip - Trigger (span)",
+      "hoverSelector": "[data-test-case=\"10\"] .trigger",
+      "onReadyScript": "hoverWithinIframe.js",
+      "selectors": ["iframe"],
+      "iframeSelector": "iframe"
+    },
+    {
+      "label": "1.12 NCK info_tooltip - HOVER Test case 11",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "hover upon the Test case 11 tooltip - Trigger (span)",
+      "hoverSelector": "[data-test-case=\"11\"] .trigger",
+      "onReadyScript": "hoverWithinIframe.js",
+      "selectors": ["iframe"],
+      "iframeSelector": "iframe"
+    },
+    {
+      "label": "1.13 NCK info_tooltip - HOVER Test case 12",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "hover upon the Test case 12 tooltip - Trigger (span)",
+      "hoverSelector": "[data-test-case=\"12\"] .trigger",
+      "onReadyScript": "hoverWithinIframe.js",
+      "selectors": ["iframe"],
+      "iframeSelector": "iframe"
+    },
+    {
+      "label": "1.14 NCK info_tooltip - HOVER Test case 13",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "hover upon the Test case 13 tooltip - Trigger (span)",
+      "hoverSelector": "[data-test-case=\"13\"] .trigger",
+      "onReadyScript": "hoverWithDelay.js",
+      "selectors": ["[data-test-case=\"13\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "1.15 NCK info_tooltip - HOVER Test case 14",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "hover upon the Test case 14 tooltip - Trigger (span)",
+      "hoverSelector": "[data-test-case=\"14\"] .trigger",
+      "onReadyScript": "hoverWithDelay.js",
+      "selectors": ["[data-test-case=\"14\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "1.16 NCK info_tooltip - HOVER Test case 15",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "hover upon the Test case 15 tooltip - Trigger (span)",
+      "hoverSelector": "[data-test-case=\"15\"] .trigger",
+      "onReadyScript": "hoverWithDelay.js",
+      "selectors": ["[data-test-case=\"15\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "1.17 NCK info_tooltip - HOVER Test case 16",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "hover upon the Test case 16 tooltip - Trigger (span)",
+      "hoverSelector": "[data-test-case=\"16\"] .trigger",
+      "onReadyScript": "hoverWithDelay.js",
+      "selectors": ["[data-test-case=\"16\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "1.18 NCK info_tooltip - HOVER Test case 17",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "hover upon the Test case 17 tooltip - Trigger (span)",
+      "hoverSelector": "[data-test-case=\"17\"] .trigger",
+      "onReadyScript": "hoverWithDelay.js",
+      "selectors": ["[data-test-case=\"17\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "1.19 NCK info_tooltip - HOVER Test case 18",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "hover upon the Test case 18 tooltip - Trigger (span)",
+      "hoverSelector": "[data-test-case=\"18\"] .trigger",
+      "onReadyScript": "hoverWithDelay.js",
+      "selectors": ["[data-test-case=\"18\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "1.21 NCK info_tooltip - HOVER Test case 20",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the Test case 20 tooltip - Trigger (span)",
+      "hoverSelector": "[data-test-case=\"20\"] .trigger",
+      "onReadyScript": "hoverWithDelay.js",
+      "selectors": ["[data-test-case=\"20\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "1.22 NCK info_tooltip - HOVER Test case 22",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the Test case 22 second list item with tooltip",
+      "hoverSelector": "[data-test-case=\"22\"] ul > li:nth-child(2)",
+      "onReadyScript": "hoverWithDelay.js",
+      "selectors": ["[data-test-case=\"22\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "1.23 NCK info_tooltip - HOVER Test case 23",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the Test case 23 radio button",
+      "hoverSelector": "[data-test-case=\"23\"] label > input[type=radio]",
+      "onReadyScript": "hoverWithDelay.js",
+      "selectors": ["[data-test-case=\"23\"]"],
+      "selectorExpansion": false
+    },
+
+    {
+      "label": "1.24 NCK info_tooltip -  HOVER+MOVE Test case 20",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "hover upon the Test case 20 tooltip - Trigger (span)",
+      "hoverSelector": "[data-test-case=\"20\"] .trigger",
+      "onReadyScript": "hoverAndMoveMouse.js",
+      "selectors": ["[data-test-case=\"20\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "1.25 NCK info_tooltip -  HOVER+MOVE Test case 21",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "hover upon the Test case 21 tooltip - Trigger (span)",
+      "hoverSelector": "[data-test-case=\"21\"] .nck-button",
+      "onReadyScript": "hoverAndMoveMouse.js",
+      "selectors": ["[data-test-case=\"21\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "1.26 NCK info_tooltip -  HOVER+MOVE Test case 22",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "hover upon the Test case 22 tooltip 2nd list item",
+      "hoverSelector": "[data-test-case=\"22\"] ul > li:nth-child(2)",
+      "onReadyScript": "hoverAndMoveMouse.js",
+      "selectors": ["[data-test-case=\"22\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "1.27 NCK info_tooltip -  HOVER+MOVE Test case 23",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "hover upon the Test case 23 tooltip radio button",
+      "hoverSelector": "[data-test-case=\"23\"] label > input[type=radio",
+      "onReadyScript": "hoverAndMoveMouse.js",
+      "selectors": ["[data-test-case=\"23\"]"],
+      "selectorExpansion": false
+    },
+
+    {
+      "label": "2.1 NCK info_tooltip - HOVER+ESC Test case 0",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "hover and press Esc on the Test case 0 tooltip",
+      "onReadyScript": "hoverAndPressEsc.js",
+      "hoverAndPressEscSelector": "[data-test-case=\"0\"] .trigger",
+      "selectors": ["[data-test-case=\"0\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "2.2 NCK info_tooltip - HOVER+ESC Test case 1",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "hover and press Esc on the Test case 1 tooltip",
+      "onReadyScript": "hoverAndPressEsc.js",
+      "hoverAndPressEscSelector": "[data-test-case=\"1\"] .trigger .trigger-inner",
+      "selectors": ["[data-test-case=\"1\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "2.3 NCK info_tooltip - HOVER+ESC Test case 2",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "hover and press Esc on the Test case 2 tooltip",
+      "onReadyScript": "hoverAndPressEsc.js",
+      "hoverAndPressEscSelector": "[data-test-case=\"2\"] .trigger",
+      "selectors": ["[data-test-case=\"2\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "2.4 NCK info_tooltip - HOVER+ESC Test case 3",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "hover and press Esc on the Test case 3 tooltip",
+      "onReadyScript": "hoverAndPressEsc.js",
+      "hoverAndPressEscSelector": "[data-test-case=\"3\"] .trigger",
+      "selectors": ["[data-test-case=\"3\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "2.5 NCK info_tooltip - HOVER+ESC Test case 4",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "hover and press Esc on the Test case 4 tooltip",
+      "onReadyScript": "hoverAndPressEsc.js",
+      "hoverAndPressEscSelector": "[data-test-case=\"4\"] .trigger",
+      "selectors": ["[data-test-case=\"4\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "2.6 NCK info_tooltip - HOVER+ESC Test case 5",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "hover and press Esc on the Test case 5 tooltip",
+      "onReadyScript": "hoverAndPressEsc.js",
+      "hoverAndPressEscSelector": "[data-test-case=\"5\"] .trigger",
+      "selectors": ["[data-test-case=\"5\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "2.7 NCK info_tooltip - HOVER+ESC Test case 6",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "hover and press Esc on the Test case 6 tooltip",
+      "onReadyScript": "hoverAndPressEsc.js",
+      "hoverAndPressEscSelector": "[data-test-case=\"6\"] .trigger",
+      "selectors": ["[data-test-case=\"6\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "2.8 NCK info_tooltip - HOVER+ESC Test case 7",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "hover and press Esc on the Test case 7 tooltip",
+      "onReadyScript": "hoverAndPressEsc.js",
+      "hoverAndPressEscSelector": "[data-test-case=\"7\"] .trigger",
+      "selectors": ["[data-test-case=\"7\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "2.9 NCK info_tooltip - HOVER+ESC Test case 8",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "hover and press Esc on the Test case 8 tooltip",
+      "onReadyScript": "hoverAndPressEsc.js",
+      "hoverAndPressEscSelector": "[data-test-case=\"8\"] .trigger",
+      "selectors": ["[data-test-case=\"8\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "2.14 NCK info_tooltip - HOVER+ESC Test case 13",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "hover and press Esc on the Test case 13 tooltip",
+      "onReadyScript": "hoverAndPressEsc.js",
+      "hoverAndPressEscSelector": "[data-test-case=\"13\"] .trigger",
+      "selectors": ["[data-test-case=\"13\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "2.15 NCK info_tooltip - HOVER+ESC Test case 14",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "hover and press Esc on the Test case 14 tooltip",
+      "onReadyScript": "hoverAndPressEsc.js",
+      "hoverAndPressEscSelector": "[data-test-case=\"14\"] .trigger",
+      "selectors": ["[data-test-case=\"14\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "2.16 NCK info_tooltip - HOVER+ESC Test case 15",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "hover and press Esc on the Test case 15 tooltip",
+      "onReadyScript": "hoverAndPressEsc.js",
+      "hoverAndPressEscSelector": "[data-test-case=\"15\"] .trigger",
+      "selectors": ["[data-test-case=\"15\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "2.17 NCK info_tooltip - HOVER+ESC Test case 16",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "hover and press Esc on the Test case 16 tooltip",
+      "onReadyScript": "hoverAndPressEsc.js",
+      "hoverAndPressEscSelector": "[data-test-case=\"16\"] .trigger",
+      "selectors": ["[data-test-case=\"16\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "2.18 NCK info_tooltip - HOVER+ESC Test case 17",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "hover and press Esc on the Test case 17 tooltip",
+      "onReadyScript": "hoverAndPressEsc.js",
+      "hoverAndPressEscSelector": "[data-test-case=\"17\"] .trigger",
+      "selectors": ["[data-test-case=\"17\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "2.19 NCK info_tooltip - HOVER+ESC Test case 18",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "hover and press Esc on the Test case 18 tooltip",
+      "onReadyScript": "hoverAndPressEsc.js",
+      "hoverAndPressEscSelector": "[data-test-case=\"18\"] .trigger",
+      "selectors": ["[data-test-case=\"18\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "2.20 NCK info_tooltip - HOVER+ESC Test case 19",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "hover and press Esc on the Test case 19 tooltip",
+      "onReadyScript": "hoverAndPressEsc.js",
+      "hoverAndPressEscSelector": "[data-test-case=\"19\"] .trigger",
+      "selectors": ["[data-test-case=\"19\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "2.21 NCK info_tooltip - HOVER+ESC Test case 22",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "hover and press Esc on the Test case 22 2nd list element tooltip",
+      "onReadyScript": "hoverAndPressEsc.js",
+      "hoverAndPressEscSelector": "[data-test-case=\"22\"] ul > li:nth-child(2)",
+      "selectors": ["[data-test-case=\"22\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "2.22 NCK info_tooltip - HOVER+ESC Test case 23",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "hover and press Esc on the Test case 23 radio button tooltip",
+      "onReadyScript": "hoverAndPressEsc.js",
+      "hoverAndPressEscSelector": "[data-test-case=\"23\"] label > input[type=radio]",
+      "selectors": ["[data-test-case=\"23\"]"],
+      "selectorExpansion": false
+    },
+
+    {
+      "label": "3.1 NCK info_tooltip - FOCUS Test case 0",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus upon the Test case 0 tooltip",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"0\"] .trigger"
+        },
+        {
+          "type": "waitForVisibleSelector",
+          "selector": "[data-test-case=\"0\"] .nck-tooltip"
+        }
+      ],
+      "selectors": ["[data-test-case=\"0\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "3.2 NCK info_tooltip - FOCUS Test case 1",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus upon the Test case 1 tooltip",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"1\"] .trigger .trigger-inner"
+        },
+        {
+          "type": "waitForTimeout",
+          "delay": 500
+        }
+      ],
+      "selectors": ["[data-test-case=\"1\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "3.3 NCK info_tooltip - FOCUS Test case 2",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus upon the Test case 2 tooltip",
+      "onReadyScript": "puppet/actions.js",
+      "actions":[
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"2\"] .trigger"
+        },
+        {
+          "type": "waitForVisibleSelector",
+          "selector": "[data-test-case=\"2\"] .nck-tooltip"
+        }
+      ],
+      "selectors": ["[data-test-case=\"2\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "3.4 NCK info_tooltip - FOCUS Test case 3",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus upon the Test case 3 tooltip",
+      "onReadyScript": "puppet/actions.js",
+      "actions":[
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"3\"] .trigger"
+        },
+        {
+          "type": "waitForVisibleSelector",
+          "selector": "[data-test-case=\"3\"] .nck-tooltip"
+        }
+      ],
+      "selectors": ["[data-test-case=\"3\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "3.5 NCK info_tooltip - FOCUS Test case 4",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus upon the Test case 4 tooltip",
+      "onReadyScript": "puppet/actions.js",
+      "actions":[
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"4\"] .trigger"
+        },
+        {
+          "type": "waitForVisibleSelector",
+          "selector": "body>.nck-tooltip"
+        }
+      ],
+      "selectors": ["[data-test-case=\"4\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "3.6 NCK info_tooltip - FOCUS Test case 5",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus upon the Test case 5 tooltip",
+      "onReadyScript": "puppet/actions.js",
+      "actions":[
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"5\"] .trigger"
+        },
+        {
+          "type": "waitForVisibleSelector",
+          "selector": "[data-test-case=\"5\"] .nck-tooltip"
+        }
+      ],
+      "selectors": ["[data-test-case=\"5\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "3.7 NCK info_tooltip - FOCUS Test case 6",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus upon the Test case 6 tooltip",
+      "onReadyScript": "puppet/actions.js",
+      "actions":[
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"6\"] .trigger"
+        },
+        {
+          "type": "waitForVisibleSelector",
+          "selector": "[data-test-case=\"6\"] .nck-tooltip"
+        }
+      ],
+      "selectors": ["[data-test-case=\"6\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "3.8 NCK info_tooltip - FOCUS Test case 7",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus upon the Test case 7 tooltip",
+      "onReadyScript": "puppet/actions.js",
+      "actions":[
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"7\"] .trigger"
+        },
+        {
+          "type": "waitForVisibleSelector",
+          "selector": "[data-test-case=\"7\"] .nck-tooltip"
+        }
+      ],
+      "selectors": ["[data-test-case=\"7\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "3.9 NCK info_tooltip - FOCUS Test case 8",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus upon the Test case 8 tooltip",
+      "onReadyScript": "puppet/actions.js",
+      "actions":[
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"8\"] .trigger"
+        },
+        {
+          "type": "waitForVisibleSelector",
+          "selector": "[data-test-case=\"8\"]  .nck-tooltip"
+        }
+      ],
+      "selectors": ["[data-test-case=\"8\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "3.10 NCK info_tooltip - FOCUS Test case 9",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "focus upon the Test case 9 tooltip",
+      "onReadyScript": "focusWithinIframe.js",
+      "focusSelector": "[data-test-case=\"9\"] .trigger",
+      "selectors": ["iframe"],
+      "iframeSelector": "iframe"
+    },
+    {
+      "label": "3.11 NCK info_tooltip - FOCUS Test case 10",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "focus upon the Test case 10 tooltip",
+      "onReadyScript": "focusWithinIframe.js",
+      "focusSelector": "[data-test-case=\"10\"] .trigger",
+      "selectors": ["iframe"],
+      "iframeSelector": "iframe"
+    },
+    {
+      "label": "3.12 NCK info_tooltip - FOCUS Test case 11",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "focus upon the Test case 11 tooltip",
+      "onReadyScript": "focusWithinIframe.js",
+      "focusSelector": "[data-test-case=\"11\"] .trigger",
+      "selectors": ["iframe"],
+      "iframeSelector": "iframe"
+    },
+    {
+      "label": "3.13 NCK info_tooltip - FOCUS Test case 12",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "focus upon the Test case 12 tooltip",
+      "onReadyScript": "focusWithinIframe.js",
+      "focusSelector": "[data-test-case=\"12\"] .trigger",
+      "selectors": ["iframe"],
+      "iframeSelector": "iframe"
+    },
+    {
+      "label": "3.14 NCK info_tooltip - FOCUS Test case 13",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus upon the Test case 13 tooltip",
+      "onReadyScript": "puppet/actions.js",
+      "actions":[
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"13\"] .trigger"
+        },
+        {
+          "type": "waitForVisibleSelector",
+          "selector": "[data-test-case=\"13\"] .nck-tooltip"
+        }
+      ],
+      "selectors": ["[data-test-case=\"13\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "3.15 NCK info_tooltip - FOCUS Test case 14",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus upon the Test case 14 tooltip",
+      "onReadyScript": "puppet/actions.js",
+      "actions":[
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"14\"] .trigger"
+        },
+        {
+          "type": "waitForVisibleSelector",
+          "selector": "[data-test-case=\"14\"] .nck-tooltip"
+        }
+      ],
+      "selectors": ["[data-test-case=\"14\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "3.16 NCK info_tooltip - FOCUS Test case 15",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus upon the Test case 15 tooltip",
+      "onReadyScript": "puppet/actions.js",
+      "actions":[
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"15\"] .trigger"
+        },
+        {
+          "type": "waitForVisibleSelector",
+          "selector": "[data-test-case=\"15\"] .nck-tooltip"
+        }
+      ],
+      "selectors": ["[data-test-case=\"15\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "3.17 NCK info_tooltip - FOCUS Test case 16",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus upon the Test case 16 tooltip",
+      "onReadyScript": "puppet/actions.js",
+      "actions":[
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"16\"] .trigger"
+        },
+        {
+          "type": "waitForVisibleSelector",
+          "selector": "[data-test-case=\"16\"] .nck-tooltip"
+        }
+      ],
+      "selectors": ["[data-test-case=\"16\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "3.18 NCK info_tooltip - FOCUS Test case 17",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus upon the Test case 17 tooltip",
+      "onReadyScript": "puppet/actions.js",
+      "actions":[
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"17\"] .trigger"
+        },
+        {
+          "type": "waitForVisibleSelector",
+          "selector": "[data-test-case=\"17\"] .nck-tooltip"
+        }
+      ],
+      "selectors": ["[data-test-case=\"17\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "3.19 NCK info_tooltip - FOCUS Test case 18",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus upon the Test case 18 tooltip",
+      "onReadyScript": "puppet/actions.js",
+      "actions":[
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"18\"] .trigger"
+        },
+        {
+          "type": "waitForVisibleSelector",
+          "selector": "[data-test-case=\"18\"] .nck-tooltip"
+        }
+      ],
+      "selectors": ["[data-test-case=\"18\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "3.20 NCK info_tooltip - FOCUS Test case 19",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus upon the Test case 19 tooltip",
+      "onReadyScript": "puppet/actions.js",
+      "actions":[
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"19\"] .trigger"
+        },
+        {
+          "type": "waitForTimeout",
+          "delay": 500
+        }
+      ],
+      "focusSelector": "[data-test-case=\"19\"] .trigger",
+      "selectors": ["[data-test-case=\"19\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "3.21 NCK info_tooltip - FOCUS Test case 22",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "focus upon the Test case 22 2nd list element tooltip",
+      "onReadyScript": "puppet/actions.js",
+      "actions":[
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"22\"] ul > li:nth-child(2)"
+        },
+        {
+          "type": "waitForVisibleSelector",
+          "selector": "[data-test-case=\"22\"] .nck-tooltip"
+        }
+      ],
+      "selectors": ["[data-test-case=\"22\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "3.22 NCK info_tooltip - FOCUS Test case 23",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "focus upon the Test case 23 radio button tooltip",
+      "onReadyScript": "puppet/actions.js",
+      "actions":[
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"23\"] label > input[type=radio]"
+        },
+        {
+          "type": "waitForVisibleSelector",
+          "selector": "[data-test-case=\"23\"] .nck-tooltip"
+        }
+      ],
+      "selectors": ["[data-test-case=\"23\"]"],
+      "selectorExpansion": false
+    },
+
+    {
+      "label": "4.1 NCK info_tooltip - FOCUS+ESC Test case 0",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "focus and press Esc on the Test case 0 tooltip",
+      "onReadyScript": "focusAndPressEsc.js",
+      "focusAndPressEscSelector": "[data-test-case=\"0\"] .trigger",
+      "selectors": ["[data-test-case=\"0\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "4.2 NCK info_tooltip - FOCUS+ESC Test case 1",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "focus and press Esc on the Test case 1 tooltip",
+      "onReadyScript": "focusAndPressEsc.js",
+      "focusAndPressEscSelector": "[data-test-case=\"1\"] .trigger .trigger-inner",
+      "selectors": ["[data-test-case=\"1\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "4.3 NCK info_tooltip - FOCUS+ESC Test case 2",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "focus and press Esc on the Test case 2 tooltip",
+      "onReadyScript": "focusAndPressEsc.js",
+      "focusAndPressEscSelector": "[data-test-case=\"2\"] .trigger",
+      "selectors": ["[data-test-case=\"2\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "4.4 NCK info_tooltip - FOCUS+ESC Test case 3",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "focus and press Esc on the Test case 3 tooltip",
+      "onReadyScript": "focusAndPressEsc.js",
+      "focusAndPressEscSelector": "[data-test-case=\"3\"] .trigger",
+      "selectors": ["[data-test-case=\"3\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "4.5 NCK info_tooltip - FOCUS+ESC Test case 4",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "focus and press Esc on the Test case 4 tooltip",
+      "onReadyScript": "focusAndPressEsc.js",
+      "focusAndPressEscSelector": "[data-test-case=\"4\"] .trigger",
+      "selectors": ["[data-test-case=\"4\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "4.6 NCK info_tooltip - FOCUS+ESC Test case 5",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "focus and press Esc on the Test case 5 tooltip",
+      "onReadyScript": "focusAndPressEsc.js",
+      "focusAndPressEscSelector": "[data-test-case=\"5\"] .trigger",
+      "selectors": ["[data-test-case=\"5\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "4.7 NCK info_tooltip - FOCUS+ESC Test case 6",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "focus and press Esc on the Test case 6 tooltip",
+      "onReadyScript": "focusAndPressEsc.js",
+      "focusAndPressEscSelector": "[data-test-case=\"6\"] .trigger",
+      "selectors": ["[data-test-case=\"6\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "4.8 NCK info_tooltip - FOCUS+ESC Test case 7",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "focus and press Esc on the Test case 7 tooltip",
+      "onReadyScript": "focusAndPressEsc.js",
+      "focusAndPressEscSelector": "[data-test-case=\"7\"] .trigger",
+      "selectors": ["[data-test-case=\"7\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "4.9 NCK info_tooltip - FOCUS+ESC Test case 8",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "focus and press Esc on the Test case 8 tooltip",
+      "onReadyScript": "focusAndPressEsc.js",
+      "focusAndPressEscSelector": "[data-test-case=\"8\"] .trigger",
+      "selectors": ["[data-test-case=\"8\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "4.10 NCK info_tooltip - FOCUS+ESC Test case 9",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "focus and press Esc on the Test case 9 tooltip",
+      "onReadyScript": "focusAndPressEscWithinIframe.js",
+      "selectors": ["iframe"],
+      "iframeSelector": "iframe",
+      "focusAndPressEscSelector": "[data-test-case=\"9\"] .trigger"
+    },
+    {
+      "label": "4.11 NCK info_tooltip - FOCUS+ESC Test case 10",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "focus and press Esc on the Test case 10 tooltip",
+      "focusAndPressEscSelector": "[data-test-case=\"10\"] .trigger",
+      "onReadyScript": "focusAndPressEscWithinIframe.js",
+      "selectors": ["iframe"],
+      "iframeSelector": "iframe"
+    },
+    {
+      "label": "4.12 NCK info_tooltip - FOCUS+ESC Test case 11",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "focus and press Esc on the Test case 11 tooltip",
+      "focusAndPressEscSelector": "[data-test-case=\"11\"] .trigger",
+      "onReadyScript": "focusAndPressEscWithinIframe.js",
+      "selectors": ["iframe"],
+      "iframeSelector": "iframe"
+    },
+    {
+      "label": "4.13 NCK info_tooltip - FOCUS+ESC Test case 12",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "focus and press Esc on the Test case 12 tooltip",
+      "focusAndPressEscSelector": "[data-test-case=\"12\"] .trigger",
+      "onReadyScript": "focusAndPressEscWithinIframe.js",
+      "selectors": ["iframe"],
+      "iframeSelector": "iframe"
+    },
+    {
+      "label": "4.14 NCK info_tooltip - FOCUS+ESC Test case 13",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "focus and press Esc on the Test case 13 tooltip",
+      "onReadyScript": "focusAndPressEsc.js",
+      "focusAndPressEscSelector": "[data-test-case=\"13\"] .trigger",
+      "selectors": ["[data-test-case=\"13\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "4.15 NCK info_tooltip - FOCUS+ESC Test case 14",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "focus and press Esc on the Test case 14 tooltip",
+      "onReadyScript": "focusAndPressEsc.js",
+      "focusAndPressEscSelector": "[data-test-case=\"14\"] .trigger",
+      "selectors": ["[data-test-case=\"14\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "4.16 NCK info_tooltip - FOCUS+ESC Test case 15",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "focus and press Esc on the Test case 15 tooltip",
+      "onReadyScript": "focusAndPressEsc.js",
+      "focusAndPressEscSelector": "[data-test-case=\"15\"] .trigger",
+      "selectors": ["[data-test-case=\"15\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "4.17 NCK info_tooltip - FOCUS+ESC Test case 16",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "focus and press Esc on the Test case 16 tooltip",
+      "onReadyScript": "focusAndPressEsc.js",
+      "focusAndPressEscSelector": "[data-test-case=\"16\"] .trigger",
+      "selectors": ["[data-test-case=\"16\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "4.18 NCK info_tooltip - FOCUS+ESC Test case 17",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "focus and press Esc on the Test case 17 tooltip",
+      "onReadyScript": "focusAndPressEsc.js",
+      "focusAndPressEscSelector": "[data-test-case=\"17\"] .trigger",
+      "selectors": ["[data-test-case=\"17\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "4.19 NCK info_tooltip - FOCUS+ESC Test case 18",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "focus and press Esc on the Test case 18 tooltip",
+      "onReadyScript": "focusAndPressEsc.js",
+      "focusAndPressEscSelector": "[data-test-case=\"18\"] .trigger",
+      "selectors": ["[data-test-case=\"18\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "4.20 NCK info_tooltip - FOCUS+ESC Test case 19",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "focus and press Esc on the Test case 19 tooltip",
+      "onReadyScript": "focusAndPressEsc.js",
+      "focusAndPressEscSelector": "[data-test-case=\"19\"] .trigger",
+      "selectors": ["[data-test-case=\"19\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "4.21 NCK info_tooltip - FOCUS+ESC Test case 22",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "focus and press Esc on the Test case 22 2nd list element tooltip",
+      "onReadyScript": "focusAndPressEsc.js",
+      "focusAndPressEscSelector": "[data-test-case=\"22\"]  ul > li:nth-child(2)",
+      "selectors": ["[data-test-case=\"22\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "4.22 NCK info_tooltip - FOCUS+ESC Test case 23",
+      "url": "http://localhost:8080/#/infoTooltip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "delay": 500,
+      "description": "focus and press Esc on the Test case 23 radio button tooltip",
+      "onReadyScript": "focusAndPressEsc.js",
+      "focusAndPressEscSelector": "[data-test-case=\"23\"] label > input[type=radio",
+      "selectors": ["[data-test-case=\"23\"]"],
+      "selectorExpansion": false
+    }
+  ]
+}

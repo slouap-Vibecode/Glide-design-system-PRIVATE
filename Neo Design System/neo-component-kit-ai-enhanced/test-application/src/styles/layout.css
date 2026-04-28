@@ -1,0 +1,38 @@
+/* Customize scrollbar to ensure more consistency accross different computes
+will work only on chrome (auto test are on chrome) */
+*::-webkit-scrollbar {
+  width: .7rem;
+  height: .7rem;
+  background-color: rgba(170, 170, 170, 0.5); /* or add it to the track */
+}
+*::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.48);
+  border-radius: 10rem;
+}
+
+body {
+  font-size: 100%;
+  margin: 0.5rem;
+  overflow-x: hidden;
+  -ms-overflow-style: scrollbar;
+  line-height: 1.42857143;
+}
+
+table.test-app-style {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+table.test-app-style caption, table.test-app-style th {
+  text-align: left;
+}
+
+button.test-app-style, input.test-app-style {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+iframe.test-app-style {
+  box-sizing: border-box;
+}

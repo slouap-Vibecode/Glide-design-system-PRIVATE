@@ -1,0 +1,928 @@
+{
+  "id": "backstop_header",
+  "viewports": [
+    {
+      "label": "phone",
+      "width": 320,
+      "height": 7700
+    },
+    {
+      "label": "tablet",
+      "width": 1024,
+      "height": 4200
+    },
+    {
+      "label": "desktop",
+      "width": 1920,
+      "height": 4536
+    }
+  ],
+  "onBeforeScript": "puppet/onBefore.js",
+  "onReadyScript": "puppet/onReady.js",
+  "scenarios": [
+    {
+      "label": "1. NCK header - default",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Global page display verification"
+    },
+    {
+      "label": "2.1 NCK header - click all the R icons of the headers",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "display the state of all the headers after their icons are clicked",
+      "onReadyScript": "clickAll.js",
+      "clickAllSelectors": ".header-icon-alignment-right"
+    },
+    {
+      "label": "2.2 NCK header - click all L the icons of the headers",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "display the state of all the headers after their icons are clicked",
+      "onReadyScript": "clickAll.js",
+      "clickAllSelectors": ".header-icon-alignment-left"
+    },
+
+    {
+      "label": "2.3 NCK header - click TC19 backlink for desktop",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on the tc19 left backlink",
+      "clickSelector": "[data-test-case=\"19\"] .header-backlink a",
+      "selectors": "[data-test-case=\"19\"]",
+      "selectorExpansion": false,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 16000
+        }
+      ]
+    },
+    {
+      "label": "2.4 NCK header - click TC19 backlink for tablet/mobile",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on the tc19 left backlink",
+      "clickSelector": "[data-test-case=\"19\"] a.header-backlink.header-icon",
+      "selectors": "[data-test-case=\"19\"]",
+      "selectorExpansion": false,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 16000
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 16000
+        }
+      ]
+    },
+    {
+      "label": "2.5 NCK header - click TC19 right-button for desktop",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on the tc19 right button",
+      "clickSelector": "[data-test-case=\"19\"] .nck-button.header-right-button",
+      "selectors": "[data-test-case=\"19\"]",
+      "selectorExpansion": false,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 16000
+        }
+      ]
+    },
+    {
+      "label": "2.6 NCK header - click TC19 right-button tablet/mobile",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on the tc19 right button",
+      "clickSelector": "[data-test-case=\"19\"] .header-right-button.header-icon",
+      "selectors": "[data-test-case=\"19\"]",
+      "selectorExpansion": false,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 16000
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 16000
+        }
+      ]
+    }, 
+       {
+      "label": "2.7 NCK header - click TC30 edit button",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on the TC30 editable button",
+      "clickSelector": "[data-test-case=\"30\"] .nck-button",
+      "selectors": "[data-test-case=\"30\"]",
+      "selectorExpansion": false
+    }, 
+    {
+      "label": "3.1 NCK header - focus TC6 L icon",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the L icon of the TC6 header",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"6\"] .header-icon-alignment-left",
+      "selectors": ["[data-test-case=\"6\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "3.2 NCK header - focus TC7 L icon",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the L icon of the TC7 header",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"7\"] .header-icon-alignment-left",
+      "selectors": ["[data-test-case=\"7\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "3.3 NCK header - focus TC7 R icon",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the R icon of the TC7 header",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"7\"] .header-icon-alignment-right",
+      "selectors": ["[data-test-case=\"7\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "3.4 NCK header - focus TC9 R icon",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the R icon of the TC 9 header",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"9\"] .header-icon-alignment-right",
+      "selectors": ["[data-test-case=\"9\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "3.5 NCK header - focus TC9 L icon",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the L icon of the TC 9 header",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"9\"] .header-icon-alignment-left",
+      "selectors": ["[data-test-case=\"9\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "3.6 NCK header - focus TC11 L icon ",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the L icon of the TC 11 header",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"11\"] .header-icon-alignment-left",
+      "selectors": ["[data-test-case=\"11\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "3.7 NCK header - focus TC12 R icon",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the R icon of the TC 12 header",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"12\"] .header-icon-alignment-right",
+      "selectors": ["[data-test-case=\"12\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "3.8 NCK header - focus TC13 R icon",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the R icon of the TC 13 header",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"13\"] .header-icon-alignment-right",
+      "selectors": ["[data-test-case=\"13\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "3.9 NCK header - focus TC14  R icon",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the R icon of the TC 14 header",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"14\"] .header-icon-alignment-right",
+      "selectors": ["[data-test-case=\"14\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "3.10 NCK header - focus TC14  L icon",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the L icon of the TC 14 header",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"14\"] .header-icon-alignment-left",
+      "selectors": ["[data-test-case=\"14\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "3.11 NCK header - focus TC15 L icon",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the L icon of the TC 15 header",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"15\"] .header-icon-alignment-left",
+      "selectors": ["[data-test-case=\"15\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "3.12 NCK header - focus TC16 R icon",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the R icon of the TC 16 header",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"16\"] .header-icon-alignment-right",
+      "selectors": ["[data-test-case=\"16\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "3.13 NCK header - focus TC17 L icon",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the L icon of the TC 17 header",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"17\"] .header-icon-alignment-left",
+      "selectors": ["[data-test-case=\"17\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "3.14 NCK header - focus TC17 R icon",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the R icon of the TC 17 header",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"17\"] .header-icon-alignment-right",
+      "selectors": ["[data-test-case=\"17\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "3.15 NCK header - focus TC19 backlink for desktop",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the TC 19 backlink for desktop",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"19\"] .header-backlink a",
+      "selectors": ["[data-test-case=\"19\"]"],
+      "selectorExpansion": false,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 16000
+        }
+      ]
+    },
+    {
+      "label": "3.16 NCK header - focus TC19 backlink for talet/mobile",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the TC 19 backlink for talet/mobile",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"19\"] a.header-backlink.header-icon",
+      "selectors": ["[data-test-case=\"19\"]"],
+      "selectorExpansion": false,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 16000
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 16000
+        }
+      ]
+    },
+    {
+      "label": "3.17 NCK header - focus TC19 right-button for desktop",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the TC 19 right button",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"19\"] .nck-button.header-right-button",
+      "selectors": ["[data-test-case=\"19\"]"],
+      "selectorExpansion": false,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 16000
+        }
+      ]
+    },
+    {
+      "label": "3.18 NCK header - focus TC19 right-button for tablet/mobile",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the TC 19 right button",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"19\"] .header-right-button.header-icon",
+      "selectors": ["[data-test-case=\"19\"]"],
+      "selectorExpansion": false,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 16000
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 16000
+        }
+      ]
+    },
+    {
+      "label": "3.19 NCK header - focus TC27 action 2 button",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the action 2 the TC 27 header",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"27\"] .nck-button:nth-child(2)",
+      "selectors": ["[data-test-case=\"27\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "3.20 NCK header - focus TC28 Input field",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the input field the TC 28 header",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"28\"] input",
+      "selectors": ["[data-test-case=\"28\"]"],
+      "selectorExpansion": false
+    }, 
+    {
+      "label": "4.1 NCK header - focus+enter TC6 L icon (link)",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus + enter on the L icon of the TC6 header",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"6\"] .header-icon-alignment-left",
+      "selectors": ["[data-test-case=\"6\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "4.2 NCK header - focus+enter TC7 L icon (link)",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus + enter on the L icon of the TC7 header",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"7\"] .header-icon-alignment-left",
+      "selectors": ["[data-test-case=\"7\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "4.3 NCK header - focus+enter TC7 R icon (link)",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus + enter on the icon of the TC7 header",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"7\"] .header-icon-alignment-right",
+      "selectors": ["[data-test-case=\"7\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "4.4 NCK header - focus+enter TC9 L icon (link)",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus + enter on the L icon of the TC9 header",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"9\"] .header-icon-alignment-left",
+      "selectors": ["[data-test-case=\"9\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "4.5 NCK header - focus+enter TC9 R icon (button)",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus + enter on the R icon of the TC9 header",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"9\"] .header-icon-alignment-right",
+      "selectors": ["[data-test-case=\"9\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "4.6 NCK header - focus+enter TC11 L icon (button)",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus + enter on the L icon of the TC11 header",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"11\"] .header-icon-alignment-left",
+      "selectors": ["[data-test-case=\"11\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "4.7 NCK header - focus+enter TC12 R icon (link)",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus + enter on the R icon of the TC12 header",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"12\"] .header-icon-alignment-right",
+      "selectors": ["[data-test-case=\"12\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "4.8 NCK header - focus+enter TC13 R icon (button)",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus + enter on the R icon of the TC13 header",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"13\"] .header-icon-alignment-right",
+      "selectors": ["[data-test-case=\"13\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "4.9 NCK header - focus+enter TC14 L icon (button)",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus + enter on the icon of the TC 14 header",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"14\"] .header-icon-alignment-left",
+      "selectors": ["[data-test-case=\"14\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "4.10 NCK header - focus+enter TC14 R icon (link)",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus + enter on the R icon of the TC 14 header",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"14\"] .header-icon-alignment-right",
+      "selectors": ["[data-test-case=\"14\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "4.11 NCK header - focus+enter TC15 L icon (button)",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus + enter on the L icon of the TC 15 header",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"15\"] .header-icon-alignment-left",
+      "selectors": ["[data-test-case=\"15\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "4.12 NCK header - focus+enter TC16 R icon (button)",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus + enter on the R icon of the TC 16 header",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"16\"] .header-icon-alignment-right",
+      "selectors": ["[data-test-case=\"16\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "4.13 NCK header - focus+enter TC17 L icon (button)",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus + enter on the L icon of the TC 17 header",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"17\"] .header-icon-alignment-left",
+      "selectors": ["[data-test-case=\"17\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "4.14 NCK header - focus+enter TC17 R icon (button)",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus + enter on the R icon of the TC 17 header",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"17\"] .header-icon-alignment-right",
+      "selectors": ["[data-test-case=\"17\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "4.15 NCK header - focus+enter TC19 backlink for desktop",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus + enter on the TC 19 backlink for desktop",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"19\"] .header-backlink a",
+      "selectors": ["[data-test-case=\"19\"]"],
+      "selectorExpansion": false,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 16000
+        }
+      ]
+    },
+    {
+      "label": "4.16 NCK header - focus+enter TC19 backlink for tablet/mobile",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus + enter on the TC 19 backlink for tablet/mobile",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"19\"] a.header-backlink.header-icon",
+      "selectors": ["[data-test-case=\"19\"]"],
+      "selectorExpansion": false,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 16000
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 16000
+        }
+      ]
+    },
+    {
+      "label": "4.17 NCK header - focus+enter TC19 right-button for desktop",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus + enter on the TC 19 right-button for desktop",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"19\"] .nck-button.header-right-button",
+      "selectors": ["[data-test-case=\"19\"]"],
+      "selectorExpansion": false,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 16000
+        }
+      ]
+    },
+    {
+      "label": "4.18 NCK header - focus+enter TC19 right-button for tablet/mobile",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus + enter on the TC 19 right-button for tablet/mobile",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"19\"] .header-right-button.header-icon",
+      "selectors": ["[data-test-case=\"19\"]"],
+      "selectorExpansion": false,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 16000
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 16000
+        }
+      ]
+    },
+    {
+      "label": "4.19 NCK header - focus+enter TC27 Action 3 (button)",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus + enter on the Action 3 button of the TC 27 header",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"27\"] .nck-button:nth-child(3)",
+      "selectors": ["[data-test-case=\"27\"]"],
+      "selectorExpansion": false
+    },    
+    {
+      "label": "5.1 NCK header - focus+space TC6 L icon (link)",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus + space on the L icon of the TC 6 header-just for negative validation",
+      "onReadyScript": "focusAndPressSpace.js",
+      "focusAndPressSpaceSelector": "[data-test-case=\"6\"] .header-icon-alignment-left",
+      "selectors": ["[data-test-case=\"6\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "5.2 NCK header - focus+space TC9 R icon (button)",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus + space on the R icon of the TC 9 header",
+      "onReadyScript": "focusAndPressSpace.js",
+      "focusAndPressSpaceSelector": "[data-test-case=\"9\"] .header-icon-alignment-right",
+      "selectors": ["[data-test-case=\"9\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "5.3 NCK header - focus+space TC11 L icon (button)",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus + space on the L icon of the TC 11 header",
+      "onReadyScript": "focusAndPressSpace.js",
+      "focusAndPressSpaceSelector": "[data-test-case=\"11\"] .header-icon-alignment-left",
+      "selectors": ["[data-test-case=\"11\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "5.4 NCK header - focus+space TC13 R icon (button)",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus + space on the R icon of the TC 13 header",
+      "onReadyScript": "focusAndPressSpace.js",
+      "focusAndPressSpaceSelector": "[data-test-case=\"13\"] .header-icon-alignment-right",
+      "selectors": ["[data-test-case=\"13\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "5.5 NCK header - focus+space TC14 L icon (button)",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus + space on the L icon of the TC 14 header",
+      "onReadyScript": "focusAndPressSpace.js",
+      "focusAndPressSpaceSelector": "[data-test-case=\"14\"] .header-icon-alignment-left",
+      "selectors": ["[data-test-case=\"14\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "5.6 NCK header - focus+space TC15 L icon (button)",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus + space on the L icon of the TC 15 header",
+      "onReadyScript": "focusAndPressSpace.js",
+      "focusAndPressSpaceSelector": "[data-test-case=\"15\"] .header-icon-alignment-left",
+      "selectors": ["[data-test-case=\"15\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "5.7 NCK header - focus+space TC16 R icon (button)",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus + space on the R icon of the TC 16 header",
+      "onReadyScript": "focusAndPressSpace.js",
+      "focusAndPressSpaceSelector": "[data-test-case=\"16\"] .header-icon-alignment-right",
+      "selectors": ["[data-test-case=\"16\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "5.8 NCK header - focus+space TC17 R icon (button)",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus + space on the R icon of the TC 17 header",
+      "onReadyScript": "focusAndPressSpace.js",
+      "focusAndPressSpaceSelector": "[data-test-case=\"17\"] .header-icon-alignment-right",
+      "selectors": ["[data-test-case=\"17\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "5.9 NCK header - focus+space TC17 L icon (button)",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus + space on the L icon of the TC 17 header",
+      "onReadyScript": "focusAndPressSpace.js",
+      "focusAndPressSpaceSelector": "[data-test-case=\"17\"] .header-icon-alignment-left",
+      "selectors": ["[data-test-case=\"17\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "5.10 NCK header - focus+space TC19 right-button desktop",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus + space on the TC19 right-button desktop",
+      "clickSelector": "[data-test-case=\"19\"] .nck-button.header-right-button",
+      "selectors": "[data-test-case=\"19\"]",
+      "selectorExpansion": false,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 16000
+        }
+      ]
+    },
+    {
+      "label": "5.11 NCK header - focus+space TC19 right-button tablet/mobile",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus + space on the TC19 right-button tablet/mobile",
+      "clickSelector": "[data-test-case=\"19\"] .header-right-button.header-icon",
+      "selectors": "[data-test-case=\"19\"]",
+      "selectorExpansion": false,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 16000
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 16000
+        }
+      ]
+    },
+    {
+      "label": "5.10 NCK header - focus+space TC27 Action 2 (button)",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus + space on the Action 2 button of the TC 27 header",
+      "onReadyScript": "focusAndPressSpace.js",
+      "focusAndPressSpaceSelector": "[data-test-case=\"27\"] .nck-button:nth-child(2)",
+      "selectors": ["[data-test-case=\"27\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "6.1 NCK header - hover TC19 backlink for desktop",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover on the TC19 backlink for desktop",
+      "hoverSelector": "[data-test-case=\"19\"] .header-backlink a",
+      "selectors": ["[data-test-case=\"19\"]"],
+      "selectorExpansion": false,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 16000
+        }
+      ]
+    },
+    {
+      "label": "6.2 NCK header - hover TC19 backlink for tablet/mobile",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover on the TC19 backlink",
+      "hoverSelector": "[data-test-case=\"19\"] a.header-backlink.header-icon",
+      "selectors": ["[data-test-case=\"19\"]"],
+      "selectorExpansion": false,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 16000
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 16000
+        }
+      ]
+    },
+
+    {
+      "label": "6.3 NCK header - hover TC19 right-button for desktop",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover on the TC19 right-button for desktop",
+      "hoverSelector": "[data-test-case=\"19\"] .nck-button.header-right-button",
+      "selectors": ["[data-test-case=\"19\"]"],
+      "selectorExpansion": false,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 16000
+        }
+      ]
+    },
+    {
+      "label": "6.4 NCK header - hover TC19 right-button for tablet/mobile",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover on the TC19 right-button for tablet/mobile",
+      "hoverSelector": "[data-test-case=\"19\"] .header-right-button.header-icon",
+      "selectors": ["[data-test-case=\"19\"]"],
+      "selectorExpansion": false,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 16000
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 16000
+        }
+      ]
+    },
+    {
+      "label": "6.5 NCK header - hover TC27 Action 1 button",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover on the Action 1 button ",
+      "hoverSelector": "[data-test-case=\"27\"] .nck-button:nth-child(1)",
+      "selectors": ["[data-test-case=\"27\"]"],
+      "selectorExpansion": false
+
+    },
+    {
+      "label": "6.6 NCK header - hover TC28 Input field",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover on the Input field ",
+      "hoverSelector": "[data-test-case=\"28\"] input",
+      "selectors": [ "[data-test-case=\"28\"]" ],
+      "selectorExpansion": false
+    },
+    {
+      "label": "6.7 NCK header - hover TC30  edit button",
+      "url": "http://localhost:8080/#/header",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover on the Input field ",
+      "hoverSelector": "[data-test-case=\"30\"] .nck-button",
+      "selectors": [ "[data-test-case=\"30\"]" ],
+      "selectorExpansion": false
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "report": ["CI"],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args":[
+    "--no-sandbox",
+    "--disable-setuid-sandbox",
+    "--disable-dev-shm-usage",
+    "--disable-accelerated-2d-canvas",
+    "--no-first-run",
+    "--no-zygote",
+
+    "--disable-gpu"
+  ],
+    "protocolTimeout": 960000
+  },
+  "asyncCaptureLimit": 3,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false
+}

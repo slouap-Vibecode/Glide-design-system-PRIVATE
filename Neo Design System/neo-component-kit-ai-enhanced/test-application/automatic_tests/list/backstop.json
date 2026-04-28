@@ -1,0 +1,880 @@
+{
+  "id": "backstop_list",
+  "viewports": [
+    {
+      "label": "phone",
+      "width": 320,
+      "height": 13250
+    },
+    {
+      "label": "tablet",
+      "width": 1024,
+      "height": 12000
+    },
+    {
+      "label": "desktop",
+      "width": 1920,
+      "height": 11650
+    }
+  ],
+  "onBeforeScript": "puppet/onBefore.js",
+  "onReadyScript": "puppet/onReady.js",
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "report": ["CI"],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args":[
+    "--no-sandbox",
+    "--disable-setuid-sandbox",
+    "--disable-dev-shm-usage",
+    "--disable-accelerated-2d-canvas",
+    "--no-first-run",
+    "--no-zygote",
+
+    "--disable-gpu"
+  ],
+    "protocolTimeout": 960000
+  },
+  "asyncCaptureLimit": 3,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false,
+  "scenarios": [
+    {
+      "label": "1. NCK list - default",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "display the default state of all the lists"
+    },
+    {
+      "label": "1.21 NCK list - rounded corners display",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "display rounded corners variant",
+      "selectors": ["[data-test-case=\"21\"]"]
+    },
+
+    {
+      "label": "2.3.1. NCK list - hover - TC3 - item1",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon item 1 of list TC3",
+      "hoverSelector": "[data-test-case=\"3\"] .nck-list-item-container:nth-child(1) .nck-list-item",
+      "selectors": ["[data-test-case=\"3\"]"]
+    },
+    {
+      "label": "2.3.2. NCK list - hover - TC3 - item2",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon item 2 of list TC3",
+      "hoverSelector": "[data-test-case=\"3\"] .nck-list-item-container:nth-child(2) .nck-list-item",
+      "selectors": ["[data-test-case=\"3\"]"]
+    },
+    {
+      "label": "2.3.3. NCK list - hover - TC3 - item3",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon item 3 of list TC3",
+      "hoverSelector": "[data-test-case=\"3\"] .nck-list-item-container:nth-child(3) .nck-list-item",
+      "selectors": ["[data-test-case=\"3\"]"]
+    },
+    {
+      "label": "2.4.1. NCK list - hover - TC4 - item1",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon item 1 of list TC4",
+      "hoverSelector": "[data-test-case=\"4\"] .nck-list-item-container:nth-child(1) .nck-list-item",
+      "selectors": ["[data-test-case=\"4\"]"]
+    },
+    {
+      "label": "2.4.2. NCK list - hover - TC4 - item2",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon item 2 of list TC4",
+      "hoverSelector": "[data-test-case=\"4\"] .nck-list-item-container:nth-child(2) .nck-list-item",
+      "selectors": ["[data-test-case=\"4\"]"]
+    },
+    {
+      "label": "2.4.3. NCK list - hover - TC4 - item3",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon item 3 of list TC4",
+      "hoverSelector": "[data-test-case=\"4\"] .nck-list-item-container:nth-child(3) .nck-list-item",
+      "selectors": ["[data-test-case=\"4\"]"]
+    },
+
+    {
+      "label": "2.7.1. NCK list - hover - TC7 - item1",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon item 1 of list TC7",
+      "hoverSelector": "[data-test-case=\"7\"] .nck-list-item-container:nth-child(1) .nck-list-item",
+      "selectors": ["[data-test-case=\"7\"]"]
+    },
+    {
+      "label": "2.7.2. NCK list - hover - TC7 - item2",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon item 2 of list TC7",
+      "hoverSelector": "[data-test-case=\"7\"] .nck-list-item-container:nth-child(2) .nck-list-item",
+      "selectors": ["[data-test-case=\"7\"]"]
+    },
+    {
+      "label": "2.7.3. NCK list - hover - TC7 - item3",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon item 3 of list TC7",
+      "hoverSelector": "[data-test-case=\"7\"] .nck-list-item-container:nth-child(3) .nck-list-item",
+      "selectors": ["[data-test-case=\"7\"]"]
+    },
+    {
+      "label": "2.8.1. NCK list - hover - TC8 - item1",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon item 1 of list TC8",
+      "hoverSelector": "[data-test-case=\"8\"] .nck-list-item-container:nth-child(1) .nck-list-item",
+      "selectors": ["[data-test-case=\"8\"]"]
+    },
+    {
+      "label": "2.8.2. NCK list - hover - TC8 - item2",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon item 2 of list TC8",
+      "hoverSelector": "[data-test-case=\"8\"] .nck-list-item-container:nth-child(2) .nck-list-item",
+      "selectors": ["[data-test-case=\"8\"]"]
+    },
+    {
+      "label": "2.8.3. NCK list - hover - TC8 - item3",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon item 3 of list TC8",
+      "hoverSelector": "[data-test-case=\"8\"] .nck-list-item-container:nth-child(3) .nck-list-item",
+      "selectors": ["[data-test-case=\"8\"]"]
+    },
+{
+      "label": "2.21.1. NCK list - hover - TC 21- item1",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon item1 of list TC21",
+      "hoverSelector": "[data-test-case=\"21\"] .nck-list-item-container:nth-child(1) .nck-list-item",
+      "selectors": ["[data-test-case=\"21\"]"]
+    },
+    {
+      "label": "2.21.3. NCK list - hover - TC 21- item3",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon item3 of list TC21",
+      "hoverSelector": "[data-test-case=\"21\"] .nck-list-item-container:nth-child(3) .nck-list-item",
+      "selectors": ["[data-test-case=\"21\"]"]
+    },
+
+    {
+      "label": "3.3.1. NCK list - click - TC3 - item1",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on item 1 of list TC3",
+      "clickSelector": "[data-test-case=\"3\"] .nck-list-item-container:nth-child(1) .nck-list-item",
+      "selectors": ["[data-test-case=\"3\"]"]
+    },
+    {
+      "label": "3.3.2. NCK list - click - TC3 - item2",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on item 2 of list TC3",
+      "clickSelector": "[data-test-case=\"3\"] .nck-list-item-container:nth-child(2) .nck-list-item",
+      "selectors": ["[data-test-case=\"3\"]"]
+    },
+    {
+      "label": "3.3.3. NCK list - click - TC3 - item3",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on item 3 of list TC3",
+      "clickSelector": "[data-test-case=\"3\"] .nck-list-item-container:nth-child(3) .nck-list-item",
+      "selectors": ["[data-test-case=\"3\"]"]
+    },
+    {
+      "label": "3.4.1. NCK list - click - TC4 - item1",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on item 1 of list TC4",
+      "clickSelector": "[data-test-case=\"4\"] .nck-list-item-container:nth-child(1) .nck-list-item",
+      "selectors": ["[data-test-case=\"4\"]"]
+    },
+    {
+      "label": "3.7.1. NCK list - click - TC7 - item1",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on item 1 of list TC7",
+      "clickSelector": "[data-test-case=\"7\"] .nck-list-item-container:nth-child(1) .nck-list-item",
+      "selectors": ["[data-test-case=\"7\"]"]
+    },
+    {
+      "label": "3.7.2. NCK list - click - TC7 - item2",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on item 2 of list TC7",
+      "clickSelector": "[data-test-case=\"7\"] .nck-list-item-container:nth-child(2) .nck-list-item",
+      "selectors": ["[data-test-case=\"7\"]"]
+    },
+    {
+      "label": "3.7.3. NCK list - click - TC7 - item3",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on item 3 of list TC7",
+      "clickSelector": "[data-test-case=\"7\"] .nck-list-item-container:nth-child(3) .nck-list-item",
+      "selectors": ["[data-test-case=\"7\"]"]
+    },
+    {
+      "label": "3.8.1. NCK list - click - TC8 - item1",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on item 1 of list TC8",
+      "clickSelector": "[data-test-case=\"8\"] .nck-list-item-container:nth-child(1) .nck-list-item",
+      "selectors": ["[data-test-case=\"8\"]"]
+    },
+    {
+      "label": "4.3.1. NCK list - focus - TC3 - item1",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on item 1 of list TC3",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"3\"] .nck-list-item-container:nth-child(1) .nck-list-item",
+      "selectors": ["[data-test-case=\"3\"]"]
+    },
+    {
+      "label": "4.3.2. NCK list - focus - TC3 - item2",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on item 2 of list TC3",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"3\"] .nck-list-item-container:nth-child(2) .nck-list-item",
+      "selectors": ["[data-test-case=\"3\"]"]
+    },
+    {
+      "label": "4.3.3. NCK list - focus - TC3 - item3",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on item 3 of list TC3",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"3\"] .nck-list-item-container:nth-child(3) .nck-list-item",
+      "selectors": ["[data-test-case=\"3\"]"]
+    },
+    {
+      "label": "4.4.1. NCK list - focus - TC4 - item1",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on item 1 of list TC4",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"4\"] .nck-list-item-container:nth-child(1) .nck-list-item",
+      "selectors": ["[data-test-case=\"4\"]"]
+    },
+    {
+      "label": "4.7.1. NCK list - focus - TC7 - item1",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on item 1 of list TC7",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"7\"] .nck-list-item-container:nth-child(1) .nck-list-item",
+      "selectors": ["[data-test-case=\"7\"]"]
+    },
+    {
+      "label": "4.7.2. NCK list - focus - TC7 - item2",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on item 2 of list TC7",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"7\"] .nck-list-item-container:nth-child(2) .nck-list-item",
+      "selectors": ["[data-test-case=\"7\"]"]
+    },
+    {
+      "label": "4.7.3. NCK list - focus - TC7 - item3",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on item 3 of list TC7",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"7\"] .nck-list-item-container:nth-child(3) .nck-list-item",
+      "selectors": ["[data-test-case=\"7\"]"]
+    },
+    {
+      "label": "4.8.1. NCK list - focus - TC8 - item1",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on item 1 of list TC8",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"8\"] .nck-list-item-container:nth-child(1) .nck-list-item",
+      "selectors": ["[data-test-case=\"8\"]"]
+    },
+    {
+      "label": "4.8.2. NCK list - focus - TC8 - item2",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on item 2 of list TC8",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"8\"] .nck-list-item-container:nth-child(2) .nck-list-item",
+      "selectors": ["[data-test-case=\"8\"]"]
+    },
+    {
+      "label": "4.4.3. NCK list - focus - TC8 - item3",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on item 3 of list TC8",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"8\"] .nck-list-item-container:nth-child(3) .nck-list-item",
+      "selectors": ["[data-test-case=\"8\"]"]
+    },
+    {
+      "label": "5.3.1. NCK list - focus+enter - TC3 - item1",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus and press enter on item 1 of list TC3",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"3\"] .nck-list-item-container:nth-child(1) .nck-list-item",
+      "selectors": ["[data-test-case=\"3\"]"]
+    },
+    {
+      "label": "5.4.1. NCK list - focus+enter - TC4 - item1",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus and press enter on item 1 of list TC4",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"4\"] .nck-list-item-container:nth-child(1) .nck-list-item",
+      "selectors": ["[data-test-case=\"4\"]"]
+    },
+    {
+      "label": "6.3.1. NCK list - focus+space - TC3 - item1",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus and press space on item 1 of list TC3",
+      "onReadyScript": "focusAndPressSpace.js",
+      "focusAndPressSpaceSelector": "[data-test-case=\"3\"] .nck-list-item-container:nth-child(1) .nck-list-item",
+      "selectors": ["[data-test-case=\"3\"]"]
+    },
+
+    {
+      "label": "7.3.1. NCK list - hover+down - TC3 - item1",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover and press down on item 1 of list TC3",
+      "onReadyScript": "hoverAndPressMouseSelector.js",
+      "hoverAndPressMouseSelector": "[data-test-case=\"3\"] .nck-list-item-container:nth-child(1) .nck-list-item",
+      "selectors": ["[data-test-case=\"3\"]"]
+    },
+    {
+      "label": "7.4.1. NCK list - hover+down - TC4 - item1",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover and press down on item 1 of list TC4",
+      "onReadyScript": "hoverAndPressMouseSelector.js",
+      "hoverAndPressMouseSelector": "[data-test-case=\"4\"] .nck-list-item-container:nth-child(1) .nck-list-item",
+      "selectors": ["[data-test-case=\"4\"]"]
+    },
+
+    {
+      "label": "8.11.1. NCK list - hover - TC 11- item1",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon item1 of list TC11",
+      "hoverSelector": "[data-test-case=\"11\"] .nck-list-item-container:nth-child(1) .nck-list-item",
+      "selectors": ["[data-test-case=\"11\"]"]
+    },
+    {
+      "label": "8.11.2. NCK list - hover - TC 11- item2",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon item2 of list TC11",
+      "hoverSelector": "[data-test-case=\"11\"] .nck-list-item-container:nth-child(2) .nck-list-item",
+      "selectors": ["[data-test-case=\"11\"]"]
+    },
+    {
+      "label": "8.11.3. NCK list - hover - TC 11- item3",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon item3 of list TC11",
+      "hoverSelector": "[data-test-case=\"11\"] .nck-list-item-container:nth-child(3) .nck-list-item",
+      "selectors": ["[data-test-case=\"11\"]"]
+    },
+    {
+      "label": "8.12.1. NCK list - hover - TC 12- item1",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon item1 of list TC12",
+      "hoverSelector": "[data-test-case=\"12\"] .nck-list-item-container:nth-child(1) .nck-list-item",
+      "selectors": ["[data-test-case=\"12\"]"]
+    },
+    {
+      "label": "8.12.2. NCK list - hover - TC 12- item2",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon item2 of list TC12",
+      "hoverSelector": "[data-test-case=\"12\"] .nck-list-item-container:nth-child(2) .nck-list-item",
+      "selectors": ["[data-test-case=\"12\"]"]
+    },
+    {
+      "label": "8.12.3. NCK list - hover - TC 12- item3",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon item3 of list TC12",
+      "hoverSelector": "[data-test-case=\"12\"] .nck-list-item-container:nth-child(3) .nck-list-item",
+      "selectors": ["[data-test-case=\"12\"]"]
+    },
+    {
+      "label": "8.15.3. NCK list - hover - TC 15- item3",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon item3 of list TC15",
+      "hoverSelector": "[data-test-case=\"15\"] .nck-list-item-container:nth-child(3) .nck-list-item",
+      "selectors": ["[data-test-case=\"15\"]"]
+    },
+    {
+      "label": "8.16.3. NCK list - hover - TC 16- item3",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon item3 of list TC16",
+      "hoverSelector": "[data-test-case=\"16\"] .nck-list-item-container:nth-child(3) .nck-list-item",
+      "selectors": ["[data-test-case=\"16\"]"]
+    },
+    {
+      "label": "8.19.1. NCK list - hover - TC 19- item1",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon item1 of list TC19",
+      "hoverSelector": "[data-test-case=\"19\"] .nck-list-item-container:nth-child(1) .nck-list-item",
+      "selectors": ["[data-test-case=\"19\"]"]
+    },
+    {
+      "label": "8.19.3. NCK list - hover - TC 19- item3",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon item3 of list TC19",
+      "hoverSelector": "[data-test-case=\"19\"] .nck-list-item-container:nth-child(3) .nck-list-item",
+      "selectors": ["[data-test-case=\"19\"]"]
+    },
+
+    {
+      "label": "9.11.1. NCK list - click - TC 11- item1",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on item1 of list TC11",
+      "clickSelector": "[data-test-case=\"11\"] .nck-list-item-container:nth-child(1) .nck-list-item",
+      "selectors": ["[data-test-case=\"11\"]"]
+    },
+    {
+      "label": "9.12.1. NCK list - click - TC 12- item1",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on item1 of list TC12",
+      "clickSelector": "[data-test-case=\"12\"] .nck-list-item-container:nth-child(1) .nck-list-item",
+      "selectors": ["[data-test-case=\"12\"]"]
+    },
+    {
+      "label": "9.15.3. NCK list - click - TC 15- item3",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on item3 of list TC15",
+      "clickSelector": "[data-test-case=\"15\"] .nck-list-item-container:nth-child(3) .nck-list-item",
+      "selectors": ["[data-test-case=\"15\"]"]
+    },
+    {
+      "label": "9.16.2. NCK list - click - TC 16- item2",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on item2 of list TC16",
+      "clickSelector": "[data-test-case=\"16\"] .nck-list-item-container:nth-child(2) .nck-list-item",
+      "selectors": ["[data-test-case=\"16\"]"]
+    },
+    {
+      "label": "9.16.3. NCK list - click - TC 16- item3",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on item3 of list TC16",
+      "clickSelector": "[data-test-case=\"16\"] .nck-list-item-container:nth-child(3) .nck-list-item",
+      "selectors": ["[data-test-case=\"16\"]"]
+    },
+    {
+      "label": "9.19.1. NCK list - click - TC 19- item1",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on item1 of list TC19",
+      "clickSelector": "[data-test-case=\"19\"] .nck-list-item-container:nth-child(1) .nck-list-item",
+      "selectors": ["[data-test-case=\"19\"]"]
+    },
+
+    {
+      "label": "9.19.3. NCK list - click - TC 19- item3",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on item3 of list TC19",
+      "clickSelector": "[data-test-case=\"19\"] .nck-list-item-container:nth-child(3) .nck-list-item",
+      "selectors": ["[data-test-case=\"19\"]"]
+    },
+
+    {
+      "label": "10.11.1. NCK list - focus - TC 11- item1",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on item1 of list TC11",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"11\"] .nck-list-item-container:nth-child(1) .nck-list-item",
+      "selectors": ["[data-test-case=\"11\"]"]
+    },
+
+    {
+      "label": "10.12.1. NCK list - focus - TC 12- item1",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on item1 of list TC12",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"12\"] .nck-list-item-container:nth-child(1) .nck-list-item",
+      "selectors": ["[data-test-case=\"12\"]"]
+    },
+    {
+      "label": "10.12.3. NCK list - focus - TC 12- item3",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on item3 of list TC12",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"12\"] .nck-list-item-container:nth-child(3) .nck-list-item",
+      "selectors": ["[data-test-case=\"12\"]"]
+    },
+
+    {
+      "label": "10.15.3. NCK list - focus - TC 15- item3",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on item3 of list TC15",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"15\"] .nck-list-item-container:nth-child(3) .nck-list-item",
+      "selectors": ["[data-test-case=\"15\"]"]
+    },
+    {
+      "label": "10.16.3. NCK list - focus - TC 16- item3",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on item3 of list TC16",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"16\"] .nck-list-item-container:nth-child(3) .nck-list-item",
+      "selectors": ["[data-test-case=\"16\"]"]
+    },
+    {
+      "label": "10.19.1. NCK list - focus - TC 19- item1",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on item1 of list TC19",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"19\"] .nck-list-item-container:nth-child(1) .nck-list-item",
+      "selectors": ["[data-test-case=\"19\"]"]
+    },
+    {
+      "label": "10.20.1. NCK list - focus - TC 20- item1",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on item1 of list TC20",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"20\"] .nck-list-item-container:nth-child(1) .nck-list-item",
+      "selectors": ["[data-test-case=\"20\"]"]
+    },
+    {
+      "label": "10.20.3. NCK list - focus - TC 20- item3",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on item3 of list TC20",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"20\"] .nck-list-item-container:nth-child(3) .nck-list-item",
+      "selectors": ["[data-test-case=\"20\"]"]
+    },
+{
+      "label": "10.21.1. NCK list - focus - TC 21- item1",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on item1 of list TC21",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"21\"] .nck-list-item-container:nth-child(1) .nck-list-item",
+      "selectors": ["[data-test-case=\"21\"]"]
+    },
+    {
+      "label": "10.21.3. NCK list - focus - TC 21- item3",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on item3 of list TC21",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"21\"] .nck-list-item-container:nth-child(3) .nck-list-item",
+      "selectors": ["[data-test-case=\"21\"]"]
+    },
+
+    {
+      "label": "11.11.1. NCK list - focus+enter - TC 11- item1",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus and press on item1 of list TC11",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"11\"] .nck-list-item-container:nth-child(1) .nck-list-item",
+      "selectors": ["[data-test-case=\"11\"]"]
+    },
+    {
+      "label": "11.12.2. NCK list - focus+enter - TC 12- item2",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus and press on item2 of list TC12",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"12\"] .nck-list-item-container:nth-child(2) .nck-list-item",
+      "selectors": ["[data-test-case=\"12\"]"]
+    },
+
+    {
+      "label": "11.15.1. NCK list - focus+enter - TC 15- item1",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus and press on item1 of list TC15",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"15\"] .nck-list-item-container:nth-child(1) .nck-list-item",
+      "selectors": ["[data-test-case=\"15\"]"]
+    },
+    {
+      "label": "11.15.2. NCK list - focus+enter - TC 15- item2",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus and press on item2 of list TC15",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"15\"] .nck-list-item-container:nth-child(2) .nck-list-item",
+      "selectors": ["[data-test-case=\"15\"]"]
+    },
+
+    {
+      "label": "11.16.1. NCK list - focus+enter - TC 16- item1",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus and press on item1 of list TC16",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"16\"] .nck-list-item-container:nth-child(1) .nck-list-item",
+      "selectors": ["[data-test-case=\"16\"]"]
+    },
+
+    {
+      "label": "11.19.2. NCK list - focus+enter - TC 19- item2",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus and press on item2 of list TC19",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"19\"] .nck-list-item-container:nth-child(2) .nck-list-item",
+      "selectors": ["[data-test-case=\"19\"]"]
+    },
+
+    {
+      "label": "11.20.2. NCK list - focus+enter - TC 20- item2",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus and press on item2 of list TC20",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"20\"] .nck-list-item-container:nth-child(2) .nck-list-item",
+      "selectors": ["[data-test-case=\"20\"]"]
+    },
+
+    {
+      "label": "12.20.1. NCK list - focus+space - TC20 - item1",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus and press space on item 1 of list TC20",
+      "onReadyScript": "focusAndPressSpace.js",
+      "focusAndPressSpaceSelector": "[data-test-case=\"20\"] .nck-list-item-container:nth-child(1) .nck-list-item",
+      "selectors": ["[data-test-case=\"20\"]"]
+    },
+
+    {
+      "label": "12.21.2. NCK list - focus+space - TC21 - item2",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus and press space on item 2 of list TC21",
+      "onReadyScript": "focusAndPressSpace.js",
+      "focusAndPressSpaceSelector": "[data-test-case=\"21\"] .nck-list-item-container:nth-child(2) .nck-list-item",
+      "selectors": ["[data-test-case=\"21\"]"]
+    },
+
+    {
+      "label": "13.11.1. NCK list - hover+down - TC 11- item1",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover and press down on item1 of list TC11",
+      "onReadyScript": "hoverAndPressMouseSelector.js",
+      "hoverAndPressMouseSelector": "[data-test-case=\"11\"] .nck-list-item-container:nth-child(1) .nck-list-item",
+      "selectors": ["[data-test-case=\"11\"]"]
+    },
+
+    {
+      "label": "13.12.1. NCK list - hover+down - TC 12- item1",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover and press down on item1 of list TC12",
+      "onReadyScript": "hoverAndPressMouseSelector.js",
+      "hoverAndPressMouseSelector": "[data-test-case=\"12\"] .nck-list-item-container:nth-child(1) .nck-list-item",
+      "selectors": ["[data-test-case=\"12\"]"]
+    },
+    {
+      "label": "13.12.2. NCK list - hover+down - TC 12- item2",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover and press down on item2 of list TC12",
+      "onReadyScript": "hoverAndPressMouseSelector.js",
+      "hoverAndPressMouseSelector": "[data-test-case=\"12\"] .nck-list-item-container:nth-child(2) .nck-list-item",
+      "selectors": ["[data-test-case=\"12\"]"]
+    },
+
+    {
+      "label": "13.15.2. NCK list - hover+down - TC 15- item2",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover and press down on item2 of list TC15",
+      "onReadyScript": "hoverAndPressMouseSelector.js",
+      "hoverAndPressMouseSelector": "[data-test-case=\"15\"] .nck-list-item-container:nth-child(2) .nck-list-item",
+      "selectors": ["[data-test-case=\"15\"]"]
+    },
+    {
+      "label": "13.15.3. NCK list - hover+down - TC 15- item3",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover and press down on item3 of list TC15",
+      "onReadyScript": "hoverAndPressMouseSelector.js",
+      "hoverAndPressMouseSelector": "[data-test-case=\"15\"] .nck-list-item-container:nth-child(3) .nck-list-item",
+      "selectors": ["[data-test-case=\"15\"]"]
+    },
+
+    {
+      "label": "13.16.3. NCK list - hover+down - TC 16- item3",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover and press down on item3 of list TC16",
+      "onReadyScript": "hoverAndPressMouseSelector.js",
+      "hoverAndPressMouseSelector": "[data-test-case=\"16\"] .nck-list-item-container:nth-child(3) .nck-list-item",
+      "selectors": ["[data-test-case=\"16\"]"]
+    },
+    {
+      "label": "13.19.1. NCK list - hover+down - TC 19- item1",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover and press down on item1 of list TC19",
+      "onReadyScript": "hoverAndPressMouseSelector.js",
+      "hoverAndPressMouseSelector": "[data-test-case=\"19\"] .nck-list-item-container:nth-child(1) .nck-list-item",
+      "selectors": ["[data-test-case=\"19\"]"]
+    },
+
+    {
+      "label": "13.19.3. NCK list - hover+down - TC 19- item3",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover and press down on item3 of list TC19",
+      "onReadyScript": "hoverAndPressMouseSelector.js",
+      "hoverAndPressMouseSelector": "[data-test-case=\"19\"] .nck-list-item-container:nth-child(3) .nck-list-item",
+      "selectors": ["[data-test-case=\"19\"]"]
+    },
+
+    {
+      "label": "13.20.2. NCK list - hover+down - TC 20- item2",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover and press down on item2 of list TC20",
+      "onReadyScript": "hoverAndPressMouseSelector.js",
+      "hoverAndPressMouseSelector": "[data-test-case=\"20\"] .nck-list-item-container:nth-child(2) .nck-list-item",
+      "selectors": ["[data-test-case=\"20\"]"]
+    },
+
+    {
+      "label": "13.21.2. NCK list - hover+down - TC 21- item2",
+      "url": "http://localhost:8080/#/list",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover and press down on item2 of list TC21",
+      "onReadyScript": "hoverAndPressMouseSelector.js",
+      "hoverAndPressMouseSelector": "[data-test-case=\"21\"] .nck-list-item-container:nth-child(2) .nck-list-item",
+      "selectors": ["[data-test-case=\"21\"]"]
+    }
+  ]
+}

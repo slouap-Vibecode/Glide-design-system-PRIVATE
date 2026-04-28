@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <g class="neo-icon-kit--glyphs-plus">
+    <path fill="#006FCF" d="M15 7H9V1C9 0.44995 8.54999 0 8 0C7.44995 0 7 0.44995 7 1V7H1C0.44995 7 0 7.44995 0 8C0 8.54999 0.44995 9 1 9H7V15C7 15.55 7.44995 16 8 16C8.54999 16 9 15.55 9 15V9H15C15.55 9 16 8.54999 16 8C16 7.44995 15.55 7 15 7Z" class="svg-primary-fill"/>
+  </g>
+</svg>

@@ -1,0 +1,909 @@
+{
+    "id": "backstop_form",
+    "viewports": [
+        {
+            "label": "phone",
+            "width": 320,
+            "height": 2390
+        },
+        {
+            "label": "tablet",
+            "width": 1024,
+            "height": 2065
+        },
+        {
+            "label": "desktop",
+            "width": 1920,
+            "height": 1970
+        }
+    ],
+    "onBeforeScript": "puppet/onBefore.js",
+    "onReadyScript": "puppet/onReady.js",
+    "scenarios": [
+        {
+            "label": "1. NCK form - default display of the page",
+            "url": "http://localhost:8080/#/form?hideCursor=1",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "display the default state of all the forms on the page"
+        },
+        {
+            "label": "2.1 NCK form - CLICK on TC0 validate button",
+            "url": "http://localhost:8080/#/form?hideCursor=1",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on TC0 validate button ",
+            "clickSelector": "[data-test-case=\"0\"] .nck-button",
+            "selectors": "[data-test-case=\"0\"]",
+            "selectorExpansion": false,
+            "postInteractionWait": 200
+        },
+        {
+            "label": "2.2 NCK form - CLICK on TC1 form validate button",
+            "url": "http://localhost:8080/#/form?hideCursor=1",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on TC1 validate button ",
+            "clickSelector": "[data-test-case=\"1\"] .nck-button",
+            "selectors": "[data-test-case=\"1\"]",
+            "selectorExpansion": false,
+            "postInteractionWait": 200
+        },
+        {
+            "label": "2.3 NCK form - CLICK on TC2 form validate button",
+            "url": "http://localhost:8080/#/form?hideCursor=1",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on TC2 validate button ",
+            "clickSelector": "[data-test-case=\"2\"] .nck-button.button-validate",
+            "selectors": "[data-test-case=\"2\"]",
+            "selectorExpansion": false,
+            "postInteractionWait": 200
+        },
+        {
+            "label": "2.4 NCK form - CLICK on TC4 form validate button",
+            "url": "http://localhost:8080/#/form?hideCursor=1",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on TC4 validate button ",
+            "clickSelector": "[data-test-case=\"4\"] .nck-button.button-validate",
+            "selectors": "[data-test-case=\"4\"]",
+            "selectorExpansion": false,
+            "postInteractionWait": 200
+        },
+        {
+            "label": "3.1 NCK form - INSERT CONTENT Test case 0 input then validate",
+            "url": "http://localhost:8080/#/form?hideCursor=1",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "insert aa in the TC0 input field then press the validate button",
+            "keyPressSelector": {
+                "selector": "[data-test-case=\"0\"] input[type=\"text\"]",
+                "keyPress": "aa"
+            },
+            "clickSelector": "[data-test-case=\"0\"] .nck-button",
+            "selectors": [
+                "[data-test-case=\"0\"]"
+            ],
+            "selectorExpansion": true
+        },
+        {
+            "label": "3.2 NCK form - INSERT VALID CONTENT TC1 input & text area then validate ",
+            "url": "http://localhost:8080/#/form?hideCursor=1",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "onReadyScript": "actions.js",
+            "actions": [
+                {
+                    "type": "focus",
+                    "selector": "[data-test-case=\"1\"] input[type=\"text\"]"
+                },
+                {
+                    "type": "pressKey",
+                    "text": "ab",
+                    "key": "Backspace"
+                },
+                {
+                    "type": "focus",
+                    "selector": "[data-test-case=\"1\"] textarea",
+                    "text": "ab"
+                },
+                {
+                    "type": "pressKey",
+                    "text": "Backspace",
+                    "key": "Backspace"
+                },
+                {
+                    "type": "pressKey",
+                    "selector": "[data-test-case=\"1\"] .nck-button",
+                    "key": "Backspace",
+                    "text": "a"
+                },
+                {
+                    "type": "pressKey",
+                    "selector": "[data-test-case=\"1\"] .nck-button",
+                    "key": "Backspace",
+                    "text": "a"
+                },
+                {
+                    "type": "type",
+                    "text": "abc"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"1\"] .nck-button"
+                }
+            ],
+            "selectors": "[data-test-case=\"1\"]"
+        },
+        {
+            "label": "3.3 NCK form - INSERT VALID  CONTENT  in TC2  then validate_desktop",
+            "url": "http://localhost:8080/#/form?hideCursor=1",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "onReadyScript": "actions.js",
+            "actions": [
+                {
+                  "type": "focus",
+                  "selector": "[data-test-case=\"2\"] input[type=\"text\"]"
+                },
+                {
+                  "type": "type",
+                  "text": "aa"
+                },
+                {
+                  "type": "click",
+                  "selector": "[data-test-case=\"2\"] .dropdown-container"
+                },
+                {
+                  "type": "click",
+                  "selector": "[data-test-case=\"2\"] .nck-dropdown-menu li:nth-child(1)"
+                },
+                {
+                  "type": "focus",
+                  "selector": "[data-test-case=\"2\"] textarea"
+                },
+                {
+                  "type": "type",
+                  "text": "123"
+                },
+                {
+                  "type": "click",
+                  "selector": "[data-test-case=\"2\"] .radio-container:nth-child(1) label"
+                },
+                {
+                  "type": "click",
+                  "selector": "[data-test-case=\"2\"] .nck-autocomplete .nck-input-container .nck-text-input"
+                },
+                {
+                  "type": "type",
+                  "text": "Koh Lanta"
+                },
+                {
+                  "type": "waitForTimeout",
+                  "delay": 100
+                },
+                {
+                  "type": "pressKey",
+                  "key": "Enter"
+                },
+                {
+                  "type": "focus",
+                  "selector": "[data-test-case=\"2\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+                },
+                {
+                  "type": "pressKey",
+                  "key": "Enter"
+                },
+                {
+                  "type": "focus",
+                  "selector": "[data-test-case=\"2\"] .datepicker-popover-body input"
+                },
+                {
+                  "type": "type",
+                  "text": "07/05/2022"
+                },
+                {
+                  "type": "pressKey",
+                  "key": "Tab"
+                },
+                {
+                  "type": "type",
+                  "text": "10/05/2022"
+                },
+                {
+                  "type": "pressKey",
+                  "key": "Tab"
+                },
+                {
+                  "type": "pressKey",
+                  "key": "Tab"
+                },
+                {
+                  "type": "pressKey",
+                  "key": "Enter"
+                },
+                {
+                  "type": "click",
+                  "selector": "[data-test-case=\"2\"] .nck-phone-number-input .nck-text-input"
+                },
+                {
+                  "type": "type",
+                  "text": "+336425689"
+                },
+                {
+                  "type": "click",
+                  "selector": "[data-test-case=\"2\"] li:nth-child(1) .nck-chip button"
+                },
+                {
+                  "type": "click",
+                  "selector": "[data-test-case=\"2\"] .nck-text-input.readonly"
+                },
+                {
+                  "type": "click",
+                  "selector": "[data-test-case=\"2\"] .nck-button[data-validate]"
+                },
+                {
+                  "type": "mouseMove",
+                  "coordinate": {
+                    "x": 0,
+                    "y": 0
+                  }
+                }
+            ],
+            "viewports": [
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 1480
+                }
+            ],
+            "selectors": "[data-test-case=\"2\"]"
+        },
+        {
+            "label": "3.4 NCK form - INSERT VALID  CONTENT  in TC2  then validate_mobile",
+            "url": "http://localhost:8080/#/form?hideCursor=1",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "onReadyScript": "actions.js",
+            "actions": [
+                {
+                    "type": "focus",
+                    "selector": "[data-test-case=\"2\"] input[type=\"text\"]"
+                },
+                {
+                    "type": "type",
+                    "text": "aa"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"2\"] .dropdown-container"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"2\"] .nck-dropdown-menu li:nth-child(1)"
+                },
+                {
+                    "type": "focus",
+                    "selector": "[data-test-case=\"2\"] textarea"
+                },
+                {
+                    "type": "type",
+                    "text": "123"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"2\"] .radio-container:nth-child(1) label"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"2\"] .nck-autocomplete .nck-input-container .nck-text-input"
+                },
+                {
+                    "type": "type",
+                    "text": "Koh Lanta"
+                },
+                {
+                    "type": "waitForTimeout",
+                    "delay": 100
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Enter"
+                },
+                {
+                    "type": "focus",
+                    "selector": "[data-test-case=\"2\"] .nck-datepicker-trigger-container:nth-child(1) button"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Enter"
+                },
+                {
+                    "type": "focus",
+                    "selector": ".nck-modal .nck-datepicker-modal .datepicker-date:nth-child(1) input"
+                },
+                {
+                    "type": "type",
+                    "text": "07/05/2022"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Tab"
+                },
+                {
+                    "type": "type",
+                    "text": "10/05/2022"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Tab"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Enter"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"2\"] .nck-phone-number-input .nck-text-input"
+                },
+                {
+                    "type": "type",
+                    "text": "+336425689"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"2\"] li:nth-child(1) .nck-chip button"
+                },
+                {
+                    "type": "waitForTimeout",
+                    "delay": 100
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"2\"] .nck-button[data-validate]"
+                },
+                {
+                    "type": "mouseMove",
+                    "coordinate": {
+                        "x": 0,
+                        "y": 0
+                    }
+                }
+            ],
+            "viewports": [
+                {
+                    "label": "phone",
+                    "width": 320,
+                    "height": 800
+                },
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 500
+                }
+            ],
+            "selectors": "[data-test-case=\"2\"]"
+        },
+        {
+            "label": "3.4.1 NCK form - Click on Start_date, and cancel the datepicker, in TC2, mobile_tablet",
+            "url": "http://localhost:8080/#/form?hideCursor=1",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "onReadyScript": "actions.js",
+            "actions": [
+                {
+                    "type": "focus",
+                    "selector": "[data-test-case=\"2\"] .nck-datepicker-trigger-container:nth-child(1) button"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Enter"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Tab"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Enter"
+                }
+            ],
+            "viewports": [
+                {
+                    "label": "phone",
+                    "width": 320,
+                    "height": 800
+                },
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 500
+                }
+            ],
+            "selectors": "[data-test-case=\"2\"]"
+        },
+        {
+            "label": "3.4.1.1 NCK form - Start_date,cancel,reopen datepicker,insert dates,confirm, in TC2",
+            "url": "http://localhost:8080/#/form?hideCursor=1",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "onReadyScript": "actions.js",
+            "actions": [
+                {
+                    "type": "focus",
+                    "selector": "[data-test-case=\"2\"] .nck-datepicker-trigger-container:nth-child(1) button"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Enter"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Tab"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Enter"
+                },
+                {
+                    "type": "focus",
+                    "selector": "[data-test-case=\"2\"] .nck-datepicker-trigger-container:nth-child(1) button"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Enter"
+                },
+                {
+                    "type": "focus",
+                    "selector": ".nck-modal .nck-datepicker-modal .datepicker-date:nth-child(1) input"
+                },
+                {
+                    "type": "type",
+                    "text": "07/05/2024"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Tab"
+                },
+                {
+                    "type": "type",
+                    "text": "10/05/2024"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Tab"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Enter"
+                }
+            ],
+            "viewports": [
+                {
+                    "label": "phone",
+                    "width": 320,
+                    "height": 800
+                },
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 500
+                }
+            ],
+            "selectors": "[data-test-case=\"2\"]"
+        },
+        {
+            "label": "3.4.2 NCK form - Click on Start_date, and cancel the datepicker, in TC2, desktop",
+            "url": "http://localhost:8080/#/form?hideCursor=1",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "onReadyScript": "actions.js",
+            "actions": [
+                {
+                  "type": "focus",
+                  "selector": "[data-test-case=\"2\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Enter"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Tab"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Tab"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Tab"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Enter"
+                }
+            ],
+            "viewports": [
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 1480
+                }
+            ],
+            "selectors": "[data-test-case=\"2\"]"
+        },
+        {
+            "label": "3.4.2.2 NCK form-Start_date,cancel,reopen datepicker,insert dates,confirm,in TC2,desktop",
+            "url": "http://localhost:8080/#/form?hideCursor=1",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "onReadyScript": "actions.js",
+            "actions": [
+                {
+                  "type": "focus",
+                  "selector": "[data-test-case=\"2\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Enter"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Tab"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Tab"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Tab"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Enter"
+                },
+                {
+                  "type": "focus",
+                  "selector": "[data-test-case=\"2\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+                },
+                {
+                  "type": "pressKey",
+                  "key": "Enter"
+                },
+                {
+                  "type": "focus",
+                  "selector": "[data-test-case=\"2\"] .datepicker-popover-body input"
+                },
+                {
+                  "type": "type",
+                  "text": "07/05/2022"
+                },
+                {
+                  "type": "pressKey",
+                  "key": "Tab"
+                },
+                {
+                  "type": "type",
+                  "text": "10/05/2022"
+                },
+                {
+                  "type": "pressKey",
+                  "key": "Tab"
+                },
+                {
+                  "type": "pressKey",
+                  "key": "Tab"
+                },
+                {
+                  "type": "pressKey",
+                  "key": "Enter"
+                }
+            ],
+            "viewports": [
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 1480
+                }
+            ],
+            "selectors": "[data-test-case=\"2\"]"
+        },
+        {
+            "label": "3.5 NCK form - INSERT Content - Validate - Reset on TC2 on desktop",
+            "url": "http://localhost:8080/#/form?hideCursor=1",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "onReadyScript": "actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"2\"] .nck-autocomplete .nck-input-container .nck-text-input"
+                },
+                {
+                    "type": "type",
+                    "text": "aaa"
+                },
+                {
+                    "type": "clickAtPosition",
+                    "coordinate": {
+                        "x": 0,
+                        "y": 0
+                    }
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"2\"] .nck-button[data-validate]"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"2\"] .nck-button[data-reset]"
+                }
+            ],
+            "viewports": [
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 1000
+                }
+            ],
+            "selectors": "[data-test-case=\"2\"]",
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.6 NCK form - INSERT Content - Validate - Reset on TC2 on mobile",
+            "url": "http://localhost:8080/#/form?hideCursor=1",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "onReadyScript": "actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"2\"] .nck-autocomplete .nck-input-container .nck-text-input"
+                },
+                {
+                    "type": "type",
+                    "text": "aaa"
+                },
+                {
+                    "type": "clickAtPosition",
+                    "coordinate": {
+                        "x": 0,
+                        "y": 0
+                    }
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"2\"] .nck-button[data-validate]"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"2\"] .nck-button[data-reset]"
+                }
+            ],
+            "viewports": [
+                {
+                    "label": "phone",
+                    "width": 320,
+                    "height": 800
+                },
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 500
+                }
+            ],
+            "selectors": "[data-test-case=\"2\"]",
+            "selectorExpansion": false
+        },
+        {
+            "label": "4.1 NCK form - Insert VALID content in TC1 text input then VALIDATE",
+            "url": "http://localhost:8080/#/form?hideCursor=1",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Insert VALID content in TC1 text input then press VALIDATE button",
+            "selectors": "[data-test-case=\"1\"]",
+            "selectorExpansion": false,
+            "postInteractionWait": 200,
+            "onReadyScript": "actions.js",
+            "actions": [
+                {
+                    "type": "focus",
+                    "selector": "[data-test-case=\"1\"] input[type=\"text\"]"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Backspace"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"1\"] .nck-button"
+                }
+            ]
+        },
+        {
+            "label": "4.2 NCK form - INSERT VALID CONTENT in TC2 input and dropdown + validate ",
+            "url": "http://localhost:8080/#/form?hideCursor=1",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "onReadyScript": "actions.js",
+            "actions": [
+                {
+                    "type": "focus",
+                    "selector": "[data-test-case=\"2\"] input[type=\"text\"]"
+                },
+                {
+                    "type": "type",
+                    "text": "aa"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"2\"] .dropdown-container"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"2\"] .nck-dropdown-menu li:nth-child(1)"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"2\"] .nck-button[data-validate]"
+                }
+            ],
+            "selectors": "[data-test-case=\"2\"]"
+        },
+        {
+            "label": "4.3 NCK form - Insert same content in both TC4 text input then VALIDATE",
+            "url": "http://localhost:8080/#/form?hideCursor=1",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Insert same content in both TC4 text input then press VALIDATE button",
+            "selectors": "[data-test-case=\"4\"]",
+            "selectorExpansion": false,
+            "postInteractionWait": 200,
+            "onReadyScript": "actions.js",
+            "actions": [
+                {
+                    "type": "focus",
+                    "selector": "[data-test-case=\"4\"] input[name=\"tc41\"]"
+                },
+                {
+                    "type": "type",
+                    "text": "dhioep"
+                },
+                {
+                    "type": "focus",
+                    "selector": "[data-test-case=\"4\"] input[name=\"tc42\"]"
+                },
+                {
+                    "type": "type",
+                    "text": "dhioep"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"4\"] .nck-button"
+                }
+            ]
+        },
+        {
+            "label": "4.4 NCK form - Insert different content in both TC4 text input then VALIDATE",
+            "url": "http://localhost:8080/#/form?hideCursor=1",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Insert different content in both TC4 text input then press VALIDATE button",
+            "selectors": "[data-test-case=\"4\"]",
+            "selectorExpansion": false,
+            "postInteractionWait": 200,
+            "onReadyScript": "actions.js",
+            "actions": [
+                {
+                    "type": "focus",
+                    "selector": "[data-test-case=\"4\"] input[name=\"tc41\"]"
+                },
+                {
+                    "type": "type",
+                    "text": "dhioep"
+                },
+                {
+                    "type": "focus",
+                    "selector": "[data-test-case=\"4\"] input[name=\"tc42\"]"
+                },
+                {
+                    "type": "type",
+                    "text": "azuiazu"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"4\"] .nck-button"
+                }
+            ]
+        },
+        {
+            "label": "5.1 NCK form - CLICK on TC1 Add general error on form button",
+            "url": "http://localhost:8080/#/form?hideCursor=1",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on TC1 Add general error on form button",
+            "clickSelector": "[data-add-general-error]",
+            "selectors": "[data-test-case=\"1\"]",
+            "selectorExpansion": false,
+            "postInteractionWait": 200
+        },
+
+        {
+            "label": "6.1 NCK form - Switch fields on TC3 form and then validate",
+            "url": "http://localhost:8080/#/form?hideCursor=1",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on TC3 switch fields button then click on validate button ",
+            "onReadyScript": "actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"3\"] .nck-button[data-switch-fields]"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"3\"] .nck-button[data-validate]"
+                }
+            ],
+            "selectors": "[data-test-case=\"3\"]"
+        },
+        {
+            "label": "6.2 NCK form - TC3 - Fill in 2nd input, switch fields and validate",
+            "url": "http://localhost:8080/#/form?hideCursor=1",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "On TC3, fill in input 'Required input always displayed', switch fields then click on validate button",
+            "onReadyScript": "actions.js",
+            "actions": [
+                {
+                    "type": "focus",
+                    "selector": "[data-test-case=\"3\"] .test-app-style:nth-child(3) div:nth-child(5) input[type=\"text\"]"
+                },
+                {
+                    "type": "type",
+                    "text": "aa"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"3\"] .nck-button[data-switch-fields]"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"3\"] .nck-button[data-validate]"
+                }
+            ],
+            "selectors": "[data-test-case=\"3\"]"
+        }
+    ],
+    "paths": {
+        "bitmaps_reference": "backstop_data/bitmaps_reference",
+        "bitmaps_test": "backstop_data/bitmaps_test",
+        "engine_scripts": "backstop_data/engine_scripts",
+        "html_report": "backstop_data/html_report",
+        "ci_report": "backstop_data/ci_report"
+    },
+    "report": [
+        "CI"
+    ],
+    "engine": "puppeteer",
+    "engineOptions": {
+        "args": [
+    "--no-sandbox",
+    "--disable-setuid-sandbox",
+    "--disable-dev-shm-usage",
+    "--disable-accelerated-2d-canvas",
+    "--no-first-run",
+    "--no-zygote",
+
+    "--disable-gpu"
+  ],
+        "protocolTimeout": 960000
+    },
+    "asyncCaptureLimit": 3,
+    "asyncCompareLimit": 50,
+    "debug": false,
+    "debugWindow": false
+}

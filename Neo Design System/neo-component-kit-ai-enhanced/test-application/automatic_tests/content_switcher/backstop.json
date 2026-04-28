@@ -1,0 +1,812 @@
+{
+    "id": "content_Switcher",
+    "viewports": [
+        {
+            "label": "phone",
+            "width": 320,
+            "height": 6300
+        },
+        {
+            "label": "tablet",
+            "width": 1024,
+            "height": 2500
+        },
+        {
+            "label": "desktop",
+            "width": 1920,
+            "height": 2500
+        }
+    ],
+    "onBeforeScript": "puppet/onBefore.js",
+    "onReadyScript": "puppet/onReady.js",
+    "scenarios": [
+        {
+            "label": "1. NCK content_switcher - default display all",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "display the default state of all the content switchers"
+        },
+        {
+            "label": "2.1 NCK content_switcher - CLICK on the 1 button of TC0 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on the 1 button of the content switcher of TC0",
+            "clickSelector": "[data-test-case=\"0\"] .button-element-container:nth-child(1) .button-element",
+            "selectors": [
+                "[data-test-case=\"0\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "2.2 NCK content_switcher - CLICK on the 2 button of TC0 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on the 2 button of the content switcher of TC0",
+            "clickSelector": "[data-test-case=\"0\"] .button-element-container:nth-child(2) .button-element",
+            "selectors": [
+                "[data-test-case=\"0\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "2.3 NCK content_switcher - CLICK on the 3 button of TC0 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on the 3 button of the content switcher of TC0",
+            "clickSelector": "[data-test-case=\"0\"] .button-element-container:nth-child(3) .button-element",
+            "selectors": [
+                "[data-test-case=\"0\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "2.4 NCK content_switcher - CLICK on the 4 button of TC0 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on the 4 button of the content switcher of TC0",
+            "clickSelector": "[data-test-case=\"0\"] .button-element-container:nth-child(4) .button-element",
+            "selectors": [
+                "[data-test-case=\"0\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "2.5 CLICK on the 5 button of TC4 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on the 5 button of the content switcher of TC4",
+            "clickSelector": "[data-test-case=\"4\"] .button-element-container:nth-child(5) .button-element",
+            "selectors": [
+                "[data-test-case=\"4\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "2.6 CLICK on the 1 button of TC5 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on the 1 button of the content switcher of TC5",
+            "clickSelector": "[data-test-case=\"5\"] .button-element-container:nth-child(1) .button-element",
+            "selectors": [
+                "[data-test-case=\"5\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "2.7 CLICK on the 1 button of TC6 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on the 1 button of the content switcher of TC6",
+            "clickSelector": "[data-test-case=\"6\"] .button-element-container:nth-child(1) .button-element",
+            "selectors": [
+                "[data-test-case=\"6\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "2.8 CLICK on the 2 button of TC6 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on the 2 button of the content switcher of TC6",
+            "clickSelector": "[data-test-case=\"6\"] .button-element-container:nth-child(2) .button-element",
+            "selectors": [
+                "[data-test-case=\"6\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "2.9 CLICK on the 3 button of TC6 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on the 3 button of the content switcher of TC6",
+            "clickSelector": "[data-test-case=\"6\"] .button-element-container:nth-child(3) .button-element",
+            "selectors": [
+                "[data-test-case=\"6\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "2.10 CLICK on the 4 button of TC6 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on the 4 button of the content switcher of TC6",
+            "clickSelector": "[data-test-case=\"6\"] .button-element-container:nth-child(4) .button-element",
+            "selectors": [
+                "[data-test-case=\"6\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "2.11 CLICK on the 1 button of TC7 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on the 1 button of the content switcher of TC7",
+            "clickSelector": "[data-test-case=\"7\"] .button-element-container:nth-child(1) .button-element",
+            "selectors": [
+                "[data-test-case=\"7\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "2.12 CLICK on the 2 button of TC7 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on the 2 button of the content switcher of TC7",
+            "clickSelector": "[data-test-case=\"7\"] .button-element-container:nth-child(2) .button-element",
+            "selectors": [
+                "[data-test-case=\"7\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+         {
+            "label": "2.13 CLICK on the 3 button of TC7 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on the 3 button of the content switcher of TC7",
+            "clickSelector": "[data-test-case=\"7\"] .button-element-container:nth-child(3) .button-element",
+            "selectors": [
+                "[data-test-case=\"7\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+         {
+            "label": "2.14 CLICK on the 4 button of TC7 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on the 4 button of the content switcher of TC7",
+            "clickSelector": "[data-test-case=\"7\"] .button-element-container:nth-child(4) .button-element",
+            "selectors": [
+                "[data-test-case=\"7\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "2.15 CLICK on the 1 button of TC8 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on the 1 button of the content switcher of TC8",
+            "clickSelector": "[data-test-case=\"8\"] .button-element-container:nth-child(1) .button-element",
+            "selectors": [
+                "[data-test-case=\"8\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "2.16 CLICK on the 2 button of TC8 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on the 2 button of the content switcher of TC8",
+            "clickSelector": "[data-test-case=\"8\"] .button-element-container:nth-child(2) .button-element",
+            "selectors": [
+                "[data-test-case=\"8\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "2.17 CLICK on the 1 button of TC9 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on the 1 button of the content switcher of TC9",
+            "clickSelector": "[data-test-case=\"9\"] .button-element-container:nth-child(1) .button-element",
+            "selectors": [
+                "[data-test-case=\"9\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "2.18 CLICK on the 2 button of TC9 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on the 2 button of the content switcher of TC9",
+            "clickSelector": "[data-test-case=\"9\"] .button-element-container:nth-child(2) .button-element",
+            "selectors": [
+                "[data-test-case=\"9\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "2.19 CLICK on the 3 button of TC9 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on the 3 button of the content switcher of TC9",
+            "clickSelector": "[data-test-case=\"9\"] .button-element-container:nth-child(3) .button-element",
+            "selectors": [
+                "[data-test-case=\"9\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "2.20 CLICK on the 4 button of TC9 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on the 4 button of the content switcher of TC9",
+            "clickSelector": "[data-test-case=\"9\"] .button-element-container:nth-child(4) .button-element",
+            "selectors": [
+                "[data-test-case=\"9\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "3.1 NCK content_switcher - HOVER on the 1 button of TC0 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "HOVER on the 1 button of the content switcher of TC0",
+            "hoverSelector": "[data-test-case=\"0\"] .button-element-container:nth-child(1) .button-element",
+            "selectors": [
+                "[data-test-case=\"0\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.2 NCK content_switcher - HOVER on the 2 button of TC0 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "HOVER on the 2 button of the content switcher of TC0",
+            "hoverSelector": "[data-test-case=\"0\"] .button-element-container:nth-child(2) .button-element",
+            "selectors": [
+                "[data-test-case=\"0\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.3 NCK content_switcher - HOVER on the 3 button of TC0 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "HOVER on the 3 button of the content switcher of TC0",
+            "hoverSelector": "[data-test-case=\"0\"] .button-element-container:nth-child(3) .button-element",
+            "selectors": [
+                "[data-test-case=\"0\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.4 HOVER on the 5 button of TC4 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "HOVER on the 1 button of the content switcher of TC4",
+            "hoverSelector": "[data-test-case=\"4\"] .button-element-container:nth-child(5) .button-element",
+            "selectors": [
+                "[data-test-case=\"4\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.5 HOVER on the 1 button of TC5 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "HOVER on the 1 button of the content switcher of TC5",
+            "hoverSelector": "[data-test-case=\"5\"] .button-element-container:nth-child(1) .button-element",
+            "selectors": [
+                "[data-test-case=\"5\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.6 NCK content_switcher - HOVER on the 1 button of TC6 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "HOVER on the 1 button of the content switcher of TC6",
+            "hoverSelector": "[data-test-case=\"6\"] .button-element-container:nth-child(1) .button-element",
+            "selectors": [
+                "[data-test-case=\"6\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.7 NCK content_switcher - HOVER on the 2 button of TC6 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "HOVER on the 2 button of the content switcher of TC6",
+            "hoverSelector": "[data-test-case=\"6\"] .button-element-container:nth-child(2) .button-element",
+            "selectors": [
+                "[data-test-case=\"6\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.8 NCK content_switcher - HOVER on the 3 button of TC6 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "HOVER on the 3 button of the content switcher of TC6",
+            "hoverSelector": "[data-test-case=\"6\"] .button-element-container:nth-child(3) .button-element",
+            "selectors": [
+                "[data-test-case=\"6\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.9 NCK content_switcher - HOVER on the 4 button of TC6 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "HOVER on the 4 button of the content switcher of TC6",
+            "hoverSelector": "[data-test-case=\"6\"] .button-element-container:nth-child(4) .button-element",
+            "selectors": [
+                "[data-test-case=\"6\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.10 NCK content_switcher - HOVER on the 1 button of TC7 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "HOVER on the 1 button of the content switcher of TC7",
+            "hoverSelector": "[data-test-case=\"7\"] .button-element-container:nth-child(1) .button-element",
+            "selectors": [
+                "[data-test-case=\"7\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.11 NCK content_switcher - HOVER on the 2 button of TC7 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "HOVER on the 1 button of the content switcher of TC7",
+            "hoverSelector": "[data-test-case=\"7\"] .button-element-container:nth-child(2) .button-element",
+            "selectors": [
+                "[data-test-case=\"7\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.12 NCK content_switcher - HOVER on the 3 button of TC7 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "HOVER on the 3 button of the content switcher of TC7",
+            "hoverSelector": "[data-test-case=\"7\"] .button-element-container:nth-child(3) .button-element",
+            "selectors": [
+                "[data-test-case=\"7\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.13 NCK content_switcher - HOVER on the 4 button of TC7 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "HOVER on the 4 button of the content switcher of TC7",
+            "hoverSelector": "[data-test-case=\"7\"] .button-element-container:nth-child(4) .button-element",
+            "selectors": [
+                "[data-test-case=\"7\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.14 NCK content_switcher - HOVER on the 1 button of TC8 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "HOVER on the 1 button of the content switcher of TC8",
+            "hoverSelector": "[data-test-case=\"8\"] .button-element-container:nth-child(1) .button-element",
+            "selectors": [
+                "[data-test-case=\"8\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.15 NCK content_switcher - HOVER on the 2 button of TC8 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "HOVER on the 2 button of the content switcher of TC8",
+            "hoverSelector": "[data-test-case=\"8\"] .button-element-container:nth-child(2) .button-element",
+            "selectors": [
+                "[data-test-case=\"8\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.16 NCK content_switcher - HOVER on the 1 button of TC9 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "HOVER on the 1 button of the content switcher of TC9",
+            "hoverSelector": "[data-test-case=\"9\"] .button-element-container:nth-child(1) .button-element",
+            "selectors": [
+                "[data-test-case=\"9\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.17 NCK content_switcher - HOVER on the 2 button of TC9 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "HOVER on the 2 button of the content switcher of TC9",
+            "hoverSelector": "[data-test-case=\"9\"] .button-element-container:nth-child(2) .button-element",
+            "selectors": [
+                "[data-test-case=\"9\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.18 NCK content_switcher - HOVER on the 3 button of TC9 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "HOVER on the 3 button of the content switcher of TC9",
+            "hoverSelector": "[data-test-case=\"9\"] .button-element-container:nth-child(3) .button-element",
+            "selectors": [
+                "[data-test-case=\"9\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.19 NCK content_switcher - HOVER on the 4 button of TC9 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "HOVER on the 4 button of the content switcher of TC9",
+            "hoverSelector": "[data-test-case=\"9\"] .button-element-container:nth-child(4) .button-element",
+            "selectors": [
+                "[data-test-case=\"9\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "4.1 NCK content_switcher - FOCUS and Tab on selcted button of TC1 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "FOCUS and press Tab on the selcted button of TC1",
+            "focusSelector": "[data-test-case=\"1\"] .before-content-switcher",
+            "selectors": [
+                "[data-test-case=\"1\"]"
+            ],
+            "onReadyScript": "focusAndPressTab.js"
+        },
+        {
+            "label": "4.2 NCK content_switcher - FOCUS and Tab on selcted button of TC3 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "FOCUS and press Tab on the selcted button of TC3",
+            "focusSelector": "[data-test-case=\"3\"] .before-content-switcher",
+            "selectors": [
+                "[data-test-case=\"3\"]"
+            ],
+            "onReadyScript": "focusAndPressTab.js"
+        },
+        {
+            "label": "5.1 NCK content_switcher - FOCUS&right arrow once on button 1 of TC0 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "FOCUS and press Arrow Key twice on the 1 button of TC0",
+            "focusSelector": "[data-test-case=\"0\"] .button-element-container:nth-child(1) .button-element",
+            "selectors": [
+                "[data-test-case=\"0\"]"
+            ],
+            "onReadyScript": "focusAndPressArrowKey.js",
+            "keyDirection": "right",
+            "pressKeyXTimes": 1
+        },
+        {
+            "label": "5.2 NCK content_switcher - FOCUS&right arrow twice on button 1 of TC0 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "FOCUS and press Arrow Key twice on the 1 button of TC0",
+            "focusSelector": "[data-test-case=\"0\"] .button-element-container:nth-child(1) .button-element",
+            "selectors": [
+                "[data-test-case=\"0\"]"
+            ],
+            "onReadyScript": "focusAndPressArrowKey.js",
+            "keyDirection": "right",
+            "pressKeyXTimes": 2
+        },
+        {
+            "label": "5.3 NCK content_switcher - FOCUS&right arrow 2times on button 2 of TC1 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "FOCUS and press Arrow Key 2 times  on the 1 button of TC1",
+            "focusSelector": "[data-test-case=\"1\"] .button-element-container:nth-child(2) .button-element",
+            "selectors": [
+                "[data-test-case=\"1\"]"
+            ],
+            "onReadyScript": "focusAndPressArrowKey.js",
+            "keyDirection": "right",
+            "pressKeyXTimes": 2
+        },
+        {
+            "label": "5.4 NCK content_switcher - FOCUS&left arrow once on button 2 of TC1 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "FOCUS and press left Arrow Key once on the 2 button of TC1",
+            "focusSelector": "[data-test-case=\"1\"] .button-element-container:nth-child(2) .button-element",
+            "selectors": [
+                "[data-test-case=\"1\"]"
+            ],
+            "onReadyScript": "focusAndPressArrowKey.js",
+            "keyDirection": "left",
+            "pressKeyXTimes": 1
+        },
+        {
+            "label": "5.5 NCK content_switcher - FOCUS&left arrow once on button 1 of TC0 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "FOCUS and press left Arrow Key once on the 1 button of TC0",
+            "focusSelector": "[data-test-case=\"0\"] .button-element-container:nth-child(1) .button-element",
+            "selectors": [
+                "[data-test-case=\"0\"]"
+            ],
+            "onReadyScript": "focusAndPressArrowKey.js",
+            "keyDirection": "left",
+            "pressKeyXTimes": 1
+        },
+        {
+            "label": "5.6 FOCUS&right arrow 3times on button 1 of TC4 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "FOCUS and press Arrow Key 4 times  on the 1 button of TC4",
+            "focusSelector": "[data-test-case=\"4\"] .button-element-container:nth-child(1) .button-element",
+            "selectors": [
+                "[data-test-case=\"4\"]"
+            ],
+            "onReadyScript": "focusAndPressArrowKey.js",
+            "keyDirection": "right",
+            "pressKeyXTimes": 3
+        },
+        {
+            "label": "5.7 FOCUS&left arrow once on button 1 of TC5 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "FOCUS and press left Arrow Key once on the 1 button of TC5",
+            "focusSelector": "[data-test-case=\"5\"] .button-element-container:nth-child(1) .button-element",
+            "selectors": [
+                "[data-test-case=\"5\"]"
+            ],
+            "onReadyScript": "focusAndPressArrowKey.js",
+            "keyDirection": "left",
+            "pressKeyXTimes": 1
+        },
+        {
+            "label": "5.8 FOCUS&right arrow once on button 1 of TC6 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "FOCUS and press left Arrow Key once on the 1 button of TC6",
+            "focusSelector": "[data-test-case=\"6\"] .button-element-container:nth-child(1) .button-element",
+            "selectors": [
+                "[data-test-case=\"6\"]"
+            ],
+            "onReadyScript": "focusAndPressArrowKey.js",
+            "keyDirection": "right",
+            "pressKeyXTimes": 1
+        },
+        {
+            "label": "5.9 FOCUS&right arrow twice on button 1 of TC6 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "FOCUS and press left Arrow Key twice on the 1 button of TC6",
+            "focusSelector": "[data-test-case=\"6\"] .button-element-container:nth-child(1) .button-element",
+            "selectors": [
+                "[data-test-case=\"6\"]"
+            ],
+            "onReadyScript": "focusAndPressArrowKey.js",
+            "keyDirection": "right",
+            "pressKeyXTimes": 2
+        },
+        {
+            "label": "5.10 FOCUS&right arrow 3 times on button 1 of TC6 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "FOCUS and press left Arrow Key 3 times on the 1 button of TC6",
+            "focusSelector": "[data-test-case=\"6\"] .button-element-container:nth-child(1) .button-element",
+            "selectors": [
+                "[data-test-case=\"6\"]"
+            ],
+            "onReadyScript": "focusAndPressArrowKey.js",
+            "keyDirection": "right",
+            "pressKeyXTimes": 3
+        },
+        {
+            "label": "5.11 FOCUS&right arrow 1 times on button 1 of TC7 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "FOCUS and press left Arrow Key 1 times on the 1 button of TC7",
+            "focusSelector": "[data-test-case=\"7\"] .button-element-container:nth-child(1) .button-element",
+            "selectors": [
+                "[data-test-case=\"7\"]"
+            ],
+            "onReadyScript": "focusAndPressArrowKey.js",
+            "keyDirection": "right",
+            "pressKeyXTimes": 1
+        },
+        {
+            "label": "5.12 FOCUS&right arrow 2 times on button 1 of TC7 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "FOCUS and press left Arrow Key 2 times on the 1 button of TC7",
+            "focusSelector": "[data-test-case=\"7\"] .button-element-container:nth-child(1) .button-element",
+            "selectors": [
+                "[data-test-case=\"7\"]"
+            ],
+            "onReadyScript": "focusAndPressArrowKey.js",
+            "keyDirection": "right",
+            "pressKeyXTimes": 2
+        },
+        {
+            "label": "5.13 FOCUS&right arrow 3 times on button 1 of TC7 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "FOCUS and press left Arrow Key 3 times on the 1 button of TC7",
+            "focusSelector": "[data-test-case=\"7\"] .button-element-container:nth-child(1) .button-element",
+            "selectors": [
+                "[data-test-case=\"7\"]"
+            ],
+            "onReadyScript": "focusAndPressArrowKey.js",
+            "keyDirection": "right",
+            "pressKeyXTimes": 3
+        },
+        {
+            "label": "5.14 FOCUS&right arrow 4 times on button 1 of TC7 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "FOCUS and press left Arrow Key 4 times on the 1 button of TC7",
+            "focusSelector": "[data-test-case=\"7\"] .button-element-container:nth-child(1) .button-element",
+            "selectors": [
+                "[data-test-case=\"7\"]"
+            ],
+            "onReadyScript": "focusAndPressArrowKey.js",
+            "keyDirection": "right",
+            "pressKeyXTimes": 4
+        },
+        {
+            "label": "5.15 FOCUS&left arrow 5 times on button 1 of TC6 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "FOCUS and press left Arrow Key 5 times on the 1 button of TC6",
+            "focusSelector": "[data-test-case=\"6\"] .button-element-container:nth-child(1) .button-element",
+            "selectors": [
+                "[data-test-case=\"6\"]"
+            ],
+            "onReadyScript": "focusAndPressArrowKey.js",
+            "keyDirection": "left",
+            "pressKeyXTimes": 5
+        },
+        {
+            "label": "5.16 FOCUS&left arrow 2 times on button 1 of TC9 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "FOCUS and press left Arrow Key 2 times on the 1 button of TC9",
+            "focusSelector": "[data-test-case=\"9\"] .button-element-container:nth-child(1) .button-element",
+            "selectors": [
+                "[data-test-case=\"9\"]"
+            ],
+            "onReadyScript": "focusAndPressArrowKey.js",
+            "keyDirection": "left",
+            "pressKeyXTimes": 2
+        },
+        {
+            "label": "5.17 FOCUS&left arrow 1 times on button 1 of TC9 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "FOCUS and press left Arrow Key 1 times on the 1 button of TC9",
+            "focusSelector": "[data-test-case=\"9\"] .button-element-container:nth-child(1) .button-element",
+            "selectors": [
+                "[data-test-case=\"9\"]"
+            ],
+            "onReadyScript": "focusAndPressArrowKey.js",
+            "keyDirection": "left",
+            "pressKeyXTimes": 1
+        },
+        {
+            "label": "6.1 NCK content_switcher - HOVER+DOWN on the 1 button of TC0 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "HOVER+DOWN on the 1 button of TC0",
+            "hoverAndPressMouseSelector": "[data-test-case=\"0\"] .button-element-container:nth-child(1) .button-element",
+            "selectors": [
+                "[data-test-case=\"0\"]"
+            ],
+            "onReadyScript": "hoverAndPressMouseSelector.js"
+        },
+        {
+            "label": "6.2 NCK content_switcher - HOVER+DOWN on the 2 button of TC0 ",
+            "url": "http://localhost:8080/#/contentSwitcher",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "HOVER+DOWN on the 2 button of TC0",
+            "hoverAndPressMouseSelector": "[data-test-case=\"0\"] .button-element-container:nth-child(2) .button-element",
+            "selectors": [
+                "[data-test-case=\"0\"]"
+            ],
+            "onReadyScript": "hoverAndPressMouseSelector.js"
+        }
+    ],
+    "paths": {
+        "bitmaps_reference": "backstop_data/bitmaps_reference",
+        "bitmaps_test": "backstop_data/bitmaps_test",
+        "engine_scripts": "backstop_data/engine_scripts",
+        "html_report": "backstop_data/html_report",
+        "ci_report": "backstop_data/ci_report"
+    },
+    "report": [
+        "CI"
+    ],
+    "engine": "puppeteer",
+    "engineOptions": {
+        "args": [
+            "--no-sandbox",
+            "--disable-setuid-sandbox",
+            "--disable-dev-shm-usage",
+            "--disable-accelerated-2d-canvas",
+            "--no-first-run",
+            "--no-zygote",
+            "--disable-gpu"
+        ],
+        "protocolTimeout": 960000
+    },
+    "asyncCaptureLimit": 3,
+    "asyncCompareLimit": 50,
+    "debug": false,
+    "debugWindow": false
+}

@@ -1,0 +1,4 @@
+registry = https://repos.gbt.gbtad.com/repository/ntg-npm/
+# force all @neotechnologygroup internal packages to come from our internal nexus server to avoid attack risk
+@neotechnologygroup:registry=https://repos.gbt.gbtad.com/repository/ntg-npm/
+cafile = gbt-root-ca.crt

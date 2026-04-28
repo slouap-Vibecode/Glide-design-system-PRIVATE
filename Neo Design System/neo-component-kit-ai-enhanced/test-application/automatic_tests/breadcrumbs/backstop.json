@@ -1,0 +1,797 @@
+{
+    "id": "backstop_breadcrumb",
+    "viewports": [
+        {
+            "label": "phone",
+            "width": 320,
+            "height": 4700
+        },
+        {
+            "label": "tablet",
+            "width": 1024,
+            "height": 3000
+        },
+        {
+            "label": "desktop",
+            "width": 1920,
+            "height": 3000
+        }
+    ],
+    "onBeforeScript": "puppet/onBefore.js",
+    "onReadyScript": "puppet/onReady.js",
+    "scenarios": [
+        {
+            "label": "1.0 NCK breadcrumb - default",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "display the default state of all the breadcrumbs"
+        },
+        {
+            "label": "2.0 NCK breadcrumb - CLICK Test case 0 for breadcrumb element 1",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "left mouse click on the breadcrumb element 1",
+            "clickSelector": "[data-test-case=\"0\"] .nck-breadcrumb li:nth-child(1) a",
+            "selectors": [
+                "[data-test-case=\"0\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "2.1 NCK breadcrumb - CLICK Test case 0 for breadcrumb element 2",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "left mouse click on the breadcrumb element 2",
+            "clickSelector": "[data-test-case=\"0\"] .nck-breadcrumb li:nth-child(2) a",
+            "selectors": [
+                "[data-test-case=\"0\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "2.6 NCK breadcrumb - CLICK Test case 3 for breadcrumb element 1",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "left mouse click on the breadcrumb element 1",
+            "clickSelector": "[data-test-case=\"3\"] .nck-breadcrumb li:nth-child(1) a",
+            "selectors": [
+                "[data-test-case=\"3\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "2.7 NCK breadcrumb - CLICK Test case 3 for breadcrumb element 2",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "left mouse click on the breadcrumb element 2",
+            "clickSelector": "[data-test-case=\"3\"] .nck-breadcrumb li:nth-child(2) a",
+            "selectors": [
+                "[data-test-case=\"3\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "2.10 NCK breadcrumb - CLICK Test case 4 for breadcrumb element 2",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "left mouse click on the breadcrumb element 2",
+            "clickSelector": "[data-test-case=\"4\"] .nck-breadcrumb li:nth-child(2) a",
+            "selectors": [
+                "[data-test-case=\"4\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "2.14 NCK breadcrumb - CLICK Test case 5 for breadcrumb element 1",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "left mouse click on the breadcrumb element 1",
+            "clickSelector": "[data-test-case=\"5\"] .nck-breadcrumb li:nth-child(1) a",
+            "selectors": [
+                "[data-test-case=\"5\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "2.15 NCK breadcrumb - CLICK Test case 5 for breadcrumb element 2",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "left mouse click on the breadcrumb element 2",
+            "clickSelector": "[data-test-case=\"5\"] .nck-breadcrumb li:nth-child(2) a",
+            "selectors": [
+                "[data-test-case=\"5\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "2.18 NCK breadcrumb - CLICK Test case 6 for breadcrumb element 2",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "left mouse click on the breadcrumb element 2",
+            "clickSelector": "[data-test-case=\"6\"] .nck-breadcrumb li:nth-child(2) a",
+            "selectors": [
+                "[data-test-case=\"6\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "2.20 NCK breadcrumb - CLICK Test case 6 for breadcrumb element 4",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "left mouse click on the breadcrumb element 4",
+            "clickSelector": "[data-test-case=\"6\"] .nck-breadcrumb li:nth-child(4) a",
+            "selectors": [
+                "[data-test-case=\"6\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "2.21 NCK breadcrumb - CLICK Test case 9 for breadcrumb element 1",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "left mouse click on the breadcrumb element 1",
+            "clickSelector": "[data-test-case=\"9\"] .nck-breadcrumb li:nth-child(1) a",
+            "selectors": [
+                "[data-test-case=\"9\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "2.22 NCK breadcrumb - CLICK Test case 9 for breadcrumb element 5",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "left mouse click on the breadcrumb element 5",
+            "clickSelector": "[data-test-case=\"9\"] .nck-breadcrumb li:nth-child(5) a",
+            "selectors": [
+                "[data-test-case=\"9\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "2.23 NCK breadcrumb - CLICK Test case 10 for breadcrumb element 2",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "left mouse click on the breadcrumb element 2",
+            "clickSelector": "[data-test-case=\"10\"] .nck-breadcrumb li:nth-child(2) a",
+            "selectors": [
+                "[data-test-case=\"10\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "3.0 NCK breadcrumb - HOVER Test case 0 for breadcrumb element 1",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "hover on the breadcrumb element 1",
+            "hoverSelector": "[data-test-case=\"0\"] .nck-breadcrumb li:nth-child(1) a",
+            "selectors": [
+                "[data-test-case=\"0\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.1 NCK breadcrumb - HOVER Test case 0 for breadcrumb element 2",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "hover on the breadcrumb element 2",
+            "hoverSelector": "[data-test-case=\"0\"] .nck-breadcrumb li:nth-child(2) a",
+            "selectors": [
+                "[data-test-case=\"0\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.2 NCK breadcrumb - HOVER Test case 0 for breadcrumb element 3",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "hover on the breadcrumb element 3",
+            "hoverSelector": "[data-test-case=\"0\"] .nck-breadcrumb li:nth-child(3) span",
+            "selectors": [
+                "[data-test-case=\"0\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.6 NCK breadcrumb - HOVER Test case 3 for breadcrumb element 1",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "hover on the breadcrumb element 1",
+            "hoverSelector": "[data-test-case=\"3\"] .nck-breadcrumb li:nth-child(1) a",
+            "selectors": [
+                "[data-test-case=\"3\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.7 NCK breadcrumb - HOVER Test case 3 for breadcrumb element 2",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "hover on the breadcrumb element 2",
+            "hoverSelector": "[data-test-case=\"3\"] .nck-breadcrumb li:nth-child(2) a",
+            "selectors": [
+                "[data-test-case=\"3\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.8 NCK breadcrumb - HOVER Test case 3 for breadcrumb element 3",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "hover on the breadcrumb element 3",
+            "hoverSelector": "[data-test-case=\"3\"] .nck-breadcrumb li:nth-child(3) span",
+            "selectors": [
+                "[data-test-case=\"3\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.9 NCK breadcrumb - HOVER Test case 4 for breadcrumb element 1",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "hover on the breadcrumb element 1",
+            "hoverSelector": "[data-test-case=\"4\"] .nck-breadcrumb li:nth-child(1) span",
+            "selectors": [
+                "[data-test-case=\"4\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.10 NCK breadcrumb - HOVER Test case 4 for breadcrumb element 2",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "hover on the breadcrumb element 2",
+            "hoverSelector": "[data-test-case=\"4\"] .nck-breadcrumb li:nth-child(2) a",
+            "selectors": [
+                "[data-test-case=\"4\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.23 NCK breadcrumb - HOVER TC 7 for breadcrumb element 1",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "hover on the breadcrumb element 1",
+            "postInteractionWait": 500,
+            "hoverSelector": "[data-test-case=\"7\"] nav > ol > li:nth-child(1) > a",
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.24 NCK breadcrumb - HOVER TC 7 for breadcrumb element 2",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "hover on the breadcrumb element 2",
+            "postInteractionWait": 500,
+            "hoverSelector": "[data-test-case=\"7\"] .nck-breadcrumb li:nth-child(2) a",
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.25 NCK breadcrumb - HOVER TC 7 for breadcrumb element 4",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "hover on the breadcrumb element 4",
+            "postInteractionWait": 500,
+            "hoverSelector": "[data-test-case=\"7\"] .nck-breadcrumb li:nth-child(4) span",
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.26 NCK breadcrumb - HOVER TC 7 for breadcrumb element 6",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "hover on the breadcrumb element 6",
+            "postInteractionWait": 500,
+            "hoverSelector": "[data-test-case=\"7\"] .nck-breadcrumb li:nth-child(6) span",
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.27 NCK breadcrumb - HOVER+ESC TC 7 for breadcrumb element 1",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "hover+esc on the breadcrumb element 1",
+            "postInteractionWait": 500,
+            "onReadyScript": "hoverAndPressEsc.js",
+            "hoverAndPressEscSelector": "[data-test-case=\"7\"] .nck-breadcrumb li:nth-child(1) a",
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.28 NCK breadcrumb - HOVER+MOVE TC 7 for breadcrumb element 1",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "delay": 500,
+            "description": "hover+move mouse on the breadcrumb element 1",
+            "postInteractionWait": 500,
+            "onReadyScript": "hoverAndMoveMouse.js",
+            "hoverSelector": "[data-test-case=\"7\"] .nck-breadcrumb li:nth-child(1) a",
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.29 NCK breadcrumb - HOVER+Mouse down TC 7 for breadcrumb element 1",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "delay": 400,
+            "description": "hover+mouse down mouse on the breadcrumb element 1",
+            "postInteractionWait": 500,
+            "onReadyScript": "hoverAndPressMouseSelector.js",
+            "hoverAndPressMouseSelector": "[data-test-case=\"7\"] .nck-breadcrumb li:nth-child(1) a",
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.30 NCK breadcrumb - HOVER Test case 9 for breadcrumb element 1",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "hover on the breadcrumb element 1",
+            "hoverSelector": "[data-test-case=\"9\"] .nck-breadcrumb li:nth-child(1) a",
+            "selectors": [
+                "[data-test-case=\"9\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.31 NCK breadcrumb - HOVER Test case 9 for breadcrumb element 2",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "hover on the breadcrumb element 2",
+            "postInteractionWait": 500,
+            "hoverSelector": "[data-test-case=\"9\"] .nck-breadcrumb li:nth-child(2)",
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.32 NCK breadcrumb - HOVER Test case 10 for breadcrumb element 2",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "hover on the breadcrumb element 2",
+            "hoverSelector": "[data-test-case=\"10\"] .nck-breadcrumb li:nth-child(2) a",
+            "selectors": [
+                "[data-test-case=\"10\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.33 NCK breadcrumb - HOVER+ESC TC 9 for breadcrumb element 2",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "hover+esc on the breadcrumb element 2   ",
+            "postInteractionWait": 500,
+            "onReadyScript": "hoverAndPressEsc.js",
+            "hoverAndPressEscSelector": "[data-test-case=\"9\"] .nck-breadcrumb li:nth-child(2) a",
+            "selectorExpansion": false
+        },
+        {
+            "label": "4.0 NCK breadcrumb - FOCUS Test case 0 for breadcrumb element 1",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus on the breadcrumb element 1",
+            "onReadyScript": "focus.js",
+            "focusSelector": "[data-test-case=\"0\"] .nck-breadcrumb li:nth-child(1) a",
+            "selectors": [
+                "[data-test-case=\"0\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "4.1 NCK breadcrumb - FOCUS Test case 0 for breadcrumb element 2",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus on the breadcrumb element 2",
+            "onReadyScript": "focus.js",
+            "focusSelector": "[data-test-case=\"0\"] .nck-breadcrumb li:nth-child(2) a",
+            "selectors": [
+                "[data-test-case=\"0\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "4.2 NCK breadcrumb - FOCUS Test case 0 for breadcrumb element 3",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus on the breadcrumb element 3",
+            "onReadyScript": "focus.js",
+            "focusSelector": "[data-test-case=\"0\"] .nck-breadcrumb li:nth-child(3) span",
+            "selectors": [
+                "[data-test-case=\"0\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "4.5 NCK breadcrumb - FOCUS Test case 2 for breadcrumb element 1",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus on the breadcrumb element 1",
+            "onReadyScript": "focus.js",
+            "focusSelector": "[data-test-case=\"2\"] .nck-breadcrumb li:nth-child(1) span",
+            "selectors": [
+                "[data-test-case=\"2\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "4.6 NCK breadcrumb - FOCUS Test case 3 for breadcrumb element 1",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus on the breadcrumb element 1",
+            "onReadyScript": "focus.js",
+            "focusSelector": "[data-test-case=\"3\"] .nck-breadcrumb li:nth-child(1) a",
+            "selectors": [
+                "[data-test-case=\"3\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "4.7 NCK breadcrumb - FOCUS Test case 3 for breadcrumb element 2",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus on the breadcrumb element 2",
+            "onReadyScript": "focus.js",
+            "focusSelector": "[data-test-case=\"3\"] .nck-breadcrumb li:nth-child(2) a",
+            "selectors": [
+                "[data-test-case=\"3\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "4.8 NCK breadcrumb - FOCUS Test case 3 for breadcrumb element 3",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus on the breadcrumb element 3",
+            "onReadyScript": "focus.js",
+            "focusSelector": "[data-test-case=\"3\"] .nck-breadcrumb li:nth-child(3) span",
+            "selectors": [
+                "[data-test-case=\"3\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "4.9 NCK breadcrumb - FOCUS Test case 4 for breadcrumb element 1",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus on the breadcrumb element 1",
+            "onReadyScript": "focus.js",
+            "focusSelector": "[data-test-case=\"4\"] .nck-breadcrumb li:nth-child(1) span",
+            "selectors": [
+                "[data-test-case=\"4\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "4.10 NCK breadcrumb - FOCUS Test case 4 for breadcrumb element 2",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus on the breadcrumb element 2",
+            "onReadyScript": "focus.js",
+            "focusSelector": "[data-test-case=\"4\"] .nck-breadcrumb li:nth-child(2) a",
+            "selectors": [
+                "[data-test-case=\"4\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "4.23 NCK breadcrumb - FOCUS Test case 7 for breadcrumb element 1",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus on the breadcrumb element 1",
+            "postInteractionWait": 500,
+            "onReadyScript": "focus.js",
+            "focusSelector": "[data-test-case=\"7\"] .nck-breadcrumb li:nth-child(1) a",
+            "selectorExpansion": false
+        },
+        {
+            "label": "4.24 NCK breadcrumb - FOCUS Test case 7 for breadcrumb element 2",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus on the breadcrumb element 2",
+            "postInteractionWait": 500,
+            "onReadyScript": "focus.js",
+            "focusSelector": "[data-test-case=\"7\"] .nck-breadcrumb li:nth-child(2) a",
+            "selectorExpansion": false
+        },
+        {
+            "label": "4.25 NCK breadcrumb - FOCUS Test case 7 for breadcrumb element 4",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus on the breadcrumb element 4",
+            "postInteractionWait": 500,
+            "onReadyScript": "focus.js",
+            "focusSelector": "[data-test-case=\"7\"] .nck-breadcrumb li:nth-child(4) span",
+            "selectorExpansion": false
+        },
+        {
+            "label": "4.26 NCK breadcrumb - FOCUS Test case 7 for breadcrumb element 6",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus on the breadcrumb element 6",
+            "postInteractionWait": 500,
+            "onReadyScript": "focus.js",
+            "focusSelector": "[data-test-case=\"7\"] .nck-breadcrumb li:nth-child(6) span",
+            "selectorExpansion": false
+        },
+        {
+            "label": "4.27 NCK breadcrumb - FOCUS Test case 9 for breadcrumb element 1",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus on the breadcrumb element 1",
+            "postInteractionWait": 500,
+            "onReadyScript": "focus.js",
+            "focusSelector": "[data-test-case=\"9\"] .nck-breadcrumb li:nth-child(1) a",
+            "selectorExpansion": false
+        },
+        {
+            "label": "4.28 NCK breadcrumb - FOCUS Test case 9 for breadcrumb element 2",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus on the breadcrumb element 2",
+            "postInteractionWait": 500,
+            "onReadyScript": "focus.js",
+            "focusSelector": "[data-test-case=\"9\"] .nck-breadcrumb li:nth-child(2) a",
+            "selectorExpansion": false
+        },
+        {
+            "label": "5.0 NCK breadcrumb - FOCUS+ENTER Test case 0 for breadcrumb element 1",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus on the breadcrumb element 1",
+            "onReadyScript": "focusAndPressEnter.js",
+            "focusAndPressEnterSelector": "[data-test-case=\"0\"] .nck-breadcrumb li:nth-child(1) a",
+            "selectors": [
+                "[data-test-case=\"0\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "5.1 NCK breadcrumb - FOCUS+ENTER Test case 0 for breadcrumb element 2",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus on the breadcrumb element 2",
+            "onReadyScript": "focusAndPressEnter.js",
+            "focusAndPressEnterSelector": "[data-test-case=\"0\"] .nck-breadcrumb li:nth-child(2) a",
+            "selectors": [
+                "[data-test-case=\"0\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "5.6 NCK breadcrumb - FOCUS+ENTER Test case 3 for breadcrumb element 1",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus on the breadcrumb element 1",
+            "onReadyScript": "focusAndPressEnter.js",
+            "focusAndPressEnterSelector": "[data-test-case=\"3\"] .nck-breadcrumb li:nth-child(1) a",
+            "selectors": [
+                "[data-test-case=\"3\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "5.7 NCK breadcrumb - FOCUS+ENTER Test case 3 for breadcrumb element 2",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus on the breadcrumb element 2",
+            "onReadyScript": "focusAndPressEnter.js",
+            "focusAndPressEnterSelector": "[data-test-case=\"3\"] .nck-breadcrumb li:nth-child(2) a",
+            "selectors": [
+                "[data-test-case=\"3\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "5.10 NCK breadcrumb - FOCUS+ENTER Test case 4 for breadcrumb element 2",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus on the breadcrumb element 2",
+            "onReadyScript": "focusAndPressEnter.js",
+            "focusAndPressEnterSelector": "[data-test-case=\"4\"] .nck-breadcrumb li:nth-child(2) a",
+            "selectors": [
+                "[data-test-case=\"4\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "5.14 NCK breadcrumb - FOCUS+ENTER Test case 5 for breadcrumb element 1",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus on the breadcrumb element 1",
+            "onReadyScript": "focusAndPressEnter.js",
+            "focusAndPressEnterSelector": "[data-test-case=\"5\"] .nck-breadcrumb li:nth-child(1) a",
+            "selectors": [
+                "[data-test-case=\"5\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "5.15 NCK breadcrumb - FOCUS+ENTER Test case 5 for breadcrumb element 2",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus on the breadcrumb element 2",
+            "onReadyScript": "focusAndPressEnter.js",
+            "focusAndPressEnterSelector": "[data-test-case=\"5\"] .nck-breadcrumb li:nth-child(2) a",
+            "selectors": [
+                "[data-test-case=\"5\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "5.18 NCK breadcrumb - FOCUS+ENTER Test case 6 for breadcrumb element 2",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus on the breadcrumb element 2",
+            "onReadyScript": "focusAndPressEnter.js",
+            "focusAndPressEnterSelector": "[data-test-case=\"6\"] .nck-breadcrumb li:nth-child(2) a",
+            "selectors": [
+                "[data-test-case=\"6\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "5.20 NCK breadcrumb - FOCUS+ENTER Test case 6 for breadcrumb element 4",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus on the breadcrumb element 4",
+            "onReadyScript": "focusAndPressEnter.js",
+            "focusAndPressEnterSelector": "[data-test-case=\"6\"] .nck-breadcrumb li:nth-child(4) a",
+            "selectors": [
+                "[data-test-case=\"6\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "5.23 NCK breadcrumb - FOCUS+ENTER Test case 7 for breadcrumb element 1",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus+enter on the breadcrumb element 1",
+            "onReadyScript": "focusAndPressEnter.js",
+            "focusAndPressEnterSelector": "[data-test-case=\"7\"] .nck-breadcrumb li:nth-child(1) a",
+            "selectors": [
+                "[data-test-case=\"7\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "5.24 NCK breadcrumb - FOCUS+ENTER Test case 9 for breadcrumb element 1",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus+enter on the breadcrumb element 1",
+            "onReadyScript": "focusAndPressEnter.js",
+            "focusAndPressEnterSelector": "[data-test-case=\"9\"] .nck-breadcrumb li:nth-child(1) a",
+            "selectors": [
+                "[data-test-case=\"9\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "5.25 NCK breadcrumb - FOCUS+ENTER Test case 9 for breadcrumb element 5",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus+enter on the breadcrumb element 5",
+            "onReadyScript": "focusAndPressEnter.js",
+            "focusAndPressEnterSelector": "[data-test-case=\"9\"] .nck-breadcrumb li:nth-child(5) a",
+            "selectors": [
+                "[data-test-case=\"9\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "5.26 NCK breadcrumb - FOCUS+ENTER Test case 10 for breadcrumb element 2",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus+enter on the breadcrumb element 2",
+            "onReadyScript": "focusAndPressEnter.js",
+            "focusAndPressEnterSelector": "[data-test-case=\"10\"] .nck-breadcrumb li:nth-child(2) a",
+            "selectors": [
+                "[data-test-case=\"10\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "6.1 NCK breadcrumb - FOCUS+ESC Test case 7 for breadcrumb element 1",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus+esc on the breadcrumb element 1",
+            "onReadyScript": "focusAndPressEsc.js",
+            "focusAndPressEscSelector": "[data-test-case=\"7\"] .nck-breadcrumb li:nth-child(1) a",
+            "selectors": [
+                "[data-test-case=\"7\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "6.2 NCK breadcrumb - FOCUS+ESC Test case 9 for breadcrumb element 2",
+            "url": "http://localhost:8080/#/breadcrumb",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus+esc on the breadcrumb element 2",
+            "onReadyScript": "focusAndPressEsc.js",
+            "focusAndPressEscSelector": "[data-test-case=\"9\"] .nck-breadcrumb li:nth-child(2) a",
+            "selectors": [
+                "[data-test-case=\"9\"]"
+            ],
+            "selectorExpansion": false
+        }
+    ],
+    "paths": {
+        "bitmaps_reference": "backstop_data/bitmaps_reference",
+        "bitmaps_test": "backstop_data/bitmaps_test",
+        "engine_scripts": "backstop_data/engine_scripts",
+        "html_report": "backstop_data/html_report",
+        "ci_report": "backstop_data/ci_report"
+    },
+    "report": [
+        "CI"
+    ],
+    "engine": "puppeteer",
+    "engineOptions": {
+        "args": [
+    "--no-sandbox",
+    "--disable-setuid-sandbox",
+    "--disable-dev-shm-usage",
+    "--disable-accelerated-2d-canvas",
+    "--no-first-run",
+    "--no-zygote",
+
+    "--disable-gpu"
+  ],
+        "protocolTimeout": 960000
+    },
+    "asyncCaptureLimit": 3,
+    "asyncCompareLimit": 50,
+    "debug": false,
+    "debugWindow": false
+}

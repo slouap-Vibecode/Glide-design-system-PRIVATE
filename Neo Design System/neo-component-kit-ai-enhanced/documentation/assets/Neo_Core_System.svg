@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>Design Studio</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Design-Studio" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(11.000000, 20.000000)" fill="#006FCF" fill-rule="nonzero">
+            <polygon id="Triangle" opacity="0.400000006" points="49.0002084 46.277921 39.9868428 59.6549249 0.0432835986 36.4937228"></polygon>
+            <polygon id="Triangle" opacity="0.699999988" points="62.0347432 26.7733775 53.536033 39.6983085 0 36.4899433"></polygon>
+            <polygon id="Triangle-Copy" points="80 0 67.4142997 18.7673141 0.0902293041 36.473735"></polygon>
+        </g>
+    </g>
+</svg>

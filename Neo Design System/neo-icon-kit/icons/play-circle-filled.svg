@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <g class="neo-icon-kit--play-circle-filled">
+    <path fill="#006FCF" fill-rule="evenodd" d="M48 24C48 10.7 37.3 0 24 0C10.7 0 0 10.7 0 24C0 37.3 10.7 48 24 48C37.3 48 48 37.3 48 24ZM21.0598 14.4374L32.5598 21.4374L32.7291 21.548C34.4783 22.7737 34.4219 25.4292 32.5598 26.5626L21.0598 33.5626L20.9126 33.6469C18.9373 34.7088 16.5 33.2833 16.5 31V17L16.5045 16.8304C16.6246 14.591 19.1094 13.2502 21.0598 14.4374Z" class="svg-primary-fill" clip-rule="evenodd"/>
+  </g>
+</svg>

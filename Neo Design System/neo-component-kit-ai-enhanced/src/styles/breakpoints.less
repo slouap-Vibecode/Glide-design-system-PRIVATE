@@ -1,0 +1,27 @@
+/**
+ * Hide content visually while keeping it accessible to assistive technologies.
+ *
+ * Credits to:
+ * https://www.ffoodd.fr/cache-cache-css/
+ * https://kittygiraudel.com/2016/10/13/css-hide-and-seek/
+ * https://github.com/twbs/bootstrap/blob/fee9dc2438736a02405412e10ea8445dd9aeac1e/scss/mixins/_visually-hidden.scss
+ */
+.screenreader-only,
+.nck-style .screenreader-only,
+.nck-style.screenreader-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important; // stylelint-disable-line unit-allowed-list
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important; // stylelint-disable-line unit-allowed-list
+  margin: -1px !important; // stylelint-disable-line unit-allowed-list
+  overflow: hidden !important;
+  padding: 0 !important;
+  width: 1px !important; // stylelint-disable-line unit-allowed-list
+  white-space: nowrap !important;
+
+  // Fix for positioned table caption that could become anonymous cells
+  &:not(caption) {
+    position: absolute !important;
+  }
+}

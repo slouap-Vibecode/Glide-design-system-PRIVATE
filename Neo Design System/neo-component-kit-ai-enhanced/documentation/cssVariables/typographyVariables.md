@@ -1,0 +1,21 @@
+Variables for typography.
+
+#### Font weight
+- `--nck-font-weight-regular`: 400
+- `--nck-font-weight-semibold`: 600
+- `--nck-font-weight-bold`: 700
+
+#### Line height
+- "--line-height-amount-large": 2.25rem
+- "--line-height-amount-medium": 1.5rem
+- "--line-height-amount-small": 1.125rem
+- "--line-height-amount-xsmall": .8125rem
+- "--line-height-badge-font": .625rem
+- "--line-height-header-1": 1.875rem
+- "--line-height-header-2": 1.75rem
+- "--line-height-header-3": 1.25rem
+- "--line-height-header-4": 1.25rem
+- "--line-height-text-l": 1.5rem
+- "--line-height-text-m": 1.25rem
+- "--line-height-text-s": 1.125rem
+- "--line-height-text-xs": 1.125rem

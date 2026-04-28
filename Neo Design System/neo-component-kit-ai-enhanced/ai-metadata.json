@@ -1,0 +1,1191 @@
+{
+  "version": "1.0.0",
+  "generated": "2026-02-17T14:56:17.655Z",
+  "system": {
+    "name": "Neo Design System Component Kit",
+    "description": "AI-optimized Vue 3 component library with comprehensive TypeScript interfaces",
+    "categories": {
+      "form": {
+        "priority": "high",
+        "description": "Form input and validation components"
+      },
+      "action": {
+        "priority": "high",
+        "description": "Interactive components for user actions"
+      },
+      "overlay": {
+        "priority": "medium",
+        "description": "Modal dialogs, popovers, and overlays"
+      },
+      "layout": {
+        "priority": "medium",
+        "description": "Layout and container components"
+      },
+      "feedback": {
+        "priority": "medium",
+        "description": "User feedback and notification components"
+      },
+      "navigation": {
+        "priority": "medium",
+        "description": "Navigation and wayfinding components"
+      },
+      "data": {
+        "priority": "medium",
+        "description": "Data display and manipulation components"
+      }
+    }
+  },
+  "components": [
+    {
+      "name": "nck-button",
+      "category": "action",
+      "complexity": "simple",
+      "description": "Interface for nck-button component props Interactive button component with icons, loading states, and accessibility built-in",
+      "usage": "Primary component for user actions - automatically handles accessibility, focus, and loading states",
+      "examples": [
+        {
+          "name": "primary",
+          "code": "<nck-button label=\"Save Changes\" type=\"filled\" />",
+          "context": "Form submissions, primary actions, confirmations"
+        },
+        {
+          "name": "secondary",
+          "code": "<nck-button label=\"Cancel\" type=\"outline\" color=\"secondary\" />",
+          "context": "Cancel buttons, back navigation, alternative paths"
+        },
+        {
+          "name": "withLeftIcon",
+          "code": "<nck-button label=\"Add Item\" type=\"filled\" leftIcon=\"add-plus\" />",
+          "context": "Actions where icon adds clarity (save, add, edit, delete)"
+        },
+        {
+          "name": "withRightIcon",
+          "code": "<nck-button label=\"Continue\" type=\"filled\" rightIcon=\"arrow-right\" />",
+          "context": "Navigation, external links, dropdown triggers"
+        },
+        {
+          "name": "loading",
+          "code": "<nck-button label=\"Saving...\" :loading=\"true\" loadingText=\"Saving your changes\" />",
+          "context": "Form submissions, API calls, any async action"
+        },
+        {
+          "name": "disabled",
+          "code": "<nck-button label=\"Submit\" :disabled=\"!isFormValid\" />",
+          "context": "Form validation, conditional actions, locked states"
+        },
+        {
+          "name": "danger",
+          "code": "<nck-button label=\"Delete Item\" type=\"filled\" color=\"danger\" leftIcon=\"delete\" />",
+          "context": "Delete operations, irreversible actions"
+        },
+        {
+          "name": "compact",
+          "code": "<nck-button label=\"Edit\" type=\"outline\" size=\"s\" leftIcon=\"edit\" />",
+          "context": "Table actions, toolbars, dense layouts"
+        },
+        {
+          "name": "prominent",
+          "code": "<nck-button label=\"Get Started\" type=\"filled\" size=\"l\" />",
+          "context": "Hero sections, call-to-action, primary flows"
+        },
+        {
+          "name": "formSubmit",
+          "code": "<nck-button label=\"Submit\" type=\"filled\" nativeType=\"submit\" />",
+          "context": "Inside nck-form components, native form submissions"
+        },
+        {
+          "name": "subtle",
+          "code": "<nck-button label=\"Learn More\" type=\"ghost\" rightIcon=\"arrow-right\" />",
+          "context": "Help links, optional actions, subtle interactions"
+        }
+      ],
+      "props": [
+        {
+          "name": "filled",
+          "type": "Primary actions (save, submit, confirm) - solid background\n   * - outline: Secondary actions (cancel, back) - border only\n   * - ghost: Tertiary actions (help, learn more) - text only\n   * @default \"filled\"\n   * @aiSuggestions { \"primary\": \"filled\", \"secondary\": \"outline\", \"tertiary\": \"ghost\" }\n   */\n  type?: ButtonType",
+          "description": "Interface for nck-button component props\n * Interactive button component with icons, loading states, and accessibility built-in\n *\n * @aiUsage Primary component for user actions - automatically handles accessibility, focus, and loading states\n * @aiCategory action\n * @aiComplexity simple\n */\nexport interface INckButton {\n  /**\n   * Button display text - the main label users will see\n   * If empty, you must provide iconAltText for accessibility\n   *",
+          "example": "\"",
+          "required": false,
+          "suggestions": null
+        },
+        {
+          "name": "Note",
+          "type": "Ghost type becomes Outline when floating\n   * @default false\n   * @aiUsage Use for primary floating actions in mobile interfaces\n   */\n  floating?: boolean",
+          "description": "Button size variant - affects padding, text size, and icon size\n   * - s: Small buttons for compact interfaces (desktop only)\n   * - m: Medium buttons for standard use (most common)\n   * - l: Large buttons for prominent actions\n   * @default \"m\"\n   */\n  size?: ButtonSize;\n\n  /**\n   * Button color theme - semantic meaning through color\n   * - light: Default light theme (most common)\n   * - primary: Main brand actions\n   * - positive: Success/confirmation actions (green)\n   * - negative: Destructive actions (red)\n   * @default \"light\"\n   * @aiSuggestions { \"save\": \"primary\", \"delete\": \"negative\", \"cancel\": \"light\", \"confirm\": \"positive\" }\n   */\n  color?: ButtonColor;\n\n  /**\n   * ARIA role override - changes semantic meaning\n   * - button: Interactive button element (default)\n   * - link: Navigation link behavior\n   * @default \"button\"\n   * @aiUsage Use \"link\" for navigation actions, \"button\" for form actions\n   */\n  ariaRole?: \"button\" | \"link\";\n\n  /**\n   * Native button type - only applies when ariaRole is \"button\"\n   * Controls form submission behavior\n   * @default ButtonControlType.BUTTON\n   * @aiUsage Use SUBMIT for form submission buttons\n   */\n  controlType?: ButtonControlType;\n\n  /**\n   * Icon name from neo-icon-kit displayed on the left side\n   * Use semantic icons that reinforce the action meaning\n   *",
+          "example": "\"",
+          "required": false,
+          "suggestions": null
+        },
+        {
+          "name": "primary",
+          "type": "`<nck-button label=\"Save Changes\" type=\"filled\" />`,\n\n  /**\n   * Secondary action button - for alternative actions\n   * @aiContext Cancel buttons, back navigation, alternative paths\n   */\n  secondary: `<nck-button label=\"Cancel\" type=\"outline\" color=\"secondary\" />`,\n\n  /**\n   * Button with left icon - reinforces action meaning\n   * @aiContext Actions where icon adds clarity (save, add, edit, delete)\n   */\n  withLeftIcon: `<nck-button label=\"Add Item\" type=\"filled\" leftIcon=\"add-plus\" />`,\n\n  /**\n   * Button with right icon - for directional or external actions\n   * @aiContext Navigation, external links, dropdown triggers\n   */\n  withRightIcon: `<nck-button label=\"Continue\" type=\"filled\" rightIcon=\"arrow-right\" />`,\n\n  /**\n   * Loading button - for async operations\n   * @aiContext Form submissions, API calls, any async action\n   */\n  loading: `<nck-button label=\"Saving...\" :loading=\"true\" loadingText=\"Saving your changes\" />`,\n\n  /**\n   * Disabled button - for unavailable actions\n   * @aiContext Form validation, conditional actions, locked states\n   */\n  disabled: `<nck-button label=\"Submit\" :disabled=\"!isFormValid\" />`,\n\n  /**\n   * Destructive action button - for dangerous operations\n   * @aiContext Delete operations, irreversible actions\n   */\n  danger: `<nck-button label=\"Delete Item\" type=\"filled\" color=\"danger\" leftIcon=\"delete\" />`,\n\n  /**\n   * Small button - for compact interfaces\n   * @aiContext Table actions, toolbars, dense layouts\n   */\n  compact: `<nck-button label=\"Edit\" type=\"outline\" size=\"s\" leftIcon=\"edit\" />`,\n\n  /**\n   * Large prominent button - for important actions\n   * @aiContext Hero sections, call-to-action, primary flows\n   */\n  prominent: `<nck-button label=\"Get Started\" type=\"filled\" size=\"l\" />`,\n\n  /**\n   * Form submission button - proper type for forms\n   * @aiContext Inside nck-form components, native form submissions\n   */\n  formSubmit: `<nck-button label=\"Submit\" type=\"filled\" nativeType=\"submit\" />`,\n\n  /**\n   * Ghost button - minimal styling for tertiary actions\n   * @aiContext Help links, optional actions, subtle interactions\n   */\n  subtle: `<nck-button label=\"Learn More\" type=\"ghost\" rightIcon=\"arrow-right\" />`\n} as const",
+          "description": "Display counter badge with this number\n   * Shows 99+ for numbers > 99, must be integer >= 0\n   * Badge appears after label or top-right of right icon\n   * @aiUsage Use for notification counts, item counts\n   */\n  counterBadgeEntry?: number;\n\n  /**\n   * Adds \"+\" prefix to counter badge number\n   * @default false\n   * @aiUsage Use when counter represents additions or growth\n   */\n  counterBadgePlusPrefix?: boolean;\n\n  /**\n   * HTML form attribute - associates button with specific form by ID\n   * Only applies when ariaRole is \"button\"\n   * Useful for buttons outside the form element\n   *",
+          "example": "\"",
+          "required": false,
+          "suggestions": null
+        }
+      ],
+      "methods": [],
+      "aiGuidance": {
+        "antiPatterns": {
+          "multiPrimary": "Don't use multiple filled buttons in the same section",
+          "genericLabels": "Avoid labels like 'Click here', 'Button', 'OK' - be specific",
+          "missingLoading": "Always show loading states for async operations",
+          "wrongColors": "Don't use danger color for non-destructive actions",
+          "tooManyIcons": "Limit to one icon per button, prefer left side for actions"
+        }
+      },
+      "patterns": {}
+    },
+    {
+      "name": "nck-table",
+      "category": "data",
+      "complexity": "complex",
+      "description": "Interface for nck-table component props Comprehensive data table component with sorting, selection, accessibility, and responsive features",
+      "usage": "Primary component for displaying structured data with sorting, filtering, and selection capabilities",
+      "examples": [
+        {
+          "name": "basic",
+          "code": "<nck-table\n    :columnsDescription=\"columns\"\n    :data=\"tableData\"\n    rowUniqueKey=\"id\"\n    ariaLabel=\"Users table\">\n  </nck-table>",
+          "context": "Product lists, user directories, simple data display"
+        },
+        {
+          "name": "sortableClickable",
+          "code": "<nck-table\n    :columnsDescription=\"sortableColumns\"\n    :data=\"users\"\n    rowUniqueKey=\"userId\"\n    rowAriaRole=\"button\"\n    ariaLabel=\"User management table\"\n    @row-clicked=\"handleRowClick\">\n  </nck-table>",
+          "context": "Interactive data management, detailed views"
+        },
+        {
+          "name": "multiSelect",
+          "code": "<nck-table\n    :columnsDescription=\"columns\"\n    :data=\"products\"\n    rowUniqueKey=\"productId\"\n    :multiSelect=\"true\"\n    selectAllLabel=\"Select all products\"\n    unselectAllLabel=\"Deselect all products\"\n    :getLabelForRowSelection=\"(product, selected) =>\n      \\",
+          "context": "Data management, bulk actions, selection workflows"
+        },
+        {
+          "name": "responsive",
+          "code": "<nck-table\n    :columnsDescription=\"wideColumns\"\n    :data=\"detailedData\"\n    rowUniqueKey=\"id\"\n    :scrollableContent=\"true\"\n    ariaLabel=\"Detailed data table\">\n  </nck-table>",
+          "context": "Mobile interfaces, wide data tables"
+        },
+        {
+          "name": "withSlots",
+          "code": "<nck-table\n    :columnsDescription=\"columnsWithSlots\"\n    :data=\"orders\"\n    rowUniqueKey=\"orderId\"\n    ariaLabel=\"Order management table\">\n\n    <template #status=\"{ entry }\">\n      <nck-badge\n        :label=\"entry.status\"\n        :type=\"getStatusBadgeType(entry.status)\" />\n    </template>\n\n    <template #actions=\"{ entry }\">\n      <nck-button\n        label=\"View\"\n        type=\"outline\"\n        size=\"s\"\n        @click=\"viewOrder(entry)\" />\n      <nck-button\n        label=\"Edit\"\n        type=\"outline\"\n        size=\"s\"\n        @click=\"editOrder(entry)\" />\n    </template>\n  </nck-table>",
+          "context": "Rich content display, action columns, custom formatting"
+        },
+        {
+          "name": "initiallySorted",
+          "code": "<nck-table\n    :columnsDescription=\"sortableColumns\"\n    :data=\"sortedData\"\n    rowUniqueKey=\"id\"\n    :initiallySortedColumnIndex=\"1\"\n    :initiallySortedColumnSortOrder=\"SortOrder.DESCENDING\"\n    ariaLabel=\"Pre-sorted data table\">\n  </nck-table>",
+          "context": "Default sorted views, pre-configured data display"
+        }
+      ],
+      "props": [
+        {
+          "name": "headerLabel",
+          "type": "\"Name\", dataPath: \"user.name\", width: \"30%\" }]\n   * @aiRequired true - Must have at least one column\n   */\n  columnsDescription: ITableColumnOptions[]",
+          "description": "Interface for nck-table component props\n * Comprehensive data table component with sorting, selection, accessibility, and responsive features\n *\n * @aiUsage Primary component for displaying structured data with sorting, filtering, and selection capabilities\n * @aiCategory data-display\n * @aiComplexity complex\n */\nexport interface INckTable {\n  /**\n   * Column configuration array - defines table structure and behavior\n   * Each column object contains: headerLabel, dataPath/slotName, width, alignment, sorting\n   *",
+          "example": "[",
+          "required": false,
+          "suggestions": null
+        },
+        {
+          "name": "id",
+          "type": "1, name: \"John\", email: \"john@example.com\" }]\n   * @aiRequired true - Table data source\n   */\n  data: Array<Record<string, any>>",
+          "description": "Array of data objects to display in table rows\n   * Each object represents one row of data\n   *",
+          "example": "[",
+          "required": false,
+          "suggestions": null
+        },
+        {
+          "name": "rowUniqueKey",
+          "type": "string",
+          "description": "Property key used for unique row identification (for v-key performance)\n   * Must be unique across all data entries\n   *",
+          "example": "\"",
+          "required": false,
+          "suggestions": null
+        },
+        {
+          "name": "button",
+          "type": "Row performs an action when clicked\n   * - link: Row navigates to another page/section\n   * @aiRequired When row-clicked event listener is provided\n   * @aiSuggestions { \"action\": \"button\", \"navigation\": \"link\", \"details\": \"button\" }\n   */\n  rowAriaRole?: \"button\" | \"link\"",
+          "description": "Accessible label for the table - describes table purpose\n   * Required if labeledByTitleId is not provided\n   *",
+          "example": "\"",
+          "required": false,
+          "suggestions": null
+        },
+        {
+          "name": "entry",
+          "type": "Record<string, any>, selected: boolean) => string",
+          "description": "Enables row selection with checkboxes\n   * When true, adds selection column and enables multi-selection functionality\n   * @default false\n   * @aiUsage Use for bulk operations, data management interfaces\n   */\n  multiSelect?: boolean;\n\n  /**\n   * Accessible label for header \"select all\" checkbox when unchecked\n   * Required when multiSelect is enabled\n   *",
+          "example": "\"",
+          "required": false,
+          "suggestions": null
+        },
+        {
+          "name": "entry",
+          "type": "Record<string, any>) => boolean)",
+          "description": "Determines which rows cannot be selected in multiSelect mode\n   * Can be property name (string) or function returning boolean\n   *",
+          "example": "\"",
+          "required": false,
+          "suggestions": null
+        },
+        {
+          "name": "basic",
+          "type": "`<nck-table\n    :columnsDescription=\"columns\"\n    :data=\"tableData\"\n    rowUniqueKey=\"id\"\n    ariaLabel=\"Users table\">\n  </nck-table>`,\n\n  /**\n   * Sortable table with click handling\n   * @aiContext Interactive data management, detailed views\n   */\n  sortableClickable: `<nck-table\n    :columnsDescription=\"sortableColumns\"\n    :data=\"users\"\n    rowUniqueKey=\"userId\"\n    rowAriaRole=\"button\"\n    ariaLabel=\"User management table\"\n    @row-clicked=\"handleRowClick\">\n  </nck-table>`,\n\n  /**\n   * Multi-select table for bulk operations\n   * @aiContext Data management, bulk actions, selection workflows\n   */\n  multiSelect: `<nck-table\n    :columnsDescription=\"columns\"\n    :data=\"products\"\n    rowUniqueKey=\"productId\"\n    :multiSelect=\"true\"\n    selectAllLabel=\"Select all products\"\n    unselectAllLabel=\"Deselect all products\"\n    :getLabelForRowSelection=\"(product, selected) =>\n      \\`\\${selected ? 'Deselect' : 'Select'} product \\${product.name}\\`\"\n    @selection-changed=\"handleSelectionChange\">\n\n    <template #action-bar>\n      <div class=\"table-actions\">\n        <nck-button label=\"Delete Selected\" color=\"negative\" />\n        <nck-button label=\"Export Selected\" type=\"outline\" />\n      </div>\n    </template>\n  </nck-table>`,\n\n  /**\n   * Responsive scrollable table\n   * @aiContext Mobile interfaces, wide data tables\n   */\n  responsive: `<nck-table\n    :columnsDescription=\"wideColumns\"\n    :data=\"detailedData\"\n    rowUniqueKey=\"id\"\n    :scrollableContent=\"true\"\n    ariaLabel=\"Detailed data table\">\n  </nck-table>`,\n\n  /**\n   * Table with custom column slots\n   * @aiContext Rich content display, action columns, custom formatting\n   */\n  withSlots: `<nck-table\n    :columnsDescription=\"columnsWithSlots\"\n    :data=\"orders\"\n    rowUniqueKey=\"orderId\"\n    ariaLabel=\"Order management table\">\n\n    <template #status=\"{ entry }\">\n      <nck-badge\n        :label=\"entry.status\"\n        :type=\"getStatusBadgeType(entry.status)\" />\n    </template>\n\n    <template #actions=\"{ entry }\">\n      <nck-button\n        label=\"View\"\n        type=\"outline\"\n        size=\"s\"\n        @click=\"viewOrder(entry)\" />\n      <nck-button\n        label=\"Edit\"\n        type=\"outline\"\n        size=\"s\"\n        @click=\"editOrder(entry)\" />\n    </template>\n  </nck-table>`,\n\n  /**\n   * Initially sorted table\n   * @aiContext Default sorted views, pre-configured data display\n   */\n  initiallySorted: `<nck-table\n    :columnsDescription=\"sortableColumns\"\n    :data=\"sortedData\"\n    rowUniqueKey=\"id\"\n    :initiallySortedColumnIndex=\"1\"\n    :initiallySortedColumnSortOrder=\"SortOrder.DESCENDING\"\n    ariaLabel=\"Pre-sorted data table\">\n  </nck-table>`\n} as const",
+          "description": "Enables horizontal scrolling for table content\n   * Useful for tables with many columns or responsive layouts\n   * @default false\n   * @aiUsage Use for wide tables or mobile-responsive designs\n   */\n  scrollableContent?: boolean;\n\n  /**\n   * Column index to show as initially sorted (0-based)\n   * Must correspond to a sortable column (has onSort function)\n   *",
+          "example": "0",
+          "required": false,
+          "suggestions": null
+        }
+      ],
+      "methods": [],
+      "aiGuidance": {
+        "accessibility": [
+          "ProvideariaLabelorlabeledByTitleIdfortablepurpose",
+          "IncluderowAriaRolewhenrowsareclickable",
+          "SupplyallmultiSelectlabelfunctionswhenenablingselection",
+          "Ensurecolumnheadersaredescriptiveandclear"
+        ],
+        "antiPatterns": {
+          "missingRowKey": "Don't forget rowUniqueKey - causes performance issues and selection bugs",
+          "asyncSortingWithoutHandling": "Don't use onSort without proper loading states",
+          "missingAccessibilityLabels": "Don't enable multiSelect without proper label functions",
+          "overuseSlots": "Don't use slots for simple text content - use dataPath instead",
+          "widthOverallocation": "Don't set column widths that total > 100%"
+        }
+      },
+      "patterns": {}
+    },
+    {
+      "name": "nck-banner",
+      "category": "feedback",
+      "complexity": "medium",
+      "description": "Interface for nck-banner component props Alert and notification component for displaying contextual system messages",
+      "usage": "Primary component for user notifications - handles semantic messaging with icons and dismissal",
+      "examples": [
+        {
+          "name": "success",
+          "code": "<nck-banner\n    type=\"success\"\n    heading=\"Changes saved successfully\"\n    :dismissable=\"true\"\n    @banner-dismissed=\"handleDismiss\" />",
+          "context": "Form submissions, save operations, successful processes"
+        },
+        {
+          "name": "error",
+          "code": "<nck-banner\n    type=\"critical\"\n    heading=\"Unable to save changes\"\n    linkLabel=\"Try again\"\n    linkAriaRole=\"button\"\n    @link-clicked=\"retryAction\" />",
+          "context": "Form validation errors, API failures, system issues"
+        },
+        {
+          "name": "warning",
+          "code": "<nck-banner\n    type=\"warning\"\n    heading=\"Your session will expire in 5 minutes\"\n    linkLabel=\"Extend session\"\n    linkAriaRole=\"button\"\n    @link-clicked=\"extendSession\" />",
+          "context": "Data validation, important notices, attention needed"
+        },
+        {
+          "name": "information",
+          "code": "<nck-banner\n    type=\"info\"\n    heading=\"New features are now available\"\n    linkLabel=\"Learn more\"\n    linkAriaRole=\"link\"\n    :dismissable=\"true\"\n    @link-clicked=\"navigateToFeatures\" />",
+          "context": "Tips, help text, feature announcements"
+        },
+        {
+          "name": "customIcon",
+          "code": "<nck-banner\n    type=\"success\"\n    heading=\"Your coffee is ready\"\n    leadingIcon=\"breakfast\"\n    leadingIconAltText=\"Coffee cup\"\n    :dismissable=\"true\" />",
+          "context": "Domain-specific notifications, custom workflows"
+        },
+        {
+          "name": "fullWidth",
+          "code": "<nck-banner\n    type=\"warning\"\n    heading=\"Scheduled maintenance tonight from 2-4 AM EST\"\n    :noRadius=\"true\"\n    linkLabel=\"View details\"\n    linkAriaRole=\"link\"\n    @link-clicked=\"viewMaintenanceInfo\" />",
+          "context": "System-wide messages, maintenance notices"
+        },
+        {
+          "name": "withItems",
+          "code": "<nck-banner\n    type=\"critical\"\n    heading=\"Please fix the following issues:\">\n\n    <nck-banner-item-group>\n      <nck-banner-item text=\"Email address is required\" />\n      <nck-banner-item\n        text=\"Password must be at least 8 characters\"\n        linkLabel=\"View requirements\"\n        linkAriaRole=\"link\"\n        @link-clicked=\"showPasswordHelp\" />\n      <nck-banner-item text=\"Terms of service must be accepted\" />\n    </nck-banner-item-group>\n  </nck-banner>",
+          "context": "Multi-point messages, validation feedback lists"
+        },
+        {
+          "name": "persistent",
+          "code": "<nck-banner\n    type=\"critical\"\n    heading=\"System is in read-only mode\"\n    linkLabel=\"Check status\"\n    linkAriaRole=\"link\"\n    @link-clicked=\"checkSystemStatus\" />",
+          "context": "Critical system status, mandatory notices"
+        }
+      ],
+      "props": [
+        {
+          "name": "heading",
+          "type": "string",
+          "description": "Interface for nck-banner component props\n * Alert and notification component for displaying contextual system messages\n *\n * @aiUsage Primary component for user notifications - handles semantic messaging with icons and dismissal\n * @aiCategory feedback\n * @aiComplexity medium\n */\nexport interface INckBanner {\n  /**\n   * Banner display text - the main message users will see\n   * Plain text only, no HTML allowed for security and consistency\n   *",
+          "example": "\"",
+          "required": false,
+          "suggestions": null
+        },
+        {
+          "name": "button",
+          "type": "Link performs an action (like opening modal, triggering process)\n   * - link: Link navigates to another page or section\n   * @aiRequired When linkLabel is provided\n   * @aiSuggestions { \"action\": \"button\", \"navigation\": \"link\", \"modal\": \"button\" }\n   */\n  linkAriaRole?: \"button\" | \"link\"",
+          "description": "Banner semantic type - controls appearance and meaning\n   * - NEUTRAL: Default informational messages (gray theme)\n   * - INFORMATION: General information and tips (blue theme)\n   * - SUCCESS: Positive confirmations and completions (green theme)\n   * - WARNING: Caution messages and attention needed (orange theme)\n   * - ERROR: Critical errors and failures (red theme)\n   * @default BannerType.NEUTRAL\n   * @aiSuggestions {\n   *   \"success\": \"SUCCESS\",\n   *   \"error\": \"ERROR\",\n   *   \"warning\": \"WARNING\",\n   *   \"info\": \"INFORMATION\",\n   *   \"default\": \"NEUTRAL\"\n   * }\n   */\n  type?: BannerType;\n\n  /**\n   * Enables dismissal functionality with close button\n   * When true, shows an X button that allows users to hide the banner\n   * @default false\n   * @aiUsage Enable for non-critical messages that users can dismiss\n   */\n  dismissable?: boolean;\n\n  /**\n   * Removes rounded corners for edge-to-edge styling\n   * Use when banner spans full container width without margins\n   * @default false\n   * @aiUsage Enable for full-width page notifications or card-edge styling\n   */\n  noRadius?: boolean;\n\n  /**\n   * Clickable link text displayed after the heading\n   * Must be used with linkAriaRole and link-clicked event handler\n   *",
+          "example": "\"",
+          "required": false,
+          "suggestions": null
+        },
+        {
+          "name": "success",
+          "type": "`<nck-banner\n    type=\"success\"\n    heading=\"Changes saved successfully\"\n    :dismissable=\"true\"\n    @banner-dismissed=\"handleDismiss\" />`,\n\n  /**\n   * Error notification - critical alerts\n   * @aiContext Form validation errors, API failures, system issues\n   */\n  error: `<nck-banner\n    type=\"critical\"\n    heading=\"Unable to save changes\"\n    linkLabel=\"Try again\"\n    linkAriaRole=\"button\"\n    @link-clicked=\"retryAction\" />`,\n\n  /**\n   * Warning notification - cautionary messages\n   * @aiContext Data validation, important notices, attention needed\n   */\n  warning: `<nck-banner\n    type=\"warning\"\n    heading=\"Your session will expire in 5 minutes\"\n    linkLabel=\"Extend session\"\n    linkAriaRole=\"button\"\n    @link-clicked=\"extendSession\" />`,\n\n  /**\n   * Information banner - general guidance\n   * @aiContext Tips, help text, feature announcements\n   */\n  information: `<nck-banner\n    type=\"info\"\n    heading=\"New features are now available\"\n    linkLabel=\"Learn more\"\n    linkAriaRole=\"link\"\n    :dismissable=\"true\"\n    @link-clicked=\"navigateToFeatures\" />`,\n\n  /**\n   * Custom icon banner - specific context messaging\n   * @aiContext Domain-specific notifications, custom workflows\n   */\n  customIcon: `<nck-banner\n    type=\"success\"\n    heading=\"Your coffee is ready\"\n    leadingIcon=\"breakfast\"\n    leadingIconAltText=\"Coffee cup\"\n    :dismissable=\"true\" />`,\n\n  /**\n   * Full-width banner - page-level notifications\n   * @aiContext System-wide messages, maintenance notices\n   */\n  fullWidth: `<nck-banner\n    type=\"warning\"\n    heading=\"Scheduled maintenance tonight from 2-4 AM EST\"\n    :noRadius=\"true\"\n    linkLabel=\"View details\"\n    linkAriaRole=\"link\"\n    @link-clicked=\"viewMaintenanceInfo\" />`,\n\n  /**\n   * Banner with detailed content using item groups\n   * @aiContext Multi-point messages, validation feedback lists\n   */\n  withItems: `<nck-banner\n    type=\"critical\"\n    heading=\"Please fix the following issues:\">\n\n    <nck-banner-item-group>\n      <nck-banner-item text=\"Email address is required\" />\n      <nck-banner-item\n        text=\"Password must be at least 8 characters\"\n        linkLabel=\"View requirements\"\n        linkAriaRole=\"link\"\n        @link-clicked=\"showPasswordHelp\" />\n      <nck-banner-item text=\"Terms of service must be accepted\" />\n    </nck-banner-item-group>\n  </nck-banner>`,\n\n  /**\n   * Persistent system banner - non-dismissable critical info\n   * @aiContext Critical system status, mandatory notices\n   */\n  persistent: `<nck-banner\n    type=\"critical\"\n    heading=\"System is in read-only mode\"\n    linkLabel=\"Check status\"\n    linkAriaRole=\"link\"\n    @link-clicked=\"checkSystemStatus\" />`\n} as const",
+          "description": "Custom icon name from neo-icon-kit to override default type icon\n   * Replaces semantic type icon with specific icon for context\n   *",
+          "example": "\"",
+          "required": false,
+          "suggestions": null
+        }
+      ],
+      "methods": [],
+      "aiGuidance": {
+        "accessibility": [
+          "Providemeaningfulheadingtextthatdescribesthesituation",
+          "Useappropriatebannertypeforsemanticmeaning",
+          "IncludelinkAriaRolewhenlinkLabelisprovided",
+          "ProvideleadingIconAltTextforcustomiconswithspecificmeaning"
+        ],
+        "antiPatterns": {
+          "overuse": "Don't show multiple banners simultaneously - prioritize and stack appropriately",
+          "wrongType": "Don't use success type for neutral information or error type for warnings",
+          "missingActions": "Don't provide linkLabel without corresponding event handler",
+          "poorContent": "Avoid vague messages like 'Error occurred' - be specific about the issue",
+          "accessibilityGaps": "Don't forget linkAriaRole when providing linkLabel"
+        }
+      },
+      "patterns": {}
+    },
+    {
+      "name": "nck-checkbox",
+      "category": "form",
+      "complexity": "simple",
+      "description": "Interface for nck-checkbox component props Checkbox input component with validation, accessibility, and form integration",
+      "usage": "Essential component for boolean selections, agreement confirmations, and multi-option forms",
+      "examples": [
+        {
+          "name": "basic",
+          "code": "<nck-checkbox\n    label=\"Enable email notifications\"\n    name=\"emailNotifications\"\n    v-model=\"userSettings.emailNotifications\" />",
+          "context": "User preferences, feature toggles, simple confirmations"
+        },
+        {
+          "name": "required",
+          "code": "<nck-checkbox\n    label=\"I agree to the Terms of Service\"\n    name=\"termsAccepted\"\n    v-model=\"formData.termsAccepted\"\n    rules=\"required\"\n    required />",
+          "context": "Terms acceptance, required confirmations, agreements"
+        },
+        {
+          "name": "withDescription",
+          "code": "<nck-checkbox\n    label=\"Share usage data\"\n    name=\"shareUsageData\"\n    v-model=\"privacySettings.shareUsageData\"\n    description=\"Help us improve our service by sharing anonymous usage statistics\"\n    icon=\"info\"\n    iconAltText=\"Information icon\" />",
+          "context": "Complex settings, impactful decisions, detailed options"
+        },
+        {
+          "name": "indeterminate",
+          "code": "<nck-checkbox\n    label=\"Select all items\"\n    name=\"selectAll\"\n    v-model=\"selectAllState\"\n    :indeterminate=\"someItemsSelected && !allItemsSelected\"\n    @change=\"handleSelectAll\" />",
+          "context": "\"Select all\" functionality, parent-child relationships"
+        },
+        {
+          "name": "emphasized",
+          "code": "<nck-checkbox\n    label=\"I understand this action cannot be undone\"\n    name=\"confirmDeletion\"\n    v-model=\"confirmationState.understood\"\n    emphasis=\"emphasized\"\n    rules=\"required\"\n    icon=\"warning\"\n    iconAltText=\"Warning icon\"\n    required />",
+          "context": "Important agreements, destructive confirmations"
+        },
+        {
+          "name": "disabled",
+          "code": "<nck-checkbox\n    label=\"Administrator privileges\"\n    name=\"isAdmin\"\n    v-model=\"user.isAdmin\"\n    :disabled=\"!canModifyPermissions\"\n    description=\"Contact your system administrator to change this setting\" />",
+          "context": "System settings, computed values, conditional states"
+        },
+        {
+          "name": "customValues",
+          "code": "<nck-checkbox\n    label=\"Project status\"\n    name=\"projectStatus\"\n    v-model=\"project.status\"\n    :checkedValue=\"'active'\"\n    :uncheckedValue=\"'inactive'\"\n    description=\"Toggle between active and inactive project status\" />",
+          "context": "Status toggles, non-boolean selections"
+        }
+      ],
+      "props": [
+        {
+          "name": "label",
+          "type": "string",
+          "description": "Interface for nck-checkbox component props\n * Checkbox input component with validation, accessibility, and form integration\n *\n * @aiUsage Essential component for boolean selections, agreement confirmations, and multi-option forms\n * @aiCategory form\n * @aiComplexity simple\n */\nexport interface INckCheckboxProps {\n  /**\n   * Accessible label text for the checkbox\n   * Required for screen reader accessibility and user understanding\n   *",
+          "example": "\"",
+          "required": false,
+          "suggestions": null
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "Unique field name for form identification and validation\n   * Used by form libraries like VeeValidate for field tracking\n   *",
+          "example": "\"",
+          "required": false,
+          "suggestions": null
+        },
+        {
+          "name": "focus",
+          "type": "() => void",
+          "description": "Current checkbox state (checked/unchecked)\n   * Use with v-model for two-way data binding\n   *",
+          "example": "v",
+          "required": false,
+          "suggestions": null
+        }
+      ],
+      "methods": [],
+      "aiGuidance": {
+        "accessibility": [
+          "Alwaysprovideclear",
+          "descriptivelabelsforallcheckboxes",
+          "IncludeiconAltTextwhenusingicons",
+          "Usepropergrouping(fieldset/legend)forrelatedcheckboxsets",
+          "Ensureadequateclick/touchtargetsize(minimum44px)"
+        ],
+        "antiPatterns": {
+          "unclearLabels": "Avoid vague labels like 'Accept' without clear context",
+          "tooManyRequired": "Don't make every checkbox required - be selective",
+          "noDescription": "Don't omit descriptions for complex or impactful choices",
+          "poorGrouping": "Don't scatter related checkboxes throughout the form",
+          "wrongControl": "Don't use checkboxes for mutually exclusive options (use radio buttons instead)"
+        }
+      },
+      "patterns": {}
+    },
+    {
+      "name": "nck-dropdown",
+      "category": "form",
+      "complexity": "medium",
+      "description": "Interface for nck-dropdown component props Dropdown selection component with search, validation, and accessibility features",
+      "usage": "Essential component for option selection, navigation, and form inputs",
+      "examples": [
+        {
+          "name": "basic",
+          "code": "<nck-dropdown\n    label=\"Status\"\n    name=\"status\"\n    v-model=\"formData.status\"\n    :options=\"[\n      { value: 'active', label: 'Active' },\n      { value: 'inactive', label: 'Inactive' },\n      { value: 'pending', label: 'Pending' }\n    ]\"\n    placeholder=\"Select status\"\n    required />",
+          "context": "Status selection, category picker, simple choices"
+        },
+        {
+          "name": "searchable",
+          "code": "<nck-dropdown\n    label=\"Country\"\n    name=\"country\"\n    v-model=\"userData.country\"\n    :options=\"countryOptions\"\n    placeholder=\"Search and select country\"\n    :searchable=\"true\"\n    leadingIcon=\"location\"\n    leadingIconAltText=\"Location icon\"\n    required />",
+          "context": "Country selection, user lists, large datasets"
+        },
+        {
+          "name": "multiple",
+          "code": "<nck-dropdown\n    label=\"Skills\"\n    name=\"skills\"\n    v-model=\"userProfile.skills\"\n    :options=\"skillsOptions\"\n    placeholder=\"Select your skills\"\n    :multiple=\"true\"\n    :maxSelections=\"5\"\n    :clearable=\"true\"\n    emptyMessage=\"No skills available\" />",
+          "context": "Skills selection, permissions, tag assignment"
+        },
+        {
+          "name": "grouped",
+          "code": "<nck-dropdown\n    label=\"Department\"\n    name=\"department\"\n    v-model=\"employee.department\"\n    :options=\"[\n      { value: 'eng-frontend', label: 'Frontend', group: 'Engineering' },\n      { value: 'eng-backend', label: 'Backend', group: 'Engineering' },\n      { value: 'design-ui', label: 'UI Design', group: 'Design' },\n      { value: 'design-ux', label: 'UX Research', group: 'Design' }\n    ]\"\n    :groupByCategory=\"true\"\n    placeholder=\"Select department\"\n    required />",
+          "context": "Product categories, organizational structure"
+        },
+        {
+          "name": "async",
+          "code": "<nck-dropdown\n    label=\"Project\"\n    name=\"project\"\n    v-model=\"task.projectId\"\n    :options=\"projectOptions\"\n    placeholder=\"Select project\"\n    :loading=\"isLoadingProjects\"\n    loadingText=\"Loading projects...\"\n    :searchable=\"true\"\n    @opened=\"loadProjects\"\n    required />",
+          "context": "API-driven options, dynamic content"
+        },
+        {
+          "name": "readonly",
+          "code": "<nck-dropdown\n    label=\"Account Type\"\n    name=\"accountType\"\n    v-model=\"user.accountType\"\n    :options=\"accountTypeOptions\"\n    :disabled=\"!canChangeAccountType\"\n    leadingIcon=\"account\"\n    leadingIconAltText=\"Account icon\" />",
+          "context": "System-assigned values, view-only forms"
+        }
+      ],
+      "props": [
+        {
+          "name": "label",
+          "type": "string",
+          "description": "Interface for nck-dropdown component props\n * Dropdown selection component with search, validation, and accessibility features\n *\n * @aiUsage Essential component for option selection, navigation, and form inputs\n * @aiCategory form\n * @aiComplexity medium\n */\nexport interface INckDropdownProps {\n  /**\n   * Accessible label text for the dropdown field\n   * Required for screen reader accessibility and field identification\n   *",
+          "example": "\"",
+          "required": false,
+          "suggestions": null
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "Unique field name for form identification and validation\n   * Used by form libraries like VeeValidate for field tracking\n   *",
+          "example": "\"",
+          "required": false,
+          "suggestions": null
+        },
+        {
+          "name": "value",
+          "type": "'us', label: 'United States' }, { value: 'ca', label: 'Canada' }]\n   * @aiRequired true\n   * @aiUsage Ensure labels are user-friendly and values are system-appropriate\n   */\n  options: Array<{\n    value: string | number",
+          "description": "Array of selectable options for the dropdown\n   * Each option should have value and label properties\n   *",
+          "example": "[",
+          "required": false,
+          "suggestions": null
+        },
+        {
+          "name": "in",
+          "type": "admin,user,guest\"\n   * @aiSuggestions {\n   *   \"required\": \"required\",\n   *   \"optional\": \"\",\n   *   \"restrictedOptions\": \"required|in:option1,option2,option3\"\n   * }\n   */\n  rules?: string",
+          "description": "Currently selected option value\n   * Use with v-model for two-way data binding\n   *",
+          "example": "v",
+          "required": false,
+          "suggestions": null
+        },
+        {
+          "name": "focus",
+          "type": "IFocusable[\"focus\"]",
+          "description": "Whether the field is required for form submission\n   * Adds visual indicators and affects validation behavior\n   * @default false\n   * @aiUsage Set true for essential selection fields\n   */\n  required?: boolean;\n\n  /**\n   * Whether the dropdown is disabled and non-interactive\n   * Prevents user interaction and excludes from form submission\n   * @default false\n   * @aiUsage Use for conditional logic or read-only states\n   */\n  disabled?: boolean;\n\n  /**\n   * Enables search/filter functionality within dropdown options\n   * Allows users to quickly find options by typing\n   * @default false\n   * @aiUsage Enable for dropdowns with many options (10+)\n   */\n  searchable?: boolean;\n\n  /**\n   * Enables selection of multiple options\n   * Changes behavior to checkbox-style multi-select\n   * @default false\n   * @aiUsage Use when users need to select multiple related items\n   */\n  multiple?: boolean;\n\n  /**\n   * Maximum number of selections allowed (when multiple=true)\n   * Prevents over-selection and provides user guidance\n   *",
+          "example": "3",
+          "required": false,
+          "suggestions": null
+        }
+      ],
+      "methods": [],
+      "aiGuidance": {
+        "accessibility": [
+          "Providedescriptivelabelsforalldropdownfields",
+          "IncludeleadingIconAltTextwhenusingleadingIcon",
+          "UseproperARIAattributesforscreenreadersupport",
+          "Ensurekeyboardnavigationworksforalloptions"
+        ],
+        "antiPatterns": {
+          "tooManyOptions": "Avoid dropdowns with 50+ unfiltered options - use search or different UI",
+          "unclearLabels": "Don't use technical values as user-facing labels",
+          "noEmptyState": "Always handle and communicate empty option states",
+          "forcedSelection": "Don't force selection of first option - let users choose",
+          "inconsistentOptionStructure": "Maintain consistent option object structure across all dropdowns"
+        }
+      },
+      "patterns": {}
+    },
+    {
+      "name": "nck-form",
+      "category": "form",
+      "complexity": "medium",
+      "description": "Interface for nck-form component props Form container with validation, accessibility, and VeeValidate integration",
+      "usage": "Essential component for data collection, validation, and submission workflows",
+      "examples": [
+        {
+          "name": "basic",
+          "code": "<nck-form\r\n    id=\"contact-form\"\r\n    labelId=\"contact-heading\"\r\n    ref=\"contactForm\"\r\n    @submit=\"handleSubmit\">\r\n\r\n    <h2 id=\"contact-heading\">Contact Information</h2>\r\n\r\n    <template #error-container>\r\n      <nck-banner\r\n        v-if=\"formErrors.length > 0\"\r\n        type=\"critical\"\r\n        :heading=\"formErrors[0]\" />\r\n    </template>\r\n\r\n    <nck-text-input\r\n      name=\"name\"\r\n      label=\"Full Name\"\r\n      v-model=\"formData.name\"\r\n      rules=\"required\"\r\n      required />\r\n\r\n    <nck-text-input\r\n      name=\"email\"\r\n      label=\"Email Address\"\r\n      type=\"email\"\r\n      v-model=\"formData.email\"\r\n      rules=\"required|email\"\r\n      required />\r\n\r\n    <div class=\"form-actions\">\r\n      <nck-button\r\n        label=\"Send Message\"\r\n        type=\"filled\"\r\n        nativeType=\"submit\"\r\n        :loading=\"isSubmitting\"\r\n        loadingText=\"Sending message...\" />\r\n      <nck-button\r\n        label=\"Clear Form\"\r\n        type=\"outline\"\r\n        @click=\"clearForm\" />\r\n    </div>\r\n  </nck-form>",
+          "context": "Contact forms, feedback, simple data entry"
+        },
+        {
+          "name": "registration",
+          "code": "<nck-form\r\n    id=\"registration-form\"\r\n    labelId=\"registration-title\"\r\n    autocompleteState=\"on\"\r\n    ref=\"registrationForm\"\r\n    @submit=\"handleRegistration\">\r\n\r\n    <h1 id=\"registration-title\">Create Your Account</h1>\r\n\r\n    <template #error-container>\r\n      <nck-banner\r\n        v-if=\"registrationErrors.length > 0\"\r\n        type=\"critical\"\r\n        heading=\"Please fix the following errors:\"\r\n        dismissable />\r\n    </template>\r\n\r\n    <nck-text-input\r\n      name=\"firstName\"\r\n      label=\"First Name\"\r\n      v-model=\"userData.firstName\"\r\n      rules=\"required|min:2\"\r\n      autocomplete=\"given-name\"\r\n      required />\r\n\r\n    <nck-text-input\r\n      name=\"email\"\r\n      label=\"Email Address\"\r\n      type=\"email\"\r\n      v-model=\"userData.email\"\r\n      rules=\"required|email\"\r\n      autocomplete=\"email\"\r\n      required />\r\n\r\n    <nck-text-input\r\n      name=\"password\"\r\n      label=\"Password\"\r\n      type=\"password\"\r\n      v-model=\"userData.password\"\r\n      rules=\"required|min:8|password\"\r\n      autocomplete=\"new-password\"\r\n      required />\r\n\r\n    <nck-checkbox\r\n      name=\"termsAccepted\"\r\n      label=\"I agree to the Terms of Service\"\r\n      v-model=\"userData.termsAccepted\"\r\n      rules=\"required\"\r\n      required />\r\n\r\n    <div class=\"form-actions\">\r\n      <nck-button\r\n        label=\"Create Account\"\r\n        type=\"filled\"\r\n        nativeType=\"submit\"\r\n        :loading=\"isRegistering\"\r\n        loadingText=\"Creating account...\"\r\n        :disabled=\"!userData.termsAccepted\" />\r\n    </div>\r\n  </nck-form>",
+          "context": "User registration, account creation, profile setup"
+        }
+      ],
+      "props": [
+        {
+          "name": "labelId",
+          "type": "string",
+          "description": "Interface for nck-form component props\r\n * Form container with validation, accessibility, and VeeValidate integration\r\n *\r\n * @aiUsage Essential component for data collection, validation, and submission workflows\r\n * @aiCategory form\r\n * @aiComplexity medium\r\n */\r\nexport interface INckFormProps {\r\n  /**\r\n   * ID of element serving as label for this form\r\n   * Used for accessibility association with form heading or description\r\n   *",
+          "example": "\"",
+          "required": false,
+          "suggestions": null
+        },
+        {
+          "name": "validate",
+          "type": "() => Promise<boolean>",
+          "description": "Unique identifier for the form element\r\n   * Allows external button elements to submit this form via form attribute\r\n   *",
+          "example": "\"",
+          "required": false,
+          "suggestions": null
+        }
+      ],
+      "methods": [],
+      "aiGuidance": {
+        "accessibility": [
+          "AlwaysprovidelabelIdpointingtoform'sdescriptiveheading",
+          "Useerror-containerslotforform-levelerrorswitharia-liveannouncements",
+          "Ensureallformfieldshaveproperlabelsandvalidationmessages",
+          "Provideclearfocusmanagementandkeyboardnavigation"
+        ],
+        "antiPatterns": {
+          "noValidation": "Don't submit forms without proper validation feedback",
+          "poorErrorMessages": "Avoid generic errors - be specific about what needs fixing",
+          "missingLabels": "Never use placeholder text as the only field labeling",
+          "forcedFormat": "Don't force rigid input formats - accept flexible user input",
+          "lostData": "Always warn users before losing form data on navigation"
+        }
+      },
+      "patterns": {}
+    },
+    {
+      "name": "nck-textinput",
+      "category": "form",
+      "complexity": "simple",
+      "description": "Interface for nck-text-input component props Text input field with validation, accessibility, and mobile optimization",
+      "usage": "Essential component for user data entry, search fields, and form interactions",
+      "examples": [
+        {
+          "name": "basic",
+          "code": "<nck-text-input\n    label=\"Full Name\"\n    name=\"fullName\"\n    v-model=\"userData.fullName\"\n    placeholder=\"Enter your full name\"\n    required />",
+          "context": "Contact forms, user profiles, general text fields"
+        },
+        {
+          "name": "email",
+          "code": "<nck-text-input\n    label=\"Email Address\"\n    name=\"email\"\n    type=\"email\"\n    v-model=\"userData.email\"\n    rules=\"required|email\"\n    autocomplete=\"email\"\n    leadingIcon=\"email\"\n    leadingIconAltText=\"Email icon\"\n    required />",
+          "context": "User registration, contact forms, login forms"
+        },
+        {
+          "name": "password",
+          "code": "<nck-text-input\n    label=\"Password\"\n    name=\"password\"\n    type=\"password\"\n    v-model=\"credentials.password\"\n    rules=\"required|min:8|password\"\n    autocomplete=\"current-password\"\n    leadingIcon=\"lock\"\n    leadingIconAltText=\"Password icon\"\n    required />",
+          "context": "Registration, login, settings forms"
+        },
+        {
+          "name": "search",
+          "code": "<nck-text-input\n    label=\"Search\"\n    name=\"searchQuery\"\n    type=\"search\"\n    v-model=\"searchState.query\"\n    placeholder=\"Search products...\"\n    leadingIcon=\"search\"\n    leadingIconAltText=\"Search icon\"\n    autofocus />",
+          "context": "Search bars, filter fields, lookup forms"
+        },
+        {
+          "name": "phone",
+          "code": "<nck-text-input\n    label=\"Phone Number\"\n    name=\"phoneNumber\"\n    type=\"tel\"\n    v-model=\"userData.phoneNumber\"\n    rules=\"required|phone\"\n    autocomplete=\"tel\"\n    placeholder=\"(555) 123-4567\"\n    leadingIcon=\"phone\"\n    leadingIconAltText=\"Phone icon\"\n    required />",
+          "context": "Contact information, registration forms"
+        },
+        {
+          "name": "readonly",
+          "code": "<nck-text-input\n    label=\"User ID\"\n    name=\"userId\"\n    v-model=\"userData.id\"\n    readonly\n    leadingIcon=\"account\"\n    leadingIconAltText=\"User account icon\" />",
+          "context": "Display calculated values, system-generated fields"
+        }
+      ],
+      "props": [
+        {
+          "name": "label",
+          "type": "string",
+          "description": "Interface for nck-text-input component props\n * Text input field with validation, accessibility, and mobile optimization\n *\n * @aiUsage Essential component for user data entry, search fields, and form interactions\n * @aiCategory form\n * @aiComplexity simple\n */\nexport interface INckTextInputProps {\n  /**\n   * Accessible label text for the input field\n   * Required for screen reader accessibility and field identification\n   *",
+          "example": "\"",
+          "required": false,
+          "suggestions": null
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "Unique field name for form identification and validation\n   * Used by form libraries like VeeValidate for field tracking\n   *",
+          "example": "\"",
+          "required": false,
+          "suggestions": null
+        },
+        {
+          "name": "min",
+          "type": "8\", \"required|phone\"\n   * @aiSuggestions {\n   *   \"email\": \"required|email\",\n   *   \"password\": \"required|min:8\",\n   *   \"phone\": \"required|phone\",\n   *   \"required\": \"required\",\n   *   \"optional\": \"\"\n   * }\n   */\n  rules?: string",
+          "description": "Input field type controlling keyboard behavior and validation\n   * Affects mobile keyboard layout and browser validation\n   * @default \"text\"\n   * @aiSuggestions {\n   *   \"email\": \"email\",\n   *   \"password\": \"password\",\n   *   \"search\": \"search\",\n   *   \"phone\": \"tel\",\n   *   \"website\": \"url\",\n   *   \"numbers\": \"number\"\n   * }\n   */\n  type?: \"text\" | \"email\" | \"password\" | \"search\" | \"tel\" | \"url\" | \"number\";\n\n  /**\n   * Current input value for controlled component behavior\n   * Use with v-model for two-way data binding\n   *",
+          "example": "v",
+          "required": false,
+          "suggestions": null
+        },
+        {
+          "name": "hasBeenValidated",
+          "type": "() => boolean",
+          "description": "Whether the field is required for form submission\n   * Adds visual indicators and affects validation behavior\n   * @default false\n   * @aiUsage Set true for essential fields, affects form submission\n   */\n  required?: boolean;\n\n  /**\n   * Whether the input is disabled and non-interactive\n   * Prevents user interaction and excludes from form submission\n   * @default false\n   * @aiUsage Use for read-only states or conditional form logic\n   */\n  disabled?: boolean;\n\n  /**\n   * Icon name to display on the left side of input\n   * Provides visual context and improves field recognition\n   *",
+          "example": "\"",
+          "required": false,
+          "suggestions": null
+        }
+      ],
+      "methods": [],
+      "aiGuidance": {
+        "accessibility": [
+          "Providedescriptivelabelsforallinputfields",
+          "Useappropriateinputtypesformobilekeyboardoptimization",
+          "IncludeleadingIconAltTextwhenusingleadingIcon",
+          "Associateerrormessageswithfieldsusingaria-describedby"
+        ],
+        "antiPatterns": {
+          "placeholderLabels": "Never use placeholder text as the only field labeling",
+          "genericErrors": "Avoid generic error messages - be specific about what's wrong",
+          "disabledStates": "Don't overuse disabled states - prefer readonly when appropriate",
+          "forcedFormats": "Don't force rigid input formats - accept flexible user input",
+          "noValidation": "Always provide validation feedback for required or formatted fields"
+        }
+      },
+      "patterns": {}
+    },
+    {
+      "name": "nck-card",
+      "category": "layout",
+      "complexity": "simple",
+      "description": "Interface for nck-card component props Flexible container component for grouping related content with consistent styling and interactions",
+      "usage": "Core layout component for content organization - supports hover, selection, and click interactions",
+      "examples": [
+        {
+          "name": "basic",
+          "code": "<nck-card>\n    <h2>Card Title</h2>\n    <p>Card content goes here...</p>\n  </nck-card>",
+          "context": "General content display, information panels"
+        },
+        {
+          "name": "clickable",
+          "code": "<nck-card ariaRole=\"button\" @click=\"handleCardClick\">\n    <h3>Clickable Card</h3>\n    <p>Click anywhere on this card to trigger action</p>\n  </nck-card>",
+          "context": "Product cards, feature cards, navigation tiles"
+        },
+        {
+          "name": "hoverable",
+          "code": "<nck-card :isHoverable=\"true\">\n    <h3>User Profile</h3>\n    <p>User information...</p>\n    <nck-button label=\"Edit Profile\" type=\"outline\" />\n  </nck-card>",
+          "context": "Cards with buttons, links, or form controls inside"
+        },
+        {
+          "name": "selectable",
+          "code": "<nck-card\n    :isSelected=\"selectedCard === 'card1'\"\n    ariaRole=\"button\"\n    @click=\"selectCard('card1')\">\n    <h3>Option 1</h3>\n    <p>This card can be selected</p>\n  </nck-card>",
+          "context": "Multi-select interfaces, option selection, current selection"
+        },
+        {
+          "name": "statusCard",
+          "code": "<nck-card backgroundColor=\"green-100\">\n    <nck-icon iconName=\"check-filled\" :iconSize=\"IconSize.M\" iconAltText=\"\" />\n    <h3>Success</h3>\n    <p>Your action was completed successfully!</p>\n  </nck-card>",
+          "context": "Success messages, error states, warnings, info panels"
+        },
+        {
+          "name": "responsive",
+          "code": "<nck-card :bareOnSmallResolution=\"true\">\n    <div class=\"card-content\">\n      <h2>Responsive Card</h2>\n      <p>This card adapts to screen size</p>\n    </div>\n  </nck-card>",
+          "context": "Content that should be full-width and simplified on mobile"
+        },
+        {
+          "name": "structured",
+          "code": "<nck-card>\n    <template #header>\n      <div class=\"card-header\">\n        <h2>Card Header</h2>\n        <nck-badge label=\"New\" />\n      </div>\n    </template>\n\n    <div class=\"card-body\">\n      <p>Main card content...</p>\n    </div>\n\n    <template #footer>\n      <div class=\"card-actions\">\n        <nck-button label=\"Action\" type=\"filled\" />\n        <nck-button label=\"Cancel\" type=\"outline\" />\n      </div>\n    </template>\n  </nck-card>",
+          "context": "Complex cards with header, content, and action areas"
+        },
+        {
+          "name": "outlined",
+          "code": "<nck-card type=\"outlined\">\n    <div class=\"form-section\">\n      <h3>Personal Information</h3>\n      <nck-text-input name=\"name\" label=\"Full Name\" />\n      <nck-text-input name=\"email\" label=\"Email\" />\n    </div>\n  </nck-card>",
+          "context": "Form sections, content blocks, structured data display"
+        },
+        {
+          "name": "minimal",
+          "code": "<nck-card type=\"flat\">\n    <div class=\"content-area\">\n      <p>Simple content without elevation</p>\n    </div>\n  </nck-card>",
+          "context": "Content areas where elevation isn't needed"
+        }
+      ],
+      "props": [],
+      "methods": [],
+      "aiGuidance": {
+        "antiPatterns": {
+          "nestedClickableCards": "Don't nest clickable cards - confuses user interaction",
+          "missingAriaRole": "Don't make cards clickable without proper ariaRole",
+          "colorOnlyMeaning": "Don't use background color as the only way to convey meaning",
+          "outlinedWithColor": "Don't use outlined type with non-white backgrounds",
+          "overuseInteractive": "Don't make every card interactive - reserve for actual interactions"
+        }
+      },
+      "patterns": {}
+    },
+    {
+      "name": "nck-header",
+      "category": "layout",
+      "complexity": "medium",
+      "description": "Interface for nck-header component props Page header component for navigation, branding, and primary page actions",
+      "usage": "Essential component for page structure - provides consistent navigation and page context",
+      "examples": [
+        {
+          "name": "basic",
+          "code": "<nck-header title=\"Dashboard Overview\" />",
+          "context": "Simple pages, content areas, basic layouts"
+        },
+        {
+          "name": "withSubtitle",
+          "code": "<nck-header\n    title=\"User Management\"\n    subtitle=\"Manage user accounts, permissions, and access controls\"\n    subtitlePosition=\"under\" />",
+          "context": "Complex pages, detailed sections, explanatory content"
+        },
+        {
+          "name": "withBacklink",
+          "code": "<nck-header\n    title=\"Profile Settings\"\n    backlink=\"Back to Dashboard\"\n    @page-header-backlink-clicked=\"navigateBack\" />",
+          "context": "Detail pages, sub-sections, hierarchical navigation"
+        },
+        {
+          "name": "withLeftIcon",
+          "code": "<nck-header\n    title=\"My Application\"\n    leftIconName=\"menu\"\n    leftIconAltText=\"Open navigation menu\"\n    leftIconAriaRole=\"button\"\n    @page-header-left-icon-clicked=\"toggleNavigation\" />",
+          "context": "Mobile layouts, sidebar navigation, app headers"
+        },
+        {
+          "name": "withActionButton",
+          "code": "<nck-header\n    title=\"Products\"\n    subtitle=\"Manage your product catalog\"\n    rightButtonLabel=\"Add Product\"\n    rightButtonIconName=\"add-plus\"\n    rightButtonAriaRole=\"button\"\n    @page-header-right-button-clicked=\"createProduct\" />",
+          "context": "CRUD interfaces, management pages, form headers"
+        },
+        {
+          "name": "condensedWithTabs",
+          "code": "<nck-header\n    title=\"Analytics Dashboard\"\n    headerType=\"Condensed\"\n    :showDivider=\"false\" />",
+          "context": "Tab layouts, filtered content, compact interfaces"
+        },
+        {
+          "name": "fullNavigation",
+          "code": "<nck-header\n    title=\"Project Management\"\n    subtitle=\"Plan, track, and deliver projects efficiently\"\n    leftIconName=\"menu\"\n    leftIconAltText=\"Main navigation\"\n    leftIconAriaRole=\"button\"\n    rightIconName=\"settings\"\n    rightIconAltText=\"Project settings\"\n    rightIconAriaRole=\"link\"\n    @page-header-left-icon-clicked=\"openMenu\"\n    @page-header-right-icon-clicked=\"openSettings\" />",
+          "context": "App headers, comprehensive navigation, multi-action interfaces"
+        },
+        {
+          "name": "modalHeader",
+          "code": "<nck-header\n    title=\"Edit User Profile\"\n    rightIconName=\"close\"\n    rightIconAltText=\"Close dialog\"\n    rightIconAriaRole=\"button\"\n    :showDivider=\"false\"\n    @page-header-right-icon-clicked=\"closeModal\" />",
+          "context": "Modal dialogs, overlay content, focused workflows"
+        },
+        {
+          "name": "withSlots",
+          "code": "<nck-header\n    title=\"Data Analysis\"\n    leftIconName=\"arrow-left\"\n    leftIconAltText=\"Back to reports\"\n    leftIconAriaRole=\"link\"\n    @page-header-left-icon-clicked=\"navigateBack\">\n\n    <template #trailing-content>\n      <nck-button\n        label=\"Export\"\n        type=\"outline\"\n        leftIcon=\"download\"\n        @click=\"exportData\" />\n      <nck-button\n        label=\"Share\"\n        type=\"outline\"\n        leftIcon=\"share\"\n        style=\"margin-left: 0.5rem\"\n        @click=\"shareReport\" />\n    </template>\n  </nck-header>",
+          "context": "Advanced layouts, custom actions, specialized interfaces"
+        },
+        {
+          "name": "editableTitle",
+          "code": "<nck-header>\n    <template #title-content>\n      <div v-if=\"editingTitle\" class=\"editable-title\">\n        <nck-text-input\n          v-model=\"editedTitle\"\n          label=\"Page title\" />\n        <nck-button\n          leftIcon=\"check\"\n          iconAltText=\"Save title\"\n          color=\"positive\"\n          @click=\"saveTitle\" />\n        <nck-button\n          leftIcon=\"close\"\n          iconAltText=\"Cancel edit\"\n          @click=\"cancelEdit\" />\n      </div>\n      <div v-else class=\"title-with-edit\">\n        <span>{{ pageTitle }}</span>\n        <nck-button\n          leftIcon=\"edit\"\n          iconAltText=\"Edit title\"\n          type=\"ghost\"\n          @click=\"startEditing\" />\n      </div>\n    </template>\n  </nck-header>",
+          "context": "Content management, editable interfaces, admin panels"
+        }
+      ],
+      "props": [
+        {
+          "name": "STANDARD",
+          "type": "Full spacing for standalone headers (default)\n   * - CONDENSED: Reduced spacing when followed by tabs or filters\n   * @default HeaderType.STANDARD\n   * @aiSuggestions { \"standalone\": \"STANDARD\", \"with-tabs\": \"CONDENSED\", \"with-filters\": \"CONDENSED\" }\n   */\n  headerType?: HeaderType",
+          "description": "Interface for nck-header component props\n * Page header component for navigation, branding, and primary page actions\n *\n * @aiUsage Essential component for page structure - provides consistent navigation and page context\n * @aiCategory layout\n * @aiComplexity medium\n */\nexport interface INckHeader {\n  /**\n   * Main page or section title displayed prominently\n   * Cannot be used with title-content slot\n   *",
+          "example": "\"",
+          "required": false,
+          "suggestions": null
+        },
+        {
+          "name": "button",
+          "type": "Icon performs an action (menu, close, action)\n   * - link: Icon navigates to another page/section\n   * @aiRequired When leftIconName is used\n   * @aiSuggestions { \"menu\": \"button\", \"navigation\": \"link\", \"action\": \"button\", \"back\": \"link\" }\n   */\n  leftIconAriaRole?: \"button\" | \"link\"",
+          "description": "Subtitle layout positioning (desktop only)\n   * - under: Subtitle appears on line below title (default)\n   * - inline: Subtitle appears same line as title with spacing\n   * @default \"under\"\n   * @aiSuggestions { \"long-subtitle\": \"under\", \"short-subtitle\": \"inline\", \"clean-layout\": \"under\" }\n   */\n  subtitlePosition?: \"under\" | \"inline\";\n\n  /**\n   * Shows bottom border divider below header\n   * Provides visual separation from content below\n   * @default true\n   * @aiUsage Disable when header flows into related content (tabs, filters)\n   */\n  showDivider?: boolean;\n\n  /**\n   * Breadcrumb-style back navigation link\n   * Shows as text link on desktop, left arrow icon on mobile\n   * Cannot be used with leftIconName properties (mutually exclusive)\n   *",
+          "example": "\"",
+          "required": false,
+          "suggestions": null
+        },
+        {
+          "name": "button",
+          "type": "Icon performs an action (menu, search, modal)\n   * - link: Icon navigates to another page/section\n   * @aiRequired When rightIconName is used\n   * @aiSuggestions { \"menu\": \"button\", \"search\": \"button\", \"settings\": \"link\", \"modal\": \"button\" }\n   */\n  rightIconAriaRole?: \"button\" | \"link\"",
+          "description": "Custom right-side icon name from neo-icon-kit\n   * Cannot be used with rightButtonLabel properties (mutually exclusive)\n   *",
+          "example": "\"",
+          "required": false,
+          "suggestions": null
+        },
+        {
+          "name": "button",
+          "type": "Button performs an action (save, add, process)\n   * - link: Button navigates to another page/section\n   * @aiRequired When rightButtonLabel is used\n   * @aiSuggestions { \"save\": \"button\", \"add\": \"button\", \"settings\": \"link\", \"help\": \"link\" }\n   */\n  rightButtonAriaRole?: \"button\" | \"link\"",
+          "description": "Text for right-side button (desktop) that becomes icon on mobile\n   * Cannot be used with rightIconName properties (mutually exclusive)\n   *",
+          "example": "\"",
+          "required": false,
+          "suggestions": null
+        }
+      ],
+      "methods": [],
+      "aiGuidance": {
+        "accessibility": [
+          "AlwaysprovideiconAltTextforiconsthatconveymeaning",
+          "IncludeappropriateariaRoleforallinteractiveicons",
+          "Ensuretitlehierarchyissemanticallycorrect(h1forpagetitles)",
+          "Providemeaningfulalternativetextthatdescribesactions",
+          "notappearances"
+        ],
+        "antiPatterns": {
+          "mutuallyExclusive": "Don't use backlink with leftIconName, or rightButton with rightIconName",
+          "missingRequiredProps": "Always provide altText and ariaRole when using icons",
+          "poorAltText": "Avoid generic alt text like 'icon' or 'button' - be descriptive",
+          "inconsistentHierarchy": "Don't use subtitle without title or title-content",
+          "wrongHeaderType": "Don't use condensed headers when content isn't immediately following"
+        }
+      },
+      "patterns": {}
+    },
+    {
+      "name": "nck-icon",
+      "category": "layout",
+      "complexity": "simple",
+      "description": "Interface for nck-icon component props Universal icon component that loads and displays SVG icons from the Neo Icon Kit",
+      "usage": "Core visual component used throughout all interfaces - handles icon loading, sizing, and accessibility",
+      "examples": [
+        {
+          "name": "functional",
+          "code": "<nck-icon\n    iconName=\"check\"\n    :iconSize=\"IconSize.S\"\n    iconAltText=\"Save changes\"\n    :primaryColor=\"IconColors.GREEN_300\" />",
+          "context": "Action buttons, interactive elements"
+        },
+        {
+          "name": "decorative",
+          "code": "<nck-icon\n    iconName=\"star-filled\"\n    :iconSize=\"IconSize.XS\"\n    iconAltText=\"\"\n    :primaryColor=\"IconColors.YELLOW_300\" />",
+          "context": "Visual enhancement, non-essential decoration"
+        },
+        {
+          "name": "status",
+          "code": "<nck-icon\n    iconName=\"warning-filled\"\n    :iconSize=\"IconSize.M\"\n    iconAltText=\"Warning\"\n    :primaryColor=\"IconColors.ORANGE_300\" />",
+          "context": "Status displays, state indicators"
+        },
+        {
+          "name": "feature",
+          "code": "<nck-icon\n    iconName=\"chart-line\"\n    :iconSize=\"IconSize.XL\"\n    iconAltText=\"Analytics dashboard\"\n    :primaryColor=\"IconColors.BRIGHT_BLUE_300\" />",
+          "context": "Hero sections, feature highlights, empty states"
+        },
+        {
+          "name": "navigation",
+          "code": "<nck-icon\n    iconName=\"arrow-right\"\n    :iconSize=\"IconSize.S\"\n    iconAltText=\"Continue to next step\"\n    :primaryColor=\"IconColors.BRIGHT_BLUE_300\" />",
+          "context": "Navigation controls, arrows, directional actions"
+        },
+        {
+          "name": "multiColor",
+          "code": "<nck-icon\n    iconName=\"amenity-parking\"\n    :iconSize=\"IconSize.M\"\n    iconAltText=\"Parking available\"\n    :primaryColor=\"IconColors.BRIGHT_BLUE_300\"\n    :secondaryColor=\"IconColors.GREEN_300\" />",
+          "context": "Rich icons with backgrounds, badges, complex graphics"
+        },
+        {
+          "name": "currency",
+          "code": "<nck-icon\n    iconName=\"currency-dollar-filled\"\n    :iconSize=\"IconSize.S\"\n    iconAltText=\"US Dollar\"\n    :primaryColor=\"IconColors.GREEN_300\" />",
+          "context": "Payment interfaces, pricing, financial data"
+        },
+        {
+          "name": "inline",
+          "code": "<span class=\"text-content\">\n    Available features\n    <nck-icon\n      iconName=\"check-filled\"\n      :iconSize=\"IconSize.XXS\"\n      iconAltText=\"\"\n      :primaryColor=\"IconColors.GREEN_300\" />\n  </span>",
+          "context": "Inline with text, small indicators, list bullets"
+        },
+        {
+          "name": "loading",
+          "code": "<nck-icon\n    iconName=\"loading\"\n    :iconSize=\"IconSize.M\"\n    iconAltText=\"Loading content\"\n    :primaryColor=\"IconColors.BLUE_GREY_500\" />",
+          "context": "Async operations, processing states"
+        }
+      ],
+      "props": [
+        {
+          "name": "iconName",
+          "type": "string",
+          "description": "Interface for nck-icon component props\n * Universal icon component that loads and displays SVG icons from the Neo Icon Kit\n *\n * @aiUsage Core visual component used throughout all interfaces - handles icon loading, sizing, and accessibility\n * @aiCategory layout\n * @aiComplexity simple\n */\nexport interface INckIcon {\n  /**\n   * Icon name from Neo Icon Kit (833 available icons)\n   * Must match exact SVG filename without extension\n   *",
+          "example": "\"",
+          "required": false,
+          "suggestions": null
+        },
+        {
+          "name": "iconAltText",
+          "type": "string",
+          "description": "Icon display size - controls both width and height\n   * - XXS: 0.5rem (8px) - Inline text icons\n   * - XS: 1rem (16px) - Small buttons, form controls\n   * - S: 1.25rem (20px) - Standard buttons, navigation\n   * - M: 1.5rem (24px) - Larger buttons, headers\n   * - L: 2rem (32px) - Feature icons, emphasis\n   * - XL: 3rem (48px) - Hero icons, illustrations\n   * @aiRequired true\n   * @aiSuggestions {\n   *   \"button\": \"S\",\n   *   \"form\": \"XS\",\n   *   \"header\": \"M\",\n   *   \"feature\": \"L\",\n   *   \"hero\": \"XL\",\n   *   \"inline\": \"XXS\"\n   * }\n   */\n  iconSize: IconSize;\n\n  /**\n   * Accessible alternative text for screen readers\n   * - Use descriptive text when icon conveys important information\n   * - Use empty string \"\" when icon is purely decorative\n   * - Use action text for functional icons (\"Save\", \"Delete\", \"Close\")\n   *",
+          "example": "\"",
+          "required": false,
+          "suggestions": null
+        },
+        {
+          "name": "functional",
+          "type": "`<nck-icon\n    iconName=\"check\"\n    :iconSize=\"IconSize.S\"\n    iconAltText=\"Save changes\"\n    :primaryColor=\"IconColors.GREEN_300\" />`,\n\n  /**\n   * Decorative icon without alt text\n   * @aiContext Visual enhancement, non-essential decoration\n   */\n  decorative: `<nck-icon\n    iconName=\"star-filled\"\n    :iconSize=\"IconSize.XS\"\n    iconAltText=\"\"\n    :primaryColor=\"IconColors.YELLOW_300\" />`,\n\n  /**\n   * Status indicator icon with semantic coloring\n   * @aiContext Status displays, state indicators\n   */\n  status: `<nck-icon\n    iconName=\"warning-filled\"\n    :iconSize=\"IconSize.M\"\n    iconAltText=\"Warning\"\n    :primaryColor=\"IconColors.ORANGE_300\" />`,\n\n  /**\n   * Large feature icon for emphasis\n   * @aiContext Hero sections, feature highlights, empty states\n   */\n  feature: `<nck-icon\n    iconName=\"chart-line\"\n    :iconSize=\"IconSize.XL\"\n    iconAltText=\"Analytics dashboard\"\n    :primaryColor=\"IconColors.BRIGHT_BLUE_300\" />`,\n\n  /**\n   * Navigation icon with directional meaning\n   * @aiContext Navigation controls, arrows, directional actions\n   */\n  navigation: `<nck-icon\n    iconName=\"arrow-right\"\n    :iconSize=\"IconSize.S\"\n    iconAltText=\"Continue to next step\"\n    :primaryColor=\"IconColors.BRIGHT_BLUE_300\" />`,\n\n  /**\n   * Multi-color icon with primary and secondary fills\n   * @aiContext Rich icons with backgrounds, badges, complex graphics\n   */\n  multiColor: `<nck-icon\n    iconName=\"amenity-parking\"\n    :iconSize=\"IconSize.M\"\n    iconAltText=\"Parking available\"\n    :primaryColor=\"IconColors.BRIGHT_BLUE_300\"\n    :secondaryColor=\"IconColors.GREEN_300\" />`,\n\n  /**\n   * Currency icon for financial content\n   * @aiContext Payment interfaces, pricing, financial data\n   */\n  currency: `<nck-icon\n    iconName=\"currency-dollar-filled\"\n    :iconSize=\"IconSize.S\"\n    iconAltText=\"US Dollar\"\n    :primaryColor=\"IconColors.GREEN_300\" />`,\n\n  /**\n   * Inline icon sized for text content\n   * @aiContext Inline with text, small indicators, list bullets\n   */\n  inline: `<span class=\"text-content\">\n    Available features\n    <nck-icon\n      iconName=\"check-filled\"\n      :iconSize=\"IconSize.XXS\"\n      iconAltText=\"\"\n      :primaryColor=\"IconColors.GREEN_300\" />\n  </span>`,\n\n  /**\n   * Loading state icon\n   * @aiContext Async operations, processing states\n   */\n  loading: `<nck-icon\n    iconName=\"loading\"\n    :iconSize=\"IconSize.M\"\n    iconAltText=\"Loading content\"\n    :primaryColor=\"IconColors.BLUE_GREY_500\" />`\n} as const",
+          "description": "Primary fill color override using design system colors\n   * Automatically calculated based on context if not provided\n   * @default Inherited from design system context\n   * @aiSuggestions {\n   *   \"success\": \"green-300\",\n   *   \"error\": \"red-300\",\n   *   \"warning\": \"orange-300\",\n   *   \"info\": \"bright-blue-300\",\n   *   \"neutral\": \"blue-grey-500\",\n   *   \"brand\": \"bright-blue-300\"\n   * }\n   */\n  primaryColor?: IconColors;\n\n  /**\n   * Secondary fill color for icons with multiple color elements\n   * Only used by icons that have secondary fill areas (badges, backgrounds)\n   *",
+          "example": "I",
+          "required": false,
+          "suggestions": null
+        }
+      ],
+      "methods": [],
+      "aiGuidance": {
+        "antiPatterns": {
+          "missingAltText": "Don't leave iconAltText undefined - always provide string (even empty)",
+          "wrongSizes": "Don't use XL icons in buttons or XXS icons for primary actions",
+          "colorMismatch": "Don't use red colors for positive actions or green for errors",
+          "overuseSecondaryColor": "Don't use secondaryColor unless icon actually has secondary elements",
+          "inconsistentSizing": "Don't mix different icon sizes for same functional context"
+        }
+      },
+      "patterns": {}
+    },
+    {
+      "name": "nck-pagination",
+      "category": "navigation",
+      "complexity": "complex",
+      "description": "Interface for nck-pagination component props Navigation component for large datasets with page-based browsing and items-per-page control",
+      "usage": "Essential component for data tables and large lists - handles pagination logic and accessibility",
+      "examples": [
+        {
+          "name": "basic",
+          "code": "<nck-pagination\n    :totalNumberOfItems=\"500\"\n    :numberOfItemsPerPage=\"25\"\n    :currentPage=\"currentPage\"\n    footerWording=\"Showing {min}-{max} of {total} items\"\n    pageNumberWording=\"Go to page {pageNumber}\"\n    @page-changed=\"handlePageChange\" />",
+          "context": "Data tables, search results, product listings"
+        },
+        {
+          "name": "withPageSize",
+          "code": "<nck-pagination\n    :totalNumberOfItems=\"1000\"\n    v-model:numberOfItemsPerPage=\"pageSize\"\n    :currentPage=\"currentPage\"\n    footerWording=\"Displaying {min}-{max} of {total} results\"\n    pageNumberWording=\"Navigate to page {pageNumber}\"\n    :withItemsPerPageDropdown=\"[10, 25, 50, 100]\"\n    withItemsPerPageLabel=\"Results per page\"\n    :withItemsMenuPosition=\"MenuPosition.TOP_LEFT\"\n    @page-changed=\"handlePageChange\"\n    @update:numberOfItemsPerPage=\"handlePageSizeChange\" />",
+          "context": "Large datasets, user preference interfaces, admin tables"
+        },
+        {
+          "name": "tableIntegration",
+          "code": "<div class=\"data-container\">\n    <nck-table\n      :data=\"tableData\"\n      :columnsDescription=\"columns\"\n      rowUniqueKey=\"id\"\n      ariaLabel=\"User data table\" />\n\n    <nck-pagination\n      :totalNumberOfItems=\"totalUsers\"\n      :numberOfItemsPerPage=\"usersPerPage\"\n      :currentPage=\"currentUserPage\"\n      footerWording=\"Showing {min}-{max} of {total} users\"\n      pageNumberWording=\"View page {pageNumber} of users\"\n      :withItemsPerPageDropdown=\"[10, 25, 50]\"\n      withItemsPerPageLabel=\"Users per page\"\n      @page-changed=\"loadUsersPage\"\n      @update:numberOfItemsPerPage=\"updateUsersPageSize\" />\n  </div>",
+          "context": "Data tables, management interfaces, filtered results"
+        },
+        {
+          "name": "searchResults",
+          "code": "<div class=\"search-results\">\n    <div class=\"results-grid\">\n      <div v-for=\"item in searchResults\" :key=\"item.id\" class=\"result-item\">\n        <!-- Search result content -->\n      </div>\n    </div>\n\n    <nck-pagination\n      :totalNumberOfItems=\"totalResults\"\n      :numberOfItemsPerPage=\"resultsPerPage\"\n      :currentPage=\"currentResultPage\"\n      footerWording=\"Results {min}-{max} of {total} found\"\n      pageNumberWording=\"View page {pageNumber} of search results\"\n      :withItemsPerPageDropdown=\"[12, 24, 48]\"\n      withItemsPerPageLabel=\"Results per page\"\n      :withItemsMenuPosition=\"MenuPosition.TOP_RIGHT\"\n      @page-changed=\"searchPage\"\n      @update:numberOfItemsPerPage=\"updateResultsPageSize\" />\n  </div>",
+          "context": "Search interfaces, filtering systems, product catalogs"
+        },
+        {
+          "name": "small",
+          "code": "<nck-pagination\n    :totalNumberOfItems=\"50\"\n    :numberOfItemsPerPage=\"10\"\n    :currentPage=\"page\"\n    footerWording=\"{min}-{max} of {total}\"\n    pageNumberWording=\"Page {pageNumber}\"\n    @page-changed=\"changePage\" />",
+          "context": "Small lists, simple browsing, focused content"
+        },
+        {
+          "name": "largeDataset",
+          "code": "<nck-pagination\n    :totalNumberOfItems=\"50000\"\n    v-model:numberOfItemsPerPage=\"itemsPerPage\"\n    :currentPage=\"currentPage\"\n    footerWording=\"Records {min} to {max} of {total} total\"\n    pageNumberWording=\"Navigate to page {pageNumber}\"\n    :withItemsPerPageDropdown=\"[25, 50, 100, 200]\"\n    withItemsPerPageLabel=\"Records per page\"\n    :withItemsMenuPosition=\"MenuPosition.TOP_LEFT\"\n    @page-changed=\"loadDataPage\"\n    @update:numberOfItemsPerPage=\"adjustPageSize\" />",
+          "context": "Analytics interfaces, big data browsing, enterprise tables"
+        },
+        {
+          "name": "mobileOptimized",
+          "code": "<nck-pagination\n    :totalNumberOfItems=\"itemCount\"\n    :numberOfItemsPerPage=\"isMobile ? 5 : 20\"\n    :currentPage=\"page\"\n    footerWording=\"Items {min}-{max} of {total}\"\n    pageNumberWording=\"Page {pageNumber}\"\n    :withItemsPerPageDropdown=\"isMobile ? [5, 10] : [10, 20, 50]\"\n    :withItemsPerPageLabel=\"isMobile ? 'Per page' : 'Items per page'\"\n    @page-changed=\"handlePageChange\"\n    @update:numberOfItemsPerPage=\"handlePageSizeChange\" />",
+          "context": "Mobile interfaces, responsive tables, touch-friendly navigation"
+        }
+      ],
+      "props": [
+        {
+          "name": "totalNumberOfItems",
+          "type": "number",
+          "description": "Interface for nck-pagination component props\n * Navigation component for large datasets with page-based browsing and items-per-page control\n *\n * @aiUsage Essential component for data tables and large lists - handles pagination logic and accessibility\n * @aiCategory navigation\n * @aiComplexity complex\n */\nexport interface INckPagination {\n  /**\n   * Total count of items across all pages\n   * Must be a positive integer representing the complete dataset size\n   *",
+          "example": "1",
+          "required": false,
+          "suggestions": null
+        },
+        {
+          "name": "numberOfItemsPerPage",
+          "type": "number",
+          "description": "Number of items to display on each page\n   * Must be a positive integer that divides the total items into pages\n   *",
+          "example": "1",
+          "required": false,
+          "suggestions": null
+        },
+        {
+          "name": "variables",
+          "type": "{min}, {max}, {total}\n   * Uses translateAndFormat function for internationalization\n   * @example \"Showing {min}-{max} of {total} items\", \"Items {min} to {max} of {total}\"\n   * @aiRequired true\n   * @aiUsage Provide clear context about current page range and total count\n   */\n  footerWording: string",
+          "description": "Current active page number (1-based indexing)\n   * Must be between 1 and total number of pages\n   *",
+          "example": "1",
+          "required": false,
+          "suggestions": null
+        },
+        {
+          "name": "pageNumberWording",
+          "type": "string",
+          "description": "Page number aria-label template for accessibility\n   * Supports template variables: {pageNumber}\n   * Uses translateAndFormat function for screen reader announcements\n   *",
+          "example": "\"",
+          "required": false,
+          "suggestions": null
+        },
+        {
+          "name": "basic",
+          "type": "`<nck-pagination\n    :totalNumberOfItems=\"500\"\n    :numberOfItemsPerPage=\"25\"\n    :currentPage=\"currentPage\"\n    footerWording=\"Showing {min}-{max} of {total} items\"\n    pageNumberWording=\"Go to page {pageNumber}\"\n    @page-changed=\"handlePageChange\" />`,\n\n  /**\n   * Pagination with dynamic page size - user-controlled page size\n   * @aiContext Large datasets, user preference interfaces, admin tables\n   */\n  withPageSize: `<nck-pagination\n    :totalNumberOfItems=\"1000\"\n    v-model:numberOfItemsPerPage=\"pageSize\"\n    :currentPage=\"currentPage\"\n    footerWording=\"Displaying {min}-{max} of {total} results\"\n    pageNumberWording=\"Navigate to page {pageNumber}\"\n    :withItemsPerPageDropdown=\"[10, 25, 50, 100]\"\n    withItemsPerPageLabel=\"Results per page\"\n    :withItemsMenuPosition=\"MenuPosition.TOP_LEFT\"\n    @page-changed=\"handlePageChange\"\n    @update:numberOfItemsPerPage=\"handlePageSizeChange\" />`,\n\n  /**\n   * Table pagination integration - with data loading\n   * @aiContext Data tables, management interfaces, filtered results\n   */\n  tableIntegration: `<div class=\"data-container\">\n    <nck-table\n      :data=\"tableData\"\n      :columnsDescription=\"columns\"\n      rowUniqueKey=\"id\"\n      ariaLabel=\"User data table\" />\n\n    <nck-pagination\n      :totalNumberOfItems=\"totalUsers\"\n      :numberOfItemsPerPage=\"usersPerPage\"\n      :currentPage=\"currentUserPage\"\n      footerWording=\"Showing {min}-{max} of {total} users\"\n      pageNumberWording=\"View page {pageNumber} of users\"\n      :withItemsPerPageDropdown=\"[10, 25, 50]\"\n      withItemsPerPageLabel=\"Users per page\"\n      @page-changed=\"loadUsersPage\"\n      @update:numberOfItemsPerPage=\"updateUsersPageSize\" />\n  </div>`,\n\n  /**\n   * Search results pagination - with result context\n   * @aiContext Search interfaces, filtering systems, product catalogs\n   */\n  searchResults: `<div class=\"search-results\">\n    <div class=\"results-grid\">\n      <div v-for=\"item in searchResults\" :key=\"item.id\" class=\"result-item\">\n        <!-- Search result content -->\n      </div>\n    </div>\n\n    <nck-pagination\n      :totalNumberOfItems=\"totalResults\"\n      :numberOfItemsPerPage=\"resultsPerPage\"\n      :currentPage=\"currentResultPage\"\n      footerWording=\"Results {min}-{max} of {total} found\"\n      pageNumberWording=\"View page {pageNumber} of search results\"\n      :withItemsPerPageDropdown=\"[12, 24, 48]\"\n      withItemsPerPageLabel=\"Results per page\"\n      :withItemsMenuPosition=\"MenuPosition.TOP_RIGHT\"\n      @page-changed=\"searchPage\"\n      @update:numberOfItemsPerPage=\"updateResultsPageSize\" />\n  </div>`,\n\n  /**\n   * Small dataset pagination - minimal configuration\n   * @aiContext Small lists, simple browsing, focused content\n   */\n  small: `<nck-pagination\n    :totalNumberOfItems=\"50\"\n    :numberOfItemsPerPage=\"10\"\n    :currentPage=\"page\"\n    footerWording=\"{min}-{max} of {total}\"\n    pageNumberWording=\"Page {pageNumber}\"\n    @page-changed=\"changePage\" />`,\n\n  /**\n   * Large dataset pagination - with progressive page sizes\n   * @aiContext Analytics interfaces, big data browsing, enterprise tables\n   */\n  largeDataset: `<nck-pagination\n    :totalNumberOfItems=\"50000\"\n    v-model:numberOfItemsPerPage=\"itemsPerPage\"\n    :currentPage=\"currentPage\"\n    footerWording=\"Records {min} to {max} of {total} total\"\n    pageNumberWording=\"Navigate to page {pageNumber}\"\n    :withItemsPerPageDropdown=\"[25, 50, 100, 200]\"\n    withItemsPerPageLabel=\"Records per page\"\n    :withItemsMenuPosition=\"MenuPosition.TOP_LEFT\"\n    @page-changed=\"loadDataPage\"\n    @update:numberOfItemsPerPage=\"adjustPageSize\" />`,\n\n  /**\n   * Mobile-optimized pagination - responsive design\n   * @aiContext Mobile interfaces, responsive tables, touch-friendly navigation\n   */\n  mobileOptimized: `<nck-pagination\n    :totalNumberOfItems=\"itemCount\"\n    :numberOfItemsPerPage=\"isMobile ? 5 : 20\"\n    :currentPage=\"page\"\n    footerWording=\"Items {min}-{max} of {total}\"\n    pageNumberWording=\"Page {pageNumber}\"\n    :withItemsPerPageDropdown=\"isMobile ? [5, 10] : [10, 20, 50]\"\n    :withItemsPerPageLabel=\"isMobile ? 'Per page' : 'Items per page'\"\n    @page-changed=\"handlePageChange\"\n    @update:numberOfItemsPerPage=\"handlePageSizeChange\" />`\n} as const",
+          "description": "Available page size options for items-per-page dropdown\n   * When provided, adds dropdown for dynamic page size changes\n   *",
+          "example": "[",
+          "required": false,
+          "suggestions": null
+        }
+      ],
+      "methods": [],
+      "aiGuidance": {
+        "accessibility": [
+          "ProvidemeaningfulfooterWordingandpageNumberWordingtemplates",
+          "Ensurecurrentpageisclearlyannouncedtoscreenreaders",
+          "UseproperARIAnavigationrole(automaticallyhandled)",
+          "Maintainfocusmanagementwhenpagechanges"
+        ],
+        "antiPatterns": {
+          "inconsistentPageSizes": "Don't offer page sizes that don't make sense for your content type",
+          "poorWording": "Avoid technical jargon in footerWording and pageNumberWording",
+          "noFocusManagement": "Don't ignore focus management after page changes",
+          "invalidStates": "Always validate currentPage is within valid range",
+          "missingLoadingStates": "Don't forget loading indicators during page transitions"
+        }
+      },
+      "patterns": {}
+    },
+    {
+      "name": "nck-tabs",
+      "category": "navigation",
+      "complexity": "medium",
+      "description": "Interface for nck-tabs component props Comprehensive tabs component for organizing content into sections with navigation",
+      "usage": "Primary component for content organization - supports overflow handling, icons, and counters",
+      "examples": [
+        {
+          "name": "uniform",
+          "code": "<nck-tabs type=\"UniformFull\">\n    <nck-tab heading=\"Overview\">\n      <div class=\"tab-content\">\n        <h2>Overview Content</h2>\n        <p>Main dashboard content...</p>\n      </div>\n    </nck-tab>\n\n    <nck-tab heading=\"Analytics\">\n      <div class=\"tab-content\">\n        <h2>Analytics</h2>\n        <p>Charts and metrics...</p>\n      </div>\n    </nck-tab>\n\n    <nck-tab heading=\"Settings\">\n      <div class=\"tab-content\">\n        <h2>Settings</h2>\n        <p>Configuration options...</p>\n      </div>\n    </nck-tab>\n  </nck-tabs>",
+          "context": "Main navigation, primary content sections"
+        },
+        {
+          "name": "compactWithIcons",
+          "code": "<nck-tabs type=\"Compact\">\n    <nck-tab\n      heading=\"Messages\"\n      leadingIcon=\"message\"\n      trailingCounterValue=\"3\">\n      <div class=\"messages-content\">\n        <h2>Messages</h2>\n        <p>3 unread messages...</p>\n      </div>\n    </nck-tab>\n\n    <nck-tab\n      heading=\"Notifications\"\n      leadingIcon=\"bell\"\n      trailingCounterValue=\"12\">\n      <div class=\"notifications-content\">\n        <h2>Notifications</h2>\n        <p>12 new notifications...</p>\n      </div>\n    </nck-tab>\n\n    <nck-tab\n      heading=\"Profile\"\n      leadingIcon=\"account\">\n      <div class=\"profile-content\">\n        <h2>User Profile</h2>\n        <p>Profile information...</p>\n      </div>\n    </nck-tab>\n  </nck-tabs>",
+          "context": "Content organization with status indicators"
+        },
+        {
+          "name": "preselected",
+          "code": "<nck-tabs\n    type=\"Compact\"\n    :preselectedTabIndex=\"1\">\n    <nck-tab heading=\"General\">\n      <p>General settings content...</p>\n    </nck-tab>\n\n    <nck-tab heading=\"Advanced\">\n      <p>Advanced settings content (selected by default)...</p>\n    </nck-tab>\n\n    <nck-tab heading=\"Security\">\n      <p>Security settings content...</p>\n    </nck-tab>\n  </nck-tabs>",
+          "context": "Default to specific content section"
+        },
+        {
+          "name": "scrollableContent",
+          "code": "<nck-tabs\n    type=\"UniformFull\"\n    :scrollableContent=\"true\">\n    <nck-tab heading=\"Dashboard\" leadingIcon=\"dashboard\">\n      <div class=\"dashboard-content\">\n        <!-- Long scrollable content -->\n        <div v-for=\"widget in dashboardWidgets\" :key=\"widget.id\">\n          <nck-card>{{ widget.content }}</nck-card>\n        </div>\n      </div>\n    </nck-tab>\n\n    <nck-tab heading=\"Reports\" leadingIcon=\"chart\">\n      <div class=\"reports-content\">\n        <!-- Scrollable reports content -->\n        <nck-table :data=\"reportData\" />\n      </div>\n    </nck-tab>\n  </nck-tabs>",
+          "context": "Dashboard sections, application main areas"
+        },
+        {
+          "name": "withClickHandlers",
+          "code": "<nck-tabs type=\"Compact\">\n    <nck-tab\n      heading=\"Users\"\n      @click=\"trackTabView('users')\">\n      <div class=\"users-content\">\n        <nck-table :data=\"users\" />\n      </div>\n    </nck-tab>\n\n    <nck-tab\n      heading=\"Settings\"\n      @click=\"validateChanges\">\n      <div class=\"settings-content\">\n        <nck-form>\n          <!-- Form content -->\n        </nck-form>\n      </div>\n    </nck-tab>\n  </nck-tabs>",
+          "context": "Analytics tracking, validation, side effects"
+        },
+        {
+          "name": "compactSide",
+          "code": "<nck-tabs type=\"CompactSide\">\n    <nck-tab heading=\"Quick Actions\" leadingIcon=\"lightning\">\n      <div class=\"quick-actions\">\n        <nck-button label=\"Create New\" type=\"filled\" />\n        <nck-button label=\"Import Data\" type=\"outline\" />\n      </div>\n    </nck-tab>\n\n    <nck-tab heading=\"Recent Items\" leadingIcon=\"clock\">\n      <div class=\"recent-items\">\n        <nck-list :items=\"recentItems\" />\n      </div>\n    </nck-tab>\n  </nck-tabs>",
+          "context": "Sidebar navigation, secondary content organization"
+        },
+        {
+          "name": "noDivider",
+          "code": "<nck-tabs\n    type=\"Compact\"\n    :hideDivider=\"true\">\n    <nck-tab heading=\"Content\">\n      <p>Content without bottom border...</p>\n    </nck-tab>\n\n    <nck-tab heading=\"Media\">\n      <p>Media content...</p>\n    </nck-tab>\n  </nck-tabs>",
+          "context": "Clean layouts, custom borders, card containers"
+        }
+      ],
+      "props": [
+        {
+          "name": "heading",
+          "type": "string",
+          "description": "Interface for nck-tabs component props\n * Comprehensive tabs component for organizing content into sections with navigation\n *\n * @aiUsage Primary component for content organization - supports overflow handling, icons, and counters\n * @aiCategory navigation\n * @aiComplexity medium\n */\nexport interface INckTabs {\n  /**\n   * Visual style of the tabs component\n   * - UniformFull: Equal width tabs across full container (max 4 tabs recommended)\n   * - Compact: Content-based width tabs with overflow menu handling\n   * - CompactSide: Compact tabs with side alignment and overflow menu\n   * @aiRequired true\n   * @aiSuggestions { \"main-navigation\": \"UniformFull\", \"content-sections\": \"Compact\", \"sidebar-tabs\": \"CompactSide\" }\n   */\n  type: TabsType;\n\n  /**\n   * Makes tab content scrollable within its container\n   * Use when tabs take most of the page height and you want sticky tab headers\n   * @default false\n   * @aiUsage Enable for full-page tab layouts, dashboard sections\n   */\n  scrollableContent?: boolean;\n\n  /**\n   * Hides the bottom border divider line under tabs\n   * Use for custom styling or when tabs are in containers with borders\n   * @default false\n   * @aiUsage Use for cleaner look in cards or custom layouts\n   */\n  hideDivider?: boolean;\n\n  /**\n   * Index of tab to select initially (0-based)\n   * Updates selected tab when value changes\n   * Note: This is one-way binding - doesn't update with user selection\n   *",
+          "example": "0",
+          "required": false,
+          "suggestions": null
+        },
+        {
+          "name": "uniform",
+          "type": "`<nck-tabs type=\"UniformFull\">\n    <nck-tab heading=\"Overview\">\n      <div class=\"tab-content\">\n        <h2>Overview Content</h2>\n        <p>Main dashboard content...</p>\n      </div>\n    </nck-tab>\n\n    <nck-tab heading=\"Analytics\">\n      <div class=\"tab-content\">\n        <h2>Analytics</h2>\n        <p>Charts and metrics...</p>\n      </div>\n    </nck-tab>\n\n    <nck-tab heading=\"Settings\">\n      <div class=\"tab-content\">\n        <h2>Settings</h2>\n        <p>Configuration options...</p>\n      </div>\n    </nck-tab>\n  </nck-tabs>`,\n\n  /**\n   * Compact tabs with icons and counters\n   * @aiContext Content organization with status indicators\n   */\n  compactWithIcons: `<nck-tabs type=\"Compact\">\n    <nck-tab\n      heading=\"Messages\"\n      leadingIcon=\"message\"\n      trailingCounterValue=\"3\">\n      <div class=\"messages-content\">\n        <h2>Messages</h2>\n        <p>3 unread messages...</p>\n      </div>\n    </nck-tab>\n\n    <nck-tab\n      heading=\"Notifications\"\n      leadingIcon=\"bell\"\n      trailingCounterValue=\"12\">\n      <div class=\"notifications-content\">\n        <h2>Notifications</h2>\n        <p>12 new notifications...</p>\n      </div>\n    </nck-tab>\n\n    <nck-tab\n      heading=\"Profile\"\n      leadingIcon=\"account\">\n      <div class=\"profile-content\">\n        <h2>User Profile</h2>\n        <p>Profile information...</p>\n      </div>\n    </nck-tab>\n  </nck-tabs>`,\n\n  /**\n   * Tabs with preselected active tab\n   * @aiContext Default to specific content section\n   */\n  preselected: `<nck-tabs\n    type=\"Compact\"\n    :preselectedTabIndex=\"1\">\n    <nck-tab heading=\"General\">\n      <p>General settings content...</p>\n    </nck-tab>\n\n    <nck-tab heading=\"Advanced\">\n      <p>Advanced settings content (selected by default)...</p>\n    </nck-tab>\n\n    <nck-tab heading=\"Security\">\n      <p>Security settings content...</p>\n    </nck-tab>\n  </nck-tabs>`,\n\n  /**\n   * Scrollable content tabs for full-page layouts\n   * @aiContext Dashboard sections, application main areas\n   */\n  scrollableContent: `<nck-tabs\n    type=\"UniformFull\"\n    :scrollableContent=\"true\">\n    <nck-tab heading=\"Dashboard\" leadingIcon=\"dashboard\">\n      <div class=\"dashboard-content\">\n        <!-- Long scrollable content -->\n        <div v-for=\"widget in dashboardWidgets\" :key=\"widget.id\">\n          <nck-card>{{ widget.content }}</nck-card>\n        </div>\n      </div>\n    </nck-tab>\n\n    <nck-tab heading=\"Reports\" leadingIcon=\"chart\">\n      <div class=\"reports-content\">\n        <!-- Scrollable reports content -->\n        <nck-table :data=\"reportData\" />\n      </div>\n    </nck-tab>\n  </nck-tabs>`,\n\n  /**\n   * Tabs with click handlers for additional logic\n   * @aiContext Analytics tracking, validation, side effects\n   */\n  withClickHandlers: `<nck-tabs type=\"Compact\">\n    <nck-tab\n      heading=\"Users\"\n      @click=\"trackTabView('users')\">\n      <div class=\"users-content\">\n        <nck-table :data=\"users\" />\n      </div>\n    </nck-tab>\n\n    <nck-tab\n      heading=\"Settings\"\n      @click=\"validateChanges\">\n      <div class=\"settings-content\">\n        <nck-form>\n          <!-- Form content -->\n        </nck-form>\n      </div>\n    </nck-tab>\n  </nck-tabs>`,\n\n  /**\n   * Compact side tabs for sidebar layouts\n   * @aiContext Sidebar navigation, secondary content organization\n   */\n  compactSide: `<nck-tabs type=\"CompactSide\">\n    <nck-tab heading=\"Quick Actions\" leadingIcon=\"lightning\">\n      <div class=\"quick-actions\">\n        <nck-button label=\"Create New\" type=\"filled\" />\n        <nck-button label=\"Import Data\" type=\"outline\" />\n      </div>\n    </nck-tab>\n\n    <nck-tab heading=\"Recent Items\" leadingIcon=\"clock\">\n      <div class=\"recent-items\">\n        <nck-list :items=\"recentItems\" />\n      </div>\n    </nck-tab>\n  </nck-tabs>`,\n\n  /**\n   * Tabs without divider for custom styling\n   * @aiContext Clean layouts, custom borders, card containers\n   */\n  noDivider: `<nck-tabs\n    type=\"Compact\"\n    :hideDivider=\"true\">\n    <nck-tab heading=\"Content\">\n      <p>Content without bottom border...</p>\n    </nck-tab>\n\n    <nck-tab heading=\"Media\">\n      <p>Media content...</p>\n    </nck-tab>\n  </nck-tabs>`\n} as const",
+          "description": "Icon name from neo-icon-kit displayed before the tab text\n   * Use semantic icons that reinforce the tab content meaning\n   *",
+          "example": "\"",
+          "required": false,
+          "suggestions": null
+        }
+      ],
+      "methods": [],
+      "aiGuidance": {
+        "antiPatterns": {
+          "tooManyUniformTabs": "Don't use >4 tabs with UniformFull type (mobile overflow)",
+          "inconsistentContent": "Don't mix unrelated content types within single tab",
+          "missingHeadings": "Don't forget descriptive tab headings - required for accessibility",
+          "overuseCounters": "Don't use trailingCounterValue for non-count information",
+          "nestedTabs": "Avoid nesting tabs within tabs - creates confusing navigation"
+        }
+      },
+      "patterns": {}
+    },
+    {
+      "name": "nck-modal",
+      "category": "overlay",
+      "complexity": "complex",
+      "description": "Interface for nck-modal component props Modal dialog component with focus trapping, accessibility, and confirmation workflows",
+      "usage": "Essential component for overlays, confirmations, and complex interactions",
+      "examples": [
+        {
+          "name": "confirmation",
+          "code": "<nck-modal\n    modalTitle=\"Confirm Delete\"\n    :size=\"ModalSize.XS\"\n    :role=\"ModalRole.ALERT_DIALOG\"\n    :dismissable=\"false\"\n    v-model:displayed=\"showDeleteModal\">\n\n    <template #modal-body>\n      <p>Are you sure you want to delete this item? This action cannot be undone.</p>\n    </template>\n\n    <template #modal-footer-action-buttons>\n      <nck-button\n        label=\"Cancel\"\n        type=\"outline\"\n        @click=\"showDeleteModal = false\" />\n      <nck-button\n        label=\"Delete\"\n        type=\"filled\"\n        color=\"negative\"\n        @click=\"confirmDelete\" />\n    </template>\n  </nck-modal>",
+          "context": "Delete confirmations, destructive actions, irreversible operations"
+        },
+        {
+          "name": "form",
+          "code": "<nck-modal\n    modalTitle=\"Add New User\"\n    :size=\"ModalSize.S\"\n    :confirmDismissal=\"hasUnsavedChanges\"\n    v-model:displayed=\"showUserForm\">\n\n    <template #modal-body>\n      <nck-form @submit=\"handleSubmit\">\n        <nck-text-input\n          name=\"name\"\n          label=\"Full Name\"\n          v-model=\"userData.name\"\n          required />\n        <nck-text-input\n          name=\"email\"\n          label=\"Email Address\"\n          type=\"email\"\n          v-model=\"userData.email\"\n          required />\n      </nck-form>\n    </template>\n\n    <template #modal-footer-action-buttons>\n      <nck-button\n        label=\"Cancel\"\n        type=\"outline\"\n        @click=\"handleCancel\" />\n      <nck-button\n        label=\"Create User\"\n        type=\"filled\"\n        :loading=\"isCreating\"\n        loadingText=\"Creating user...\"\n        @click=\"handleSubmit\" />\n    </template>\n  </nck-modal>",
+          "context": "User creation, edit profiles, settings forms"
+        }
+      ],
+      "props": [
+        {
+          "name": "modalTitle",
+          "type": "string",
+          "description": "Interface for nck-modal component props\n * Modal dialog component with focus trapping, accessibility, and confirmation workflows\n *\n * @aiUsage Essential component for overlays, confirmations, and complex interactions\n * @aiCategory overlay\n * @aiComplexity complex\n */\nexport interface INckModalProps {\n  /**\n   * Modal dialog title displayed in header\n   * Used for screen reader navigation and modal identification\n   *",
+          "example": "\"",
+          "required": false,
+          "suggestions": null
+        },
+        {
+          "name": "closeModal",
+          "type": "(...args: unknown[]) => void",
+          "description": "Modal size variant - controls width and layout behavior\n   * - XS: 320px - Minimal confirmations, simple alerts\n   * - S: 600px - Standard forms, simple content\n   * - M: 778px - Complex forms, moderate content (default)\n   * - L: 980px - Data tables, extensive content\n   * - FULL: Full screen - Complex applications, detailed workflows\n   * @default ModalSize.M\n   * @aiSuggestions {\n   *   \"confirmation\": \"XS\",\n   *   \"form\": \"S\",\n   *   \"content\": \"M\",\n   *   \"data-table\": \"L\",\n   *   \"full-app\": \"FULL\"\n   * }\n   */\n  size?: ModalSize;\n\n  /**\n   * ARIA role defining modal's semantic purpose\n   * - DIALOG: Standard modal for forms, content, interactions\n   * - ALERT_DIALOG: Critical confirmations, destructive actions, alerts\n   * @default ModalRole.DIALOG\n   * @aiRequired When modal contains critical/destructive actions\n   * @aiSuggestions { \"form\": \"DIALOG\", \"confirmation\": \"ALERT_DIALOG\", \"delete\": \"ALERT_DIALOG\" }\n   */\n  role?: ModalRole;\n\n  /**\n   * Enables dismissal via close button, overlay click, or escape key\n   * When false, modal can only be closed via explicit action buttons\n   * @default true\n   * @aiUsage Disable for critical workflows that must be completed\n   */\n  dismissable?: boolean;\n\n  /**\n   * Requires confirmation before dismissing modal\n   * Shows confirmation dialog when user attempts to close\n   * @default false\n   * @aiUsage Enable for forms with unsaved changes or important workflows\n   */\n  confirmDismissal?: boolean;\n\n  /**\n   * Removes default padding from modal body content\n   * Use for full-width content, tables, or custom layouts\n   * @default false\n   * @aiUsage Enable when body content needs full control over spacing\n   */\n  noBodyPadding?: boolean;\n\n  /**\n   * Icon name for optional header action button\n   * Displays on left side of header for contextual actions\n   *",
+          "example": "\"",
+          "required": false,
+          "suggestions": null
+        }
+      ],
+      "methods": [],
+      "aiGuidance": {
+        "accessibility": [
+          "AlwaysprovidemeaningfulmodalTitleforscreenreadernavigation",
+          "Useappropriaterole(dialogvsalertdialog)basedoncontentcriticality",
+          "Ensurefocusistrappedwithinmodalduringinteraction",
+          "Provideclearactionbuttonswithdescriptivelabels"
+        ],
+        "antiPatterns": {
+          "nestedModals": "Avoid opening modals from within modals - use navigation or drawer patterns",
+          "oversizedContent": "Don't force large content into small modals - choose appropriate size",
+          "missingActions": "Always provide clear ways to complete or cancel modal interactions"
+        }
+      },
+      "patterns": {}
+    }
+  ],
+  "summary": {
+    "totalComponents": 13,
+    "byCategory": {
+      "feedback": 1,
+      "action": 1,
+      "layout": 3,
+      "form": 4,
+      "overlay": 1,
+      "navigation": 2,
+      "data": 1
+    },
+    "byComplexity": {
+      "medium": 5,
+      "simple": 5,
+      "complex": 3
+    },
+    "highPriorityComponents": ["nck-button", "nck-checkbox", "nck-dropdown", "nck-form", "nck-textinput"]
+  }
+}

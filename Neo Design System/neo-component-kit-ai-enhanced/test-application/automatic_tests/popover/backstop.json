@@ -1,0 +1,475 @@
+{
+    "id": "backstop_popover",
+    "viewports": [
+        {
+            "label": "phone",
+            "width": 320,
+            "height": 5500
+        },
+        {
+            "label": "tablet",
+            "width": 1024,
+            "height": 4700
+        },
+        {
+            "label": "desktop",
+            "width": 1920,
+            "height": 5500
+        }
+    ],
+    "onBeforeScript": "puppet/onBefore.js",
+    "onReadyScript": "puppet/onReady.js",
+    "scenarios": [
+        {
+            "label": "1. NCK popover - default display of the page",
+            "url": "http://localhost:8080/#/popover",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "display the default state of all the menus on the page"
+        },
+
+
+
+
+        {
+            "label": "2.1 NCK popover - CLICK TC0 popover Show popover",
+            "url": "http://localhost:8080/#/popover",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click TC0 popover Show popover",
+            "clickSelector": "[data-test-case=\"0\"] *:nth-child(3)",
+            "selectors": [
+                "[data-test-case=\"0\"]"
+            ]
+        },
+        {
+            "label": "2.2 NCK popover - CLICK TC1 popover Show popover",
+            "url": "http://localhost:8080/#/popover",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click TC1 popover Show popover",
+            "clickSelector": "[data-test-case=\"1\"] *:nth-child(3)",
+            "selectors": [
+                "[data-test-case=\"1\"]"
+            ]
+        },
+        {
+            "label": "2.3 NCK popover - CLICK TC2 popover Show popover",
+            "url": "http://localhost:8080/#/popover",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click TC2 popover Show popover",
+            "clickSelector": "[data-test-case=\"2\"] *:nth-child(3)",
+            "selectors": [
+                "[data-test-case=\"2\"]"
+            ]
+        },
+        {
+            "label": "2.4 NCK popover - CLICK TC3 popover Show popover",
+            "url": "http://localhost:8080/#/popover",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click TC3 popover Show popover",
+            "clickSelector": "[data-test-case=\"3\"] *:nth-child(3)",
+            "selectors": [
+                "[data-test-case=\"3\"]"
+            ]
+        },
+        {
+            "label": "2.5 NCK popover - CLICK TC4 popover Show popover",
+            "url": "http://localhost:8080/#/popover",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click TC4 popover Show popover",
+            "clickSelector": "[data-test-case=\"4\"] *:nth-child(3)",
+            "selectors": [
+                "[data-test-case=\"4\"]"
+            ]
+        },
+        {
+            "label": "2.6 NCK popover - CLICK TC5 popover Show popover",
+            "url": "http://localhost:8080/#/popover",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click TC5 popover Show popover",
+            "clickSelector": "[data-test-case=\"5\"] *:nth-child(3)",
+            "selectors": [
+                "[data-test-case=\"5\"]"
+            ]
+        },
+        {
+            "label": "2.7 NCK popover - CLICK TC6 popover Show popover",
+            "url": "http://localhost:8080/#/popover",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click TC6 popover Show popover",
+            "clickSelector": "[data-test-case=\"6\"] *:nth-child(3)",
+            "selectors": [
+                "[data-test-case=\"6\"]"
+            ]
+        },
+        {
+            "label": "2.8 NCK popover - CLICK TC7 popover Show and Focus popover",
+            "url": "http://localhost:8080/#/popover",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click TC7 Show and Focus popover",
+            "clickSelector": "[data-test-case=\"7\"] *:nth-child(3)",
+            "selectors": [
+                "[data-test-case=\"7\"]"
+            ]
+        },
+        {
+            "label": "2.9 NCK popover - CLICK TC8 popover Show popover",
+            "url": "http://localhost:8080/#/popover",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click TC8 popover Show popover",
+            "clickSelector": "[data-test-case=\"8\"] *:nth-child(3)",
+            "selectors": [
+                "[data-test-case=\"8\"]"
+            ]
+        },
+        {
+            "label": "2.10 NCK popover - CLICK TC9 popover Show popover",
+            "url": "http://localhost:8080/#/popover",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click TC9 popover Show popover",
+            "clickSelector": "[data-test-case=\"9\"] *:nth-child(3)",
+            "selectors": [
+                "[data-test-case=\"9\"]"
+            ]
+        },
+        {
+            "label": "2.11 NCK popover - CLICK TC10 popover Show popover",
+            "url": "http://localhost:8080/#/popover",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click TC10 popover Show popover",
+            "clickSelector": "[data-test-case=\"10\"] *:nth-child(3)",
+            "selectors": [
+                "[data-test-case=\"10\"]"
+            ]
+        },
+        {
+            "label": "2.12 NCK popover - CLICK TC11 popover Show popover",
+            "url": "http://localhost:8080/#/popover",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click TC10 popover Show popover",
+            "clickSelector": "[data-test-case=\"11\"] *:nth-child(3)",
+            "selectors": [
+                "[data-test-case=\"11\"]"
+            ]
+        },
+
+
+
+
+
+        {
+            "label": "3.1 NCK popover - CLICK TC0 popover Show then Hide popover",
+            "url": "http://localhost:8080/#/popover",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click TC1 popover Show then Hide popover",
+            "clickSelectors": [
+                "[data-test-case=\"0\"] *:nth-child(3)",
+                "[data-test-case=\"0\"] *:nth-child(4)"
+            ],
+            "selectors": [
+                "[data-test-case=\"0\"]"
+            ]
+        },
+        {
+            "label": "3.2 NCK popover - CLICK TC1 popover Show then Hide popover",
+            "url": "http://localhost:8080/#/popover",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click TC1 popover Show then Hide popover",
+            "clickSelectors": [
+                "[data-test-case=\"1\"] *:nth-child(3)",
+                "[data-test-case=\"1\"] *:nth-child(4)"
+            ],
+            "selectors": [
+                "[data-test-case=\"1\"]"
+            ]
+        },
+        {
+            "label": "3.3 NCK popover - CLICK TC8 popover Show then Hide popover",
+            "url": "http://localhost:8080/#/popover",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click TC8 popover Show then Hide popover",
+            "clickSelectors": [
+                "[data-test-case=\"8\"] *:nth-child(3)",
+                "[data-test-case=\"8\"] *:nth-child(4)"
+            ],
+            "selectors": [
+                "[data-test-case=\"8\"]"
+            ]
+        },
+        {
+            "label": "3.4 NCK popover - CLICK TC10 popover Show then Hide popover",
+            "url": "http://localhost:8080/#/popover",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click TC10 popover Show then Hide popover",
+            "clickSelectors": [
+                "[data-test-case=\"10\"] *:nth-child(3)",
+                "[data-test-case=\"10\"] *:nth-child(4)"
+            ],
+            "selectors": [
+                "[data-test-case=\"10\"]"
+            ]
+        },
+
+
+
+
+        {
+            "label": "4.1 NCK popover - CLICK on the X TC2 popover",
+            "url": "http://localhost:8080/#/popover",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click on the X of Popover TC2",
+            "clickSelectors": [
+                "[data-test-case=\"2\"] *:nth-child(3)",
+                ".nck-popover-header button"
+            ],
+            "selectors": [
+                "[data-test-case=\"2\"]"
+            ]
+        },
+        {
+            "label": "4.2 NCK popover - CLICK on the X TC3 popover",
+            "url": "http://localhost:8080/#/popover",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click on the X of Popover TC3",
+            "clickSelectors": [
+                "[data-test-case=\"3\"] *:nth-child(3)",
+                ".nck-popover-header button"
+            ],
+            "selectors": [
+                "[data-test-case=\"3\"]"
+            ]
+        },
+        {
+            "label": "4.3 NCK popover - CLICK on the X TC9 popover",
+            "url": "http://localhost:8080/#/popover",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click on the X of Popover TC9",
+            "clickSelectors": [
+                "[data-test-case=\"9\"] *:nth-child(3)",
+                ".nck-popover-header button"
+            ],
+            "selectors": [
+                "[data-test-case=\"9\"]"
+            ]
+        },
+        {
+            "label": "4.4 NCK popover - CLICK on the X TC10 popover",
+            "url": "http://localhost:8080/#/popover",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click on the X of Popover TC10",
+            "clickSelectors": [
+                "[data-test-case=\"10\"] *:nth-child(3)",
+                ".nck-popover-header button"
+            ],
+            "selectors": [
+                "[data-test-case=\"10\"]"
+            ]
+        },
+
+
+
+
+        {
+            "label": "5.1 NCK popover- CLICK outside of the TC3 popover",
+            "url": "http://localhost:8080/#/popover",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "to dismiss-click outside of the TC3 popover",
+            "onReadyScript": "clickAndMoveMouseAndClick.js",
+            "clickSelector": "[data-test-case=\"3\"] button",
+            "selectors": [
+                "[data-test-case=\"3\"]"
+            ]
+        },
+        {
+            "label": "5.2 NCK popover- CLICK outside of the TC8 popover",
+            "url": "http://localhost:8080/#/popover",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "to dismiss-click outside of the TC8 popover",
+            "onReadyScript": "clickAndMoveMouseAndClick.js",
+            "clickSelector": "[data-test-case=\"8\"] button",
+            "selectors": [
+                "[data-test-case=\"8\"]"
+            ]
+        },
+
+
+
+
+        {
+            "label": "6.1 NCK popover - FOCUS+SPACE on the X of TC4 popover",
+            "url": "http://localhost:8080/#/popover",
+            "onReadyScript": "actions.js",
+            "actions": [
+                {
+                    "type": "focus",
+                    "selector": "[data-test-case=\"4\"] *:nth-child(3)"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Space"
+                },
+                {
+                    "type": "focus",
+                    "selector": "[data-test-case=\"4\"] .nck-popover-header button"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Space"
+                }
+            ],
+            "selectors": [
+                "[data-test-case=\"4\"]"
+            ]
+        },
+        {
+            "label": "6.2 NCK popover - FOCUS+SPACE on the X of TC9 popover",
+            "url": "http://localhost:8080/#/popover",
+            "onReadyScript": "actions.js",
+            "actions": [
+                {
+                    "type": "focus",
+                    "selector": "[data-test-case=\"9\"] *:nth-child(3)"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Space"
+                },
+                {
+                    "type": "focus",
+                    "selector": "[data-test-case=\"9\"] .nck-popover-header button"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Space"
+                }
+            ],
+            "selectors": [
+                "[data-test-case=\"9\"]"
+            ]
+        },
+
+
+
+
+        {
+            "label": "7.1 NCK popover - FOCUS+ENTER on the X of TC6 popover",
+            "url": "http://localhost:8080/#/popover",
+            "onReadyScript": "actions.js",
+            "actions": [
+                {
+                    "type": "focus",
+                    "selector": "[data-test-case=\"6\"] *:nth-child(3)"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Enter"
+                },
+                {
+                    "type": "focus",
+                    "selector": "[data-test-case=\"6\"] .nck-popover-header button"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Enter"
+                }
+            ],
+            "selectors": [
+                "[data-test-case=\"6\"]"
+            ]
+        },
+        {
+            "label": "7.2 NCK popover - FOCUS+ENTER on the X of TC10 popover",
+            "url": "http://localhost:8080/#/popover",
+            "onReadyScript": "actions.js",
+            "actions": [
+                {
+                    "type": "focus",
+                    "selector": "[data-test-case=\"10\"] *:nth-child(3)"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Enter"
+                },
+                {
+                    "type": "focus",
+                    "selector": "[data-test-case=\"10\"] .nck-popover-header button"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Enter"
+                }
+            ],
+            "selectors": [
+                "[data-test-case=\"10\"]"
+            ]
+        },
+
+
+
+
+        {
+            "label": "8.1 NCK popover - CLICK+SCROLL Test case 0 ",
+            "url": "http://localhost:8080/#/popover",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "click show popover and scroll tc 0",
+            "onReadyScript": "clickAndScroll.js",
+            "clickSelector": "[data-test-case=\"0\"] *:nth-child(3)",
+            "scrollSelector": "[data-test-case=\"0\"] .nck-popover div",
+            "yScroll": 500,
+            "selectors": [
+                "[data-test-case=\"0\"]"
+            ]
+        }
+    ],
+    "paths": {
+        "bitmaps_reference": "backstop_data/bitmaps_reference",
+        "bitmaps_test": "backstop_data/bitmaps_test",
+        "engine_scripts": "backstop_data/engine_scripts",
+        "html_report": "backstop_data/html_report",
+        "ci_report": "backstop_data/ci_report"
+    },
+    "report": [
+        "CI"
+    ],
+    "engine": "puppeteer",
+    "engineOptions": {
+        "args": [
+    "--no-sandbox",
+    "--disable-setuid-sandbox",
+    "--disable-dev-shm-usage",
+    "--disable-accelerated-2d-canvas",
+    "--no-first-run",
+    "--no-zygote",
+
+    "--disable-gpu"
+  ],
+        "protocolTimeout": 960000
+    },
+    "asyncCaptureLimit": 3,
+    "asyncCompareLimit": 50,
+    "debug": false,
+    "debugWindow": false
+}

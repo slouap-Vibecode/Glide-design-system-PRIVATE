@@ -1,0 +1,413 @@
+{
+    "id": "backstop_SearchInput",
+    "viewports": [
+        {
+            "label": "phone",
+            "width": 320,
+            "height": 586
+        },
+        {
+            "label": "tablet",
+            "width": 1024,
+            "height": 378
+        },
+        {
+            "label": "desktop",
+            "width": 1920,
+            "height": 378
+        }
+    ],
+    "onBeforeScript": "puppet/onBefore.js",
+    "onReadyScript": "puppet/onReady.js",
+  "scenarios": [
+    {
+      "label": "1.0 NCK search input - Default display",
+      "url": "http://localhost:8080/#/search-input",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Global page verification"
+    },
+    {
+      "label": "1.1 NCK search input - HOVER TC 0",
+      "url": "http://localhost:8080/#/search-Input",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the TC0 input",
+      "hoverSelector": "[data-test-case=\"0\"] .nck-search-input",
+      "selectors": [
+        "[data-test-case=\"0\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "1.2 NCK search input - HOVER TC 1",
+      "url": "http://localhost:8080/#/search-Input",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the TC1 input",
+      "hoverSelector": "[data-test-case=\"1\"] .nck-search-input",
+      "selectors": [
+        "[data-test-case=\"1\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "2.0 NCK search input - FOCUS TC 1 input",
+      "url": "http://localhost:8080/#/search-input",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the TC 1 input field",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"1\"] .nck-text-input",
+      "selectors": [
+        "[data-test-case=\"1\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "2.1 NCK search input - FOCUS TC 2 input",
+      "url": "http://localhost:8080/#/search-input",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the TC 2 input field",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"2\"] .nck-text-input",
+      "selectors": [
+        "[data-test-case=\"2\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "2.2 NCK search input - FOCUS TC 3 input",
+      "url": "http://localhost:8080/#/search-input",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the TC 3 input field",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"3\"] .nck-text-input",
+      "selectors": [
+        "[data-test-case=\"3\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "2.3 NCK search input - FOCUS + enter TC 0 input",
+      "url": "http://localhost:8080/#/search-input",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus + enter on the TC 0 input field",
+      "selectorExpansion": true,
+      "selectors": [
+        "[data-test-case=\"0\"]"
+      ],
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"0\"] .nck-text-input"
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        }
+      ]
+    },
+    {
+      "label": "3.0 NCK search input - CLICK TC 1 input",
+      "url": "http://localhost:8080/#/search-input",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on the TC 1 input field",
+      "clickSelector": "[data-test-case=\"1\"] .nck-text-input",
+      "selectors": [
+        "[data-test-case=\"1\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "3.1 NCK search input - CLICK TC 4 input",
+      "url": "http://localhost:8080/#/search-input",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on the TC 4 input field",
+      "clickSelector": "[data-test-case=\"4\"] .nck-text-input",
+      "selectors": [
+        "[data-test-case=\"4\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "3.2 NCK search input - CLICK TC 0 input then outside",
+      "url": "http://localhost:8080/#/search-input",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on the TC 0 input field then click outside it",
+      "onReadyScript": "clickAndMoveMouseAndCLick.js",
+      "clickSelector": "[data-test-case=\"0\"] .nck-text-input",
+      "selectors": [
+        "[data-test-case=\"0\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "3.3 NCK search input - CLICK TC 3 input then outside",
+      "url": "http://localhost:8080/#/search-input",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on the TC 3 input field then click outside it",
+      "onReadyScript": "clickAndMoveMouseAndCLick.js",
+      "clickSelector": "[data-test-case=\"3\"] .nck-text-input",
+      "selectors": [
+        "[data-test-case=\"3\"]"
+      ],
+      "selectorExpansion": true
+
+    },
+    {
+      "label": "4.0 NCK search input - INSERT CONTENT TC 0 input tablet and phone",
+      "url": "http://localhost:8080/#/search-input",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "insert aa in the TC0 input field then press the search button",
+      "keyPressSelector": {
+        "selector": "[data-test-case=\"0\"] .nck-text-input",
+        "keyPress": "aa"
+      },
+      "clickSelector": "[data-test-case=\"0\"] .nck-button:nth-child(3)",
+      "selectors": [
+        "[data-test-case=\"0\"]"
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 378
+                },
+                {
+                    "label": "phone",
+                    "width": 320,
+                    "height": 586
+                }
+            ]
+    },
+    {
+      "label": "4.1 NCK search input - INSERT CONTENT TC 0 input desktop only",
+      "url": "http://localhost:8080/#/search-input",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "insert aa in the TC0 input field then press the search button",
+      "keyPressSelector": {
+        "selector": "[data-test-case=\"0\"] .nck-text-input",
+        "keyPress": "aa"
+      },
+      "clickSelector": "[data-test-case=\"0\"] .nck-button:nth-child(2)",
+      "selectors": [
+        "[data-test-case=\"0\"]"
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 378
+                }
+
+            ]
+    },
+    {
+      "label": "4.2 NCK search input - INSERT CONTENT TC 2 input tablet and phone",
+      "url": "http://localhost:8080/#/search-input",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "insert test in the TC2 input field then press the search button",
+      "keyPressSelector": {
+        "selector": "[data-test-case=\"2\"] .nck-text-input",
+        "keyPress": "test"
+      },
+      "clickSelector": "[data-test-case=\"2\"] .nck-button:nth-child(3)",
+      "selectors": [
+        "[data-test-case=\"2\"]"
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 378
+                },
+                {
+                    "label": "phone",
+                    "width": 320,
+                    "height": 586
+                }
+            ]
+    },
+    {
+      "label": "4.3 NCK search input - INSERT CONTENT TC 2 input desktop only",
+      "url": "http://localhost:8080/#/search-input",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "insert test in the TC2 input field then press the search button",
+      "keyPressSelector": {
+        "selector": "[data-test-case=\"2\"] .nck-text-input",
+        "keyPress": "test"
+      },
+      "clickSelector": "[data-test-case=\"2\"] .nck-button:nth-child(2)",
+      "selectors": [
+        "[data-test-case=\"2\"]"
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 378
+                }
+
+            ]
+    },
+    {
+      "label": "4.4 NCK search input - INSERT CONTENT TC 4 input tablet and phone",
+      "url": "http://localhost:8080/#/search-input",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "insert test2 in the TC4 input field then press the search button",
+      "keyPressSelector": {
+        "selector": "[data-test-case=\"4\"] .nck-text-input",
+        "keyPress": "test2"
+      },
+      "clickSelector": "[data-test-case=\"4\"] .nck-button:nth-child(3)",
+      "selectors": [
+        "[data-test-case=\"4\"]"
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 378
+                },
+                {
+                    "label": "phone",
+                    "width": 320,
+                    "height": 586
+                }
+            ]
+    },
+    {
+      "label": "4.5 NCK search input - INSERT CONTENT TC 4 input desktop only",
+      "url": "http://localhost:8080/#/search-input",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "insert test2 in the TC4 input field then press the search button",
+      "keyPressSelector": {
+        "selector": "[data-test-case=\"4\"] .nck-text-input",
+        "keyPress": "test2"
+      },
+      "clickSelector": "[data-test-case=\"4\"] .nck-button:nth-child(2)",
+      "selectors": [
+        "[data-test-case=\"4\"]"
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 378
+                }
+
+            ]
+    },
+    {
+      "label": "4.6 NCK search input - INSERT CONTENT TC 2 input + clear the input",
+      "url": "http://localhost:8080/#/search-input",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "insert aaz in the TC2 input field then press the clear button",
+      "selectors": [
+          "[data-test-case=\"2\"]"
+        ],
+      "selectorExpansion": true,
+        "onReadyScript": "puppet/actions.js",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "[data-test-case=\"2\"] .nck-text-input"
+          },
+          {
+            "type": "type",
+            "text": "aaz"
+          },
+          {
+            "type": "waitForSelector",
+            "selector": "[data-test-case=\"2\"] .clear-input-button"
+          },
+          {
+            "type": "click",
+            "selector": "[data-test-case=\"2\"] .clear-input-button"
+          }
+
+        ]
+    },
+    {
+      "label": "4.7 NCK search input - INSERT CONTENT TC 3 input + clear the input",
+      "url": "http://localhost:8080/#/search-input",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "insert test in the TC3 input field then press the clear button",
+      "selectors": [
+          "[data-test-case=\"3\"]"
+        ],
+      "selectorExpansion": true,
+        "onReadyScript": "puppet/actions.js",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "[data-test-case=\"3\"] .nck-text-input"
+          },
+          {
+            "type": "type",
+            "text": "test"
+          },
+          {
+            "type": "waitForSelector",
+            "selector": "[data-test-case=\"3\"] .clear-input-button"
+          },
+          {
+            "type": "click",
+            "selector": "[data-test-case=\"3\"] .clear-input-button"
+          }
+
+        ]
+    }
+  ],
+    "paths": {
+        "bitmaps_reference": "backstop_data/bitmaps_reference",
+        "bitmaps_test": "backstop_data/bitmaps_test",
+        "engine_scripts": "backstop_data/engine_scripts",
+        "html_report": "backstop_data/html_report",
+        "ci_report": "backstop_data/ci_report"
+    },
+    "report": [
+        "CI"
+    ],
+    "engine": "puppeteer",
+    "engineOptions": {
+        "args": [
+          "--no-sandbox",
+          "--disable-setuid-sandbox",
+          "--disable-dev-shm-usage",
+          "--disable-accelerated-2d-canvas",
+          "--no-first-run",
+          "--no-zygote",
+
+          "--disable-gpu"
+        ],
+        "protocolTimeout": 960000
+    },
+    "asyncCaptureLimit": 3,
+    "asyncCompareLimit": 50,
+    "debug": false,
+    "debugWindow": false
+}

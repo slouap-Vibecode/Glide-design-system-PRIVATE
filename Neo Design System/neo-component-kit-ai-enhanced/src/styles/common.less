@@ -1,0 +1,106 @@
+@import (reference) "./colorsVariables.less";
+@import (reference) "./focusMixins.less";
+
+.nck-internal {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-size-adjust: 100%;
+
+  *,
+  :after,
+  :before {
+    box-sizing: border-box;
+  }
+
+  button&,
+  input&,
+  optgroup&,
+  select&,
+  textarea&,
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+  }
+
+  button&,
+  input[type="button"]&,
+  input[type="submit"]&,
+  button,
+  input[type="button"],
+  input[type="submit"] {
+    cursor: pointer;
+  }
+
+  button[disabled]&,
+  input[disabled]&,
+  button[disabled],
+  input[disabled] {
+    cursor: default;
+  }
+
+  img {
+    vertical-align: middle;
+    border: 0;
+  }
+}
+
+// This style is publicly exposed & documented for use in consuming application,
+// evaluate consequences before modifying it.
+.outside-focus,
+.nck-style.outside-focus,
+.nck-style .outside-focus {
+  &:focus {
+    .outside-focus-mixin();
+  }
+}
+
+// This style is publicly exposed & documented for use in consuming application,
+// evaluate consequences before modifying it.
+.inside-focus:focus,
+.nck-style.inside-focus:focus,
+.nck-style .inside-focus:focus {
+  .inside-focus-mixin();
+}
+
+.nck-style.border-focus,
+.nck-style .border-focus {
+  position: relative;
+  left: -0.1875rem; // compensating for the border
+  right: -0.1875rem; // compensating for the border
+  border: 0.1875rem solid transparent;
+  &:focus {
+    border-color: @focus-color;
+    .outline-focus-ring-for-high-contrast-display();
+  }
+}
+
+// This style is publicly exposed & documented for use in consuming application,
+// evaluate consequences before modifying it.
+.nck-style.nck-link,
+.nck-style .nck-link {
+  position: relative;
+  color: var(--bright-blue-300);
+  text-decoration: underline;
+  &:hover {
+    color: var(--bright-blue-400);
+    cursor: pointer;
+  }
+  .outside-focus();
+  &:focus {
+    border-radius: var(--nck-radius-s);
+    color: var(--bright-blue-300);
+  }
+}
+
+// This style is publicly exposed & documented for use in consuming application,
+// evaluate consequences before modifying it.
+.nck-style.nck-button-with-link-aspect,
+.nck-style .nck-button-with-link-aspect {
+  all: unset;
+  .nck-style.nck-link();
+}

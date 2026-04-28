@@ -1,0 +1,597 @@
+{
+	"id": "backstop_card",
+	"viewports": [
+		{
+		"label": "phone",
+		"width": 320,
+		"height": 16080
+		},
+		{
+		"label": "tablet",
+		"width": 1024,
+		"height": 10000
+		},
+		{
+		"label": "desktop",
+		"width": 1920,
+		"height": 10000
+		}
+	],
+	"onBeforeScript": "puppet/onBefore.js",
+	"onReadyScript": "puppet/onReady.js",
+	"paths": {
+		"bitmaps_reference": "backstop_data/bitmaps_reference",
+		"bitmaps_test": "backstop_data/bitmaps_test",
+		"engine_scripts": "backstop_data/engine_scripts",
+		"html_report": "backstop_data/html_report",
+		"ci_report": "backstop_data/ci_report"
+	},
+	"report": ["CI"],
+	"engine": "puppeteer",
+	"engineOptions": {
+		"args":[
+    "--no-sandbox",
+    "--disable-setuid-sandbox",
+    "--disable-dev-shm-usage",
+    "--disable-accelerated-2d-canvas",
+    "--no-first-run",
+    "--no-zygote",
+
+    "--disable-gpu"
+  ],
+		"protocolTimeout": 960000
+	},
+	"asyncCaptureLimit": 3,
+	"asyncCompareLimit": 50,
+	"debug": false,
+	"debugWindow": false,
+
+
+	"scenarios":
+	[
+		{
+			"label": "1. NCK card - default",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold" : 0,
+			"requireSameDimensions" : true,
+			"description": "display the default state of all cards"
+		},
+
+
+		{
+			"label": "2.1. NCK card - hover - TC1",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "hover upon TC1 card",
+			"hoverSelector": "[data-test-case=\"1\"] .nck-card",
+			"selectors": ["[data-test-case=\"1\"]"],
+			"postInteractionWait": 400
+		},
+		{
+			"label": "2.2. NCK card - HOVER - TC3",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "hover upon T3 card",
+			"hoverSelector": "[data-test-case=\"3\"] .nck-card",
+			"selectors": ["[data-test-case=\"3\"]"],
+			"postInteractionWait": 400
+		},
+		{
+			"label": "2.3. NCK card - HOVER - TC6",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "hover upon TC6 card",
+			"hoverSelector": "[data-test-case=\"6\"] .nck-card",
+			"selectors": ["[data-test-case=\"6\"]"],
+			"postInteractionWait": 400
+		},
+		{
+			"label": "2.4. NCK card - HOVER - TC7",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "hover upon TC7 card",
+			"hoverSelector": "[data-test-case=\"7\"] .nck-card",
+			"selectors": ["[data-test-case=\"7\"]"],
+			"postInteractionWait": 400
+		},
+		{
+			"label": "2.5. NCK card - HOVER - TC10",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "hover upon TC10 card",
+			"hoverSelector": "[data-test-case=\"10\"] .nck-card",
+			"selectors": ["[data-test-case=\"10\"]"],
+			"postInteractionWait": 400
+		},
+		{
+			"label": "2.6. NCK card - HOVER Outlined - TC12",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "hover upon TC12 card",
+			"hoverSelector": "[data-test-case=\"12\"] .nck-card",
+			"selectors": ["[data-test-case=\"12\"]"],
+			"postInteractionWait": 500
+		},
+		{
+			"label": "2.7. NCK card - HOVER Elevated - TC14",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "hover upon TC13 card",
+			"hoverSelector": "[data-test-case=\"14\"] .nck-card",
+			"selectors": ["[data-test-case=\"14\"]"],
+			"postInteractionWait": 500
+		},
+		{
+			"label": "2.8. NCK card - HOVER FLAT - TC19",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "hover upon TC17 card",
+			"hoverSelector": "[data-test-case=\"19\"] .nck-card",
+			"selectors": ["[data-test-case=\"19\"]"],
+			"postInteractionWait": 500
+		},
+
+
+
+
+		{
+			"label": "3.1. NCK card - FOCUS - TC3",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "focus on TC3",
+			"onReadyScript": "focus.js",
+			"focusSelector": "[data-test-case=\"3\"] .nck-card",
+			"selectors": ["[data-test-case=\"3\"]"],
+			"postInteractionWait": 400
+		},
+		{
+			"label": "3.2. NCK card - FOCUS - TC5",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "focus on TC5",
+			"onReadyScript": "focus.js",
+			"focusSelector": "[data-test-case=\"5\"] .nck-card",
+			"selectors": ["[data-test-case=\"5\"]"],
+			"postInteractionWait": 400
+		},
+		{
+
+			"label": "3.3. NCK card - FOCUS - TC7",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "focus on TC7",
+			"onReadyScript": "focus.js",
+			"focusSelector": "[data-test-case=\"7\"] .nck-card",
+			"selectors": ["[data-test-case=\"7\"]"],
+			"postInteractionWait": 400
+		},
+		{
+
+			"label": "3.4. NCK card - FOCUS - TC8",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "focus on TC8",
+			"onReadyScript": "focus.js",
+			"focusSelector": "[data-test-case=\"8\"] .nck-card",
+			"selectors": ["[data-test-case=\"8\"]"],
+			"postInteractionWait": 400
+		},
+		{
+			"label": "3.5. NCK card - FOCUS - TC9",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "focus on TC9",
+			"onReadyScript": "focus.js",
+			"focusSelector": "[data-test-case=\"9\"] .nck-card",
+			"selectors": ["[data-test-case=\"9\"]"],
+			"postInteractionWait": 400
+		},
+		{
+			"label": "3.6. NCK card - FOCUS - TC10",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "focus on TC10",
+			"onReadyScript": "focus.js",
+			"focusSelector": "[data-test-case=\"10\"] .nck-card",
+			"selectors": ["[data-test-case=\"10\"]"],
+			"postInteractionWait": 400
+		},
+		{
+			"label": "3.7. NCK card - FOCUS - TC11",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "focus on TC11",
+			"onReadyScript": "focus.js",
+			"focusSelector": "[data-test-case=\"11\"] .nck-card",
+			"selectors": ["[data-test-case=\"11\"]"],
+			"postInteractionWait": 400
+		},
+		{
+			"label": "3.8. NCK card - FOCUS Flat - TC13",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "focus on TC13",
+			"onReadyScript": "focus.js",
+			"focusSelector": "[data-test-case=\"13\"] .nck-card",
+			"selectors": ["[data-test-case=\"13\"]"],
+			"postInteractionWait": 400
+		},
+		{
+			"label": "3.9. NCK card - FOCUS Elevated - TC14",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "focus on TC14",
+			"onReadyScript": "focus.js",
+			"focusSelector": "[data-test-case=\"14\"] .nck-card",
+			"selectors": ["[data-test-case=\"14\"]"],
+			"postInteractionWait": 400
+		},
+		{
+			"label": "3.10. NCK card - FOCUS Outlined - TC16",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "focus on TC16",
+			"onReadyScript": "focus.js",
+			"focusSelector": "[data-test-case=\"16\"] .nck-card",
+			"selectors": ["[data-test-case=\"16\"]"],
+			"postInteractionWait": 400
+		},
+
+
+
+
+
+		{
+			"label": "4.1. NCK card - CLICK - TC3",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "click on TC3",
+			"clickSelector": "[data-test-case=\"3\"] .nck-card",
+			"selectors": ["[data-test-case=\"3\"]"],
+			"postInteractionWait": 400
+		},
+		{
+			"label": "4.2. NCK card - click - TC5",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "click on TC5",
+			"clickSelector": "[data-test-case=\"5\"] .nck-card",
+			"selectors": ["[data-test-case=\"5\"]"],
+			"postInteractionWait": 400
+		},
+		{
+			"label": "4.3. NCK card - click - TC7",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "click on TC7",
+			"clickSelector": "[data-test-case=\"7\"] .nck-card",
+			"selectors": ["[data-test-case=\"7\"]"],
+			"postInteractionWait": 400
+		},
+		{
+			"label": "4.4. NCK card - click - TC8",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "click on TC8",
+			"clickSelector": "[data-test-case=\"8\"] .nck-card",
+			"selectors": ["[data-test-case=\"8\"]"],
+			"postInteractionWait": 400
+		},
+		{
+			"label": "4.5. NCK card - click - TC9",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "click on TC9",
+			"clickSelector": "[data-test-case=\"9\"] .nck-card",
+			"selectors": ["[data-test-case=\"9\"]"],
+			"postInteractionWait": 400
+		},
+		{
+			"label": "4.6. NCK card - click - TC10",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "click on TC10",
+			"clickSelector": "[data-test-case=\"10\"] .nck-card",
+			"selectors": ["[data-test-case=\"10\"]"],
+			"postInteractionWait": 400
+		},
+		{
+			"label": "4.7. NCK card - click - TC11",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "click on TC11",
+			"clickSelector": "[data-test-case=\"11\"] .nck-card",
+			"selectors": ["[data-test-case=\"11\"]"],
+			"postInteractionWait": 400
+		},
+		{
+			"label": "4.8. NCK card - click Flat - TC13",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "click on TC13",
+			"clickSelector": "[data-test-case=\"13\"] .nck-card",
+			"selectors": ["[data-test-case=\"13\"]"],
+			"postInteractionWait": 400
+		},
+		{
+			"label": "4.9. NCK card - click Elevated - TC14",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "click on TC14",
+			"clickSelector": "[data-test-case=\"14\"] .nck-card",
+			"selectors": ["[data-test-case=\"14\"]"],
+			"postInteractionWait": 400
+		},
+		{
+			"label": "4.10. NCK card - click Outlined - TC18",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "click on TC18",
+			"clickSelector": "[data-test-case=\"18\"] .nck-card",
+			"selectors": ["[data-test-case=\"18\"]"],
+			"postInteractionWait": 400
+		},
+
+
+
+
+
+
+
+
+		{
+			"label": "5.1. NCK card - FOCUS+ENTER- TC7",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "focus+enter on TC7-ariaRole:link",
+			"onReadyScript": "focusAndPressEnter.js",
+			"focusAndPressEnterSelector": "[data-test-case=\"7\"] .nck-card",
+			"selectors": ["[data-test-case=\"7\"]"],
+			"postInteractionWait": 400
+		},
+		{
+			"label": "5.2. NCK card - FOCUS+ENTER- TC8",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "focus+enter on TC8-ariaRole:link",
+			"onReadyScript": "focusAndPressEnter.js",
+			"focusAndPressEnterSelector": "[data-test-case=\"8\"] .nck-card",
+			"selectors": ["[data-test-case=\"8\"]"],
+			"postInteractionWait": 400
+		},
+		{
+			"label": "5.3. NCK card - FOCUS+ENTER- TC9",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "focus+enter on TC9-ariaRole:link",
+			"onReadyScript": "focusAndPressEnter.js",
+			"focusAndPressEnterSelector": "[data-test-case=\"9\"] .nck-card",
+			"selectors": ["[data-test-case=\"9\"]"],
+			"postInteractionWait": 400
+		},
+		{
+			"label": "5.4. NCK card -FOCUS+ENTER- TC10",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "focus+enter on TC10-ariaRole:link",
+			"onReadyScript": "focusAndPressEnter.js",
+			"focusAndPressEnterSelector": "[data-test-case=\"10\"] .nck-card",
+			"selectors": ["[data-test-case=\"10\"]"],
+			"postInteractionWait": 400
+		},
+		{
+			"label": "5.5. NCK card -FOCUS+ENTER Outlined - TC16",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "focus+enter on TC16-ariaRole:link",
+			"onReadyScript": "focusAndPressEnter.js",
+			"focusAndPressEnterSelector": "[data-test-case=\"16\"] .nck-card",
+			"selectors": ["[data-test-case=\"16\"]"],
+			"postInteractionWait": 400
+		},
+		{
+			"label": "5.6. NCK card -FOCUS+ENTER Flat- TC19",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "focus+enter on TC19-ariaRole:link",
+			"onReadyScript": "focusAndPressEnter.js",
+			"focusAndPressEnterSelector": "[data-test-case=\"19\"] .nck-card",
+			"selectors": ["[data-test-case=\"19\"]"],
+			"postInteractionWait": 400
+		},
+		{
+			"label": "5.7. NCK card -FOCUS+ENTER Elevated- TC20",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "focus+enter on TC20-ariaRole:link",
+			"onReadyScript": "focusAndPressEnter.js",
+			"focusAndPressEnterSelector": "[data-test-case=\"20\"] .nck-card",
+			"selectors": ["[data-test-case=\"20\"]"],
+			"postInteractionWait": 400
+		},
+
+
+
+
+		{
+			"label": "6.1. NCK card -FOCUS+ENTER- TC3",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "focus+enter on TC3-ariaRole:button",
+			"onReadyScript": "focusAndPressEnter.js",
+			"focusAndPressEnterSelector": "[data-test-case=\"3\"] .nck-card",
+			"selectors": ["[data-test-case=\"3\"]"],
+			"postInteractionWait": 400
+		},
+		{
+			"label": "6.2. NCK card -FOCUS+ENTER- TC5",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "focus+enter on TC5-ariaRole:button",
+			"onReadyScript": "focusAndPressEnter.js",
+			"focusAndPressEnterSelector": "[data-test-case=\"5\"] .nck-card",
+			"selectors": ["[data-test-case=\"5\"]"],
+			"postInteractionWait": 400
+		},
+		{
+			"label": "6.3. NCK card -FOCUS+ENTER- TC11",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "focus+enter on TC11-ariaRole:button",
+			"onReadyScript": "focusAndPressEnter.js",
+			"focusAndPressEnterSelector": "[data-test-case=\"11\"] .nck-card",
+			"selectors": ["[data-test-case=\"11\"]"],
+			"postInteractionWait": 400
+		},
+		{
+			"label": "6.4. NCK card - FOCUS+SPACE- TC3",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "focus+space on TC3-ariaRole:button",
+			"onReadyScript": "focusAndPressSpace.js",
+			"focusAndPressSpaceSelector": "[data-test-case=\"3\"] .nck-card",
+			"selectors": [
+				"[data-test-case=\"3\"]"
+			],
+			"postInteractionWait": 400
+		},
+		{
+			"label": "6.5. NCK card - FOCUS+SPACE- TC5",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "focus+space on TC5-ariaRole:button",
+			"onReadyScript": "focusAndPressSpace.js",
+			"focusAndPressSpaceSelector": "[data-test-case=\"5\"] .nck-card",
+			"selectors": [
+				"[data-test-case=\"5\"]"
+			],
+			"postInteractionWait": 400
+		},
+		{
+			"label": "6.4. NCK card - FOCUS+SPACE- TC11",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "focus+space on TC11-ariaRole:button",
+			"onReadyScript": "focusAndPressSpace.js",
+			"focusAndPressSpaceSelector": "[data-test-case=\"11\"] .nck-card",
+			"selectors": [
+				"[data-test-case=\"11\"]"
+			],
+			"postInteractionWait": 400
+		},
+		{
+			"label": "6.6. NCK card -FOCUS+ENTER Flat- TC13",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "focus+enter on TC13-ariaRole:button",
+			"onReadyScript": "focusAndPressEnter.js",
+			"focusAndPressEnterSelector": "[data-test-case=\"13\"] .nck-card",
+			"selectors": ["[data-test-case=\"13\"]"],
+			"postInteractionWait": 400
+		},
+		{
+			"label": "6.7. NCK card -FOCUS+ENTER Elevated - TC14",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "focus+enter on TC14-ariaRole:button",
+			"onReadyScript": "focusAndPressEnter.js",
+			"focusAndPressEnterSelector": "[data-test-case=\"14\"] .nck-card",
+			"selectors": ["[data-test-case=\"14\"]"],
+			"postInteractionWait": 400
+		},
+		{
+			"label": "6.8. NCK card -FOCUS+ENTER Outlined - TC18",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "focus+enter on TC18-ariaRole:button",
+			"onReadyScript": "focusAndPressEnter.js",
+			"focusAndPressEnterSelector": "[data-test-case=\"18\"] .nck-card",
+			"selectors": ["[data-test-case=\"18\"]"],
+			"postInteractionWait": 400
+		},
+		{
+			"label": "6.9. NCK card - FOCUS+SPACE Flat- TC13",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "focus+space on TC13-ariaRole:Button",
+			"onReadyScript": "focusAndPressSpace.js",
+			"focusAndPressSpaceSelector": "[data-test-case=\"13\"] .nck-card",
+			"selectors": [
+				"[data-test-case=\"13\"]"
+			],
+			"postInteractionWait": 400
+		},
+		{
+			"label": "6.10. NCK card - FOCUS+SPACE Elevated- TC14",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "focus+space on TC14-ariaRole:button",
+			"onReadyScript": "focusAndPressSpace.js",
+			"focusAndPressSpaceSelector": "[data-test-case=\"14\"] .nck-card",
+			"selectors": [
+				"[data-test-case=\"14\"]"
+			],
+			"postInteractionWait": 400
+		},
+		{
+			"label": "6.11. NCK card - FOCUS+SPACE Outlined- TC18",
+			"url": "http://localhost:8080/#/card",
+			"misMatchThreshold": 0,
+			"requireSameDimensions": true,
+			"description": "focus+space on TC18-ariaRole:button",
+			"onReadyScript": "focusAndPressSpace.js",
+			"focusAndPressSpaceSelector": "[data-test-case=\"18\"] .nck-card",
+			"selectors": [
+				"[data-test-case=\"18\"]"
+			],
+			"postInteractionWait": 400
+		}
+
+  ]
+}

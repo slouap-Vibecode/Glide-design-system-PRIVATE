@@ -1,0 +1,38 @@
+{
+  "extends": ["stylelint-config-recommended-vue"],
+  "plugins": ["stylelint-no-unsupported-browser-features"],
+  "ignoreFiles": ["**/build/**", "**/dist/**", "documentation/**", "test-application/**"],
+  "overrides": [
+    {
+      "files": ["*.less", "**/*.less"],
+      "customSyntax": "postcss-less"
+    }
+  ],
+  "rules": {
+    "block-no-empty": null,
+    "color-no-invalid-hex": true,
+    "unit-no-unknown": true,
+    "property-no-unknown": true,
+    "no-invalid-double-slash-comments": true,
+    "value-no-vendor-prefix": true,
+    "declaration-block-no-duplicate-properties": true,
+    "declaration-no-important": null,
+    "color-named": "always-where-possible",
+    "color-no-hex": true,
+    "unit-allowed-list": ["rem", "%", "ms", "s", "deg"],
+    "no-descending-specificity": null,
+    "media-query-no-invalid": null,
+    "function-no-unknown": [true, { "ignoreFunctions": ["fade", "darken", "tint", "extend"] }],
+    "no-duplicate-selectors": [true, { "severity": "warning" }],
+    "font-family-no-missing-generic-family-keyword": [true, { "severity": "warning" }],
+    "plugin/no-unsupported-browser-features": [
+      true,
+      {
+        "ignore": ["css-nesting", "css3-cursors"],
+        "severity": "warning"
+      }
+    ],
+    "at-rule-prelude-no-invalid": null,
+    "declaration-property-value-no-unknown": null
+  }
+}

@@ -1,0 +1,59 @@
+h1.test-app-style {
+  font-size: 36px;
+  margin: .67em 0;
+}
+
+h2.test-app-style {
+  font-size: 30px;
+}
+
+h3.test-app-style {
+  font-size: 24px;
+}
+
+h5.test-app-style {
+  font-size: 14px;
+}
+
+h1.test-app-style, h2.test-app-style, h3.test-app-style {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+h4.test-app-style, h5.test-app-style, h6.test-app-style {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+h1.test-app-style, h2.test-app-style, h3.test-app-style, h4.test-app-style, h5.test-app-style, h6.test-app-style {
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+a.test-app-style {
+  color: #337ab7;
+  text-decoration: none;
+}
+
+p.test-app-style {
+  margin: 0 0 10px;
+}
+
+hr.test-app-style {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+
+ol.test-app-style, ul.test-app-style {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+label.test-app-style {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: 700;
+}

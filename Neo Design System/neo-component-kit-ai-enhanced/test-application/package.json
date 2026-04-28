@@ -1,0 +1,37 @@
+{
+  "name": "@neotechnologygroup/test-application",
+  "engines": {
+    "node": "^22.14.0",
+    "npm": "^10.9.2"
+  },
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "npm run importNeoIconKitIcons && vue-cli-service serve",
+    "build": "npm run importNeoIconKitIcons && vue-cli-service build --formats commonjs",
+    "importNeoIconKitIcons": "npm explore @neotechnologygroup/neo-icon-kit -- npm run copyIcons ../../../public/icons",
+    "installAndBuild": "npm ci && npm run build",
+    "installAndServe": "npm ci && npm run serve",
+    "updateAndCheckDependencies": "npx update-browserslist-db@latest && npx npm-check-updates --interactive --format group && npx --yes check-outdated --columns name,current,wanted,latest"
+  },
+  "dependencies": {
+    "@neotechnologygroup/neo-component-kit": "file:..",
+    "@neotechnologygroup/neo-icon-kit": "^5.5.0",
+    "core-js": "^3.46.0",
+    "vue": "^3.5.22",
+    "vue-router": "^4.6.0"
+  },
+  "devDependencies": {
+    "@axe-core/puppeteer": "^4.10.2",
+    "@vue/cli-plugin-babel": "^5.0.9",
+    "@vue/cli-plugin-typescript": "^5.0.9",
+    "@vue/cli-service": "^5.0.9",
+    "backstopjs": "^6.3.25",
+    "express": "^5.1.0",
+    "less": "^4.4.2",
+    "less-loader": "^12.3.0",
+    "puppeteer": "^24.24.1",
+    "typescript": "^5.9.3",
+    "webpack-font-preload-plugin": "^1.5.0"
+  }
+}

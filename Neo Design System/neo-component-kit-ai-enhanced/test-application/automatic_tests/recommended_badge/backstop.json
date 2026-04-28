@@ -1,0 +1,210 @@
+{
+  "id": "backstop_recommended_Badge",
+  "viewports": [
+    {
+      "label": "phone",
+      "width": 320,
+      "height": 1600
+    },
+    {
+      "label": "tablet",
+      "width": 1024,
+      "height": 1050
+    },
+    {
+      "label": "desktop",
+      "width": 1920,
+      "height": 1080
+  }
+  ],
+  "onBeforeScript": "puppet/onBefore.js",
+  "onReadyScript": "puppet/onReady.js",
+  "scenarios": [
+
+    {
+      "label": "1.0 NCK recommended_badge - default",
+      "url": "http://localhost:8080/#/recommendedBadge",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "display the default state of all the recommended badges"
+  },
+
+
+  {
+    "label": "2.1 NCK recommended_badge - HOVER tc 1 recom badge",
+    "url": "http://localhost:8080/#/recommendedBadge",
+    "misMatchThreshold": 0,
+    "requireSameDimensions": true,
+    "description": "hover the recommended badge of tc 1",
+    "onReadyScript": "hoverWithDelay.js",
+    "hoverSelector": "[data-test-case=\"1\"] .nck-recommended-badge",
+    "selectors": "[data-test-case=\"1\"]",
+    "selectorExpansion": false
+},
+{
+  "label": "2.2 NCK recommended_badge - HOVER tc 6 recom badge",
+  "url": "http://localhost:8080/#/recommendedBadge",
+  "misMatchThreshold": 0,
+  "requireSameDimensions": true,
+  "description": "hover the recommended badge of tc 6 ",
+  "onReadyScript": "hoverWithDelay.js",
+  "hoverSelector": "[data-test-case=\"6\"] .nck-recommended-badge",
+  "selectors": "[data-test-case=\"6\"]",
+  "selectorExpansion": false
+},
+{
+  "label": "2.3 NCK recommended_badge - HOVER tc 8 recom badge",
+  "url": "http://localhost:8080/#/recommendedBadge",
+  "misMatchThreshold": 0,
+  "requireSameDimensions": true,
+  "description": "hover the recommended badge of tc 8 ",
+  "onReadyScript": "hoverWithDelay.js",
+  "hoverSelector": "[data-test-case=\"8\"] .nck-recommended-badge",
+  "selectors": "[data-test-case=\"8\"]",
+  "selectorExpansion": false
+},
+{
+  "label": "2.4 NCK recommended_badge - HOVER tc 9 recom badge",
+  "url": "http://localhost:8080/#/recommendedBadge",
+  "misMatchThreshold": 0,
+  "requireSameDimensions": true,
+  "description": "hover the recommended badge of tc 9 ",
+  "onReadyScript": "hoverWithDelay.js",
+  "hoverSelector": "[data-test-case=\"9\"] .nck-recommended-badge",
+  "selectors": "[data-test-case=\"9\"]",
+  "selectorExpansion": false
+},
+
+
+
+
+
+
+
+
+{
+  "label": "4.1 NCK badge - FOCUS tc 1 recom badge",
+  "url": "http://localhost:8080/#/recommendedBadge",
+  "misMatchThreshold": 0,
+  "requireSameDimensions": true,
+  "description": "focus the recommended badge of tc 1",
+  "onReadyScript": "focus.js",
+  "focusSelector": "[data-test-case=\"1\"] .nck-recommended-badge",
+  "selectors": ["[data-test-case=\"1\"]"],
+  "selectorExpansion": false
+},
+{
+  "label": "4.2 NCK badge - FOCUS tc 6 recom badge",
+  "url": "http://localhost:8080/#/recommendedBadge",
+  "misMatchThreshold": 0,
+  "requireSameDimensions": true,
+  "description": "focus the recommended badge of tc 6",
+  "onReadyScript": "focus.js",
+  "focusSelector": "[data-test-case=\"6\"] .nck-recommended-badge",
+  "selectors": ["[data-test-case=\"6\"]"],
+  "selectorExpansion": false
+},
+{
+  "label": "4.3 NCK badge - FOCUS tc 8 recom badge",
+  "url": "http://localhost:8080/#/recommendedBadge",
+  "misMatchThreshold": 0,
+  "requireSameDimensions": true,
+  "description": "focus the recommended badge of tc 8",
+  "onReadyScript": "focus.js",
+  "focusSelector": "[data-test-case=\"8\"] .nck-recommended-badge",
+  "selectors": ["[data-test-case=\"8\"]"],
+  "selectorExpansion": false
+},
+{
+  "label": "4.4 NCK badge - FOCUS tc 9 recom badge",
+  "url": "http://localhost:8080/#/recommendedBadge",
+  "misMatchThreshold": 0,
+  "requireSameDimensions": true,
+  "description": "focus the recommended badge of tc 9",
+  "onReadyScript": "focus.js",
+  "focusSelector": "[data-test-case=\"9\"] .nck-recommended-badge",
+  "selectors": ["[data-test-case=\"9\"]"],
+  "selectorExpansion": false
+},
+
+
+
+
+{
+  "label": "5.1 NCK badge - FOCUS+ESC tc 1 recom badge",
+  "url": "http://localhost:8080/#/recommendedBadge",
+  "misMatchThreshold": 0,
+  "requireSameDimensions": true,
+  "description": "FOCUS+ESC the the recommended badge of tc 1",
+  "onReadyScript": "focusAndPressEsc.js",
+  "focusAndPressEscSelector": "[data-test-case=\"1\"] .nck-recommended-badge",
+  "selectors": "[data-test-case=\"1\"]",
+  "selectorExpansion": false
+},
+{
+  "label": "5.1 NCK badge - FOCUS+ESC tc 6 recom badge",
+  "url": "http://localhost:8080/#/recommendedBadge",
+  "misMatchThreshold": 0,
+  "requireSameDimensions": true,
+  "description": "FOCUS+ESC the the recommended badge of tc 6",
+  "onReadyScript": "focusAndPressEsc.js",
+  "focusAndPressEscSelector": "[data-test-case=\"6\"] .nck-recommended-badge",
+  "selectors": "[data-test-case=\"6\"]",
+  "selectorExpansion": false
+},
+{
+  "label": "5.1 NCK badge - FOCUS+ESC tc 8 recom badge",
+  "url": "http://localhost:8080/#/recommendedBadge",
+  "misMatchThreshold": 0,
+  "requireSameDimensions": true,
+  "description": "FOCUS+ESC the the recommended badge of tc 8",
+  "onReadyScript": "focusAndPressEsc.js",
+  "focusAndPressEscSelector": "[data-test-case=\"8\"] .nck-recommended-badge",
+  "selectors": "[data-test-case=\"8\"]",
+  "selectorExpansion": false
+},
+{
+  "label": "5.1 NCK badge - FOCUS+ESC tc 9 recom badge",
+  "url": "http://localhost:8080/#/recommendedBadge",
+  "misMatchThreshold": 0,
+  "requireSameDimensions": true,
+  "description": "FOCUS+ESC the the recommended badge of tc 9",
+  "onReadyScript": "focusAndPressEsc.js",
+  "focusAndPressEscSelector": "[data-test-case=\"9\"] .nck-recommended-badge",
+  "selectors": "[data-test-case=\"9\"]",
+  "selectorExpansion": false
+}
+
+
+
+
+
+
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "report": ["CI"],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args":[
+    "--no-sandbox",
+    "--disable-setuid-sandbox",
+    "--disable-dev-shm-usage",
+    "--disable-accelerated-2d-canvas",
+    "--no-first-run",
+    "--no-zygote",
+
+    "--disable-gpu"
+  ],
+    "protocolTimeout": 960000
+  },
+  "asyncCaptureLimit": 3,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false
+}

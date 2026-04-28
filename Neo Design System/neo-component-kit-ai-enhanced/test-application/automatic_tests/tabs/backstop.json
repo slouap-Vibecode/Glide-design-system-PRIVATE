@@ -1,0 +1,1307 @@
+{
+    "id": "backstop_tabs",
+    "viewports": [
+        {
+            "label": "phone",
+            "width": 320,
+            "height": 11000
+        },
+        {
+            "label": "tablet",
+            "width": 1024,
+            "height": 10000
+        },
+        {
+            "label": "desktop",
+            "width": 1920,
+            "height": 10000
+        }
+    ],
+    "onBeforeScript": "puppet/onBefore.js",
+    "onReadyScript": "puppet/onReady.js",
+    "scenarios": [
+        {
+            "label": "1. NCK tabs - default",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "display the default state of all the tabs, for all the 6 working test cases",
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "2.8 NCK tabs - HOVER Test case 9 for child number 1",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "hover on the first tab of the Test case 9",
+            "hoverSelector": "[data-test-case=\"9\"] .nck-tab:nth-child(1) button",
+            "selectors": [
+                "[data-test-case=\"9\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "2.8 NCK tabs - HOVER Test case 9 for child number 2",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "hover on the second tab of the Test case 9",
+            "hoverSelector": "[data-test-case=\"9\"] .nck-tab:nth-child(2) button",
+            "selectors": [
+                "[data-test-case=\"9\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "2.8 NCK tabs - HOVER Test case 9 for child number 3",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "hover on the third tab of the Test case 9",
+            "hoverSelector": "[data-test-case=\"9\"] .nck-tab:nth-child(3) button",
+            "selectors": [
+                "[data-test-case=\"9\"]"
+            ],
+            "selectorExpansion": false,
+            "viewports": [
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 10000
+                },
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 10000
+                }
+            ]
+        },
+        {
+            "label": "2.8 NCK tabs - HOVER Test case 9 for child number 4",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "hover on the fourth tab of the Test case 9",
+            "hoverSelector": "[data-test-case=\"9\"] .nck-tab:nth-child(4) button",
+            "selectors": [
+                "[data-test-case=\"9\"]"
+            ],
+            "selectorExpansion": false,
+            "viewports": [
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 10000
+                },
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 10000
+                }
+            ]
+        },
+        {
+            "label": "2.8 NCK tabs - HOVER Test case 9 for child number 5",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "hover on the fifth tab of the Test case 9",
+            "hoverSelector": "[data-test-case=\"9\"] .nck-tab:nth-child(5) button",
+            "selectors": [
+                "[data-test-case=\"9\"]"
+            ],
+            "selectorExpansion": false,
+            "viewports": [
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 10000
+                },
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 10000
+                }
+            ]
+        },
+        {
+            "label": "2.10 NCK tabs - HOVER Test case 11 for child number 1",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "hover on the first tab of the Test case 11",
+            "hoverSelector": "[data-test-case=\"11\"] .nck-tab:nth-child(1) button",
+            "selectors": [
+                "[data-test-case=\"11\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "2.10  NCK tabs - HOVER Test case 11 for child number 2",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0.02,
+            "requireSameDimensions": true,
+            "description": "hover on the second tab of the Test case 11",
+            "hoverSelector": "[data-test-case=\"11\"] .nck-tab:nth-child(2) button",
+            "selectors": [
+                "[data-test-case=\"11\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "2.10  NCK tabs - HOVER Test case 11 for child number 3",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0.01,
+            "requireSameDimensions": true,
+            "description": "hover on the third tab of the Test case 11",
+            "hoverSelector": "[data-test-case=\"11\"] .nck-tab:nth-child(3) button",
+            "selectors": [
+                "[data-test-case=\"11\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.8 NCK tabs - FOCUS Test case 9 for child number 1",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus on the first tab of the Test case 9",
+            "focusSelector": "[data-test-case=\"9\"] .nck-tab:nth-child(1) button",
+            "onReadyScript": "focus.js",
+            "selectors": [
+                "[data-test-case=\"9\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.8 NCK tabs - FOCUS Test case 9 for child number 2",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus on the second tab of the Test case 9",
+            "focusSelector": "[data-test-case=\"9\"] .nck-tab:nth-child(2) button",
+            "onReadyScript": "focus.js",
+            "selectors": [
+                "[data-test-case=\"9\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.8 NCK tabs - FOCUS Test case 9 for child number 3",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus on the third tab of the Test case 9",
+            "focusSelector": "[data-test-case=\"9\"] .nck-tab:nth-child(3) button",
+            "onReadyScript": "focus.js",
+            "selectors": [
+                "[data-test-case=\"9\"]"
+            ],
+            "selectorExpansion": false,
+            "viewports": [
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 10000
+                },
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 10000
+                }
+            ]
+        },
+        {
+            "label": "3.8 NCK tabs - FOCUS Test case 9 for child number 4",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus on the fourth tab of the Test case 9",
+            "focusSelector": "[data-test-case=\"9\"] .nck-tab:nth-child(4) button",
+            "onReadyScript": "focus.js",
+            "selectors": [
+                "[data-test-case=\"9\"]"
+            ],
+            "selectorExpansion": false,
+            "viewports": [
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 10000
+                },
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 10000
+                }
+            ]
+        },
+        {
+            "label": "3.8 NCK tabs - FOCUS Test case 9 for child number 5",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus on the fifth tab of the Test case 9",
+            "focusSelector": "[data-test-case=\"9\"] .nck-tab:nth-child(5) button",
+            "onReadyScript": "focus.js",
+            "selectors": [
+                "[data-test-case=\"9\"]"
+            ],
+            "selectorExpansion": false,
+            "viewports": [
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 10000
+                },
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 10000
+                }
+            ]
+        },
+        {
+            "label": "3.10 NCK tabs - FOCUS Test case 11 for child number 1",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus on the first tab of the Test case 11",
+            "focusSelector": "[data-test-case=\"11\"] .nck-tab:nth-child(1) button",
+            "onReadyScript": "focus.js",
+            "selectors": [
+                "[data-test-case=\"11\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.10  NCK tabs - FOCUS Test case 11 for child number 2",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus on the second tab of the Test case 11",
+            "focusSelector": "[data-test-case=\"11\"] .nck-tab:nth-child(2) button",
+            "onReadyScript": "focus.js",
+            "selectors": [
+                "[data-test-case=\"11\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.10  NCK tabs - FOCUS Test case 11 for child number 3",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus on the third tab of the Test case 11",
+            "focusSelector": "[data-test-case=\"11\"] .nck-tab:nth-child(3) button",
+            "onReadyScript": "focus.js",
+            "selectors": [
+                "[data-test-case=\"11\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "4.3 NCK tabs - FOCUS+ENTER Test case 4 for child number 1",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus + enter on the tab of the Test case 4 tabs",
+            "onReadyScript": "focusAndPressEnter.js",
+            "focusAndPressEnterSelector": "[data-test-case=\"4\"] .nck-tab:nth-child(1) button",
+            "selectors": [
+                "[data-test-case=\"4\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "4.3 NCK tabs - FOCUS+ENTER Test case 4 for child number 2",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus + enter on the tab of the Test case 4 tabs",
+            "onReadyScript": "focusAndPressEnter.js",
+            "focusAndPressEnterSelector": "[data-test-case=\"4\"] .nck-tab:nth-child(2) button",
+            "selectors": [
+                "[data-test-case=\"4\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "4.3 NCK tabs - FOCUS+ENTER Test case 4 for child number 3",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus + enter on the tab of the Test case 4 tabs",
+            "onReadyScript": "focusAndPressEnter.js",
+            "focusAndPressEnterSelector": "[data-test-case=\"4\"] .nck-tab:nth-child(3) button",
+            "selectors": [
+                "[data-test-case=\"4\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "4.5 NCK tabs - FOCUS+ENTER Test case 6 for child number 1",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus + enter on the tab of the Test case 6 tabs",
+            "onReadyScript": "focusAndPressEnter.js",
+            "focusAndPressEnterSelector": "[data-test-case=\"6\"] .nck-tab:nth-child(1) button",
+            "selectors": [
+                "[data-test-case=\"6\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "4.5 NCK tabs - FOCUS+ENTER Test case 6 for child number 2",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus + enter on the tab of the Test case 6 tabs",
+            "onReadyScript": "focusAndPressEnter.js",
+            "focusAndPressEnterSelector": "[data-test-case=\"6\"] .nck-tab:nth-child(2) button",
+            "selectors": [
+                "[data-test-case=\"6\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "4.5 NCK tabs - FOCUS+ENTER Test case 6 for child number 3",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus + enter on the tab of the Test case 6 tabs",
+            "onReadyScript": "focusAndPressEnter.js",
+            "focusAndPressEnterSelector": "[data-test-case=\"6\"] .nck-tab:nth-child(3) button",
+            "selectors": [
+                "[data-test-case=\"6\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "4.6 NCK tabs - FOCUS+ENTER Test case 7 for child number 1",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus + enter on the tab of the Test case 7 tabs",
+            "onReadyScript": "focusAndPressEnter.js",
+            "focusAndPressEnterSelector": "[data-test-case=\"7\"] .nck-tab:nth-child(1) button",
+            "selectors": [
+                "[data-test-case=\"7\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "4.6 NCK tabs - FOCUS+ENTER Test case 7 for child number 2",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus + enter on the tab of the Test case 7 tabs",
+            "onReadyScript": "focusAndPressEnter.js",
+            "focusAndPressEnterSelector": "[data-test-case=\"7\"] .nck-tab:nth-child(2) button",
+            "selectors": [
+                "[data-test-case=\"7\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "4.8 NCK tabs - FOCUS+ENTER Test case 9 for child number 1",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus+enter on the first tab of the Test case 9",
+            "focusAndPressEnterSelector": "[data-test-case=\"9\"] .nck-tab:nth-child(1) button",
+            "onReadyScript": "focusAndPressEnter.js",
+            "selectors": [
+                "[data-test-case=\"9\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "4.8 NCK tabs - FOCUS+ENTER Test case 9 for child number 2",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus+enter on the second tab of the Test case 9",
+            "focusAndPressEnterSelector": "[data-test-case=\"9\"] .nck-tab:nth-child(2) button",
+            "onReadyScript": "focusAndPressEnter.js",
+            "selectorExpansion": false,
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "4.8 NCK tabs - FOCUS+ENTER Test case 9 for child number 3",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus+enter on the third tab of the Test case 9",
+            "focusAndPressEnterSelector": "[data-test-case=\"9\"] .nck-tab:nth-child(3) button",
+            "onReadyScript": "focusAndPressEnter.js",
+            "selectors": [
+                "[data-test-case=\"9\"]"
+            ],
+            "selectorExpansion": false,
+            "viewports": [
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 10000
+                },
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 10000
+                }
+            ]
+        },
+        {
+            "label": "4.8 NCK tabs - FOCUS+ENTER Test case 9 for child number 4",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus+enter on the fourth tab of the Test case 9",
+            "focusAndPressEnterSelector": "[data-test-case=\"9\"] .nck-tab:nth-child(4) button",
+            "onReadyScript": "focusAndPressEnter.js",
+            "selectors": [
+                "[data-test-case=\"9\"]"
+            ],
+            "selectorExpansion": false,
+            "viewports": [
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 10000
+                },
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 10000
+                }
+            ]
+        },
+        {
+            "label": "4.8 NCK tabs - FOCUS+ENTER Test case 9 for child number 5",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus+enter on the fifth tab of the Test case 9",
+            "focusAndPressEnterSelector": "[data-test-case=\"9\"] .nck-tab:nth-child(5) button",
+            "onReadyScript": "focusAndPressEnter.js",
+            "selectors": [
+                "[data-test-case=\"9\"]"
+            ],
+            "selectorExpansion": false,
+            "viewports": [
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 10000
+                },
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 10000
+                }
+            ]
+        },
+        {
+            "label": "4.10 NCK tabs - FOCUS+ENTER Test case 11 for child number 1",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus+enter on the first tab of the Test case 11",
+            "focusAndPressEnterSelector": "[data-test-case=\"11\"] .nck-tab:nth-child(1) button",
+            "onReadyScript": "focusAndPressEnter.js",
+            "selectors": [
+                "[data-test-case=\"11\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "4.10  NCK tabs - FOCUS+ENTER Test case 11 for child number 2",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus+enter on the second tab of the Test case 11",
+            "focusAndPressEnterSelector": "[data-test-case=\"11\"] .nck-tab:nth-child(2) button",
+            "onReadyScript": "focusAndPressEnter.js",
+            "selectors": [
+                "[data-test-case=\"11\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "4.10  NCK tabs - FOCUS+ENTER Test case 11 for child number 3",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus+enter on the third tab of the Test case 11",
+            "focusAndPressEnterSelector": "[data-test-case=\"11\"] .nck-tab:nth-child(3) button",
+            "onReadyScript": "focusAndPressEnter.js",
+            "selectors": [
+                "[data-test-case=\"11\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "5.3 NCK tabs - FOCUS+SPACE Test case 4 for child number 1",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus + space on the tab of the Test case 4 tabs",
+            "onReadyScript": "focusAndPressSpace.js",
+            "focusAndPressSpaceSelector": "[data-test-case=\"4\"] .nck-tab:nth-child(1) button",
+            "selectors": [
+                "[data-test-case=\"4\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "5.3 NCK tabs - FOCUS+SPACE Test case 4 for child number 2",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus + space on the tab of the Test case 4 tabs",
+            "onReadyScript": "focusAndPressSpace.js",
+            "focusAndPressSpaceSelector": "[data-test-case=\"4\"] .nck-tab:nth-child(2) button",
+            "selectors": [
+                "[data-test-case=\"4\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "5.3 NCK tabs - FOCUS+SPACE Test case 4 for child number 3",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus + space on the tab of the Test case 4 tabs",
+            "onReadyScript": "focusAndPressSpace.js",
+            "focusAndPressSpaceSelector": "[data-test-case=\"4\"] .nck-tab:nth-child(3) button",
+            "selectors": [
+                "[data-test-case=\"4\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "5.11  NCK tabs - FOCUS+SPACE Test case 12 for child number 1",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus+space on the first tab of the Test case 12",
+            "focusAndPressSpaceSelector": "[data-test-case=\"12\"] .nck-tab:nth-child(1) button",
+            "onReadyScript": "focusAndPressSpace.js",
+            "selectors": [
+                "[data-test-case=\"12\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "5.11  NCK tabs - FOCUS+SPACE Test case 12 for child number 2",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus+space on the second tab of the Test case 12",
+            "focusAndPressSpaceSelector": "[data-test-case=\"12\"] .nck-tab:nth-child(2) button",
+            "onReadyScript": "focusAndPressSpace.js",
+            "selectorExpansion": false,
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "5.11 NCK tabs - FOCUS+SPACE Test case 12 for child number 3",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus+space on the third tab of the Test case 12",
+            "focusAndPressSpaceSelector": "[data-test-case=\"12\"] .nck-tab:nth-child(3) button",
+            "onReadyScript": "focusAndPressSpace.js",
+            "selectors": [
+                "[data-test-case=\"12\"]"
+            ],
+            "selectorExpansion": false,
+            "viewports": [
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 10000
+                },
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 10000
+                }
+            ]
+        },
+        {
+            "label": "5.11 NCK tabs - FOCUS+SPACE Test case 12 for child number 4",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus+space on the fourth tab of the Test case 12",
+            "focusAndPressSpaceSelector": "[data-test-case=\"12\"] .nck-tab:nth-child(4) button",
+            "onReadyScript": "focusAndPressSpace.js",
+            "selectors": [
+                "[data-test-case=\"12\"]"
+            ],
+            "selectorExpansion": false,
+            "viewports": [
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 10000
+                },
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 10000
+                }
+            ]
+        },
+        {
+            "label": "5.11 NCK tabs - FOCUS+SPACE Test case 12 for child number 5",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "focus+space on the fifth tab of the Test case 12",
+            "focusAndPressSpaceSelector": "[data-test-case=\"12\"] .nck-tab:nth-child(5) button",
+            "onReadyScript": "focusAndPressSpace.js",
+            "selectors": [
+                "[data-test-case=\"12\"]"
+            ],
+            "selectorExpansion": false,
+            "viewports": [
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 10000
+                },
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 10000
+                }
+            ]
+        },
+        {
+            "label": "6.3 NCK tabs - CLICK Test case 4 for child number 1",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "left mouse click on the tab of the Test case 4 tabs",
+            "clickSelector": "[data-test-case=\"4\"] .nck-tab:nth-child(1) button",
+            "selectors": [
+                "[data-test-case=\"4\"]"
+            ]
+        },
+        {
+            "label": "6.3 NCK tabs - CLICK Test case 4 for child number 2",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0.02,
+            "requireSameDimensions": true,
+            "description": "left mouse click on the tab of the Test case 4 tabs",
+            "clickSelector": "[data-test-case=\"4\"] .nck-tab:nth-child(2) button",
+            "selectors": [
+                "[data-test-case=\"4\"]"
+            ]
+        },
+        {
+            "label": "6.3 NCK tabs - CLICK Test case 4 for child number 3",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0.02,
+            "requireSameDimensions": true,
+            "description": "left mouse click on the tab of the Test case 4 tabs",
+            "clickSelector": "[data-test-case=\"4\"] .nck-tab:nth-child(3) button",
+            "selectors": [
+                "[data-test-case=\"4\"]"
+            ]
+        },
+        {
+            "label": "6.5 NCK tabs - CLICK Test case 6 for child number 1",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "left mouse click on the tab of the Test case 6 tabs",
+            "clickSelector": "[data-test-case=\"6\"] .nck-tab:nth-child(1) button",
+            "selectors": [
+                "[data-test-case=\"6\"]"
+            ]
+        },
+        {
+            "label": "6.5 NCK tabs - CLICK Test case 6 for child number 2",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "left mouse click on the tab of the Test case 6 tabs",
+            "clickSelector": "[data-test-case=\"6\"] .nck-tab:nth-child(2) button",
+            "selectors": [
+                "[data-test-case=\"6\"]"
+            ]
+        },
+        {
+            "label": "6.5 NCK tabs - CLICK Test case 6 for child number 3",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "left mouse click on the tab of the Test case 6 tabs",
+            "clickSelector": "[data-test-case=\"6\"] .nck-tab:nth-child(3) button",
+            "selectors": [
+                "[data-test-case=\"6\"]"
+            ]
+        },
+        {
+            "label": "6.6 NCK tabs - CLICK Test case 7 for child number 1",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "left mouse click on the tab of the Test case 7 tabs",
+            "clickSelector": "[data-test-case=\"7\"] .nck-tab:nth-child(1) button",
+            "selectors": [
+                "[data-test-case=\"7\"]"
+            ]
+        },
+        {
+            "label": "6.6 NCK tabs - CLICK Test case 7 for child number 2",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "left mouse click on the tab of the Test case 7 tabs",
+            "clickSelector": "[data-test-case=\"7\"] .nck-tab:nth-child(2) button",
+            "selectors": [
+                "[data-test-case=\"7\"]"
+            ]
+        },
+        {
+            "label": "6.8 NCK tabs - CLICK Test case 9 for child number 1",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "left mouse click on the first tab of the Test case 9",
+            "clickSelector": "[data-test-case=\"9\"] .nck-tab:nth-child(1) button",
+            "selectors": [
+                "[data-test-case=\"9\"]"
+            ]
+        },
+        {
+            "label": "6.8 NCK tabs - CLICK Test case 9 for child number 2",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "left mouse click on the second tab of the Test case 9",
+            "clickSelector": "[data-test-case=\"9\"] .nck-tab:nth-child(2) button",
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "6.8 NCK tabs - CLICK Test case 9 for child number 3",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "left mouse click on the third tab of the Test case 9",
+            "clickSelector": "[data-test-case=\"9\"] .nck-tab:nth-child(3) button",
+            "selectors": [
+                "[data-test-case=\"9\"]"
+            ],
+            "viewports": [
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 10000
+                },
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 10000
+                }
+            ]
+        },
+        {
+            "label": "6.8 NCK tabs - CLICK Test case 9 for child number 4",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "left mouse click on the fourth tab of the Test case 9",
+            "clickSelector": "[data-test-case=\"9\"] .nck-tab:nth-child(4) button",
+            "selectors": [
+                "[data-test-case=\"9\"]"
+            ],
+            "viewports": [
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 10000
+                },
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 10000
+                }
+            ]
+        },
+        {
+            "label": "6.8 NCK tabs - CLICK Test case 9 for child number 5",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "left mouse click on the fifth tab of the Test case 9",
+            "clickSelector": "[data-test-case=\"9\"] .nck-tab:nth-child(5) button",
+            "selectors": [
+                "[data-test-case=\"9\"]"
+            ],
+            "viewports": [
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 10000
+                },
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 10000
+                }
+            ]
+        },
+        {
+            "label": "6.10 NCK tabs - CLICK Test case 11 for child number 1",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "left mouse click on the first tab of the Test case 11",
+            "clickSelector": "[data-test-case=\"11\"] .nck-tab:nth-child(1) button",
+            "selectors": [
+                "[data-test-case=\"11\"]"
+            ]
+        },
+        {
+            "label": "6.10  NCK tabs - CLICK Test case 11 for child number 2",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0.01,
+            "requireSameDimensions": true,
+            "description": "left mouse click on the second tab of the Test case 11",
+            "clickSelector": "[data-test-case=\"11\"] .nck-tab:nth-child(2) button",
+            "selectors": [
+                "[data-test-case=\"11\"]"
+            ]
+        },
+        {
+            "label": "6.10  NCK tabs - CLICK Test case 11 for child number 3",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0.01,
+            "requireSameDimensions": true,
+            "description": "left mouse click on the third tab of the Test case 11",
+            "clickSelector": "[data-test-case=\"11\"] .nck-tab:nth-child(3) button",
+            "selectors": [
+                "[data-test-case=\"11\"]"
+            ]
+        },
+        {
+            "label": "6.12 NCK tabs - CLICK Test case 13 Increment counter value button",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "left mouse click on button with the name Increment counter value ",
+            "clickSelector": "[data-test-case=\"13\"] [data-test-modifier=\"counter\"]",
+            "selectors": [
+                "[data-test-case=\"13\"]"
+            ]
+        },
+        {
+            "label": "6.12 NCK tabs - CLICK Test case 13 Change third tab heading",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "left mouse click on button with the name Change third tab heading",
+            "clickSelector": "[data-test-case=\"13\"] [data-test-modifier=\"heading\"]",
+            "selectors": [
+                "[data-test-case=\"13\"]"
+            ]
+        },
+        {
+            "label": "6.12 NCK tabs - CLICK Test case 13 Change third tab content ",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "left mouse click on button with the name Change third tab content  ",
+            "clickSelectors": [
+                "[data-test-case=\"13\"] .nck-tab:nth-child(3) button",
+                "[data-test-case=\"13\"] [data-test-modifier=\"content\"]"
+            ],
+            "selectors": [
+                "[data-test-case=\"13\"]"
+            ]
+        },
+        {
+            "label": "6.12 NCK tabs - CLICK Test case 13 Change leading icon button",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "left mouse click on button with the name Change leading icon ",
+            "clickSelector": "[data-test-case=\"13\"] [data-test-modifier=\"leadingIcon\"]",
+            "selectors": [
+                "[data-test-case=\"13\"]"
+            ]
+        },
+        {
+            "label": "6.12 NCK tabs - CLICK Test case 13 Change trailing icon button",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "left mouse click on button with the name Change trailing icon ",
+            "clickSelector": "[data-test-case=\"13\"] [data-test-modifier=\"trailingIcon\"]",
+            "selectors": [
+                "[data-test-case=\"13\"]"
+            ]
+        },
+        {
+            "label": "6.13 NCK tabs - CLICK Test case 14 button",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "left mouse click on button with the name button to change the default to the third tab ",
+            "clickSelector": "[data-test-case=\"14\"] button.select-third-tab",
+            "selectors": [
+                "[data-test-case=\"14\"]"
+            ]
+        },
+        {
+            "label": "7.8 NCK tabs - HOVER+DOWN Test case 9 for child number 1",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0.01,
+            "requireSameDimensions": true,
+            "description": "hover and press left mouse click on the first tab of the Test case 9",
+            "hoverAndPressMouseSelector": "[data-test-case=\"9\"] .nck-tab:nth-child(1) button",
+            "selectors": [
+                "[data-test-case=\"9\"]"
+            ],
+            "onReadyScript": "hoverAndPressMouseSelector.js"
+        },
+        {
+            "label": "7.8 NCK tabs - HOVER+DOWN Test case 9 for child number 2",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "hover and press left mouse click on the second tab of the Test case 9",
+            "hoverAndPressMouseSelector": "[data-test-case=\"9\"] .nck-tab:nth-child(2) button",
+            "selectors": [
+                "[data-test-case=\"9\"]"
+            ],
+            "onReadyScript": "hoverAndPressMouseSelector.js"
+        },
+        {
+            "label": "7.8 NCK tabs - HOVER+DOWN Test case 9 for child number 3",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "hover and press left mouse click on the third tab of the Test case 9",
+            "hoverAndPressMouseSelector": "[data-test-case=\"9\"] .nck-tab:nth-child(3) button",
+            "selectors": [
+                "[data-test-case=\"9\"]"
+            ],
+            "onReadyScript": "hoverAndPressMouseSelector.js",
+            "viewports": [
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 10000
+                },
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 10000
+                }
+            ]
+        },
+        {
+            "label": "7.8 NCK tabs - HOVER+DOWN Test case 9 for child number 4",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "hover and press left mouse click on the fourth tab of the Test case 9",
+            "hoverAndPressMouseSelector": "[data-test-case=\"9\"] .nck-tab:nth-child(4) button",
+            "selectors": [
+                "[data-test-case=\"9\"]"
+            ],
+            "onReadyScript": "hoverAndPressMouseSelector.js",
+            "viewports": [
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 10000
+                },
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 10000
+                }
+            ]
+        },
+        {
+            "label": "7.8 NCK tabs - HOVER+DOWN Test case 9 for child number 5",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "hover and press left mouse click on the fifth tab of the Test case 9",
+            "hoverAndPressMouseSelector": "[data-test-case=\"9\"] .nck-tab:nth-child(5) button",
+            "selectors": [
+                "[data-test-case=\"9\"]"
+            ],
+            "onReadyScript": "hoverAndPressMouseSelector.js",
+            "viewports": [
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 10000
+                },
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 10000
+                }
+            ]
+        },
+        {
+            "label": "8. NCK tabs - Scroll Test case 7 for child number 1",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "scroll down in the window of the tab of the Test case 7 first tab",
+            "onReadyScript": "scroll.js",
+            "scrollSelector": "[data-test-case=\"7\"] .nck-tabs-content",
+            "yScroll": 500,
+            "selectors": [
+                "[data-test-case=\"7\"]"
+            ]
+        },
+        {
+            "label": "10.1 NCK tabs - CLICK Test case 9  more and option 3",
+            "url": "http://localhost:8080/#/tabs",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"9\"] .nck-tab:nth-child(2) button"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"9\"] .nck-tabs .tabs-popover-menu li:nth-child(3)"
+                }
+            ],
+            "viewports": [
+                {
+                    "label": "phone",
+                    "height": 11000,
+                    "width": 320
+                }
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "10.2 NCK tabs - Click TC9 more and hover option 1",
+            "url": "http://localhost:8080/#/tabs",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"9\"] .nck-tab:nth-child(2) button"
+                },
+                {
+                    "type": "hover",
+                    "selector": "[data-test-case=\"9\"] .nck-tabs .tabs-popover-menu li:nth-child(1)"
+                },
+                {
+                    "type": "waitFor",
+                    "delay": 200
+                }
+            ],
+            "viewports": [
+                {
+                    "label": "phone",
+                    "height": 11000,
+                    "width": 320
+                }
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "10.3 NCK tabs - Click TC9 more and down arrow key x 2",
+            "url": "http://localhost:8080/#/tabs",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"9\"] .nck-tab:nth-child(2) button"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowDown"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowDown"
+                }
+            ],
+            "viewports": [
+                {
+                    "label": "phone",
+                    "height": 11000,
+                    "width": 320
+                }
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "10.4 NCK tabs - Click TC9 more and down arrow key x 3",
+            "url": "http://localhost:8080/#/tabs",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "coordinate": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "selector": "[data-test-case=\"9\"] .nck-tab:nth-child(2) button"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowDown"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowDown"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowDown"
+                }
+            ],
+            "viewports": [
+                {
+                    "label": "phone",
+                    "height": 11000,
+                    "width": 320
+                }
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "11.1 NCK tabs - CLICK Test case 12 more, option 4 then more again",
+            "url": "http://localhost:8080/#/tabs",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"12\"] .nck-tab:nth-child(2) button"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"12\"] .nck-tabs .tabs-popover-menu li:nth-child(4)"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"12\"] .nck-tab:nth-child(2) button"
+                }
+            ],
+            "viewports": [
+                {
+                    "label": "phone",
+                    "height": 11000,
+                    "width": 320
+                }
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "11.2 NCK tabs - Open Test case 12 more menu, select option 2 then open menu again",
+            "url": "http://localhost:8080/#/tabs",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "focus",
+                    "selector": "[data-test-case=\"12\"] .nck-tab:nth-child(2) button"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Enter"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowDown"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Enter"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Enter"
+                }
+            ],
+            "viewports": [
+                {
+                    "label": "phone",
+                    "height": 11000,
+                    "width": 320
+                }
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "12. NCK tabs - Open test modal and check display",
+            "url": "http://localhost:8080/#/tabs",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Check display of tabs within a modal",
+            "clickSelector": "[data-test-case=\"15\"] [data-test-tabs-modal-trigger]",
+            "selectors": [
+                ".nck-modal"
+            ]
+        }
+    ],
+    "paths": {
+        "bitmaps_reference": "backstop_data/bitmaps_reference",
+        "bitmaps_test": "backstop_data/bitmaps_test",
+        "engine_scripts": "backstop_data/engine_scripts",
+        "html_report": "backstop_data/html_report",
+        "ci_report": "backstop_data/ci_report"
+    },
+    "report": [
+        "CI"
+    ],
+    "engine": "puppeteer",
+    "engineOptions": {
+        "args": [
+            "--no-sandbox",
+            "--disable-setuid-sandbox",
+            "--disable-dev-shm-usage",
+            "--disable-accelerated-2d-canvas",
+            "--no-first-run",
+            "--no-zygote",
+            "--disable-gpu"
+        ],
+        "ignoreDefaultArgs": [
+            "--hide-scrollbars"
+        ],
+        "protocolTimeout": 960000
+    },
+    "asyncCaptureLimit": 3,
+    "asyncCompareLimit": 50,
+    "debug": false,
+    "debugWindow": false
+}

@@ -1,0 +1,34 @@
+@import (reference) "./colorsVariables.less";
+each(@kit-colors, {
+  // This style is publicly exposed & documented for use in consuming application,
+  // evaluate consequences before modifying it.
+  .font-color-@{key},
+  .nck-style .font-color-@{key},
+  .nck-style.font-color-@{key} {
+    color: @value;
+  }
+
+  // This style is publicly exposed & documented for use in consuming application,
+  // evaluate consequences before modifying it.
+  .background-color-@{key},
+  .nck-style .background-color-@{key},
+  .nck-style.background-color-@{key} {
+    background-color: @value;
+  }
+
+  // This style is publicly exposed & documented for use in consuming application,
+  // evaluate consequences before modifying it.
+  .background-color-hover-@{key}:hover,
+  .nck-style .background-color-hover-@{key}:hover,
+  .nck-style.background-color-hover-@{key}:hover {
+    background-color: multiply(@value, rgba(0,0,0,0.1));
+  }
+
+  // This style is publicly exposed & documented for use in consuming application,
+  // evaluate consequences before modifying it.
+  .border-color-@{key},
+  .nck-style .border-color-@{key},
+  .nck-style.border-color-@{key} {
+    border-color: @value;
+  }
+});

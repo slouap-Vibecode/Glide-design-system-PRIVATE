@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g class="neo-icon-kit--time-s">
+    <path fill="#444B61" fill-rule="evenodd" d="M1 10C1 5.05 5.05 1 10 1C14.95 1 19 5.05 19 10C19 14.95 14.95 19 10 19C5.05 19 1 14.95 1 10ZM3 10C3 13.85 6.15 17 10 17C13.85 17 17 13.85 17 10C17 6.15 13.85 3 10 3C6.15 3 3 6.15 3 10Z" class="svg-primary-fill" clip-rule="evenodd"/>
+    <path fill="#444B61" d="M10.999 9.68598L11 5.00098H9V10.496L12.717 14.219L14.131 12.805L10.999 9.68598Z" class="svg-secondary-fill"/>
+  </g>
+</svg>

@@ -1,0 +1,852 @@
+{
+    "id": "backstop_textInput",
+    "viewports": [
+        {
+            "label": "phone",
+            "width": 320,
+            "height": 4041
+        },
+        {
+            "label": "tablet",
+            "width": 1024,
+            "height": 2712
+        },
+        {
+            "label": "desktop",
+            "width": 1920,
+            "height": 2643
+        }
+    ],
+    "onBeforeScript": "puppet/onBefore.js",
+    "onReadyScript": "puppet/onReady.js",
+  "scenarios": [
+    {
+      "label": "1.0 NCK text input - Default display",
+      "url": "http://localhost:8080/#/textInput",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Global page verification"
+    },
+    {
+      "label": "1.1 NCK text input - HOVER TC 0",
+      "url": "http://localhost:8080/#/textInput",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the TC0 input",
+      "hoverSelector": "[data-test-case=\"0\"] .nck-text-input",
+      "selectors": [
+        "[data-test-case=\"0\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "1.2 NCK text input - HOVER TC 2",
+      "url": "http://localhost:8080/#/textInput",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the TC2 input",
+      "hoverSelector": "[data-test-case=\"2\"] .nck-text-input",
+      "selectors": [
+        "[data-test-case=\"2\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "1.3 NCK text input - Display TC 13",
+      "url": "http://localhost:8080/#/textInput",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Display the default state of TC 13",
+      "selectors": [
+        "[data-test-case=\"13\"]"
+      ],
+      "selectorExpansion": true
+
+    },
+    {
+      "label": "1.4 NCK text input - HOVER TC 15",
+      "url": "http://localhost:8080/#/textInput",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the TC15 input",
+      "hoverSelector": "[data-test-case=\"15\"] .nck-text-input",
+      "selectors": [
+        "[data-test-case=\"15\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "1.5 NCK text input - HOVER TC 16",
+      "url": "http://localhost:8080/#/textInput",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the TC16 input",
+      "hoverSelector": "[data-test-case=\"16\"] .nck-text-input",
+      "selectors": [
+        "[data-test-case=\"16\"]"
+      ],
+      "selectorExpansion": false,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 3230
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 4000
+        },
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 2120
+        }
+      ]
+    },
+    {
+      "label": "1.6 NCK text input - Display TC 17",
+      "url": "http://localhost:8080/#/textInput",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Display the default state of TC 17",
+      "selectors": [
+        "[data-test-case=\"17\"]"
+      ],
+      "selectorExpansion": true
+
+    },
+    {
+        "label": "1.7 NCK text input - Display TC 19",
+        "url": "http://localhost:8080/#/textInput",
+        "misMatchThreshold": 0,
+        "requireSameDimensions": true,
+        "description": "Display the default state of TC 19",
+        "selectors": [
+          "[data-test-case=\"19\"]"
+        ],
+        "selectorExpansion": true
+      },
+      {
+        "label": "1.8 NCK text input - HOVER TC 21",
+        "url": "http://localhost:8080/#/textInput",
+        "misMatchThreshold": 0,
+        "requireSameDimensions": true,
+        "description": "hover upon the TC 21 input",
+        "hoverSelector": "[data-test-case=\"21\"] .nck-text-input",
+        "selectors": [
+          "[data-test-case=\"21\"]"
+        ],
+        "selectorExpansion": true
+      },
+      {
+        "label": "1.9 NCK text input - HOVER TC 22",
+        "url": "http://localhost:8080/#/textInput",
+        "misMatchThreshold": 0,
+        "requireSameDimensions": true,
+        "description": "hover upon the TC 22 input",
+        "hoverSelector": "[data-test-case=\"22\"] .nck-text-input",
+        "selectors": [
+          "[data-test-case=\"22\"]"
+        ],
+        "selectorExpansion": true
+      },
+    {
+      "label": "2.1 NCK text input - FOCUS TC 1 input",
+      "url": "http://localhost:8080/#/textInput?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the TC 1 input field",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"1\"] .nck-text-input",
+      "selectors": [
+        "[data-test-case=\"1\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "2.2 NCK text input - FOCUS TC 0 input",
+      "url": "http://localhost:8080/#/textInput?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the TC 0 input field",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"0\"] .nck-text-input",
+      "selectors": [
+        "[data-test-case=\"0\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "2.3 NCK text input - FOCUS TC 1 clear button",
+      "url": "http://localhost:8080/#/textInput?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the TC 1 clear button",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"1\"] .clear-input-button",
+      "selectors": [
+        "[data-test-case=\"1\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "2.4 NCK text input - FOCUS+ENTER TC 1 close button",
+      "url": "http://localhost:8080/#/textInput?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus+enter on the TC 1 clear button",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"1\"] .clear-input-button",
+      "selectors": [
+        "[data-test-case=\"1\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "2.5 NCK text input - FOCUS+SPACE TC 1 close button",
+      "url": "http://localhost:8080/#/textInput",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus+space on the TC 1 clear button",
+      "onReadyScript": "focusAndPressSpace.js",
+      "focusAndPressSpaceSelector": "[data-test-case=\"1\"] .clear-input-button",
+      "selectors": [
+        "[data-test-case=\"1\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "2.6 NCK text input - FOCUS TC 4 input",
+      "url": "http://localhost:8080/#/textInput?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the TC 4  input",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"4\"] .nck-text-input",
+      "clickSelectors": [
+        "[data-test-case=\"4\"] .validate-input",
+        "[data-test-case=\"4\"] .nck-text-input"
+      ],
+      "selectors": [
+        "[data-test-case=\"4\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "2.7 NCK text input - FOCUS TC 14 input",
+      "url": "http://localhost:8080/#/textInput?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the TC 14 input field",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"14\"] .nck-text-input",
+      "selectorExpansion": true
+    },
+    {
+      "label": "2.8 NCK text input - FOCUS TC 16 input",
+      "url": "http://localhost:8080/#/textInput?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the TC 16 input field",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"16\"] .nck-text-input",
+      "selectors": [
+        "[data-test-case=\"16\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+        "label": "2.9 NCK text input - FOCUS TC 20 input",
+        "url": "http://localhost:8080/#/textInput?hideCursor=1",
+        "misMatchThreshold": 0,
+        "requireSameDimensions": true,
+        "description": "focus on the TC 20 input field",
+        "onReadyScript": "focus.js",
+        "focusSelector": "[data-test-case=\"20\"] .nck-text-input",
+        "selectors": [
+          "[data-test-case=\"20\"]"
+        ],
+        "selectorExpansion": true
+      },
+    {
+      "label": "3.1 NCK text input - CLICK TC 1 input",
+      "url": "http://localhost:8080/#/textInput?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on the TC 1 input field",
+      "clickSelector": "[data-test-case=\"1\"] .nck-text-input",
+      "selectors": [
+        "[data-test-case=\"1\"]"
+      ],
+      "selectorExpansion": true
+    },
+
+    {
+      "label": "3.2 NCK text input - CLICK TC 1 clear button",
+      "url": "http://localhost:8080/#/textInput",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on the TC 1 clear button",
+      "clickSelector": "[data-test-case=\"1\"] .clear-input-button",
+      "selectors": [
+        "[data-test-case=\"1\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "3.3 NCK text input - CLICK TC 0 input then outside",
+      "url": "http://localhost:8080/#/textInput",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on the TC 0 input field then click outside it",
+      "onReadyScript": "clickAndMoveMouseAndClick.js",
+      "clickSelector": "[data-test-case=\"0\"] .nck-text-input",
+      "selectors": [
+        "[data-test-case=\"0\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "3.4 NCK text input - CLICK TC 4 input then outside",
+      "url": "http://localhost:8080/#/textInput",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on the TC 4 input field then click outside it",
+      "onReadyScript": "clickAndMoveMouseAndClick.js",
+      "clickSelector": "[data-test-case=\"4\"] .nck-text-input",
+      "selectorToWait": "[data-test-case=\"4\"] [data-test-error-message-text]",
+      "selectors": [
+        "[data-test-case=\"4\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "3.5 NCK text input - CLICK TC 6 input then outside",
+      "url": "http://localhost:8080/#/textInput",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on the TC 6 input field then click outside it",
+      "onReadyScript": "clickAndMoveMouseAndClick.js",
+      "clickSelector": "[data-test-case=\"6\"] .nck-text-input",
+      "selectorToWait": "[data-test-case=\"6\"] [data-test-error-message-text]",
+      "selectors": [
+        "[data-test-case=\"6\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "3.6 NCK text input - CLICK TC 13 input",
+      "url": "http://localhost:8080/#/textInput?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on the TC 13 input field",
+      "clickSelector": "[data-test-case=\"13\"] .nck-text-input",
+      "selectors": [
+        "[data-test-case=\"13\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "3.7 NCK text input - CLICK TC 15 input then outside",
+      "url": "http://localhost:8080/#/textInput",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on the TC 15 input field then click outside it",
+      "onReadyScript": "clickAndMoveMouseAndClick.js",
+      "clickSelector": "[data-test-case=\"15\"] .nck-text-input",
+      "selectors": [
+        "[data-test-case=\"15\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "3.8 NCK text input - CLICK TC 16 input then outside",
+      "url": "http://localhost:8080/#/textInput",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on the TC 16 input field then click outside it",
+      "onReadyScript": "clickAndMoveMouseAndClick.js",
+      "clickSelector": "[data-test-case=\"16\"] .nck-text-input",
+      "selectorToWait": "[data-test-case=\"16\"] [data-test-error-message-text]",
+      "selectors": [
+        "[data-test-case=\"16\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "3.9 NCK text input - CLICK TC 21 input",
+      "url": "http://localhost:8080/#/textInput?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on the TC 21 input field",
+      "clickSelector": "[data-test-case=\"21\"] .nck-text-input",
+      "selectors": [
+        "[data-test-case=\"21\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "4.1 NCK text input - INSERT CONTENT TC 0 input",
+      "url": "http://localhost:8080/#/textInput?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "insert aa in the TC0 input field then press the validate button",
+      "keyPressSelector": {
+        "selector": "[data-test-case=\"0\"] .nck-text-input",
+        "keyPress": "aa"
+      },
+      "clickSelector": "[data-test-case=\"0\"] .validate-input",
+      "selectors": [
+        "[data-test-case=\"0\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "4.2 NCK text input - INSERT CONTENT TC 0 input",
+      "url": "http://localhost:8080/#/textInput?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "insert aaz in the TC0 input field then blur by clicking outside then press the validate button",
+      "selectors": [
+        "[data-test-case=\"0\"]"
+      ],
+      "selectorExpansion": true,
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .nck-text-input"
+        },
+        {
+          "type": "type",
+          "text": "aaz"
+        },
+        {
+          "type": "clickAtPosition",
+          "coordinate": {
+            "x": 5,
+            "y": 5
+          }
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .validate-input"
+        }
+      ]
+    },
+    {
+      "label": "4.3 NCK text input - INSERT CONTENT TC 0 input",
+      "url": "http://localhost:8080/#/textInput?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "insert 22 in the TC0 input field then blur by clicking outside then press the validate button",
+      "selectors": "[data-test-case=\"0\"]",
+      "selectorExpansion": true,
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .nck-text-input"
+        },
+        {
+          "type": "type",
+          "text": "22"
+        },
+        {
+          "type": "clickAtPosition",
+          "coordinate": {
+            "x": 5,
+            "y": 5
+          }
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .validate-input"
+        }
+      ]
+    },
+    {
+      "label": "4.4 NCK text input - INSERT CONTENT TC 5 input",
+      "url": "http://localhost:8080/#/textInput?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "insert aa in the TC5 input field which is Read-Only",
+      "keyPressSelector": {
+        "selector": "[data-test-case=\"5\"] .nck-text-input",
+        "keyPress": "aa"
+      },
+      "selectors": [
+        "[data-test-case=\"5\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "4.41 NCK text input - Click on TC 5 input, and then click outside",
+      "url": "http://localhost:8080/#/textInput?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on the TC5 input field which is Read-Only and required, and click outside",
+      "onReadyScript": "clickAndMoveMouseAndClick.js",
+      "clickSelector": "[data-test-case=\"5\"] .nck-text-input",
+      "selectors": [
+        "[data-test-case=\"5\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "4.42 NCK text input - Click on TC 7 input, and then click outside",
+      "url": "http://localhost:8080/#/textInput?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on the TC7 input field which is Read-Only and required, and click outside",
+      "onReadyScript": "clickAndMoveMouseAndClick.js",
+      "clickSelector": "[data-test-case=\"7\"] .nck-text-input",
+      "selectors": [
+        "[data-test-case=\"7\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "4.5 NCK text input - INSERT CONTENT TC 9 input",
+      "url": "http://localhost:8080/#/textInput?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "insert aa in the TC9 input field which is Disabled",
+      "keyPressSelector": {
+        "selector": "[data-test-case=\"9\"] .nck-text-input",
+        "keyPress": "aa"
+      },
+      "selectors": [
+        "[data-test-case=\"9\"]"
+      ],
+      "selectorExpansion": true
+    },
+
+    {
+      "label": "4.6 NCK text input - Insert number with decimals TC 11 input",
+      "url": "http://localhost:8080/#/textInput?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "insert 12.3 in the TC11 input field which accepts only numbers",
+      "keyPressSelector": {
+        "selector": "[data-test-case=\"11\"] .nck-text-input",
+        "keyPress": "12,3"
+      },
+      "selectors": [
+        "[data-test-case=\"11\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "4.7 NNCK text input - Insert letters TC 11 input",
+      "url": "http://localhost:8080/#/textInput?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "insert a in the TC11 input field which accepts only numbers",
+      "keyPressSelector": {
+        "selector": "[data-test-case=\"11\"] .nck-text-input",
+        "keyPress": "a"
+      },
+      "selectors": [
+        "[data-test-case=\"11\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "4.8 NCK text input - Insert special character TC 11 input",
+      "url": "http://localhost:8080/#/textInput?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "insert % in the TC11 input field which accepts only numbers",
+      "keyPressSelector": {
+        "selector": "[data-test-case=\"11\"] .nck-text-input",
+        "keyPress": "%"
+      },
+      "selectors": [
+        "[data-test-case=\"11\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "4.9 NCK text input - Insert number with decimals TC 12 input",
+      "url": "http://localhost:8080/#/textInput?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "insert 159.5 in the TC12 input field which accepts only letters",
+      "keyPressSelector": {
+        "selector": "[data-test-case=\"12\"] .nck-text-input",
+        "keyPress": "159.5"
+      },
+      "selectors": [
+        "[data-test-case=\"12\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "4.10 NCK text input - Insert a word TC 12 input",
+      "url": "http://localhost:8080/#/textInput?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "insert Hello in the TC12 input field which accepts only letters",
+      "keyPressSelector": {
+        "selector": "[data-test-case=\"12\"] .nck-text-input",
+        "keyPress": "Hello"
+      },
+      "selectors": [
+        "[data-test-case=\"12\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "4.11 NCK text input - Insert special character TC 12 input",
+      "url": "http://localhost:8080/#/textInput?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "insert $ in the TC12 input field which accepts only letters",
+      "keyPressSelector": {
+        "selector": "[data-test-case=\"12\"] .nck-text-input",
+        "keyPress": "$"
+      },
+      "selectors": [
+        "[data-test-case=\"12\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "4.12 NCK text input - INSERT CONTENT TC 12 input + clear the input",
+      "url": "http://localhost:8080/#/textInput?hideCursor=12",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "insert aaz in the TC12 input field then press the clear button",
+      "selectors": [
+        "[data-test-case=\"12\"]"
+      ],
+      "selectorExpansion": true,
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"12\"] .nck-text-input"
+        },
+        {
+          "type": "type",
+          "text": "aaz"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"12\"] .clear-input-button"
+        }
+      ]
+    },
+    {
+      "label": "4.13 NCK text input - CLEAR INPUT + INSERT CONTENT TC 13 input",
+      "url": "http://localhost:8080/#/textInput?hideCursor=13",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Press the clear button then insert the value 839.78",
+      "selectors": [
+        "[data-test-case=\"13\"]"
+      ],
+      "selectorExpansion": true,
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"13\"] .clear-input-button"
+        },
+        {
+          "type": "type",
+          "text": "839,78"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"13\"] .nck-text-input"
+        }
+      ]
+    },
+    {
+      "label": "4.14 NCK text input - CLEAR INPUT  + INSERT CONTENT TC 13 input + go out of TC13",
+      "url": "http://localhost:8080/#/textInput?hideCursor=13",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Press the clear button then insert the value 839.78 and Go out of fields",
+      "selectors": [
+        "[data-test-case=\"13\"]"
+      ],
+      "selectorExpansion": true,
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"13\"] .clear-input-button"
+        },
+        {
+          "type": "type",
+          "text": "859,78"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"12\"] .nck-text-input"
+        }
+      ]
+    },
+    {
+      "label": "4.15 NCK text input - INSERT CONTENT TC 15",
+      "url": "http://localhost:8080/#/textInput?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "insert aaa in the TC15 input field then press the validate button",
+      "keyPressSelector": {
+        "selector": "[data-test-case=\"15\"] .nck-text-input",
+        "keyPress": "zz"
+      },
+      "clickSelector": "[data-test-case=\"15\"] .validate-input",
+      "selectors": [
+        "[data-test-case=\"15\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "4.16 NCK text input - INSERT CONTENT TC 15",
+      "url": "http://localhost:8080/#/textInput?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "insert aaa in the TC15 input field then press the validate button",
+      "keyPressSelector": {
+        "selector": "[data-test-case=\"15\"] .nck-text-input",
+        "keyPress": "aaa"
+      },
+      "clickSelector": "[data-test-case=\"15\"] .validate-input",
+      "selectors": [
+        "[data-test-case=\"15\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "4.17 NCK text input - INSERT CONTENT TC 16",
+      "url": "http://localhost:8080/#/textInput?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "insert aaa in the TC16 input field then press the validate button",
+      "keyPressSelector": {
+        "selector": "[data-test-case=\"16\"] .nck-text-input",
+        "keyPress": "zz"
+      },
+      "clickSelector": "[data-test-case=\"16\"] .validate-input",
+      "selectors": [
+        "[data-test-case=\"16\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "4.18 NCK text input - INSERT CONTENT TC 16",
+      "url": "http://localhost:8080/#/textInput?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "insert aaa in the TC16 input field then press the validate button",
+      "keyPressSelector": {
+        "selector": "[data-test-case=\"16\"] .nck-text-input",
+        "keyPress": "aaa"
+      },
+      "clickSelector": "[data-test-case=\"16\"] .validate-input",
+      "selectors": [
+        "[data-test-case=\"16\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+        "label": "4.19 NCK text input - INSERT CONTENT TC 19 input + clear the input",
+        "url": "http://localhost:8080/#/textInput?hideCursor=12",
+        "misMatchThreshold": 0,
+        "requireSameDimensions": true,
+        "description": "insert aaz in the TC19 input field then press the clear button",
+        "selectors": [
+          "[data-test-case=\"19\"]"
+        ],
+        "selectorExpansion": true,
+        "onReadyScript": "puppet/actions.js",
+        "actions": [
+          {
+            "type": "click",
+            "selector": "[data-test-case=\"19\"] .nck-text-input"
+          },
+          {
+            "type": "type",
+            "text": "aaz"
+          },
+          {
+            "type": "click",
+            "selector": "[data-test-case=\"19\"] .clear-input-button"
+          }
+        ]
+      },
+      {
+        "label": "4.20 NCK text input - INSERT CONTENT TC 23",
+        "url": "http://localhost:8080/#/textInput?hideCursor=1",
+        "misMatchThreshold": 0,
+        "requireSameDimensions": true,
+        "description": "insert aaa in the TC 23 input field then press the validate button",
+        "keyPressSelector": {
+          "selector": "[data-test-case=\"23\"] .nck-text-input",
+          "keyPress": "test"
+        },
+        "selectors": [
+          "[data-test-case=\"23\"]"
+        ],
+        "selectorExpansion": true
+      },
+    {
+      "label": "5.1 NCK text input - CLICK TC0 Focus button",
+      "url": "http://localhost:8080/#/textInput?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "CLICK TC0 Focus button",
+      "clickSelector": "[data-test-case=\"0\"] [data-focus-input]",
+      "selectors": [
+        "[data-test-case=\"0\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "5.2 NCK text input - CLICK TC2 Focus button",
+      "url": "http://localhost:8080/#/textInput?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "CLICK TC2 Focus button",
+      "clickSelector": "[data-test-case=\"2\"] [data-focus-input]",
+      "selectors": [
+        "[data-test-case=\"2\"]"
+      ],
+      "selectorExpansion": true
+    }
+  ],
+    "paths": {
+        "bitmaps_reference": "backstop_data/bitmaps_reference",
+        "bitmaps_test": "backstop_data/bitmaps_test",
+        "engine_scripts": "backstop_data/engine_scripts",
+        "html_report": "backstop_data/html_report",
+        "ci_report": "backstop_data/ci_report"
+    },
+    "report": [
+        "CI"
+    ],
+    "engine": "puppeteer",
+    "engineOptions": {
+        "args": [
+    "--no-sandbox",
+    "--disable-setuid-sandbox",
+    "--disable-dev-shm-usage",
+    "--disable-accelerated-2d-canvas",
+    "--no-first-run",
+    "--no-zygote",
+
+    "--disable-gpu"
+  ],
+        "protocolTimeout": 960000
+    },
+    "asyncCaptureLimit": 3,
+    "asyncCompareLimit": 50,
+    "debug": false,
+    "debugWindow": false
+}

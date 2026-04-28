@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <g class="neo-icon-kit--copy-filled">
+    <path fill="#006FCF" fill-rule="evenodd" d="M39 1C40.6569 1 42 2.34315 42 4V38C42 39.6569 40.6569 41 39 41H35V44C35 45.6569 33.6569 47 32 47H19C18.447 47 17.6839 46.6839 17 46L7 36C6.31607 35.3161 6 34.553 6 34V11C6 9.34315 7.34315 8 9 8H12V4C12 2.34315 13.3431 1 15 1H39ZM10 35L18 43V35H10ZM15 4H39V38H35V11C35 9.34315 33.6569 8 32 8H15V4Z" class="svg-primary-fill" clip-rule="evenodd"/>
+  </g>
+</svg>

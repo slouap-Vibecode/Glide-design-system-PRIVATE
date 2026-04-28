@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <g class="neo-icon-kit--glyphs-equal" clip-path="url(#a)">
+    <path fill="#006FCF" d="M15 10C15.5107 10 15.9352 10.388 15.9932 10.8838L16 11C16 11.55 15.55 12 15 12H1C0.48929 12 0.0648002 11.612 0.0067602 11.1162L0 11C0 10.45 0.45 10 1 10H15ZM15 4C15.5107 4 15.9352 4.38801 15.9932 4.8838L16 5C16 5.55 15.55 6 15 6H1C0.48929 6 0.0648002 5.61199 0.0067602 5.1162L0 5C0 4.45 0.45 4 1 4H15Z" class="svg-primary-fill"/>
+  </g>
+  <defs>
+    <clipPath id="a" class="a">
+      <path fill="#fff" d="M0 0H16V16H0z"/>
+    </clipPath>
+  </defs>
+</svg>

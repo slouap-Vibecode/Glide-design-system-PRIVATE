@@ -1,0 +1,37 @@
+@import "./breakpointsVariables.less";
+
+.hidden-phone {
+  @media @phone {
+    display: none !important;
+  }
+}
+
+.hidden-tablet {
+  @media @tablet {
+    display: none !important;
+  }
+}
+
+.hidden-desktop {
+  @media @desktop {
+    display: none !important;
+  }
+}
+
+.visible-phone {
+  @media @tablet, @desktop {
+    display: none !important;
+  }
+}
+
+.visible-tablet {
+  @media @phone, @desktop {
+    display: none !important;
+  }
+}
+
+.visible-desktop {
+  @media @phone, @tablet {
+    display: none !important;
+  }
+}

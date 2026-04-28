@@ -1,0 +1,9 @@
+# ignore general files & dir
+*.md
+**/node_modules/
+**/dist
+**/bitmaps_test/
+.git
+
+# ignore specific files & dir
+types
