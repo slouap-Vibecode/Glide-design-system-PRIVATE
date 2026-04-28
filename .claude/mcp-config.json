@@ -1,0 +1,49 @@
+{
+  "mcpServers": {
+    "neo-design-system": {
+      "command": "neo-mcp-server",
+      "args": [
+        "--components-path", "./src/components",
+        "--storybook-url", "http://localhost:6006",
+        "--icons-path", "../neo-icon-kit-master/icons"
+      ],
+      "description": "Neo Design System MCP server providing access to Vue components, Storybook integration, and icon system",
+      "capabilities": [
+        "Component introspection and analysis",
+        "Storybook story generation and management",
+        "Icon system integration and optimization",
+        "Design token extraction and validation",
+        "Component usage analytics and reporting"
+      ]
+    }
+  },
+  "serverConfiguration": {
+    "neo-design-system": {
+      "autoStart": true,
+      "restartOnFailure": true,
+      "healthCheck": {
+        "enabled": true,
+        "interval": 30000,
+        "timeout": 5000
+      },
+      "logging": {
+        "level": "info",
+        "file": ".claude/logs/neo-mcp-server.log"
+      }
+    }
+  },
+  "workspace": {
+    "paths": {
+      "components": "./src/components",
+      "icons": "../neo-icon-kit-master/icons",
+      "storybook": "./.storybook",
+      "docs": "./docs",
+      "tests": "./tests"
+    },
+    "urls": {
+      "storybook": "http://localhost:6006",
+      "documentation": "http://localhost:3000",
+      "development": "http://localhost:5173"
+    }
+  }
+}

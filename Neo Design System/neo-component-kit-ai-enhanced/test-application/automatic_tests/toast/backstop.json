@@ -1,0 +1,268 @@
+{
+  "id": "backstop_default",
+  "viewports": [
+
+    {
+      "label": "phone",
+      "width": 320,
+      "height": 1700
+    },
+    {
+      "label": "tablet",
+      "width": 1024,
+      "height": 1600
+    },
+    {
+			"label": "desktop",
+			"width": 1920,
+			"height": 1600
+		}
+
+  ],
+  "onBeforeScript": "puppet/onBefore.js",
+  "onReadyScript": "puppet/onReady.js",
+  "scenarios": [
+    {
+      "label": "1. NCK toast - default display of the page",
+      "url": "http://localhost:8080/#/toast",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "display the default state of all the menus on the page"
+    },
+    {
+      "label": "2.1 NCK toast - CLICK TC0 Toast - Simple Toast",
+      "url": "http://localhost:8080/#/toast",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click TC0 Toast - Add Toast",
+      "clickSelector": "[data-test-case=\"0\"] button"
+    },
+    {
+      "label": "2.2 NCK toast - CLICK TC1 Toast - Another Simple Toast",
+      "url": "http://localhost:8080/#/toast",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click TC1 Toast - Add Toast",
+      "clickSelector": "[data-test-case=\"1\"] button"
+    },
+    {
+      "label": "2.3 NCK toast - CLICK TC2, toast with text",
+      "url": "http://localhost:8080/#/toast",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click TC2 Toast - Add Toast",
+      "clickSelector": "[data-test-case=\"2\"] button"
+    },
+    {
+      "label": "2.4 NCK toast - CLICK TC3, a toast that shows up after 5s",
+      "url": "http://localhost:8080/#/toast",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click TC3 Toast - Add Toast",
+      "clickSelector": "[data-test-case=\"3\"] button",
+      "postInteractionWait": 6000
+    },
+    {
+      "label": "2.5 NCK toast - CLICK TC4, a toast with type error",
+      "url": "http://localhost:8080/#/toast",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click TC4 Toast - Add Toast",
+      "clickSelector": "[data-test-case=\"4\"] button"
+
+    },
+    {
+      "label": "2.6 NCK toast - CLICK TC5, a toast with type warning",
+      "url": "http://localhost:8080/#/toast",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click TC5 Toast - Add Toast",
+      "clickSelector": "[data-test-case=\"5\"] button"
+
+    },
+    {
+      "label": "2.7 NCK toast - CLICK TC6, a toast with type success",
+      "url": "http://localhost:8080/#/toast",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click TC6 Toast - Add Toast",
+      "clickSelector": "[data-test-case=\"6\"] button"
+
+    },
+    {
+      "label": "2.8 NCK toast - CLICK TC7, a toast with type info",
+      "url": "http://localhost:8080/#/toast",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click TC7 Toast - Add Toast",
+      "clickSelector": "[data-test-case=\"7\"] button"
+
+    },
+    {
+      "label": "2.9 NCK toast - CLICK TC8, a toast with neutral type, with action button",
+      "url": "http://localhost:8080/#/toast",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click TC8 Toast - Add Toast",
+      "clickSelector": "[data-test-case=\"8\"] button",
+      "postInteractionWait": 500
+    },
+    {
+      "label": "3.0 NCK toast - CLICK TC10, a toast with type info, with action button",
+      "url": "http://localhost:8080/#/toast",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click TC10 Toast - Add Toast",
+      "clickSelector": "[data-test-case=\"10\"] button",
+      "postInteractionWait": 500
+    },
+    {
+      "label": "3.01 NCK toast - CLICK TC11, a toast with type warning, with action button",
+      "url": "http://localhost:8080/#/toast",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click TC11 Toast - Add Toast",
+      "clickSelector": "[data-test-case=\"11\"] button",
+      "postInteractionWait": 500
+    },
+    {
+      "label": "3.02 NCK toast - CLICK TC12, a toast with type error, with action button",
+      "url": "http://localhost:8080/#/toast",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click TC12 Toast - Add Toast",
+      "clickSelector": "[data-test-case=\"12\"] button",
+      "postInteractionWait": 500
+    },
+    {
+      "label": "3.03 NCK toast - CLICK TC13, a toast with type success, with action button",
+      "url": "http://localhost:8080/#/toast",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click TC13 Toast - Add Toast",
+      "clickSelector": "[data-test-case=\"13\"] button",
+      "postInteractionWait": 500
+    },
+    {
+      "label": "3.1 NCK toast - CLICK on the X of TC0 modal",
+      "url": "http://localhost:8080/#/toast",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "CLICK on the X of TC0 modal",
+      "clickSelectors": [ "[data-test-case=\"0\"] button", "button.nck-toast-close" ],
+      "selectors": [ "[data-test-case=\"0\"]" ]
+
+    },
+    {
+      "label": "3.2 NCK toast - CLICK on the X of TC5 Toast",
+      "url": "http://localhost:8080/#/toast",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "CLICK on the X of TC5 Toast",
+      "clickSelectors": [ "[data-test-case=\"5\"] button", "button.nck-toast-close" ],
+      "selectors": [ "[data-test-case=\"5\"]" ]
+
+    },
+    {
+      "label": "4.1 NCK toast - FOCUS+SPACE on the X of TC2 toast",
+      "url": "http://localhost:8080/#/toast",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "onReadyScript": "actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"2\"] button"
+        },
+        {
+          "type": "focus",
+          "selector": "button.nck-toast-close"
+        },
+        {
+          "type": "pressKey",
+          "selector": "Space",
+          "key": "Space"
+        }
+
+      ],
+      "selectors": [ "[data-test-case=\"2\"]" ]
+    },
+    {
+      "label": "5.1 NCK toast - FOCUS+ENTER on the X of TC4 toast",
+      "url": "http://localhost:8080/#/toast",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "onReadyScript": "actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"4\"] button"
+        },
+        {
+          "type": "focus",
+          "selector": "button.nck-toast-close"
+        },
+        {
+          "type": "pressKey",
+          "selector": "Enter",
+          "key": "Enter"
+        }
+      ],
+      "selectors": [ "[data-test-case=\"4\"]" ]
+    },
+    {
+      "label": "6.1 NCK toast - Displays several toasts",
+      "url": "http://localhost:8080/#/toast",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "onReadyScript": "actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"1\"] button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"4\"] button"
+        },
+        {
+          "type": "focus",
+          "selector": "button.nck-toast-close"
+        },
+        {
+          "type": "pressKey",
+          "selector": "Enter",
+          "key": "Enter"
+        }
+      ]
+
+    }
+
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "report": ["CI"],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args":[
+    "--no-sandbox",
+    "--disable-setuid-sandbox",
+    "--disable-dev-shm-usage",
+    "--disable-accelerated-2d-canvas",
+    "--no-first-run",
+    "--no-zygote",
+
+    "--disable-gpu"
+  ],
+    "protocolTimeout": 960000
+  },
+  "asyncCaptureLimit": 3,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false
+}

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <g class="neo-icon-kit--folder">
+    <path fill="#006FCF" fill-rule="evenodd" d="M4 10C4 8.34315 5.34315 7 7 7H20.8377C22.129 7 23.2754 7.82629 23.6838 9.05132L25 13H41C42.6569 13 44 14.3431 44 16V36C44 37.6569 42.6569 39 41 39H7C5.34315 39 4 37.6569 4 36V10ZM7 10H20.8377L21.8377 13H7L7 10ZM7 16L7 36H41V16H7Z" class="svg-primary-fill" clip-rule="evenodd"/>
+  </g>
+</svg>

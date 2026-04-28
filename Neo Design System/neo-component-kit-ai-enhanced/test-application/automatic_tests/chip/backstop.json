@@ -1,0 +1,364 @@
+{
+  "id": "backstop_chip",
+  "viewports": [
+    {
+      "label": "phone",
+      "width": 380,
+      "height": 1500
+    },
+    {
+      "label": "tablet",
+      "width": 1024,
+      "height": 1100
+    },
+    {
+      "label": "desktop",
+      "width": 1920,
+      "height": 1300
+    }
+  ],
+  "onBeforeScript": "puppet/onBefore.js",
+  "onReadyScript": "puppet/onReady.js",
+  "scenarios": [
+    {
+      "label": "1. NCK chip - default display",
+      "url": "http://localhost:8080/#/chip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "display the default state of all chip"
+    },
+    {
+      "label": "2.0. NCK chip - CLICK - TC0",
+      "url": "http://localhost:8080/#/chip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on TC0",
+      "clickSelector": "[data-test-case=\"0\"] .nck-chip button",
+      "selectors": ["[data-test-case=\"0\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "2.1. NCK chip - CLICK - TC1",
+      "url": "http://localhost:8080/#/chip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on TC1",
+      "clickSelector": "[data-test-case=\"1\"] .nck-chip button",
+      "selectors": ["[data-test-case=\"1\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "2.2. NCK chip - CLICK - TC3",
+      "url": "http://localhost:8080/#/chip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on TC3",
+      "clickSelector": "[data-test-case=\"3\"] .nck-chip button",
+      "selectors": ["[data-test-case=\"3\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "2.3. NCK chip - CLICK - TC4",
+      "url": "http://localhost:8080/#/chip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on TC4",
+      "clickSelector": "[data-test-case=\"4\"] .nck-chip button",
+      "selectors": ["[data-test-case=\"4\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "2.4. NCK chip - CLICK - TC4 clear button",
+      "url": "http://localhost:8080/#/chip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on TC4 clear button",
+      "clickSelector": "[data-test-case=\"4\"] .nck-chip .close-icon",
+      "selectors": ["[data-test-case=\"4\"]"],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "2.5. NCK chip - CLICK - TC6 clear button",
+      "url": "http://localhost:8080/#/chip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on TC6 clear button",
+      "clickSelector": "[data-test-case=\"6\"] .nck-chip .close-icon",
+      "selectors": ["[data-test-case=\"6\"]"],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "2.6. NCK chip - CLICK - TC14",
+      "url": "http://localhost:8080/#/chip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on TC14",
+      "clickSelector": "[data-test-case=\"14\"] .nck-chip button",
+      "selectors": ["[data-test-case=\"14\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "3.0 NCK chip - FOCUS Test case 1",
+      "url": "http://localhost:8080/#/chip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the TC 1 chip",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"1\"] .nck-chip button",
+      "selectors": ["[data-test-case=\"1\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "3.1 NCK chip - FOCUS Test case 3",
+      "url": "http://localhost:8080/#/chip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the TC 3 chip",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"3\"] .nck-chip button",
+      "selectors": ["[data-test-case=\"3\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "3.2 NCK chip - FOCUS Test case 4",
+      "url": "http://localhost:8080/#/chip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the TC 4 chip",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"4\"] .nck-chip button",
+      "selectors": ["[data-test-case=\"4\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "3.3 NCK chip - FOCUS Test case 14",
+      "url": "http://localhost:8080/#/chip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the TC 14 chip",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"14\"] .nck-chip button",
+      "selectors": ["[data-test-case=\"14\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "3.1 NCK chip - FOCUS Test case 4 clear button",
+      "url": "http://localhost:8080/#/chip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the TC 4 clear button",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"4\"] .nck-chip .close-icon",
+      "selectors": ["[data-test-case=\"4\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "3.2 NCK chip - FOCUS Test case 6 clear button",
+      "url": "http://localhost:8080/#/chip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the TC 6 clear button",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"6\"] .nck-chip .close-icon",
+      "selectors": ["[data-test-case=\"6\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "4.0 NCK chip - HOVER Test case 1",
+      "url": "http://localhost:8080/#/chip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the TC1 button",
+      "hoverSelector": "[data-test-case=\"1\"] .nck-chip button",
+      "selectors": ["[data-test-case=\"1\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "4.1 NCK chip - HOVER Test case 3",
+      "url": "http://localhost:8080/#/chip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the TC3 button",
+      "hoverSelector": "[data-test-case=\"3\"] .nck-chip button",
+      "selectors": ["[data-test-case=\"3\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "4.2 NCK chip - HOVER Test case 4",
+      "url": "http://localhost:8080/#/chip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the TC4 button",
+      "hoverSelector": "[data-test-case=\"4\"] .nck-chip button",
+      "selectors": ["[data-test-case=\"4\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "4.3 NCK chip - HOVER Test case 14",
+      "url": "http://localhost:8080/#/chip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the TC14 button",
+      "hoverSelector": "[data-test-case=\"14\"] .nck-chip button",
+      "selectors": ["[data-test-case=\"14\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "4.0 NCK chip - HOVER Test case 4 clear button",
+      "url": "http://localhost:8080/#/chip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the TC4 button",
+      "hoverSelector": "[data-test-case=\"4\"] .nck-chip .close-icon",
+      "selectors": ["[data-test-case=\"4\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "4.1 NCK chip - HOVER Test case 6 clear button",
+      "url": "http://localhost:8080/#/chip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the TC6 button",
+      "hoverSelector": "[data-test-case=\"6\"] .nck-chip .close-icon",
+      "selectors": ["[data-test-case=\"6\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "5.0 NCK chip - FOCUS+ENTER Test case 4",
+      "url": "http://localhost:8080/#/chip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus and press enter on the Test case 4 chip button",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"4\"] .nck-chip button",
+      "selectors": ["[data-test-case=\"4\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "5.1 NCK chip - FOCUS+ENTER Test case 4 clear button",
+      "url": "http://localhost:8080/#/chip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus and press enter on the Test case 4 clear button",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"4\"] .nck-chip .close-icon",
+      "selectors": ["[data-test-case=\"4\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "5.2 NCK chip - FOCUS+ENTER Test case 6 clear button",
+      "url": "http://localhost:8080/#/chip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus and press enter on the Test case 6 clear button",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"6\"] .nck-chip .close-icon",
+      "selectors": ["[data-test-case=\"6\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "6.0. NCK chip - FOCUS+SPACE- TC4",
+      "url": "http://localhost:8080/#/chip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus+space on TC4 chip button",
+      "onReadyScript": "focusAndPressSpace.js",
+      "focusAndPressSpaceSelector": "[data-test-case=\"4\"] .nck-chip button",
+      "selectors": ["[data-test-case=\"4\"]"]
+    },
+    {
+      "label": "6.1. NCK chip - FOCUS+SPACE- TC4",
+      "url": "http://localhost:8080/#/chip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus+space on TC4 clear button",
+      "onReadyScript": "focusAndPressSpace.js",
+      "focusAndPressSpaceSelector": "[data-test-case=\"4\"] .nck-chip .close-icon",
+      "selectors": ["[data-test-case=\"4\"]"]
+    },
+    {
+      "label": "7.0 NCK chip - HOVER+DOWN Test case 4",
+      "url": "http://localhost:8080/#/chip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover and press left mouse click on the TC 4 button",
+      "onReadyScript": "hoverAndPressMouseSelector.js",
+      "hoverAndPressMouseSelector": "[data-test-case=\"4\"] .nck-chip button",
+      "selectors": ["[data-test-case=\"4\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "7.1 NCK chip - HOVER+DOWN Test case 4 clear button",
+      "url": "http://localhost:8080/#/chip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover and press left mouse click on the TC 4 clear button",
+      "onReadyScript": "hoverAndPressMouseSelector.js",
+      "hoverAndPressMouseSelector": "[data-test-case=\"4\"] .nck-chip .close-icon",
+      "selectors": [ "[data-test-case=\"4\"]" ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "8.0 NCK chip - Press the Close icon on TC 13",
+      "url": "http://localhost:8080/#/chip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on the Close icon from TC 13, it will remove the cross & blue aspect",
+      "selectors": "[data-test-case=\"13\"]",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"13\"] .close-icon"
+        }
+      ]
+    },
+    {
+      "label": "8.1 NCK chip - Press the Close icon on TC 13, and then click on the chip",
+      "url": "http://localhost:8080/#/chip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on the Close icon from TC 13, and afterwards click on the chip to give initial blue aspect",
+      "selectors": "[data-test-case=\"13\"]",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"13\"] .close-icon"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"13\"] .nck-chip button"
+        }
+      ]
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "report": ["CI"],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args":[
+    "--no-sandbox",
+    "--disable-setuid-sandbox",
+    "--disable-dev-shm-usage",
+    "--disable-accelerated-2d-canvas",
+    "--no-first-run",
+    "--no-zygote",
+
+    "--disable-gpu"
+  ],
+    "protocolTimeout": 960000
+  },
+  "asyncCaptureLimit": 3,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false
+}

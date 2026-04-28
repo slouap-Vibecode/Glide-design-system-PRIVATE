@@ -1,0 +1,69 @@
+.as-path-line {
+    font-family: Consolas, monospace;
+    font-size: 13px;
+    color: rgb(118, 118, 118);
+}
+
+[data-preview=nck-info-tooltip] span[role="button"], [data-preview=nck-dialog-tooltip] span[role="button"] {
+    font-family: 'Open Sans', 'Segoe UI', 'Arial', sans-serif;
+}
+[data-preview=nck-info-tooltip] div[role="button"], [data-preview=nck-dialog-tooltip] div[role="button"] {
+    font-family: 'Open Sans', 'Segoe UI', 'Arial', sans-serif;
+    background-color: whitesmoke;
+    text-align: center;
+}
+[data-preview=nck-info-tooltip] button[role="button"], [data-preview=nck-dialog-tooltip] button[role="button"] {
+    border: 1px solid;
+}
+
+svg.dummy-animation {
+    animation: 1s linear infinite svg-animation;
+    height: 3rem;
+}
+
+svg.dummy-animation circle {
+    animation: 2s ease-in-out infinite both circle-animation;
+    display: block;
+    fill: black;
+    stroke: transparent;
+    stroke-linecap: round;
+    stroke-dasharray: 56;
+    stroke-dashoffset: 14;
+    stroke-width: 1rem;
+    transform-origin: 50% 50%;
+}
+
+@keyframes svg-animation {
+    0% {
+        transform: rotateZ(0deg);
+        width: 1rem;
+    }
+    100% {
+        transform: rotateZ(360deg);
+        width: 3rem;
+    }
+}
+
+@keyframes circle-animation {
+    0%,
+    25% {
+        fill: red;
+    }
+
+    50%,
+    75% {
+        fill: green;
+    }
+
+    100% {
+        fill: blue;
+    }
+}
+
+.red-background {
+    background: red;
+}
+
+.border-green {
+    border: 0.125rem solid green;
+}

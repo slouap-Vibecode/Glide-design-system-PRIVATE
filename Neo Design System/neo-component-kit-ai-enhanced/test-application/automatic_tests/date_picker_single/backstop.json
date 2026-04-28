@@ -1,0 +1,3774 @@
+{
+  "id": "backstop_date_picker_single",
+  "viewports": [
+    {
+      "label": "phone",
+      "width": 320,
+      "height": 500
+    },
+    {
+      "label": "tablet",
+      "width": 1024,
+      "height": 500
+    },
+    {
+      "label": "desktop",
+      "width": 1920,
+      "height": 1000
+    }
+  ],
+  "onBeforeScript": "puppet/onBefore.js",
+  "onReadyScript": "puppet/onReady.js",
+  "resembleOutputOptions": {
+    "ignoreAntialiasing": true,
+    "usePreciseMatching": true
+  },
+  "scenarios": [
+    {
+      "label": "1. NCK date_picker_single - default display of the page",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "display the default state the date_picker_single test page"
+    },
+    {
+      "label": "2.1 NCK date_picker_single - CLICK TC0 Date_mobile",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC0 Date on a mobile device",
+      "clickSelector": "[data-test-case=\"0\"] .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(1) .modal-trigger button",
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 300
+        }
+      ],
+      "selectors": [
+        ".nck-modal"
+      ]
+    },
+    {
+      "label": "2.2 NCK date_picker_single - CLICK TC0 Date_desktop",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC0 Date on desktop",
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "mouseMove",
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ]
+    },
+    {
+      "label": "2.3 NCK date_picker_single - CLICK TC6 Date_mobile",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC6 Date on a mobile device",
+      "clickSelector": "[data-test-case=\"6\"] .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(1) .modal-trigger button",
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 300
+        }
+      ]
+    },
+    {
+      "label": "2.4 NCK date_picker_single - CLICK TC6 Date_desktop",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC6 Date on desktop",
+      "clickSelector": "[data-test-case=\"6\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button",
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ]
+    },
+    {
+      "label": "2.5 NCK date_picker_single - CLICK TC7 Date_mobile",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC7 Date on a mobile device",
+      "clickSelector": "[data-test-case=\"7\"] .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(1) .modal-trigger .readonly",
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 300
+        }
+      ]
+    },
+    {
+      "label": "2.6 NCK date_picker_single - CLICK TC7 Date_desktop",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC7 Date on desktop",
+      "clickSelector": "[data-test-case=\"7\"] .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(1) .popover-trigger .readonly",
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ]
+    },
+    {
+      "label": "2.7 NCK date_picker_single - Focus on TC0 Date_mobile",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Focus on TC0 Date on a mobile device",
+      "selectorExpansion": true,
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"0\"] .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(1) .modal-trigger button",
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "2.8 NCK date_picker_single - Focus on TC0 Date_desktop",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Focus on TC0 Date on desktop",
+      "selectorExpansion": true,
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button",
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "2.9 NCK date_picker_single - Focus + Enter on TC0 Date_mobile",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "selectorExpansion": true,
+      "description": "Focus on TC0 Date then press Enter on a mobile device",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(1) .modal-trigger button"
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        }
+      ],
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": [
+        ".nck-modal"
+      ]
+    },
+    {
+      "label": "2.10 NCK date_picker_single - Focus + Enter on TC0 Date_desktop",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "selectorExpansion": true,
+      "description": "Focus on TC0 Date then press Enter on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        }
+      ],
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "2.11 NCK date_picker_single - Hover on TC0 Date_mobile",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Hover on TC0 Date on a mobile device",
+      "selectorExpansion": true,
+      "hoverSelector": "[data-test-case=\"0\"] .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(1) .modal-trigger button",
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "2.12 NCK date_picker_single - Hover on TC0 Date_desktop",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Hover on TC0 Date on desktop",
+      "selectorExpansion": true,
+      "hoverSelector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button",
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "3.1 NCK date_picker_single - Click TC0 Date then Done_mobile",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC0 Date then on Done button on a mobile device",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(1) .modal-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal-footer .nck-button"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "3.2 NCK date_picker_single - Click TC0 Date then Done_desktop",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC0 Date then on Done button on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-popover-footer .nck-button"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "3.3 NCK date_picker_single - Click TC4 Date then Done_mobile",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC4 Date then on Done button on a mobile device",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"4\"] .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(1) .modal-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal-footer .nck-button"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": [
+        ".nck-modal"
+      ]
+    },
+    {
+      "label": "3.4 NCK date_picker_single - Click TC4 Date then Done_desktop",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC4 Date then on Done button on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"4\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"4\"] .datepicker-popover-footer .nck-button:nth-child(3)"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"4\"]"
+    },
+    {
+      "label": "3.5 NCK date_picker_single - Click TC5 Date then Done_mobile",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC5 Date then on Done button on a mobile device",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"5\"] .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(1) .modal-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal-footer .nck-button"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": [
+        ".nck-modal"
+      ]
+    },
+    {
+      "label": "3.6 NCK date_picker_single - Click TC5 Date then Done_desktop",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC5 Date then on Done button on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"5\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"5\"] .datepicker-popover-footer .nck-button:nth-child(3)"
+        },
+        {
+          "type": "mouseMove",
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"5\"]"
+    },
+    {
+      "label": "3.7 NCK date_picker_single - Click TC0 + Click Outside_desktop",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC0 Date then click outside on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "clickAtPosition",
+          "coordinate": {
+            "x": 5,
+            "y": 5
+          }
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "3.8 NCK date_picker_single - Click TC4 + Click Outside_desktop",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC4 Date then click outside on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"4\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "clickAtPosition",
+          "coordinate": {
+            "x": 5,
+            "y": 5
+          }
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"4\"]"
+    },
+    {
+      "label": "3.9 NCK date_picker_single - Click TC5 + Click Outside_desktop",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC5 Date then click outside on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"5\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "clickAtPosition",
+          "coordinate": {
+            "x": 5,
+            "y": 5
+          }
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"5\"]"
+    },
+    {
+      "label": "3.10 NCK date_picker_single - Click TC0 Date + Escape_desktop",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC0 Date then press Escape on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "pressKey",
+          "key": "Escape"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "3.11 NCK date_picker_single - Click TC0 Date + Escape_mobile",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC0 Date then press Escape on mobile",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .nck-datepicker-trigger-container:nth-child(1)"
+        },
+        {
+          "type": "pressKey",
+          "key": "Escape"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "3.12 NCK date_picker_single - Click TC4 Date + Escape_desktop",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC4 Date then press Escape on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"4\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "pressKey",
+          "key": "Escape"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"4\"]"
+    },
+    {
+      "label": "3.13 NCK date_picker_single - Click TC4 Date + Escape_mobile",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC4 Date then press Escape on mobile",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"4\"] .nck-datepicker-trigger-container:nth-child(1)"
+        },
+        {
+          "type": "pressKey",
+          "key": "Escape"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": "[data-test-case=\"4\"]"
+    },
+    {
+      "label": "3.14 NCK date_picker_single - Click TC5 Date + Escape_desktop",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC5 Date then press Escape on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"5\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "pressKey",
+          "key": "Escape"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"5\"]"
+    },
+    {
+      "label": "3.15 NCK date_picker_single - Click TC5 Date + Escape_mobile",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC5 Date then press Escape on mobile",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"5\"] .nck-datepicker-trigger-container:nth-child(1)"
+        },
+        {
+          "type": "pressKey",
+          "key": "Escape"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": "[data-test-case=\"5\"]"
+    },
+    {
+      "label": "3.16 NCK date_picker_single - Click TC0 Date + Close_mobile",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC0 Date then on the close button on a mobile device",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .nck-datepicker-trigger-container:nth-child(1)"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal .left-button"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "3.17 NCK date_picker_single - Click TC4 Date + Close_mobile",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC4 Date then on the close button on a mobile device",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"4\"] .nck-datepicker-trigger-container:nth-child(1)"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal .left-button"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": "[data-test-case=\"4\"]"
+    },
+    {
+      "label": "3.18 NCK date_picker_single - Click TC5 Date + Close_mobile",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC5 Date then on the close button on a mobile device",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"5\"] .nck-datepicker-trigger-container:nth-child(1)"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal .left-button"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": "[data-test-case=\"5\"]"
+    },
+    {
+      "label": "4.1 NCK date_picker_single - Click TC0 Date + Prev month_mobile",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC0 Date then on Previous month button on a mobile device",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(1) .modal-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-datepicker-modal .flatpickr-months .flatpickr-prev-month"
+        },
+        {
+          "type": "mouseMove",
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": [
+        ".nck-modal"
+      ]
+    },
+    {
+      "label": "4.2 NCK date_picker_single - Click TC0 Date + Prev month_desktop",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC0 Date then on Previous month button on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .flatpickr-months .flatpickr-prev-month"
+        },
+        {
+          "type": "mouseMove",
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "4.2 NCK date_picker_single - Click TC0 Date + Prev month_desktop",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC0 Date then on Previous month button on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .flatpickr-months .flatpickr-prev-month"
+        },
+        {
+          "type": "mouseMove",
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "4.3 NCK date_picker_single - Click TC0 Date + Next x2_mobile",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC0 Date then on Next month button on a mobile device",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(1) .modal-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-datepicker-modal .flatpickr-months .flatpickr-next-month"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-datepicker-modal .flatpickr-months .flatpickr-next-month"
+        },
+        {
+          "type": "mouseMove",
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": [
+        ".nck-modal"
+      ]
+    },
+    {
+      "label": "4.4 NCK date_picker_single - Click TC0 Date + Next x2_desktop",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC0 Date then on Next month button on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .flatpickr-months .flatpickr-next-month"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .flatpickr-months .flatpickr-next-month"
+        },
+        {
+          "type": "mouseMove",
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "5.1 NCK date_picker_single - Click TC0 Date + Hover Date_mobile",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click Date on TC0 then Hover on a date - 10/06/2022 on a mobile device",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(1) .modal-trigger button"
+        },
+        {
+          "type": "hover",
+          "selector": ".nck-datepicker-modal .flatpickr-days .flatpickr-day[aria-label=\"June 10, 2022\"]"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": [
+        ".nck-modal"
+      ]
+    },
+    {
+      "label": "5.2 NCK date_picker_single - Click TC0 Date + Hover Date_desktop",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click Date then Hover on a date - 10/06/2022 on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "waitForTimeout",
+          "delay": 200
+        },
+        {
+          "type": "hover",
+          "selector": "[data-test-case=\"0\"] .flatpickr-days .flatpickr-day[aria-label=\"June 10, 2022\"]"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "5.3 NCK date_picker_single - TC0 Date/ Prev/ hover Today_desktop",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click Date then click on Previous month  then Hover on today's date on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .flatpickr-months .flatpickr-prev-month"
+        },
+        {
+          "type": "waitForTimeout",
+          "delay": 200
+        },
+        {
+          "type": "hover",
+          "selector": "[data-test-case=\"0\"] .flatpickr-days .flatpickr-day[aria-label=\"May 19, 2022\"]"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "5.6 NCK date_picker_single - TC0 Date/ Prev/ hover Today_mobile",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click Date then click on Previous month  then Hover on today's date on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(1) .modal-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-datepicker-modal .flatpickr-months .flatpickr-prev-month"
+        },
+        {
+          "type": "waitForTimeout",
+          "delay": 200
+        },
+        {
+          "type": "hover",
+          "selector": ".nck-datepicker-modal .flatpickr-days .flatpickr-day[aria-label=\"May 19, 2022\"]"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": [
+        ".nck-modal"
+      ]
+    },
+    {
+      "label": "5.7 NCK date_picker_single - Click TC0 Date + Click 7 June_mobile",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click Date on TC 0 then click on the 7th of June on mobie resolutions",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(1) .modal-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-datepicker-modal .flatpickr-days .flatpickr-day[aria-label=\"June 7, 2022\"]"
+        },
+        {
+          "type": "mouseMove",
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "type": "waitForTimeout",
+          "delay": 100
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": [
+        ".nck-modal"
+      ]
+    },
+    {
+      "label": "5.8 NCK date_picker_single - Click TC0 Date + Click 7 June_desktop",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click Date on TC 0 then click on the 7th of June on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .flatpickr-days .flatpickr-day[aria-label=\"June 7, 2022\"]"
+        },
+        {
+          "type": "mouseMove",
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "type": "waitForTimeout",
+          "delay": 100
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "5.9 NCK date_picker_single - TC0 Click 7 + hover 11.06_mobile",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click Date on TC0 then click on the 7th of June, then hover the 11th of June",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(1) .modal-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-datepicker-modal .flatpickr-days .flatpickr-day[aria-label=\"June 7, 2022\"]"
+        },
+        {
+          "type": "hover",
+          "selector": ".nck-datepicker-modal .flatpickr-days .flatpickr-day[aria-label=\"June 11, 2022\"]"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": [
+        ".nck-modal"
+      ]
+    },
+    {
+      "label": "5.10 NCK date_picker_single - TC0 Click 7 + hover 11.06_desktop",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click Date on TC0 then click on the 7th of June, then hover the 11th of June",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .flatpickr-days .flatpickr-day[aria-label=\"June 7, 2022\"]"
+        },
+        {
+          "type": "hover",
+          "selector": "[data-test-case=\"0\"] .flatpickr-days .flatpickr-day[aria-label=\"June 11, 2022\"]"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "5.11 NCK date_picker_single - TC4 Click 7/ Done/ Validate_mobile",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click TC4 Date then click on the 7th of May, then click Done then Validate button on a mobile resolution",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"4\"] .nck-datepicker-trigger-container:nth-child(1) button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-datepicker-modal .flatpickr-days .flatpickr-day[aria-label=\"May 7, 2022\"]"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal-footer .nck-button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"4\"] .button-validate"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": "[data-test-case=\"4\"]"
+    },
+    {
+      "label": "5.12 NCK date_picker_single - TC4 Click 7/ Done/ Validate_desktop",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click TC4 Date then click on the 7th of May, then click Done then Validate button on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"4\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"4\"] .flatpickr-days .flatpickr-day[aria-label=\"May 7, 2022\"]"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"4\"] .datepicker-popover-footer .nck-button:nth-child(3)"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"4\"] .button-validate"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"4\"]"
+    },
+    {
+      "label": "6.1 NCK date_picker_single - TC0 Focus+Enter + edit Date_mobile",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Focus + Enter on the TC0 Date button, then delete the content and insert a new date on a mobile device",
+      "selectorExpansion": true,
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(1) .modal-trigger button"
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        },
+        {
+          "type": "focus",
+          "selector": ".nck-modal .nck-datepicker-modal .datepicker-date:nth-child(1) input"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "type",
+          "text": "07/06/2022"
+        },
+        {
+          "type": "clickAtPosition",
+          "coordinate": {
+            "x": 5,
+            "y": 5
+          }
+        }
+      ],
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": [
+        ".nck-modal"
+      ]
+    },
+    {
+      "label": "6.2 NCK date_picker_single - TC0 Focus+Enter + edit Date_desktop",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Focus + Enter on the Date on TC0, then delete the content and insert a new date on desktop",
+      "selectorExpansion": true,
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        },
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"0\"] .datepicker-popover-body input"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "type",
+          "text": "07/06/2022"
+        },
+        {
+          "type": "pressKey",
+          "key": "Tab"
+        },
+        {
+          "type": "pressKey",
+          "key": "Tab"
+        }
+      ],
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "6.3 NCK date_picker_single- TC4 Focus+Enter/Insert/Validate_mobile",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Focus + Enter on the TC4 Date button, then insert date and press Done then the validate button on a mobile device",
+      "selectorExpansion": true,
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"4\"] .nck-datepicker-trigger-container:nth-child(1) button"
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        },
+        {
+          "type": "focus",
+          "selector": ".nck-modal .nck-datepicker-modal .datepicker-date:nth-child(1) input"
+        },
+        {
+          "type": "type",
+          "text": "07/05/2022"
+        },
+        {
+          "type": "pressKey",
+          "key": "Tab"
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"4\"] .button-validate"
+        }
+      ],
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": "[data-test-case=\"4\"]"
+    },
+    {
+      "label": "6.4 NCK date_picker_single- TC4 Focus+Enter/Insert/Validate_deskt",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Focus + Enter on the TC4 Date button, then insert date, press Done then the validate button on a desktop",
+      "selectorExpansion": true,
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"4\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        },
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"4\"] .datepicker-popover-body input"
+        },
+        {
+          "type": "type",
+          "text": "07/05/2022"
+        },
+        {
+          "type": "pressKey",
+          "key": "Tab"
+        },
+        {
+          "type": "pressKey",
+          "key": "Tab"
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"4\"] .button-validate"
+        }
+      ],
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"4\"]"
+    },
+    {
+      "label": "7.1 NCK date_picker_single - CLICK TC0 Focus button",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC0 Focus button",
+      "clickSelector": "[data-test-case=\"0\"] .button-focus",
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "7.2 NCK date_picker_single - CLICK TC7 Focus button",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC7 Focus button",
+      "clickSelector": "[data-test-case=\"7\"] .button-focus",
+      "selectors": "[data-test-case=\"7\"]"
+    },
+    {
+      "label": "7.3 NCK date_picker_single - CLICK TC0 Validate button",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC0 Validate button",
+      "clickSelector": "[data-test-case=\"0\"] .button-validate",
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "7.4 NCK date_picker_single - CLICK TC3 Validate button",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC3 Validate button",
+      "clickSelector": "[data-test-case=\"3\"] .button-validate",
+      "selectors": "[data-test-case=\"3\"]"
+    },
+    {
+      "label": "7.5 NCK date_picker_single - CLICK TC4 Validate button",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC4 Validate button",
+      "clickSelector": "[data-test-case=\"4\"] .button-validate",
+      "selectors": "[data-test-case=\"4\"]"
+    },
+    {
+      "label": "7.6 NCK date_picker_single - CLICK TC5 Validate button",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC5 Validate button",
+      "clickSelector": "[data-test-case=\"5\"] .button-validate",
+      "selectors": "[data-test-case=\"5\"]"
+    },
+    {
+      "label": "7.7 NCK date_picker_single - CLICK TC6 Validate button",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC6 Validate button",
+      "clickSelector": "[data-test-case=\"6\"] .button-validate",
+      "selectors": "[data-test-case=\"6\"]"
+    },
+    {
+      "label": "7.8 NCK date_picker_single - CLICK TC7 Validate button",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC7 Validate button",
+      "clickSelector": "[data-test-case=\"7\"] .button-validate",
+      "selectors": "[data-test-case=\"7\"]"
+    },
+    {
+      "label": "7.9 NCK date_picker_single - CLICK TC1 isValid button",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC1 isValid button",
+      "clickSelector": "[data-test-case=\"1\"] .button-isvalid",
+      "selectors": "[data-test-case=\"1\"]"
+    },
+    {
+      "label": "7.10 NCK date_picker_single - CLICK TC3 isValid button",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC3 isValid button",
+      "clickSelector": "[data-test-case=\"3\"] .button-isvalid",
+      "selectors": "[data-test-case=\"3\"]"
+    },
+    {
+      "label": "7.11 NCK date_picker_single - CLICK TC6 isValid button",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC6 isValid button",
+      "clickSelector": "[data-test-case=\"6\"] .button-isvalid",
+      "selectors": "[data-test-case=\"6\"]"
+    },
+    {
+      "label": "7.12 NCK date_picker_single - CLICK TC7 isValid button",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC7 isValid button",
+      "clickSelector": "[data-test-case=\"7\"] .button-isvalid",
+      "selectors": "[data-test-case=\"7\"]"
+    },
+    {
+      "label": "8.1 NCK date_picker_single- TC0 Date/Invalid format/DONE_desktop",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on the Date on TC0 and modify the date to an invalid format then press DONE button on desktop",
+      "selectorExpansion": true,
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"0\"] .datepicker-popover-body input"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-popover-footer .nck-button:nth-child(3)"
+        }
+      ],
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "8.2 NCK date_picker_single- TC0 Date/Invalid format/DONE_mobile",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on the Date on TC0 and modify the date to an invalid format then press Done button on mobile",
+      "selectorExpansion": true,
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(1) .modal-trigger button"
+        },
+        {
+          "type": "focus",
+          "selector": ".nck-modal .nck-datepicker-modal .datepicker-date:nth-child(1) input"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal-footer .nck-button"
+        }
+      ],
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 800
+        }
+      ],
+      "selectors": [
+        ".nck-modal"
+      ]
+    },
+    {
+      "label": "8.3 NCK date_picker_single - TC0 Insert letters/ DONE_desktop",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on the Date on TC0 and modify the date to an invalid format then click Done button on desktop",
+      "selectorExpansion": true,
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"0\"] .datepicker-popover-body input"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "type",
+          "text": "abcd"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-popover-footer .nck-button:nth-child(3)"
+        }
+      ],
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "8.4 NCK date_picker_single - TC0 Insert letters/ DONE_mobile",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on the Date on TC0 and modify the date to an invalid format then click Done button on mobile",
+      "selectorExpansion": true,
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(1) .modal-trigger button"
+        },
+        {
+          "type": "focus",
+          "selector": ".nck-modal .nck-datepicker-modal .datepicker-date:nth-child(1) input"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "type",
+          "text": "abcd"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal-footer .nck-button"
+        }
+      ],
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 800
+        }
+      ],
+      "selectors": [
+        ".nck-modal"
+      ]
+    },
+    {
+      "label": "8.5 NCK date_picker_single - TC0 Empty Date + DONE_desktop",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on the Date on TC0 and empty the date to generate required error then press Done button on desktop",
+      "selectorExpansion": true,
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"0\"] .datepicker-popover-body input"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-popover-footer .nck-button:nth-child(3)"
+        }
+      ],
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "8.6 NCK date_picker_single - TC0 Empty Date + DONE_mobile",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on the Date on TC0 and empty the date to generate required error then press Done button on mobile",
+      "selectorExpansion": true,
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(1) .modal-trigger button"
+        },
+        {
+          "type": "focus",
+          "selector": ".nck-modal .nck-datepicker-modal .datepicker-date:nth-child(1) input"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal-footer .nck-button"
+        }
+      ],
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 800
+        }
+      ],
+      "selectors": [
+        ".nck-modal"
+      ]
+    },
+    {
+      "label": "9.1 NCK date_picker_single - TC0 Invalid/ click outside_desktop",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on the Date on TC0 and modify the date to an invalid format then press Tab and click outside on desktop",
+      "selectorExpansion": true,
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"0\"] .datepicker-popover-body input"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "type",
+          "text": "abcd"
+        },
+        {
+          "type": "pressKey",
+          "key": "Tab"
+        },
+        {
+          "type": "clickAtPosition",
+          "coordinate": {
+            "x": 5,
+            "y": 5
+          }
+        }
+      ],
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "9.2 NCK date_picker_single - TC0 Invalid/ Tab/ Escape_desktop",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on the Date on TC0 and modify the date to an invalid format then press Tab and Escape on desktop",
+      "selectorExpansion": true,
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"0\"] .datepicker-popover-body input"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "type",
+          "text": "abcd"
+        },
+        {
+          "type": "pressKey",
+          "key": "Tab"
+        },
+        {
+          "type": "pressKey",
+          "key": "Escape"
+        }
+      ],
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "9.3 NCK date_picker_single - TC0 Invalid/ Escape_mobile",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on the Date on TC0 and modify the date to an invalid format then press Tab and Escape on mobile",
+      "selectorExpansion": true,
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(1) .modal-trigger button"
+        },
+        {
+          "type": "focus",
+          "selector": ".nck-modal .nck-datepicker-modal .datepicker-date:nth-child(1) input"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "type",
+          "text": "abcd"
+        },
+        {
+          "type": "pressKey",
+          "key": "Tab"
+        },
+        {
+          "type": "pressKey",
+          "key": "Escape"
+        }
+      ],
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 800
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "9.4 NCK date_picker_single - TC0 Invalid/ X button_mobile",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on the Date on TC0 and modify the date to an invalid format then press Tab and click X button on mobile",
+      "selectorExpansion": true,
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(1) .modal-trigger button"
+        },
+        {
+          "type": "focus",
+          "selector": ".nck-modal .nck-datepicker-modal .datepicker-date:nth-child(1) input"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "type",
+          "text": "abcd"
+        },
+        {
+          "type": "pressKey",
+          "key": "Tab"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal .left-button"
+        }
+      ],
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 800
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "9.5 NCK date_picker_single - TC0 Empty/ click outside_desktop",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on the Date on TC0 and empty the date to generate required error then press Tab and click outside on desktop",
+      "selectorExpansion": true,
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"0\"] .datepicker-popover-body input"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Tab"
+        },
+        {
+          "type": "clickAtPosition",
+          "coordinate": {
+            "x": 5,
+            "y": 5
+          }
+        }
+      ],
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "9.6 NCK date_picker_single - TC0 Empty Date/ Escape_desktop",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on the Date on TC0 and empty the date to generate required error then press Tab and Escape on desktop",
+      "selectorExpansion": true,
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"0\"] .datepicker-popover-body input"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Tab"
+        },
+        {
+          "type": "pressKey",
+          "key": "Escape"
+        }
+      ],
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "9.7 NCK date_picker_single - TC0 Empty Date/ Escape_mobile",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on the Date on TC0 and empty the date to generate required error then press tab and Escape on mobile",
+      "selectorExpansion": true,
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(1) .modal-trigger button"
+        },
+        {
+          "type": "focus",
+          "selector": ".nck-modal .nck-datepicker-modal .datepicker-date:nth-child(1) input"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Tab"
+        },
+        {
+          "type": "pressKey",
+          "key": "Escape"
+        }
+      ],
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 800
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "9.8 NCK date_picker_single - TC0 Empty Date/ X button_mobile",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on the Date on TC0 and empty the date to generate required error then press tab and X button on mobile",
+      "selectorExpansion": true,
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(1) .modal-trigger button"
+        },
+        {
+          "type": "focus",
+          "selector": ".nck-modal .nck-datepicker-modal .datepicker-date:nth-child(1) input"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Tab"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal .left-button"
+        }
+      ],
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 800
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "9.9 NCK date_picker_single - TC4 Valid date + Validate_mobile",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Insert valid date in TC4 and then validate the form",
+      "selectorExpansion": true,
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"4\"] .nck-datepicker-trigger-container:nth-child(1) button"
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        },
+        {
+          "type": "focus",
+          "selector": ".nck-modal .nck-datepicker-modal .datepicker-date:nth-child(1) input"
+        },
+        {
+          "type": "type",
+          "text": "07/05/2022"
+        },
+        {
+          "type": "pressKey",
+          "key": "Tab"
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"4\"] .button-validate"
+        }
+      ],
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": "[data-test-case=\"4\"]"
+    },
+    {
+      "label": "9.10 NCK date_picker_single - TC4 Valid date + Validate_desktop",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Insert valid date in TC4 and then validate the form",
+      "selectorExpansion": true,
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"4\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        },
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"4\"] .datepicker-popover-body input"
+        },
+        {
+          "type": "type",
+          "text": "07/05/2022"
+        },
+        {
+          "type": "pressKey",
+          "key": "Tab"
+        },
+        {
+          "type": "pressKey",
+          "key": "Tab"
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"4\"] .button-validate"
+        }
+      ],
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"4\"]"
+    },
+    {
+      "label": "10 NCK date_picker_single - default display of the page_US",
+      "url": "http://localhost:8080/#/datepicker-single?lang=en-US",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "display the default state the date_picker single test page with US date format"
+    },
+    {
+      "label": "10.1 NCK date_picker_single - CLICK TC1 Date_mobile_US",
+      "url": "http://localhost:8080/#/datepicker-single?lang=en-US",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC1 Date on a mobile device with US date format",
+      "selectorExpansion": true,
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"1\"] .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(1) .modal-trigger button"
+        },
+        {
+          "type": "mouseMove",
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 500
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 300
+        }
+      ],
+      "selectors": [
+        ".nck-modal"
+      ]
+    },
+    {
+      "label": "10.2 NCK date_picker_single - CLICK TC1 Date_desktop_US",
+      "url": "http://localhost:8080/#/datepicker-single?lang=en-US",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC1 Date on desktop with US date format",
+      "selectorExpansion": true,
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"1\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "mouseMove",
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"1\"]"
+    },
+    {
+      "label": "10.3 NCK date_picker_single - TC1 Click 7.06_mobile_US",
+      "url": "http://localhost:8080/#/datepicker-single?lang=en-US",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click TC1 Date then click on the 7th of June on a mobile resolution with US date format",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"1\"] .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(1) .modal-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-datepicker-modal .flatpickr-days .flatpickr-day[aria-label=\"June 7, 2022\"]"
+        },
+        {
+          "type": "mouseMove",
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": [
+        ".nck-modal"
+      ]
+    },
+    {
+      "label": "10.4 NCK date_picker_single - TC1 Click 7.06_desktop_US",
+      "url": "http://localhost:8080/#/datepicker-single?lang=en-US",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click Date on TC1 then click on the 7th of June on desktop with US date format",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"1\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"1\"] .flatpickr-days .flatpickr-day[aria-label=\"June 7, 2022\"]"
+        },
+        {
+          "type": "mouseMove",
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"1\"]"
+    },
+    {
+      "label": "10.5 NCK date_picker_single - TC1 Click 7.06 + DONE_mobile_US",
+      "url": "http://localhost:8080/#/datepicker-single?lang=en-US",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click TC1 Date then click on the 7th of June, then on DONE button on a mobile resolution with US date format",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"1\"] .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(1) .modal-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-datepicker-modal .flatpickr-days .flatpickr-day[aria-label=\"June 7, 2022\"]"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal-footer .nck-button"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": "[data-test-case=\"1\"]"
+    },
+    {
+      "label": "10.6 NCK date_picker_single - TC1 Click 7.06 + DONE_desktop_US",
+      "url": "http://localhost:8080/#/datepicker-single?lang=en-US",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click Date on TC1 then click on the 7th of June, then on DONE button on desktop with US date format",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"1\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"1\"] .flatpickr-days .flatpickr-day[aria-label=\"June 7, 2022\"]"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"1\"] .datepicker-popover-footer .nck-button:nth-child(3)"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"1\"]"
+    },
+    {
+      "label": "10.7 NCK date_picker_single- TC1 Valid date + DONE_mobile_US",
+      "url": "http://localhost:8080/#/datepicker-single?lang=en-US",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Insert valid date in TC1 and then Done button on a mobile resolution with US date format",
+      "selectorExpansion": true,
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"1\"] .nck-datepicker-trigger-container:nth-child(1) button"
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        },
+        {
+          "type": "focus",
+          "selector": ".nck-modal .nck-datepicker-modal .datepicker-date:nth-child(1) input"
+        },
+        {
+          "type": "type",
+          "text": "05-07-2022"
+        },
+        {
+          "type": "pressKey",
+          "key": "Tab"
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        }
+      ],
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": "[data-test-case=\"1\"]"
+    },
+    {
+      "label": "10.8 NCK date_picker_single - TC1 Valid date + DONE_desktop_US",
+      "url": "http://localhost:8080/#/datepicker-single?lang=en-US",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Insert valid date in TC1 and then click the Done button on desktop with US date format",
+      "selectorExpansion": true,
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"1\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        },
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"1\"] .datepicker-popover-body input"
+        },
+        {
+          "type": "type",
+          "text": "05-07-2022"
+        },
+        {
+          "type": "pressKey",
+          "key": "Tab"
+        },
+        {
+          "type": "pressKey",
+          "key": "Tab"
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        }
+      ],
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"1\"]"
+    },
+    {
+      "label": "10.9 NCK date_picker_single - TC1 Invalid date + DONE_mobile_US",
+      "url": "http://localhost:8080/#/datepicker-single?lang=en-US",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Insert invalid date in TC1 and then Done button on a mobile resolution with US date format",
+      "selectorExpansion": true,
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"1\"] .nck-datepicker-trigger-container:nth-child(1) button"
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        },
+        {
+          "type": "focus",
+          "selector": ".nck-modal .nck-datepicker-modal .datepicker-date:nth-child(1) input"
+        },
+        {
+          "type": "type",
+          "text": "07/05/2022"
+        },
+        {
+          "type": "pressKey",
+          "key": "Tab"
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        }
+      ],
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": [
+        ".nck-modal"
+      ]
+    },
+    {
+      "label": "10.10 NCK date_picker_single - TC1 Invalid date + DONE_desktop_US",
+      "url": "http://localhost:8080/#/datepicker-single?lang=en-US",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Insert invalid date in TC1 and then click the Done button on desktop with US date format",
+      "selectorExpansion": true,
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"1\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        },
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"1\"] .datepicker-popover-body input"
+        },
+        {
+          "type": "type",
+          "text": "07/05/2022"
+        },
+        {
+          "type": "pressKey",
+          "key": "Tab"
+        },
+        {
+          "type": "pressKey",
+          "key": "Tab"
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        }
+      ],
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"1\"]"
+    },
+    {
+      "label": "11.1 NCK date_picker_single - TC4 Date > 1 year ahead + Done_mobile",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Insert date more than 1 year in the future in TC4, then press Done button in mobile resolution",
+      "selectorExpansion": true,
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"4\"] .nck-datepicker-trigger-container:nth-child(1) button"
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        },
+        {
+          "type": "focus",
+          "selector": ".nck-modal .nck-datepicker-modal .datepicker-date:nth-child(1) input"
+        },
+        {
+          "type": "type",
+          "text": "20/05/2023"
+        },
+        {
+          "type": "pressKey",
+          "key": "Tab"
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        }
+      ],
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": [
+        ".nck-modal"
+      ]
+    },
+    {
+      "label": "11.2 NCK date_picker_single - TC4 Date >1 year ahead+Done_desktop",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Insert date more than 1 year in the future in TC4, then press Done button in desktop resolution",
+      "selectorExpansion": true,
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"4\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        },
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"4\"] .datepicker-popover-body input"
+        },
+        {
+          "type": "type",
+          "text": "20/05/2023"
+        },
+        {
+          "type": "pressKey",
+          "key": "Tab"
+        },
+        {
+          "type": "pressKey",
+          "key": "Tab"
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        }
+      ],
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"4\"]"
+    },
+    {
+      "label": "11.3 NCK date_picker_single - TC4 Date=1 year ahead+Done_mobile",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Insert date in exactly 1 year from Today in TC4, then press Done button in mobile resolution",
+      "selectorExpansion": true,
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"4\"] .nck-datepicker-trigger-container:nth-child(1) button"
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        },
+        {
+          "type": "focus",
+          "selector": ".nck-modal .nck-datepicker-modal .datepicker-date:nth-child(1) input"
+        },
+        {
+          "type": "type",
+          "text": "19/05/2023"
+        },
+        {
+          "type": "pressKey",
+          "key": "Tab"
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        }
+      ],
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": [
+        ".nck-modal"
+      ]
+    },
+    {
+      "label": "11.4 NCK date_picker_single - TC4 Date=1 year ahead+Done_desktop",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Insert date in exactly 1 year from Today in TC4, then press Done button in desktop resolution",
+      "selectorExpansion": true,
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"4\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        },
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"4\"] .datepicker-popover-body input"
+        },
+        {
+          "type": "type",
+          "text": "19/05/2023"
+        },
+        {
+          "type": "pressKey",
+          "key": "Tab"
+        },
+        {
+          "type": "pressKey",
+          "key": "Tab"
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        }
+      ],
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"4\"]"
+    },
+    {
+      "label": "12.1 NCK date_picker_single - TC2 Date > max date + Done_mobile",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "TC2 - Insert date after max valid date, then press Done button in mobile resolution",
+      "selectorExpansion": true,
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"2\"] .nck-datepicker-trigger-container:nth-child(1) button"
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        },
+        {
+          "type": "focus",
+          "selector": ".nck-modal .nck-datepicker-modal .datepicker-date:nth-child(1) input"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "type",
+          "text": "12/02/2024"
+        },
+        {
+          "type": "pressKey",
+          "key": "Tab"
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        }
+      ],
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": [
+        ".nck-modal"
+      ]
+    },
+    {
+      "label": "12.2 NCK date_picker_single - TC2 Date > max date + Done_desktop",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "TC2 - Insert date after max valid date, then press Done button in desktop resolution",
+      "selectorExpansion": true,
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"2\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        },
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"2\"] .datepicker-popover-body input"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "type",
+          "text": "12/02/2024"
+        },
+        {
+          "type": "pressKey",
+          "key": "Tab"
+        },
+        {
+          "type": "pressKey",
+          "key": "Tab"
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        }
+      ],
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"2\"]"
+    },
+    {
+      "label": "12.3 NCK date_picker_single - TC5 Date < valid period_mobile",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "TC5 - Insert date outside valid period, then press Done button in mobile resolution",
+      "selectorExpansion": true,
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"5\"] .nck-datepicker-trigger-container:nth-child(1) button"
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        },
+        {
+          "type": "focus",
+          "selector": ".nck-modal .nck-datepicker-modal .datepicker-date:nth-child(1) input"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "type",
+          "text": "14/02/1055"
+        },
+        {
+          "type": "pressKey",
+          "key": "Tab"
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        }
+      ],
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": [
+        ".nck-modal"
+      ]
+    },
+    {
+      "label": "12.4 NCK date_picker_single - TC5 Date < valid period_desktop",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "TC5 - Insert date outside valid period, then press Done button in desktop resolution",
+      "selectorExpansion": true,
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"5\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        },
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"5\"] .datepicker-popover-body input"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "pressKey",
+          "key": "Backspace"
+        },
+        {
+          "type": "type",
+          "text": "14/02/1055"
+        },
+        {
+          "type": "pressKey",
+          "key": "Tab"
+        },
+        {
+          "type": "pressKey",
+          "key": "Tab"
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        }
+      ],
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"5\"]"
+    },
+    {
+      "label": "12.5 NCK date_picker - CLICK TC8 Start Date_mobile",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC8 Start Date on a mobile device",
+      "clickSelector": "[data-test-case=\"8\"] .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(1) .modal-trigger button",
+      "selectorExpansion": true,
+      "viewports": [
+          {
+              "label": "phone",
+              "width": 320,
+              "height": 500
+          },
+          {
+              "label": "tablet",
+              "width": 1024,
+              "height": 300
+          }
+      ],
+      "selectors": [
+          ".nck-modal"
+      ]
+  },
+  {
+      "label": "12.6 NCK date_picker - CLICK TC8 Start Date_desktop",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC8 Start Date on desktop",
+      "clickSelector": "[data-test-case=\"8\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button",
+      "selectorExpansion": true,
+      "viewports": [
+          {
+              "label": "desktop",
+              "width": 1920,
+              "height": 1000
+          }
+      ]
+  },
+  {
+      "label": "12.7 NCK date_picker - CLICK TC8 Focus button",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC8 Focus button",
+      "clickSelector": "[data-test-case=\"8\"] .button-focus",
+      "selectors": [
+          "[data-test-case=\"8\"]"
+      ]
+  },
+  {
+      "label": "12.8 NCK date_picker - CLICK TC9 Validate button",
+      "url": "http://localhost:8080/#/datepicker-single",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC9 Validate button",
+      "clickSelector": "[data-test-case=\"9\"] .button-validate",
+      "selectors": [
+          "[data-test-case=\"9\"]"
+      ]
+  }
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "report": [
+    "CI"
+  ],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args": [
+      "--no-sandbox"
+    ],
+    "protocolTimeout": 960000
+  },
+  "asyncCaptureLimit": 3,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false
+}

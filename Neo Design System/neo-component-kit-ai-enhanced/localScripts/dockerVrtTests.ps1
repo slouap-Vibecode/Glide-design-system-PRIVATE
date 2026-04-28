@@ -1,0 +1,2 @@
+docker build -t nck-vrt -f ./ciImages/visualRegressionTest.dockerfile .
+docker run -v ${pwd}/test-application/automatic_tests:/app/test-application/automatic_tests --entrypoint npm nck-vrt run test:vrt:docker:local $Args[0]

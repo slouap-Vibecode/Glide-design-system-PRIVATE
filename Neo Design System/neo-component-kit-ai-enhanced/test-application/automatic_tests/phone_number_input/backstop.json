@@ -1,0 +1,374 @@
+{
+  "id": "backstop_phone_input",
+  "viewports": [
+    {
+      "label": "phone",
+      "width": 320,
+      "height": 1475
+    },
+    {
+      "label": "tablet",
+      "width": 1024,
+      "height": 1246
+    },
+    {
+        "label": "desktop",
+        "width": 1920,
+        "height": 1246
+    }
+  ],
+  "onBeforeScript": "puppet/onBefore.js",
+  "onReadyScript": "puppet/onReady.js",
+  "scenarios": [
+    {
+      "label": "1.0 NCK phone number input - Default display",
+      "url": "http://localhost:8080/#/phone-number-input",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Global page verification"
+    },
+    {
+      "label": "1.1 NCK phone number input - HOVER TC 0",
+      "url": "http://localhost:8080/#/phone-number-input",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the TC0 input",
+      "hoverSelector": "[data-test-case=\"0\"] .nck-text-input",
+      "selectors": [
+          "[data-test-case=\"0\"]"
+      ],
+      "selectorExpansion": true
+  },
+  {
+      "label": "1.2 NCK phone number input - HOVER TC 2",
+      "url": "http://localhost:8080/#/phone-number-input",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the TC2 input",
+      "hoverSelector": "[data-test-case=\"2\"] .nck-text-input",
+      "selectors": [
+          "[data-test-case=\"2\"]"
+      ],
+      "selectorExpansion": true
+  },
+  {
+      "label": "1.3 NCK phone number input - HOVER TC 4",
+      "url": "http://localhost:8080/#/phone-number-input",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the TC4 input",
+      "hoverSelector": "[data-test-case=\"4\"] .nck-text-input",
+      "selectors": [
+          "[data-test-case=\"4\"]"
+      ],
+      "selectorExpansion": true
+  },
+  {
+      "label": "1.4 NCK phone number input - HOVER TC 5",
+      "url": "http://localhost:8080/#/phone-number-input",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the TC5 input",
+      "hoverSelector": "[data-test-case=\"5\"] .nck-text-input",
+      "selectors": [
+          "[data-test-case=\"5\"]"
+      ],
+      "selectorExpansion": true
+  },
+  {
+      "label": "2.1 NCK phone number input - FOCUS TC 1 phone number field",
+      "url": "http://localhost:8080/#/phone-number-input?hideCursor=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the TC 1 phone number field",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"1\"] .nck-text-input",
+      "selectors": [
+          "[data-test-case=\"1\"]"
+      ],
+      "selectorExpansion": true
+  },
+  {
+    "label": "2.2 NCK phone number input - FOCUS country dropdown TC5",
+    "url": "http://localhost:8080/#/phone-number-input",
+    "misMatchThreshold": 0,
+    "requireSameDimensions": true,
+    "description": "focus on TC5 country dropdown",
+    "onReadyScript": "focus.js",
+    "focusSelector": "[data-test-case=\"5\"] .nck-dropdown button",
+    "selectors": [
+      "[data-test-case=\"5\"]"
+    ],
+    "selectorExpansion": false
+  },
+  {
+    "label": "2.3 NCK phone number input - FOCUS country dropdown TC6",
+    "url": "http://localhost:8080/#/phone-number-input",
+    "misMatchThreshold": 0,
+    "requireSameDimensions": true,
+    "description": "focus on TC6 country dropdown",
+    "onReadyScript": "focus.js",
+    "focusSelector": "[data-test-case=\"6\"] .nck-dropdown button",
+    "selectors": [
+      "[data-test-case=\"6\"]"
+    ],
+    "selectorExpansion": false
+  },
+  {
+    "label": "2.4 NCK phone number input - FOCUS country dropdown TC7",
+    "url": "http://localhost:8080/#/phone-number-input",
+    "misMatchThreshold": 0,
+    "requireSameDimensions": true,
+    "description": "focus on TC7 country dropdown",
+    "onReadyScript": "focus.js",
+    "focusSelector": "[data-test-case=\"7\"] .nck-dropdown button",
+    "selectors": [
+      "[data-test-case=\"7\"]"
+    ],
+    "selectorExpansion": false
+  },
+  {
+    "label": "3.1 NCK phone number input - FOCUS+ENTER on TC0 country dropdown",
+    "url": "http://localhost:8080/#/phone-number-input",
+    "misMatchThreshold": 0,
+    "requireSameDimensions": true,
+    "description": "focus+enter on TC0 country dropdown",
+    "onReadyScript": "focusAndPressEnter.js",
+    "focusAndPressEnterSelector": "[data-test-case=\"0\"] .country-dropdown button",
+    "selectorExpansion": false
+  },
+  {
+    "label": "3.2 NCK phone number input - FOCUS+ENTER on TC1 dropdown",
+    "url": "http://localhost:8080/#/phone-number-input",
+    "misMatchThreshold": 0,
+    "requireSameDimensions": true,
+    "description": "focus+enter on TC1 dropdown",
+    "onReadyScript": "focusAndPressEnter.js",
+    "focusAndPressEnterSelector": "[data-test-case=\"1\"] .nck-dropdown button",
+    "selectorExpansion": false
+  },
+  {
+    "label": "4.1 NCK phone number input - FOCUS+SPACE on TC5 dropdown",
+    "url": "http://localhost:8080/#/phone-number-input",
+    "misMatchThreshold": 0,
+    "requireSameDimensions": true,
+    "description": "focus+space on TC5 dropdown",
+    "onReadyScript": "focusAndPressSpace.js",
+    "focusAndPressSpaceSelector": "[data-test-case=\"5\"] .nck-dropdown button",
+    "selectorExpansion": false
+  },
+  {
+    "label": "5.1 NCK phone number input - CLICK TC6 dropdown",
+    "url": "http://localhost:8080/#/phone-number-input",
+    "misMatchThreshold": 0,
+    "requireSameDimensions": true,
+    "description": "click TC6 dropdown",
+    "clickSelector": "[data-test-case=\"6\"] .nck-dropdown button",
+    "selectorExpansion": true
+  },
+  {
+    "label": "5.2 NCK phone number input - CLICK TC7 country dropdown value 2 of the list",
+    "url": "http://localhost:8080/#/phone-number-input",
+    "misMatchThreshold": 0,
+    "requireSameDimensions": true,
+    "description": "CLICK TC7 country dropdown value 2 of the list",
+    "onReadyScript": "ClickTwice.js",
+    "clickSelector": "[data-test-case=\"7\"] .nck-dropdown button",
+    "clickSelector2": "[data-test-case=\"7\"] .nck-dropdown .nck-dropdown-menu li:nth-child(2)",
+    "selectorExpansion": true
+  },
+  {
+    "label": "5.3 NCK phone number input - Click on country dropdown and press down arrow on TC0",
+    "url": "http://localhost:8080/#/phone-number-input",
+    "misMatchThreshold": 0,
+    "requireSameDimensions": true,
+    "description": "Click and press down arrow key on TC0 dropdown",
+    "onReadyScript": "clickAndPressArrowKey.js",
+    "clickSelector": "[data-test-case=\"0\"] .nck-dropdown button",
+    "keyDirection": "down",
+    "pressKeyXTimes": 1,
+    "selectors": [
+      "#app"
+    ]
+  },
+  {
+    "label": "5.4 NCK phone number input - Click on country dropdown+ arrowdown + enter on TC1",
+    "url": "http://localhost:8080/#/phone-number-input",
+    "misMatchThreshold": 0,
+    "requireSameDimensions": true,
+    "description": "Click on country dropdown+ arrowdown + enter on TC1",
+    "onReadyScript": "actions.js",
+    "actions": [
+      {
+        "type": "click",
+        "selector": "[data-test-case=\"1\"] .nck-dropdown button"
+      },
+      {
+        "type": "pressKey",
+        "key": "ArrowDown"
+      },
+      {
+        "type": "pressKey",
+        "key": "Enter"
+      }
+    ],
+    "selectors": [
+      "[data-test-case=\"1\"]"
+    ],
+    "selectorExpansion": false
+  },
+  {
+      "label": "6.1 NCK phone number input - Click on phone number field + click outside TC0",
+      "url": "http://localhost:8080/#/phone-number-input",
+      "misMatchThreshold": 0,
+      "description": "Click on the phone number field + click outside the phone number field TC0",
+      "selectorExpansion": true,
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .nck-text-input"
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        },
+        {
+          "type": "clickAtPosition",
+          "coordinate": {
+            "x": 5,
+            "y": 5
+          }
+        }
+      ]
+    },
+  {
+    "label": "6.2 NCK phone number input - Click on country dropdown + press arrow up TC3",
+    "url": "http://localhost:8080/#/phone-number-input",
+    "misMatchThreshold": 0,
+    "description": "Click on country dropdown + press arrow up TC3",
+    "requireSameDimensions": true,
+    "onReadyScript": "actions.js",
+    "actions": [
+      {
+        "type": "click",
+        "selector": "[data-test-case=\"3\"] .nck-dropdown button"
+      },
+      {
+        "type": "pressKey",
+        "key": "ArrowUp"
+      }
+    ],
+    "selectorExpansion": false,
+    "selectors": [
+      "[data-test-case=\"3\"]"
+    ]
+  },
+  {
+    "label": "7.1 NCK phone number input - INSERT CONTENT in TC0 phone number input + click outside",
+    "url": "http://localhost:8080/#/phone-number-input",
+    "misMatchThreshold": 0,
+    "requireSameDimensions": true,
+    "description": "insert content in TC0 phone number input + click outside of the field",
+    "selectorExpansion": true,
+    "onReadyScript": "puppet/actions.js",
+    "actions": [
+      {
+        "type": "click",
+        "selector": "[data-test-case=\"0\"] .nck-text-input"
+      },
+      {
+        "type": "type",
+        "text": "aa"
+      },
+      {
+        "type": "clickAtPosition",
+        "coordinate": {
+          "x": 5,
+          "y": 5
+        }
+      }
+    ]
+  },
+  {
+    "label": "7.2 NCK phone number input - INSERT CONTENT in TC6 phone number field + click outside",
+    "url": "http://localhost:8080/#/phone-number-input",
+    "misMatchThreshold": 0,
+    "requireSameDimensions": true,
+    "description": "insert aa in the TC6 phone number field then click outside",
+    "selectors": "[data-test-case=\"6\"]",
+    "selectorExpansion": true,
+    "onReadyScript": "puppet/actions.js",
+    "actions": [
+      {
+        "type": "click",
+        "selector": "[data-test-case=\"6\"] .nck-text-input"
+      },
+      {
+        "type": "type",
+        "text": "aa"
+      },
+      {
+        "type": "clickAtPosition",
+        "coordinate": {
+          "x": 5,
+          "y": 5
+        }
+      }
+    ]
+  },
+  {
+    "label": "7.3 NCK phone number input - INSERT CONTENT in TC7 phone number field + click outside",
+    "url": "http://localhost:8080/#/phone-number-input",
+    "misMatchThreshold": 0,
+    "requireSameDimensions": true,
+    "description": "insert aa in the TC7 phone number field then click outside",
+    "selectors": "[data-test-case=\"7\"]",
+    "selectorExpansion": true,
+    "onReadyScript": "puppet/actions.js",
+    "actions": [
+      {
+        "type": "click",
+        "selector": "[data-test-case=\"7\"] .nck-text-input"
+      },
+      {
+        "type": "type",
+        "text": "aa"
+      },
+      {
+        "type": "clickAtPosition",
+        "coordinate": {
+          "x": 5,
+          "y": 5
+        }
+      }
+    ]
+  }
+    ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "report": ["CI"],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args":[
+    "--no-sandbox",
+    "--disable-setuid-sandbox",
+    "--disable-dev-shm-usage",
+    "--disable-accelerated-2d-canvas",
+    "--no-first-run",
+    "--no-zygote",
+
+    "--disable-gpu"
+  ],
+    "protocolTimeout": 960000
+  },
+  "asyncCaptureLimit": 3,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false
+}

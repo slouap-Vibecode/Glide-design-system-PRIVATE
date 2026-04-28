@@ -1,0 +1,2948 @@
+{
+  "testSuite": "BackstopJS",
+  "tests": [
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_1_NCK_card_-_default_0_document_0_phone.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_1_NCK_card_-_default_0_document_0_phone.png",
+        "selector": "document",
+        "fileName": "backstop_card_1_NCK_card_-_default_0_document_0_phone.png",
+        "label": "1. NCK card - default",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_1_NCK_card_-_default_0_document_1_tablet.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_1_NCK_card_-_default_0_document_1_tablet.png",
+        "selector": "document",
+        "fileName": "backstop_card_1_NCK_card_-_default_0_document_1_tablet.png",
+        "label": "1. NCK card - default",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_1_NCK_card_-_default_0_document_2_desktop.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_1_NCK_card_-_default_0_document_2_desktop.png",
+        "selector": "document",
+        "fileName": "backstop_card_1_NCK_card_-_default_0_document_2_desktop.png",
+        "label": "1. NCK card - default",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_21_NCK_card_-_hover_-_TC1_0_data-test-case1_0_phone.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_21_NCK_card_-_hover_-_TC1_0_data-test-case1_0_phone.png",
+        "selector": "[data-test-case=\"1\"]",
+        "fileName": "backstop_card_21_NCK_card_-_hover_-_TC1_0_data-test-case1_0_phone.png",
+        "label": "2.1. NCK card - hover - TC1",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_21_NCK_card_-_hover_-_TC1_0_data-test-case1_1_tablet.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_21_NCK_card_-_hover_-_TC1_0_data-test-case1_1_tablet.png",
+        "selector": "[data-test-case=\"1\"]",
+        "fileName": "backstop_card_21_NCK_card_-_hover_-_TC1_0_data-test-case1_1_tablet.png",
+        "label": "2.1. NCK card - hover - TC1",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_21_NCK_card_-_hover_-_TC1_0_data-test-case1_2_desktop.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_21_NCK_card_-_hover_-_TC1_0_data-test-case1_2_desktop.png",
+        "selector": "[data-test-case=\"1\"]",
+        "fileName": "backstop_card_21_NCK_card_-_hover_-_TC1_0_data-test-case1_2_desktop.png",
+        "label": "2.1. NCK card - hover - TC1",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_22_NCK_card_-_hover_-_TC19_0_data-test-case19_0_phone.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_22_NCK_card_-_hover_-_TC19_0_data-test-case19_0_phone.png",
+        "selector": "[data-test-case=\"19\"]",
+        "fileName": "backstop_card_22_NCK_card_-_hover_-_TC19_0_data-test-case19_0_phone.png",
+        "label": "2.2. NCK card - hover - TC19",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_22_NCK_card_-_hover_-_TC19_0_data-test-case19_1_tablet.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_22_NCK_card_-_hover_-_TC19_0_data-test-case19_1_tablet.png",
+        "selector": "[data-test-case=\"19\"]",
+        "fileName": "backstop_card_22_NCK_card_-_hover_-_TC19_0_data-test-case19_1_tablet.png",
+        "label": "2.2. NCK card - hover - TC19",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 29
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_22_NCK_card_-_hover_-_TC19_0_data-test-case19_2_desktop.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_22_NCK_card_-_hover_-_TC19_0_data-test-case19_2_desktop.png",
+        "selector": "[data-test-case=\"19\"]",
+        "fileName": "backstop_card_22_NCK_card_-_hover_-_TC19_0_data-test-case19_2_desktop.png",
+        "label": "2.2. NCK card - hover - TC19",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_23_NCK_card_-_hover_-_TC21_0_data-test-case21_0_phone.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_23_NCK_card_-_hover_-_TC21_0_data-test-case21_0_phone.png",
+        "selector": "[data-test-case=\"21\"]",
+        "fileName": "backstop_card_23_NCK_card_-_hover_-_TC21_0_data-test-case21_0_phone.png",
+        "label": "2.3. NCK card - hover - TC21",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 188
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_23_NCK_card_-_hover_-_TC21_0_data-test-case21_1_tablet.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_23_NCK_card_-_hover_-_TC21_0_data-test-case21_1_tablet.png",
+        "selector": "[data-test-case=\"21\"]",
+        "fileName": "backstop_card_23_NCK_card_-_hover_-_TC21_0_data-test-case21_1_tablet.png",
+        "label": "2.3. NCK card - hover - TC21",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 27
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_23_NCK_card_-_hover_-_TC21_0_data-test-case21_2_desktop.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_23_NCK_card_-_hover_-_TC21_0_data-test-case21_2_desktop.png",
+        "selector": "[data-test-case=\"21\"]",
+        "fileName": "backstop_card_23_NCK_card_-_hover_-_TC21_0_data-test-case21_2_desktop.png",
+        "label": "2.3. NCK card - hover - TC21",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_24_NCK_card_-_hover_-_TC24_0_data-test-case24_0_phone.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_24_NCK_card_-_hover_-_TC24_0_data-test-case24_0_phone.png",
+        "selector": "[data-test-case=\"24\"]",
+        "fileName": "backstop_card_24_NCK_card_-_hover_-_TC24_0_data-test-case24_0_phone.png",
+        "label": "2.4. NCK card - hover - TC24",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 23
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_24_NCK_card_-_hover_-_TC24_0_data-test-case24_1_tablet.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_24_NCK_card_-_hover_-_TC24_0_data-test-case24_1_tablet.png",
+        "selector": "[data-test-case=\"24\"]",
+        "fileName": "backstop_card_24_NCK_card_-_hover_-_TC24_0_data-test-case24_1_tablet.png",
+        "label": "2.4. NCK card - hover - TC24",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_24_NCK_card_-_hover_-_TC24_0_data-test-case24_2_desktop.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_24_NCK_card_-_hover_-_TC24_0_data-test-case24_2_desktop.png",
+        "selector": "[data-test-case=\"24\"]",
+        "fileName": "backstop_card_24_NCK_card_-_hover_-_TC24_0_data-test-case24_2_desktop.png",
+        "label": "2.4. NCK card - hover - TC24",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_25_NCK_card_-_hover_-_TC26_0_data-test-case26_0_phone.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_25_NCK_card_-_hover_-_TC26_0_data-test-case26_0_phone.png",
+        "selector": "[data-test-case=\"26\"]",
+        "fileName": "backstop_card_25_NCK_card_-_hover_-_TC26_0_data-test-case26_0_phone.png",
+        "label": "2.5. NCK card - hover - TC26",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 21
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_25_NCK_card_-_hover_-_TC26_0_data-test-case26_1_tablet.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_25_NCK_card_-_hover_-_TC26_0_data-test-case26_1_tablet.png",
+        "selector": "[data-test-case=\"26\"]",
+        "fileName": "backstop_card_25_NCK_card_-_hover_-_TC26_0_data-test-case26_1_tablet.png",
+        "label": "2.5. NCK card - hover - TC26",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_25_NCK_card_-_hover_-_TC26_0_data-test-case26_2_desktop.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_25_NCK_card_-_hover_-_TC26_0_data-test-case26_2_desktop.png",
+        "selector": "[data-test-case=\"26\"]",
+        "fileName": "backstop_card_25_NCK_card_-_hover_-_TC26_0_data-test-case26_2_desktop.png",
+        "label": "2.5. NCK card - hover - TC26",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_26_NCK_card_-_hover_-_TC27_0_data-test-case27_0_phone.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_26_NCK_card_-_hover_-_TC27_0_data-test-case27_0_phone.png",
+        "selector": "[data-test-case=\"27\"]",
+        "fileName": "backstop_card_26_NCK_card_-_hover_-_TC27_0_data-test-case27_0_phone.png",
+        "label": "2.6. NCK card - hover - TC27",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_26_NCK_card_-_hover_-_TC27_0_data-test-case27_1_tablet.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_26_NCK_card_-_hover_-_TC27_0_data-test-case27_1_tablet.png",
+        "selector": "[data-test-case=\"27\"]",
+        "fileName": "backstop_card_26_NCK_card_-_hover_-_TC27_0_data-test-case27_1_tablet.png",
+        "label": "2.6. NCK card - hover - TC27",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_26_NCK_card_-_hover_-_TC27_0_data-test-case27_2_desktop.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_26_NCK_card_-_hover_-_TC27_0_data-test-case27_2_desktop.png",
+        "selector": "[data-test-case=\"27\"]",
+        "fileName": "backstop_card_26_NCK_card_-_hover_-_TC27_0_data-test-case27_2_desktop.png",
+        "label": "2.6. NCK card - hover - TC27",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 29
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_27_NCK_card_-_hover_-_TC29_0_data-test-case29_0_phone.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_27_NCK_card_-_hover_-_TC29_0_data-test-case29_0_phone.png",
+        "selector": "[data-test-case=\"29\"]",
+        "fileName": "backstop_card_27_NCK_card_-_hover_-_TC29_0_data-test-case29_0_phone.png",
+        "label": "2.7. NCK card - hover - TC29",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 22
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_27_NCK_card_-_hover_-_TC29_0_data-test-case29_1_tablet.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_27_NCK_card_-_hover_-_TC29_0_data-test-case29_1_tablet.png",
+        "selector": "[data-test-case=\"29\"]",
+        "fileName": "backstop_card_27_NCK_card_-_hover_-_TC29_0_data-test-case29_1_tablet.png",
+        "label": "2.7. NCK card - hover - TC29",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 27
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_27_NCK_card_-_hover_-_TC29_0_data-test-case29_2_desktop.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_27_NCK_card_-_hover_-_TC29_0_data-test-case29_2_desktop.png",
+        "selector": "[data-test-case=\"29\"]",
+        "fileName": "backstop_card_27_NCK_card_-_hover_-_TC29_0_data-test-case29_2_desktop.png",
+        "label": "2.7. NCK card - hover - TC29",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 29
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_28_NCK_card_-_hover_-_TC32_0_data-test-case32_0_phone.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_28_NCK_card_-_hover_-_TC32_0_data-test-case32_0_phone.png",
+        "selector": "[data-test-case=\"32\"]",
+        "fileName": "backstop_card_28_NCK_card_-_hover_-_TC32_0_data-test-case32_0_phone.png",
+        "label": "2.8. NCK card - hover - TC32",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 22
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_28_NCK_card_-_hover_-_TC32_0_data-test-case32_1_tablet.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_28_NCK_card_-_hover_-_TC32_0_data-test-case32_1_tablet.png",
+        "selector": "[data-test-case=\"32\"]",
+        "fileName": "backstop_card_28_NCK_card_-_hover_-_TC32_0_data-test-case32_1_tablet.png",
+        "label": "2.8. NCK card - hover - TC32",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 26
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_28_NCK_card_-_hover_-_TC32_0_data-test-case32_2_desktop.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_28_NCK_card_-_hover_-_TC32_0_data-test-case32_2_desktop.png",
+        "selector": "[data-test-case=\"32\"]",
+        "fileName": "backstop_card_28_NCK_card_-_hover_-_TC32_0_data-test-case32_2_desktop.png",
+        "label": "2.8. NCK card - hover - TC32",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 32
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_29_NCK_card_-_hover_-_TC34_0_data-test-case34_0_phone.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_29_NCK_card_-_hover_-_TC34_0_data-test-case34_0_phone.png",
+        "selector": "[data-test-case=\"34\"]",
+        "fileName": "backstop_card_29_NCK_card_-_hover_-_TC34_0_data-test-case34_0_phone.png",
+        "label": "2.9. NCK card - hover - TC34",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 189
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_29_NCK_card_-_hover_-_TC34_0_data-test-case34_1_tablet.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_29_NCK_card_-_hover_-_TC34_0_data-test-case34_1_tablet.png",
+        "selector": "[data-test-case=\"34\"]",
+        "fileName": "backstop_card_29_NCK_card_-_hover_-_TC34_0_data-test-case34_1_tablet.png",
+        "label": "2.9. NCK card - hover - TC34",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 24
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_29_NCK_card_-_hover_-_TC34_0_data-test-case34_2_desktop.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_29_NCK_card_-_hover_-_TC34_0_data-test-case34_2_desktop.png",
+        "selector": "[data-test-case=\"34\"]",
+        "fileName": "backstop_card_29_NCK_card_-_hover_-_TC34_0_data-test-case34_2_desktop.png",
+        "label": "2.9. NCK card - hover - TC34",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 30
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_31_NCK_card_-_focus_-_TC8_0_data-test-case8_0_phone.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_31_NCK_card_-_focus_-_TC8_0_data-test-case8_0_phone.png",
+        "selector": "[data-test-case=\"8\"]",
+        "fileName": "backstop_card_31_NCK_card_-_focus_-_TC8_0_data-test-case8_0_phone.png",
+        "label": "3.1. NCK card - focus - TC8",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.62",
+          "analysisTime": 21
+        },
+        "diffImage": "..\\bitmaps_test\\20200722-130025\\failed_diff_backstop_card_31_NCK_card_-_focus_-_TC8_0_data-test-case8_0_phone.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_31_NCK_card_-_focus_-_TC8_0_data-test-case8_1_tablet.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_31_NCK_card_-_focus_-_TC8_0_data-test-case8_1_tablet.png",
+        "selector": "[data-test-case=\"8\"]",
+        "fileName": "backstop_card_31_NCK_card_-_focus_-_TC8_0_data-test-case8_1_tablet.png",
+        "label": "3.1. NCK card - focus - TC8",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_31_NCK_card_-_focus_-_TC8_0_data-test-case8_2_desktop.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_31_NCK_card_-_focus_-_TC8_0_data-test-case8_2_desktop.png",
+        "selector": "[data-test-case=\"8\"]",
+        "fileName": "backstop_card_31_NCK_card_-_focus_-_TC8_0_data-test-case8_2_desktop.png",
+        "label": "3.1. NCK card - focus - TC8",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 101
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_32_NCK_card_-_focus_-_TC10_0_data-test-case10_0_phone.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_32_NCK_card_-_focus_-_TC10_0_data-test-case10_0_phone.png",
+        "selector": "[data-test-case=\"10\"]",
+        "fileName": "backstop_card_32_NCK_card_-_focus_-_TC10_0_data-test-case10_0_phone.png",
+        "label": "3.2. NCK card - focus - TC10",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.62",
+          "analysisTime": 83
+        },
+        "diffImage": "..\\bitmaps_test\\20200722-130025\\failed_diff_backstop_card_32_NCK_card_-_focus_-_TC10_0_data-test-case10_0_phone.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_32_NCK_card_-_focus_-_TC10_0_data-test-case10_1_tablet.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_32_NCK_card_-_focus_-_TC10_0_data-test-case10_1_tablet.png",
+        "selector": "[data-test-case=\"10\"]",
+        "fileName": "backstop_card_32_NCK_card_-_focus_-_TC10_0_data-test-case10_1_tablet.png",
+        "label": "3.2. NCK card - focus - TC10",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 27
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_32_NCK_card_-_focus_-_TC10_0_data-test-case10_2_desktop.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_32_NCK_card_-_focus_-_TC10_0_data-test-case10_2_desktop.png",
+        "selector": "[data-test-case=\"10\"]",
+        "fileName": "backstop_card_32_NCK_card_-_focus_-_TC10_0_data-test-case10_2_desktop.png",
+        "label": "3.2. NCK card - focus - TC10",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 35
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_33_NCK_card_-_focus_-_TC16_0_data-test-case16_0_phone.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_33_NCK_card_-_focus_-_TC16_0_data-test-case16_0_phone.png",
+        "selector": "[data-test-case=\"16\"]",
+        "fileName": "backstop_card_33_NCK_card_-_focus_-_TC16_0_data-test-case16_0_phone.png",
+        "label": "3.3. NCK card - focus - TC16",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 169
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_33_NCK_card_-_focus_-_TC16_0_data-test-case16_1_tablet.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_33_NCK_card_-_focus_-_TC16_0_data-test-case16_1_tablet.png",
+        "selector": "[data-test-case=\"16\"]",
+        "fileName": "backstop_card_33_NCK_card_-_focus_-_TC16_0_data-test-case16_1_tablet.png",
+        "label": "3.3. NCK card - focus - TC16",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 169
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_33_NCK_card_-_focus_-_TC16_0_data-test-case16_2_desktop.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_33_NCK_card_-_focus_-_TC16_0_data-test-case16_2_desktop.png",
+        "selector": "[data-test-case=\"16\"]",
+        "fileName": "backstop_card_33_NCK_card_-_focus_-_TC16_0_data-test-case16_2_desktop.png",
+        "label": "3.3. NCK card - focus - TC16",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_34_NCK_card_-_focus_-_TC18_0_data-test-case18_0_phone.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_34_NCK_card_-_focus_-_TC18_0_data-test-case18_0_phone.png",
+        "selector": "[data-test-case=\"18\"]",
+        "fileName": "backstop_card_34_NCK_card_-_focus_-_TC18_0_data-test-case18_0_phone.png",
+        "label": "3.4. NCK card - focus - TC18",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_34_NCK_card_-_focus_-_TC18_0_data-test-case18_1_tablet.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_34_NCK_card_-_focus_-_TC18_0_data-test-case18_1_tablet.png",
+        "selector": "[data-test-case=\"18\"]",
+        "fileName": "backstop_card_34_NCK_card_-_focus_-_TC18_0_data-test-case18_1_tablet.png",
+        "label": "3.4. NCK card - focus - TC18",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 32
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_34_NCK_card_-_focus_-_TC18_0_data-test-case18_2_desktop.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_34_NCK_card_-_focus_-_TC18_0_data-test-case18_2_desktop.png",
+        "selector": "[data-test-case=\"18\"]",
+        "fileName": "backstop_card_34_NCK_card_-_focus_-_TC18_0_data-test-case18_2_desktop.png",
+        "label": "3.4. NCK card - focus - TC18",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.78",
+          "analysisTime": 58
+        },
+        "diffImage": "..\\bitmaps_test\\20200722-130025\\failed_diff_backstop_card_34_NCK_card_-_focus_-_TC18_0_data-test-case18_2_desktop.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_35_NCK_card_-_focus_-_TC20_0_data-test-case20_0_phone.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_35_NCK_card_-_focus_-_TC20_0_data-test-case20_0_phone.png",
+        "selector": "[data-test-case=\"20\"]",
+        "fileName": "backstop_card_35_NCK_card_-_focus_-_TC20_0_data-test-case20_0_phone.png",
+        "label": "3.5. NCK card - focus - TC20",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 88
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_35_NCK_card_-_focus_-_TC20_0_data-test-case20_1_tablet.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_35_NCK_card_-_focus_-_TC20_0_data-test-case20_1_tablet.png",
+        "selector": "[data-test-case=\"20\"]",
+        "fileName": "backstop_card_35_NCK_card_-_focus_-_TC20_0_data-test-case20_1_tablet.png",
+        "label": "3.5. NCK card - focus - TC20",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.77",
+          "analysisTime": 180
+        },
+        "diffImage": "..\\bitmaps_test\\20200722-130025\\failed_diff_backstop_card_35_NCK_card_-_focus_-_TC20_0_data-test-case20_1_tablet.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_35_NCK_card_-_focus_-_TC20_0_data-test-case20_2_desktop.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_35_NCK_card_-_focus_-_TC20_0_data-test-case20_2_desktop.png",
+        "selector": "[data-test-case=\"20\"]",
+        "fileName": "backstop_card_35_NCK_card_-_focus_-_TC20_0_data-test-case20_2_desktop.png",
+        "label": "3.5. NCK card - focus - TC20",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.78",
+          "analysisTime": 33
+        },
+        "diffImage": "..\\bitmaps_test\\20200722-130025\\failed_diff_backstop_card_35_NCK_card_-_focus_-_TC20_0_data-test-case20_2_desktop.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_36_NCK_card_-_focus_-_TC24_0_data-test-case24_0_phone.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_36_NCK_card_-_focus_-_TC24_0_data-test-case24_0_phone.png",
+        "selector": "[data-test-case=\"24\"]",
+        "fileName": "backstop_card_36_NCK_card_-_focus_-_TC24_0_data-test-case24_0_phone.png",
+        "label": "3.6. NCK card - focus - TC24",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.62",
+          "analysisTime": 24
+        },
+        "diffImage": "..\\bitmaps_test\\20200722-130025\\failed_diff_backstop_card_36_NCK_card_-_focus_-_TC24_0_data-test-case24_0_phone.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_36_NCK_card_-_focus_-_TC24_0_data-test-case24_1_tablet.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_36_NCK_card_-_focus_-_TC24_0_data-test-case24_1_tablet.png",
+        "selector": "[data-test-case=\"24\"]",
+        "fileName": "backstop_card_36_NCK_card_-_focus_-_TC24_0_data-test-case24_1_tablet.png",
+        "label": "3.6. NCK card - focus - TC24",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.77",
+          "analysisTime": 172
+        },
+        "diffImage": "..\\bitmaps_test\\20200722-130025\\failed_diff_backstop_card_36_NCK_card_-_focus_-_TC24_0_data-test-case24_1_tablet.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_36_NCK_card_-_focus_-_TC24_0_data-test-case24_2_desktop.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_36_NCK_card_-_focus_-_TC24_0_data-test-case24_2_desktop.png",
+        "selector": "[data-test-case=\"24\"]",
+        "fileName": "backstop_card_36_NCK_card_-_focus_-_TC24_0_data-test-case24_2_desktop.png",
+        "label": "3.6. NCK card - focus - TC24",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.78",
+          "analysisTime": 40
+        },
+        "diffImage": "..\\bitmaps_test\\20200722-130025\\failed_diff_backstop_card_36_NCK_card_-_focus_-_TC24_0_data-test-case24_2_desktop.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_37_NCK_card_-_focus_-_TC26_0_data-test-case26_0_phone.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_37_NCK_card_-_focus_-_TC26_0_data-test-case26_0_phone.png",
+        "selector": "[data-test-case=\"26\"]",
+        "fileName": "backstop_card_37_NCK_card_-_focus_-_TC26_0_data-test-case26_0_phone.png",
+        "label": "3.7. NCK card - focus - TC26",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_37_NCK_card_-_focus_-_TC26_0_data-test-case26_1_tablet.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_37_NCK_card_-_focus_-_TC26_0_data-test-case26_1_tablet.png",
+        "selector": "[data-test-case=\"26\"]",
+        "fileName": "backstop_card_37_NCK_card_-_focus_-_TC26_0_data-test-case26_1_tablet.png",
+        "label": "3.7. NCK card - focus - TC26",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 116
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_37_NCK_card_-_focus_-_TC26_0_data-test-case26_2_desktop.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_37_NCK_card_-_focus_-_TC26_0_data-test-case26_2_desktop.png",
+        "selector": "[data-test-case=\"26\"]",
+        "fileName": "backstop_card_37_NCK_card_-_focus_-_TC26_0_data-test-case26_2_desktop.png",
+        "label": "3.7. NCK card - focus - TC26",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 27
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_38_NCK_card_-_focus_-_TC32_0_data-test-case32_0_phone.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_38_NCK_card_-_focus_-_TC32_0_data-test-case32_0_phone.png",
+        "selector": "[data-test-case=\"32\"]",
+        "fileName": "backstop_card_38_NCK_card_-_focus_-_TC32_0_data-test-case32_0_phone.png",
+        "label": "3.8. NCK card - focus - TC32",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 94
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_38_NCK_card_-_focus_-_TC32_0_data-test-case32_1_tablet.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_38_NCK_card_-_focus_-_TC32_0_data-test-case32_1_tablet.png",
+        "selector": "[data-test-case=\"32\"]",
+        "fileName": "backstop_card_38_NCK_card_-_focus_-_TC32_0_data-test-case32_1_tablet.png",
+        "label": "3.8. NCK card - focus - TC32",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 26
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_38_NCK_card_-_focus_-_TC32_0_data-test-case32_2_desktop.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_38_NCK_card_-_focus_-_TC32_0_data-test-case32_2_desktop.png",
+        "selector": "[data-test-case=\"32\"]",
+        "fileName": "backstop_card_38_NCK_card_-_focus_-_TC32_0_data-test-case32_2_desktop.png",
+        "label": "3.8. NCK card - focus - TC32",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 25
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_39_NCK_card_-_focus_-_TC34_0_data-test-case34_0_phone.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_39_NCK_card_-_focus_-_TC34_0_data-test-case34_0_phone.png",
+        "selector": "[data-test-case=\"34\"]",
+        "fileName": "backstop_card_39_NCK_card_-_focus_-_TC34_0_data-test-case34_0_phone.png",
+        "label": "3.9. NCK card - focus - TC34",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 23
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_39_NCK_card_-_focus_-_TC34_0_data-test-case34_1_tablet.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_39_NCK_card_-_focus_-_TC34_0_data-test-case34_1_tablet.png",
+        "selector": "[data-test-case=\"34\"]",
+        "fileName": "backstop_card_39_NCK_card_-_focus_-_TC34_0_data-test-case34_1_tablet.png",
+        "label": "3.9. NCK card - focus - TC34",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_39_NCK_card_-_focus_-_TC34_0_data-test-case34_2_desktop.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_39_NCK_card_-_focus_-_TC34_0_data-test-case34_2_desktop.png",
+        "selector": "[data-test-case=\"34\"]",
+        "fileName": "backstop_card_39_NCK_card_-_focus_-_TC34_0_data-test-case34_2_desktop.png",
+        "label": "3.9. NCK card - focus - TC34",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 31
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_41_NCK_card_-_click_-_TC8_0_data-test-case8_0_phone.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_41_NCK_card_-_click_-_TC8_0_data-test-case8_0_phone.png",
+        "selector": "[data-test-case=\"8\"]",
+        "fileName": "backstop_card_41_NCK_card_-_click_-_TC8_0_data-test-case8_0_phone.png",
+        "label": "4.1. NCK card - click - TC8",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 66
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_41_NCK_card_-_click_-_TC8_0_data-test-case8_1_tablet.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_41_NCK_card_-_click_-_TC8_0_data-test-case8_1_tablet.png",
+        "selector": "[data-test-case=\"8\"]",
+        "fileName": "backstop_card_41_NCK_card_-_click_-_TC8_0_data-test-case8_1_tablet.png",
+        "label": "4.1. NCK card - click - TC8",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 91
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_41_NCK_card_-_click_-_TC8_0_data-test-case8_2_desktop.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_41_NCK_card_-_click_-_TC8_0_data-test-case8_2_desktop.png",
+        "selector": "[data-test-case=\"8\"]",
+        "fileName": "backstop_card_41_NCK_card_-_click_-_TC8_0_data-test-case8_2_desktop.png",
+        "label": "4.1. NCK card - click - TC8",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 75
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_42_NCK_card_-_click_-_TC10_0_data-test-case10_0_phone.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_42_NCK_card_-_click_-_TC10_0_data-test-case10_0_phone.png",
+        "selector": "[data-test-case=\"10\"]",
+        "fileName": "backstop_card_42_NCK_card_-_click_-_TC10_0_data-test-case10_0_phone.png",
+        "label": "4.2. NCK card - click - TC10",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 21
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_42_NCK_card_-_click_-_TC10_0_data-test-case10_1_tablet.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_42_NCK_card_-_click_-_TC10_0_data-test-case10_1_tablet.png",
+        "selector": "[data-test-case=\"10\"]",
+        "fileName": "backstop_card_42_NCK_card_-_click_-_TC10_0_data-test-case10_1_tablet.png",
+        "label": "4.2. NCK card - click - TC10",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 25
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_42_NCK_card_-_click_-_TC10_0_data-test-case10_2_desktop.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_42_NCK_card_-_click_-_TC10_0_data-test-case10_2_desktop.png",
+        "selector": "[data-test-case=\"10\"]",
+        "fileName": "backstop_card_42_NCK_card_-_click_-_TC10_0_data-test-case10_2_desktop.png",
+        "label": "4.2. NCK card - click - TC10",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 29
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_43_NCK_card_-_click_-_TC16_0_data-test-case16_0_phone.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_43_NCK_card_-_click_-_TC16_0_data-test-case16_0_phone.png",
+        "selector": "[data-test-case=\"16\"]",
+        "fileName": "backstop_card_43_NCK_card_-_click_-_TC16_0_data-test-case16_0_phone.png",
+        "label": "4.3. NCK card - click - TC16",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 25
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_43_NCK_card_-_click_-_TC16_0_data-test-case16_1_tablet.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_43_NCK_card_-_click_-_TC16_0_data-test-case16_1_tablet.png",
+        "selector": "[data-test-case=\"16\"]",
+        "fileName": "backstop_card_43_NCK_card_-_click_-_TC16_0_data-test-case16_1_tablet.png",
+        "label": "4.3. NCK card - click - TC16",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 93
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_43_NCK_card_-_click_-_TC16_0_data-test-case16_2_desktop.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_43_NCK_card_-_click_-_TC16_0_data-test-case16_2_desktop.png",
+        "selector": "[data-test-case=\"16\"]",
+        "fileName": "backstop_card_43_NCK_card_-_click_-_TC16_0_data-test-case16_2_desktop.png",
+        "label": "4.3. NCK card - click - TC16",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 35
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_44_NCK_card_-_click_-_TC18_0_data-test-case18_0_phone.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_44_NCK_card_-_click_-_TC18_0_data-test-case18_0_phone.png",
+        "selector": "[data-test-case=\"18\"]",
+        "fileName": "backstop_card_44_NCK_card_-_click_-_TC18_0_data-test-case18_0_phone.png",
+        "label": "4.4. NCK card - click - TC18",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 22
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_44_NCK_card_-_click_-_TC18_0_data-test-case18_1_tablet.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_44_NCK_card_-_click_-_TC18_0_data-test-case18_1_tablet.png",
+        "selector": "[data-test-case=\"18\"]",
+        "fileName": "backstop_card_44_NCK_card_-_click_-_TC18_0_data-test-case18_1_tablet.png",
+        "label": "4.4. NCK card - click - TC18",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 89
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_44_NCK_card_-_click_-_TC18_0_data-test-case18_2_desktop.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_44_NCK_card_-_click_-_TC18_0_data-test-case18_2_desktop.png",
+        "selector": "[data-test-case=\"18\"]",
+        "fileName": "backstop_card_44_NCK_card_-_click_-_TC18_0_data-test-case18_2_desktop.png",
+        "label": "4.4. NCK card - click - TC18",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 44
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_45_NCK_card_-_click_-_TC20_0_data-test-case20_0_phone.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_45_NCK_card_-_click_-_TC20_0_data-test-case20_0_phone.png",
+        "selector": "[data-test-case=\"20\"]",
+        "fileName": "backstop_card_45_NCK_card_-_click_-_TC20_0_data-test-case20_0_phone.png",
+        "label": "4.5. NCK card - click - TC20",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 49
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_45_NCK_card_-_click_-_TC20_0_data-test-case20_1_tablet.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_45_NCK_card_-_click_-_TC20_0_data-test-case20_1_tablet.png",
+        "selector": "[data-test-case=\"20\"]",
+        "fileName": "backstop_card_45_NCK_card_-_click_-_TC20_0_data-test-case20_1_tablet.png",
+        "label": "4.5. NCK card - click - TC20",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 30
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_45_NCK_card_-_click_-_TC20_0_data-test-case20_2_desktop.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_45_NCK_card_-_click_-_TC20_0_data-test-case20_2_desktop.png",
+        "selector": "[data-test-case=\"20\"]",
+        "fileName": "backstop_card_45_NCK_card_-_click_-_TC20_0_data-test-case20_2_desktop.png",
+        "label": "4.5. NCK card - click - TC20",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.67",
+          "analysisTime": 94
+        },
+        "diffImage": "..\\bitmaps_test\\20200722-130025\\failed_diff_backstop_card_45_NCK_card_-_click_-_TC20_0_data-test-case20_2_desktop.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_46_NCK_card_-_click_-_TC24_0_data-test-case24_0_phone.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_46_NCK_card_-_click_-_TC24_0_data-test-case24_0_phone.png",
+        "selector": "[data-test-case=\"24\"]",
+        "fileName": "backstop_card_46_NCK_card_-_click_-_TC24_0_data-test-case24_0_phone.png",
+        "label": "4.6. NCK card - click - TC24",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 26
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_46_NCK_card_-_click_-_TC24_0_data-test-case24_1_tablet.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_46_NCK_card_-_click_-_TC24_0_data-test-case24_1_tablet.png",
+        "selector": "[data-test-case=\"24\"]",
+        "fileName": "backstop_card_46_NCK_card_-_click_-_TC24_0_data-test-case24_1_tablet.png",
+        "label": "4.6. NCK card - click - TC24",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 39
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_46_NCK_card_-_click_-_TC24_0_data-test-case24_2_desktop.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_46_NCK_card_-_click_-_TC24_0_data-test-case24_2_desktop.png",
+        "selector": "[data-test-case=\"24\"]",
+        "fileName": "backstop_card_46_NCK_card_-_click_-_TC24_0_data-test-case24_2_desktop.png",
+        "label": "4.6. NCK card - click - TC24",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_47_NCK_card_-_click_-_TC26_0_data-test-case26_0_phone.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_47_NCK_card_-_click_-_TC26_0_data-test-case26_0_phone.png",
+        "selector": "[data-test-case=\"26\"]",
+        "fileName": "backstop_card_47_NCK_card_-_click_-_TC26_0_data-test-case26_0_phone.png",
+        "label": "4.7. NCK card - click - TC26",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.53",
+          "analysisTime": 44
+        },
+        "diffImage": "..\\bitmaps_test\\20200722-130025\\failed_diff_backstop_card_47_NCK_card_-_click_-_TC26_0_data-test-case26_0_phone.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_47_NCK_card_-_click_-_TC26_0_data-test-case26_1_tablet.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_47_NCK_card_-_click_-_TC26_0_data-test-case26_1_tablet.png",
+        "selector": "[data-test-case=\"26\"]",
+        "fileName": "backstop_card_47_NCK_card_-_click_-_TC26_0_data-test-case26_1_tablet.png",
+        "label": "4.7. NCK card - click - TC26",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 29
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_47_NCK_card_-_click_-_TC26_0_data-test-case26_2_desktop.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_47_NCK_card_-_click_-_TC26_0_data-test-case26_2_desktop.png",
+        "selector": "[data-test-case=\"26\"]",
+        "fileName": "backstop_card_47_NCK_card_-_click_-_TC26_0_data-test-case26_2_desktop.png",
+        "label": "4.7. NCK card - click - TC26",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 48
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_48_NCK_card_-_click_-_TC32_0_data-test-case32_0_phone.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_48_NCK_card_-_click_-_TC32_0_data-test-case32_0_phone.png",
+        "selector": "[data-test-case=\"32\"]",
+        "fileName": "backstop_card_48_NCK_card_-_click_-_TC32_0_data-test-case32_0_phone.png",
+        "label": "4.8. NCK card - click - TC32",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 40
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_48_NCK_card_-_click_-_TC32_0_data-test-case32_1_tablet.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_48_NCK_card_-_click_-_TC32_0_data-test-case32_1_tablet.png",
+        "selector": "[data-test-case=\"32\"]",
+        "fileName": "backstop_card_48_NCK_card_-_click_-_TC32_0_data-test-case32_1_tablet.png",
+        "label": "4.8. NCK card - click - TC32",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 65
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_48_NCK_card_-_click_-_TC32_0_data-test-case32_2_desktop.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_48_NCK_card_-_click_-_TC32_0_data-test-case32_2_desktop.png",
+        "selector": "[data-test-case=\"32\"]",
+        "fileName": "backstop_card_48_NCK_card_-_click_-_TC32_0_data-test-case32_2_desktop.png",
+        "label": "4.8. NCK card - click - TC32",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 72
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_49_NCK_card_-_click_-_TC34_0_data-test-case34_0_phone.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_49_NCK_card_-_click_-_TC34_0_data-test-case34_0_phone.png",
+        "selector": "[data-test-case=\"34\"]",
+        "fileName": "backstop_card_49_NCK_card_-_click_-_TC34_0_data-test-case34_0_phone.png",
+        "label": "4.9. NCK card - click - TC34",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 25
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_49_NCK_card_-_click_-_TC34_0_data-test-case34_1_tablet.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_49_NCK_card_-_click_-_TC34_0_data-test-case34_1_tablet.png",
+        "selector": "[data-test-case=\"34\"]",
+        "fileName": "backstop_card_49_NCK_card_-_click_-_TC34_0_data-test-case34_1_tablet.png",
+        "label": "4.9. NCK card - click - TC34",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 79
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_49_NCK_card_-_click_-_TC34_0_data-test-case34_2_desktop.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_49_NCK_card_-_click_-_TC34_0_data-test-case34_2_desktop.png",
+        "selector": "[data-test-case=\"34\"]",
+        "fileName": "backstop_card_49_NCK_card_-_click_-_TC34_0_data-test-case34_2_desktop.png",
+        "label": "4.9. NCK card - click - TC34",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 31
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_51_NCK_card_-_Focus_and_Enter_-_TC8_0_data-test-case8_0_phone.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_51_NCK_card_-_Focus_and_Enter_-_TC8_0_data-test-case8_0_phone.png",
+        "selector": "[data-test-case=\"8\"]",
+        "fileName": "backstop_card_51_NCK_card_-_Focus_and_Enter_-_TC8_0_data-test-case8_0_phone.png",
+        "label": "5.1. NCK card - Focus and Enter - TC8",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 41
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_51_NCK_card_-_Focus_and_Enter_-_TC8_0_data-test-case8_1_tablet.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_51_NCK_card_-_Focus_and_Enter_-_TC8_0_data-test-case8_1_tablet.png",
+        "selector": "[data-test-case=\"8\"]",
+        "fileName": "backstop_card_51_NCK_card_-_Focus_and_Enter_-_TC8_0_data-test-case8_1_tablet.png",
+        "label": "5.1. NCK card - Focus and Enter - TC8",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 27
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_51_NCK_card_-_Focus_and_Enter_-_TC8_0_data-test-case8_2_desktop.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_51_NCK_card_-_Focus_and_Enter_-_TC8_0_data-test-case8_2_desktop.png",
+        "selector": "[data-test-case=\"8\"]",
+        "fileName": "backstop_card_51_NCK_card_-_Focus_and_Enter_-_TC8_0_data-test-case8_2_desktop.png",
+        "label": "5.1. NCK card - Focus and Enter - TC8",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 52
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_52_NCK_card_-_Focus_and_Enter_-_TC10_0_data-test-case10_0_phone.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_52_NCK_card_-_Focus_and_Enter_-_TC10_0_data-test-case10_0_phone.png",
+        "selector": "[data-test-case=\"10\"]",
+        "fileName": "backstop_card_52_NCK_card_-_Focus_and_Enter_-_TC10_0_data-test-case10_0_phone.png",
+        "label": "5.2. NCK card - Focus and Enter - TC10",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 22
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_52_NCK_card_-_Focus_and_Enter_-_TC10_0_data-test-case10_1_tablet.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_52_NCK_card_-_Focus_and_Enter_-_TC10_0_data-test-case10_1_tablet.png",
+        "selector": "[data-test-case=\"10\"]",
+        "fileName": "backstop_card_52_NCK_card_-_Focus_and_Enter_-_TC10_0_data-test-case10_1_tablet.png",
+        "label": "5.2. NCK card - Focus and Enter - TC10",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 24
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_52_NCK_card_-_Focus_and_Enter_-_TC10_0_data-test-case10_2_desktop.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_52_NCK_card_-_Focus_and_Enter_-_TC10_0_data-test-case10_2_desktop.png",
+        "selector": "[data-test-case=\"10\"]",
+        "fileName": "backstop_card_52_NCK_card_-_Focus_and_Enter_-_TC10_0_data-test-case10_2_desktop.png",
+        "label": "5.2. NCK card - Focus and Enter - TC10",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 59
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_53_NCK_card_-_Focus_and_Enter_-_TC16_0_data-test-case16_0_phone.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_53_NCK_card_-_Focus_and_Enter_-_TC16_0_data-test-case16_0_phone.png",
+        "selector": "[data-test-case=\"16\"]",
+        "fileName": "backstop_card_53_NCK_card_-_Focus_and_Enter_-_TC16_0_data-test-case16_0_phone.png",
+        "label": "5.3. NCK card - Focus and Enter - TC16",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 22
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_53_NCK_card_-_Focus_and_Enter_-_TC16_0_data-test-case16_1_tablet.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_53_NCK_card_-_Focus_and_Enter_-_TC16_0_data-test-case16_1_tablet.png",
+        "selector": "[data-test-case=\"16\"]",
+        "fileName": "backstop_card_53_NCK_card_-_Focus_and_Enter_-_TC16_0_data-test-case16_1_tablet.png",
+        "label": "5.3. NCK card - Focus and Enter - TC16",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 33
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_53_NCK_card_-_Focus_and_Enter_-_TC16_0_data-test-case16_2_desktop.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_53_NCK_card_-_Focus_and_Enter_-_TC16_0_data-test-case16_2_desktop.png",
+        "selector": "[data-test-case=\"16\"]",
+        "fileName": "backstop_card_53_NCK_card_-_Focus_and_Enter_-_TC16_0_data-test-case16_2_desktop.png",
+        "label": "5.3. NCK card - Focus and Enter - TC16",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 91
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_54_NCK_card_-_Focus_and_Enter_-_TC18_0_data-test-case18_0_phone.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_54_NCK_card_-_Focus_and_Enter_-_TC18_0_data-test-case18_0_phone.png",
+        "selector": "[data-test-case=\"18\"]",
+        "fileName": "backstop_card_54_NCK_card_-_Focus_and_Enter_-_TC18_0_data-test-case18_0_phone.png",
+        "label": "5.4. NCK card - Focus and Enter - TC18",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 26
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_54_NCK_card_-_Focus_and_Enter_-_TC18_0_data-test-case18_1_tablet.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_54_NCK_card_-_Focus_and_Enter_-_TC18_0_data-test-case18_1_tablet.png",
+        "selector": "[data-test-case=\"18\"]",
+        "fileName": "backstop_card_54_NCK_card_-_Focus_and_Enter_-_TC18_0_data-test-case18_1_tablet.png",
+        "label": "5.4. NCK card - Focus and Enter - TC18",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 38
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_54_NCK_card_-_Focus_and_Enter_-_TC18_0_data-test-case18_2_desktop.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_54_NCK_card_-_Focus_and_Enter_-_TC18_0_data-test-case18_2_desktop.png",
+        "selector": "[data-test-case=\"18\"]",
+        "fileName": "backstop_card_54_NCK_card_-_Focus_and_Enter_-_TC18_0_data-test-case18_2_desktop.png",
+        "label": "5.4. NCK card - Focus and Enter - TC18",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 30
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_55_NCK_card_-_Focus_and_Enter_-_TC20_0_data-test-case20_0_phone.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_55_NCK_card_-_Focus_and_Enter_-_TC20_0_data-test-case20_0_phone.png",
+        "selector": "[data-test-case=\"20\"]",
+        "fileName": "backstop_card_55_NCK_card_-_Focus_and_Enter_-_TC20_0_data-test-case20_0_phone.png",
+        "label": "5.5. NCK card - Focus and Enter - TC20",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 22
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_55_NCK_card_-_Focus_and_Enter_-_TC20_0_data-test-case20_1_tablet.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_55_NCK_card_-_Focus_and_Enter_-_TC20_0_data-test-case20_1_tablet.png",
+        "selector": "[data-test-case=\"20\"]",
+        "fileName": "backstop_card_55_NCK_card_-_Focus_and_Enter_-_TC20_0_data-test-case20_1_tablet.png",
+        "label": "5.5. NCK card - Focus and Enter - TC20",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 39
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_55_NCK_card_-_Focus_and_Enter_-_TC20_0_data-test-case20_2_desktop.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_55_NCK_card_-_Focus_and_Enter_-_TC20_0_data-test-case20_2_desktop.png",
+        "selector": "[data-test-case=\"20\"]",
+        "fileName": "backstop_card_55_NCK_card_-_Focus_and_Enter_-_TC20_0_data-test-case20_2_desktop.png",
+        "label": "5.5. NCK card - Focus and Enter - TC20",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 77
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_56_NCK_card_-_Focus_and_Enter_-_TC24_0_data-test-case24_0_phone.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_56_NCK_card_-_Focus_and_Enter_-_TC24_0_data-test-case24_0_phone.png",
+        "selector": "[data-test-case=\"24\"]",
+        "fileName": "backstop_card_56_NCK_card_-_Focus_and_Enter_-_TC24_0_data-test-case24_0_phone.png",
+        "label": "5.6. NCK card - Focus and Enter - TC24",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 32
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_56_NCK_card_-_Focus_and_Enter_-_TC24_0_data-test-case24_1_tablet.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_56_NCK_card_-_Focus_and_Enter_-_TC24_0_data-test-case24_1_tablet.png",
+        "selector": "[data-test-case=\"24\"]",
+        "fileName": "backstop_card_56_NCK_card_-_Focus_and_Enter_-_TC24_0_data-test-case24_1_tablet.png",
+        "label": "5.6. NCK card - Focus and Enter - TC24",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 33
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_56_NCK_card_-_Focus_and_Enter_-_TC24_0_data-test-case24_2_desktop.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_56_NCK_card_-_Focus_and_Enter_-_TC24_0_data-test-case24_2_desktop.png",
+        "selector": "[data-test-case=\"24\"]",
+        "fileName": "backstop_card_56_NCK_card_-_Focus_and_Enter_-_TC24_0_data-test-case24_2_desktop.png",
+        "label": "5.6. NCK card - Focus and Enter - TC24",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 88
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_57_NCK_card_-_Focus_and_Enter_-_TC26_0_data-test-case26_0_phone.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_57_NCK_card_-_Focus_and_Enter_-_TC26_0_data-test-case26_0_phone.png",
+        "selector": "[data-test-case=\"26\"]",
+        "fileName": "backstop_card_57_NCK_card_-_Focus_and_Enter_-_TC26_0_data-test-case26_0_phone.png",
+        "label": "5.7. NCK card - Focus and Enter - TC26",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 26
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_57_NCK_card_-_Focus_and_Enter_-_TC26_0_data-test-case26_1_tablet.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_57_NCK_card_-_Focus_and_Enter_-_TC26_0_data-test-case26_1_tablet.png",
+        "selector": "[data-test-case=\"26\"]",
+        "fileName": "backstop_card_57_NCK_card_-_Focus_and_Enter_-_TC26_0_data-test-case26_1_tablet.png",
+        "label": "5.7. NCK card - Focus and Enter - TC26",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 38
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_57_NCK_card_-_Focus_and_Enter_-_TC26_0_data-test-case26_2_desktop.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_57_NCK_card_-_Focus_and_Enter_-_TC26_0_data-test-case26_2_desktop.png",
+        "selector": "[data-test-case=\"26\"]",
+        "fileName": "backstop_card_57_NCK_card_-_Focus_and_Enter_-_TC26_0_data-test-case26_2_desktop.png",
+        "label": "5.7. NCK card - Focus and Enter - TC26",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 46
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_58_NCK_card_-_Focus_and_Enter_-_TC32_0_data-test-case32_0_phone.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_58_NCK_card_-_Focus_and_Enter_-_TC32_0_data-test-case32_0_phone.png",
+        "selector": "[data-test-case=\"32\"]",
+        "fileName": "backstop_card_58_NCK_card_-_Focus_and_Enter_-_TC32_0_data-test-case32_0_phone.png",
+        "label": "5.8. NCK card - Focus and Enter - TC32",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 27
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_58_NCK_card_-_Focus_and_Enter_-_TC32_0_data-test-case32_1_tablet.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_58_NCK_card_-_Focus_and_Enter_-_TC32_0_data-test-case32_1_tablet.png",
+        "selector": "[data-test-case=\"32\"]",
+        "fileName": "backstop_card_58_NCK_card_-_Focus_and_Enter_-_TC32_0_data-test-case32_1_tablet.png",
+        "label": "5.8. NCK card - Focus and Enter - TC32",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 29
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_58_NCK_card_-_Focus_and_Enter_-_TC32_0_data-test-case32_2_desktop.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_58_NCK_card_-_Focus_and_Enter_-_TC32_0_data-test-case32_2_desktop.png",
+        "selector": "[data-test-case=\"32\"]",
+        "fileName": "backstop_card_58_NCK_card_-_Focus_and_Enter_-_TC32_0_data-test-case32_2_desktop.png",
+        "label": "5.8. NCK card - Focus and Enter - TC32",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.67",
+          "analysisTime": 83
+        },
+        "diffImage": "..\\bitmaps_test\\20200722-130025\\failed_diff_backstop_card_58_NCK_card_-_Focus_and_Enter_-_TC32_0_data-test-case32_2_desktop.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_59_NCK_card_-_Focus_and_Enter_-_TC34_0_data-test-case34_0_phone.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_59_NCK_card_-_Focus_and_Enter_-_TC34_0_data-test-case34_0_phone.png",
+        "selector": "[data-test-case=\"34\"]",
+        "fileName": "backstop_card_59_NCK_card_-_Focus_and_Enter_-_TC34_0_data-test-case34_0_phone.png",
+        "label": "5.9. NCK card - Focus and Enter - TC34",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 29
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_59_NCK_card_-_Focus_and_Enter_-_TC34_0_data-test-case34_1_tablet.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_59_NCK_card_-_Focus_and_Enter_-_TC34_0_data-test-case34_1_tablet.png",
+        "selector": "[data-test-case=\"34\"]",
+        "fileName": "backstop_card_59_NCK_card_-_Focus_and_Enter_-_TC34_0_data-test-case34_1_tablet.png",
+        "label": "5.9. NCK card - Focus and Enter - TC34",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 26
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_59_NCK_card_-_Focus_and_Enter_-_TC34_0_data-test-case34_2_desktop.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_59_NCK_card_-_Focus_and_Enter_-_TC34_0_data-test-case34_2_desktop.png",
+        "selector": "[data-test-case=\"34\"]",
+        "fileName": "backstop_card_59_NCK_card_-_Focus_and_Enter_-_TC34_0_data-test-case34_2_desktop.png",
+        "label": "5.9. NCK card - Focus and Enter - TC34",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 79
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_61_NCK_card_-_Focus_and_Space_-_TC10_0_data-test-case10_0_phone.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_61_NCK_card_-_Focus_and_Space_-_TC10_0_data-test-case10_0_phone.png",
+        "selector": "[data-test-case=\"10\"]",
+        "fileName": "backstop_card_61_NCK_card_-_Focus_and_Space_-_TC10_0_data-test-case10_0_phone.png",
+        "label": "6.1. NCK card - Focus and Space - TC10",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 23
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_61_NCK_card_-_Focus_and_Space_-_TC10_0_data-test-case10_1_tablet.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_61_NCK_card_-_Focus_and_Space_-_TC10_0_data-test-case10_1_tablet.png",
+        "selector": "[data-test-case=\"10\"]",
+        "fileName": "backstop_card_61_NCK_card_-_Focus_and_Space_-_TC10_0_data-test-case10_1_tablet.png",
+        "label": "6.1. NCK card - Focus and Space - TC10",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 26
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_61_NCK_card_-_Focus_and_Space_-_TC10_0_data-test-case10_2_desktop.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_61_NCK_card_-_Focus_and_Space_-_TC10_0_data-test-case10_2_desktop.png",
+        "selector": "[data-test-case=\"10\"]",
+        "fileName": "backstop_card_61_NCK_card_-_Focus_and_Space_-_TC10_0_data-test-case10_2_desktop.png",
+        "label": "6.1. NCK card - Focus and Space - TC10",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 55
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_62_NCK_card_-_Focus_and_Space_-_TC18_0_data-test-case18_0_phone.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_62_NCK_card_-_Focus_and_Space_-_TC18_0_data-test-case18_0_phone.png",
+        "selector": "[data-test-case=\"18\"]",
+        "fileName": "backstop_card_62_NCK_card_-_Focus_and_Space_-_TC18_0_data-test-case18_0_phone.png",
+        "label": "6.2. NCK card - Focus and Space - TC18",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 22
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_62_NCK_card_-_Focus_and_Space_-_TC18_0_data-test-case18_1_tablet.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_62_NCK_card_-_Focus_and_Space_-_TC18_0_data-test-case18_1_tablet.png",
+        "selector": "[data-test-case=\"18\"]",
+        "fileName": "backstop_card_62_NCK_card_-_Focus_and_Space_-_TC18_0_data-test-case18_1_tablet.png",
+        "label": "6.2. NCK card - Focus and Space - TC18",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 47
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_62_NCK_card_-_Focus_and_Space_-_TC18_0_data-test-case18_2_desktop.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_62_NCK_card_-_Focus_and_Space_-_TC18_0_data-test-case18_2_desktop.png",
+        "selector": "[data-test-case=\"18\"]",
+        "fileName": "backstop_card_62_NCK_card_-_Focus_and_Space_-_TC18_0_data-test-case18_2_desktop.png",
+        "label": "6.2. NCK card - Focus and Space - TC18",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 34
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_63_NCK_card_-_Focus_and_Space_-_TC26_0_data-test-case26_0_phone.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_63_NCK_card_-_Focus_and_Space_-_TC26_0_data-test-case26_0_phone.png",
+        "selector": "[data-test-case=\"26\"]",
+        "fileName": "backstop_card_63_NCK_card_-_Focus_and_Space_-_TC26_0_data-test-case26_0_phone.png",
+        "label": "6.3. NCK card - Focus and Space - TC26",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 24
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_63_NCK_card_-_Focus_and_Space_-_TC26_0_data-test-case26_1_tablet.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_63_NCK_card_-_Focus_and_Space_-_TC26_0_data-test-case26_1_tablet.png",
+        "selector": "[data-test-case=\"26\"]",
+        "fileName": "backstop_card_63_NCK_card_-_Focus_and_Space_-_TC26_0_data-test-case26_1_tablet.png",
+        "label": "6.3. NCK card - Focus and Space - TC26",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 24
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_63_NCK_card_-_Focus_and_Space_-_TC26_0_data-test-case26_2_desktop.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_63_NCK_card_-_Focus_and_Space_-_TC26_0_data-test-case26_2_desktop.png",
+        "selector": "[data-test-case=\"26\"]",
+        "fileName": "backstop_card_63_NCK_card_-_Focus_and_Space_-_TC26_0_data-test-case26_2_desktop.png",
+        "label": "6.3. NCK card - Focus and Space - TC26",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 39
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_64_NCK_card_-_Focus_and_Space_-_TC34_0_data-test-case34_0_phone.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_64_NCK_card_-_Focus_and_Space_-_TC34_0_data-test-case34_0_phone.png",
+        "selector": "[data-test-case=\"34\"]",
+        "fileName": "backstop_card_64_NCK_card_-_Focus_and_Space_-_TC34_0_data-test-case34_0_phone.png",
+        "label": "6.4. NCK card - Focus and Space - TC34",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 42
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_64_NCK_card_-_Focus_and_Space_-_TC34_0_data-test-case34_1_tablet.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_64_NCK_card_-_Focus_and_Space_-_TC34_0_data-test-case34_1_tablet.png",
+        "selector": "[data-test-case=\"34\"]",
+        "fileName": "backstop_card_64_NCK_card_-_Focus_and_Space_-_TC34_0_data-test-case34_1_tablet.png",
+        "label": "6.4. NCK card - Focus and Space - TC34",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 34
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_card_64_NCK_card_-_Focus_and_Space_-_TC34_0_data-test-case34_2_desktop.png",
+        "test": "..\\bitmaps_test\\20200722-130025\\backstop_card_64_NCK_card_-_Focus_and_Space_-_TC34_0_data-test-case34_2_desktop.png",
+        "selector": "[data-test-case=\"34\"]",
+        "fileName": "backstop_card_64_NCK_card_-_Focus_and_Space_-_TC34_0_data-test-case34_2_desktop.png",
+        "label": "6.4. NCK card - Focus and Space - TC34",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "http://localhost:8080/#/card",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00",
+          "analysisTime": 36
+        }
+      },
+      "status": "pass"
+    }
+  ],
+  "id": "backstop_card"
+}

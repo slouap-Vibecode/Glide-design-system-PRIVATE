@@ -1,0 +1,180 @@
+{
+  "id": "backstop_switch",
+  "viewports": [
+    {
+      "label": "phone",
+      "width": 320,
+      "height": 480
+    },
+    {
+      "label": "tablet",
+      "width": 1024,
+      "height": 900
+    },
+    {
+      "label": "desktop",
+      "width": 1920,
+      "height": 1080
+  }
+  ],
+  "onBeforeScript": "puppet/onBefore.js",
+  "onReadyScript": "puppet/onReady.js",
+  "scenarios": [
+    {
+      "label": "1. NCK switch - default display",
+        "url": "http://localhost:8080/#/switch",
+        "misMatchThreshold": 0,
+        "requireSameDimensions": true,
+        "description": "display the default state of all the switches on the page"
+
+    },
+
+    {
+      "label": "2. NCK switch - CLICK all switches",
+      "url": "http://localhost:8080/#/switch",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "display the state of all switches after they are clicked",
+      "onReadyScript": "clickAll.js",
+      "clickAllSelectors": "label"
+    },
+
+    {
+      "label": "3.1 NCK switch - HOVER TC0 switch",
+      "url": "http://localhost:8080/#/switch",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the TC0 switch",
+      "hoverSelector": "[data-test-case=\"0\"] label",
+      "selectors": ["[data-test-case=\"0\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "3.2 NCK switch - HOVER TC2 switch",
+      "url": "http://localhost:8080/#/switch",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the TC2 switch",
+      "hoverSelector": "[data-test-case=\"2\"] label",
+      "selectors": ["[data-test-case=\"2\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "3.3 NCK switch - HOVER TC5 switch",
+      "url": "http://localhost:8080/#/switch",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the TC5 switch",
+      "hoverSelector": "[data-test-case=\"5\"] label",
+      "selectors": ["[data-test-case=\"5\"]"],
+      "selectorExpansion": true
+    },
+
+
+    {
+      "label": "4.1 NCK switch - FOCUS TC0 switch",
+      "url": "http://localhost:8080/#/switch",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the TC0 switch",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"0\"] label",
+      "selectors": ["[data-test-case=\"0\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "4.2 NCK switch - FOCUS TC2 switch",
+      "url": "http://localhost:8080/#/switch",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the TC2 switch",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"2\"] label",
+      "selectors": ["[data-test-case=\"2\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "4.3 NCK switch - FOCUS TC5 switch",
+      "url": "http://localhost:8080/#/switch",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the TC5 switch",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"5\"] label",
+      "selectors": ["[data-test-case=\"5\"]"],
+      "selectorExpansion": true
+    },
+
+
+    {
+      "label": "5.1 NCK switch - FOCUS+SPACE TC0 switch",
+      "url": "http://localhost:8080/#/switch",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus+space on the TC0 switch",
+      "onReadyScript": "focusAndPressSpace.js",
+      "focusAndPressSpaceSelector": "[data-test-case=\"0\"] label",
+      "selectors": ["[data-test-case=\"0\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "5.2 NCK switch - FOCUS+SPACE TC2 switch",
+      "url": "http://localhost:8080/#/switch",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus+space on the TC2 switch",
+      "onReadyScript": "focusAndPressSpace.js",
+      "focusAndPressSpaceSelector": "[data-test-case=\"2\"] label",
+      "selectors": ["[data-test-case=\"2\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "5.3 NCK switch - FOCUS+SPACE TC5 switch",
+      "url": "http://localhost:8080/#/switch",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus+space on the TC5 switch",
+      "onReadyScript": "focusAndPressSpace.js",
+      "focusAndPressSpaceSelector": "[data-test-case=\"5\"] label",
+      "selectors": ["[data-test-case=\"5\"]"],
+      "selectorExpansion": true
+    },
+
+    {
+      "label": "6 NCK switch - Click TC0 Focus button",
+      "url": "http://localhost:8080/#/switch",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click TC0 Focus button",
+      "clickSelector": "[data-test-case=\"0\"] [data-focus-input]",
+      "selectors": ["[data-test-case=\"0\"]"],
+      "selectorExpansion": true
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "report": ["CI"],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args":[
+    "--no-sandbox",
+    "--disable-setuid-sandbox",
+    "--disable-dev-shm-usage",
+    "--disable-accelerated-2d-canvas",
+    "--no-first-run",
+    "--no-zygote",
+
+    "--disable-gpu"
+  ],
+    "protocolTimeout": 960000
+  },
+  "asyncCaptureLimit": 3,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false
+}

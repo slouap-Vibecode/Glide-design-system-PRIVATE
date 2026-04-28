@@ -1,0 +1,390 @@
+{
+    "id": "backstop_slider",
+    "viewports": [
+        {
+            "label": "phone",
+            "width": 320,
+            "height": 1150
+        },
+        {
+            "label": "tablet",
+            "width": 1024,
+            "height": 1030
+        },
+        {
+            "label": "desktop",
+            "width": 1920,
+            "height": 950
+        }
+    ],
+    "onBeforeScript": "puppet/onBefore.js",
+    "onReadyScript": "puppet/onReady.js",
+    "scenarios": [
+        {
+            "label": "1. NCK slider - default display of the page",
+            "url": "http://localhost:8080/#/slider",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "display the default state of all the sliders on the page"
+        },
+        {
+            "label": "2.1 NCK slider - CLICK TC1 slider thumb",
+            "url": "http://localhost:8080/#/slider",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on the slider thumb of TC1",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"1\"] .noUi-handle"
+                },
+                {
+                    "type": "mouseMove",
+                    "coordinate": {
+                        "x": 5,
+                        "y": 5
+                    }
+                }
+            ],
+            "selectors": "[data-test-case=\"1\"]"
+        },
+        {
+            "label": "2.2 NCK slider - CLICK TC2 slider thumb",
+            "url": "http://localhost:8080/#/slider",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on the slider thumb of TC2",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"2\"] .noUi-handle"
+                },
+                {
+                    "type": "mouseMove",
+                    "coordinate": {
+                        "x": 5,
+                        "y": 5
+                    }
+                }
+            ],
+            "selectors": "[data-test-case=\"2\"]"
+        },
+        {
+            "label": "2.3 NCK slider - CLICK TC1 slider bar",
+            "url": "http://localhost:8080/#/slider",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on the slider bar of TC1",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"1\"] .nck-slider-inner"
+                },
+                {
+                    "type": "mouseMove",
+                    "coordinate": {
+                        "x": 5,
+                        "y": 5
+                    }
+                }
+            ],
+            "selectors": "[data-test-case=\"1\"]"
+        },
+        {
+            "label": "3.1 NCK slider - HOVER TC1 slider thumb",
+            "url": "http://localhost:8080/#/slider",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Hover on the slider of TC1",
+            "hoverSelector": "[data-test-case=\"1\"] .noUi-handle",
+            "selectors": "[data-test-case=\"1\"]"
+        },
+        {
+            "label": "3.2 NCK slider - HOVER+MOUSE DOWN TC1 slider thumb",
+            "url": "http://localhost:8080/#/slider",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Hover and Mouse down on the slider of TC1",
+            "onReadyScript": "hoverAndPressMouseSelector.js",
+            "hoverAndPressMouseSelector": "[data-test-case=\"1\"] .noUi-handle",
+            "selectors": "[data-test-case=\"1\"]"
+        },
+        {
+            "label": "3.3 NCK slider - HOVER+MOUSE DOWN TC2 slider thumb",
+            "url": "http://localhost:8080/#/slider",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Hover and Mouse down on the slider of TC2",
+            "onReadyScript": "hoverAndPressMouseSelector.js",
+            "hoverAndPressMouseSelector": "[data-test-case=\"2\"] .noUi-handle",
+            "selectors": "[data-test-case=\"2\"]"
+        },
+        {
+            "label": "3.4 NCK slider - Click and drag TC1 slider thumb to the right",
+            "url": "http://localhost:8080/#/slider",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click and drag TC1 slider thumb to the right",
+            "onReadyScript": "moveMouseWhileHolding.js",
+            "hoverSelector": "[data-test-case=\"1\"] .noUi-handle",
+            "xPixelToMove": 30,
+            "selectors": "[data-test-case=\"1\"]"
+        },
+        {
+            "label": "3.5 NCK slider - Click and drag TC2 slider thumb to the left",
+            "url": "http://localhost:8080/#/slider",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click and drag TC2 slider thumb to the right",
+            "onReadyScript": "moveMouseWhileHolding.js",
+            "hoverSelector": "[data-test-case=\"2\"] .noUi-handle",
+            "xPixelToMove": -10,
+            "selectors": "[data-test-case=\"2\"]"
+        },
+        {
+            "label": "4.1 NCK slider - FOCUS TC1 slider thumb",
+            "url": "http://localhost:8080/#/slider",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Focus on the slider of TC1",
+            "onReadyScript": "focus.js",
+            "focusSelector": "[data-test-case=\"1\"] .noUi-handle",
+            "selectors": "[data-test-case=\"1\"]"
+        },
+        {
+            "label": "4.2 NCK slider - FOCUS TC2 slider thumb",
+            "url": "http://localhost:8080/#/slider",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Focus on the slider of TC2",
+            "onReadyScript": "focus.js",
+            "focusSelector": "[data-test-case=\"2\"] .noUi-handle",
+            "selectors": "[data-test-case=\"2\"]"
+        },
+        {
+            "label": "5.1 NCK slider - FOCUS TC1 slider thumb + RIGHT arrow key",
+            "url": "http://localhost:8080/#/slider",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Focus on the slider of TC1 then press right arrow key",
+            "selectors": "[data-test-case=\"1\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "focus",
+                    "selector": "[data-test-case=\"1\"] .noUi-handle"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowRight"
+                }
+            ]
+        },
+        {
+            "label": "5.2 NCK slider - FOCUS TC1 slider thumb + RIGHT arrow key x 2",
+            "url": "http://localhost:8080/#/slider",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Focus on the slider of TC1 then press right arrow key twice",
+            "selectors": "[data-test-case=\"1\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "focus",
+                    "selector": "[data-test-case=\"1\"] .noUi-handle"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowRight"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowRight"
+                }
+            ]
+        },
+        {
+            "label": "5.3 NCK slider - FOCUS TC1 slider thumb + UP arrow key ",
+            "url": "http://localhost:8080/#/slider",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Focus on the slider of TC1 then press up arrow key",
+            "selectors": "[data-test-case=\"1\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "focus",
+                    "selector": "[data-test-case=\"1\"] .noUi-handle"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowUp"
+                }
+            ]
+        },
+        {
+            "label": "5.4 NCK slider - FOCUS TC1 slider thumb + LEFT arrow key",
+            "url": "http://localhost:8080/#/slider",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Focus on the slider of TC1 then press left arrow key",
+            "selectors": "[data-test-case=\"1\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "focus",
+                    "selector": "[data-test-case=\"1\"] .noUi-handle"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowLeft"
+                }
+            ]
+        },
+        {
+            "label": "5.5 NCK slider - FOCUS TC1 slider thumb + DOWN arrow key",
+            "url": "http://localhost:8080/#/slider",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Focus on the slider of TC1 then press down arrow key",
+            "selectors": "[data-test-case=\"1\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "focus",
+                    "selector": "[data-test-case=\"1\"] .noUi-handle"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowDown"
+                }
+            ]
+        },
+        {
+            "label": "5.5 NCK slider - FOCUS TC1 slider thumb + HOME key",
+            "url": "http://localhost:8080/#/slider",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Focus on the slider of TC1 then press home key",
+            "selectors": "[data-test-case=\"1\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "focus",
+                    "selector": "[data-test-case=\"1\"] .noUi-handle"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Home"
+                }
+            ]
+        },
+        {
+            "label": "5.6 NCK slider - FOCUS TC1 slider thumb + END key",
+            "url": "http://localhost:8080/#/slider",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Focus on the slider of TC1 then press end key",
+            "selectors": "[data-test-case=\"1\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "focus",
+                    "selector": "[data-test-case=\"1\"] .noUi-handle"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "End"
+                }
+            ]
+        },
+        {
+            "label": "6.1 NCK slider - TC3 Change the value of slider",
+            "url": "http://localhost:8080/#/slider",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on the button to change the value of slider",
+            "clickSelector": "[data-test-case=\"3\"] .button3",
+            "selectors": ["[data-test-case=\"3\"]"]
+
+        },
+        {
+            "label": "7.1 NCK slider - TC4 change step value and move the slider",
+            "url": "http://localhost:8080/#/slider",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on the button and move the slider",
+            "selectors": ["[data-test-case=\"4\"]"],
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"4\"] .button3"
+                },
+                {
+                    "type": "focus",
+                    "selector": "[data-test-case=\"4\"] .noUi-handle"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowUp"
+                }
+            ]
+
+        },
+        {
+            "label": "8.1 NCK slider - TC5 change range of the slider",
+            "url": "http://localhost:8080/#/slider",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on the button to change range of slider and move the slider",
+            "selectors": ["[data-test-case=\"5\"]"],
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"5\"] .button3"
+                },
+                {
+                    "type": "focus",
+                    "selector": "[data-test-case=\"5\"] .noUi-handle"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "End"
+                }
+            ]
+
+        }
+    ],
+    "paths": {
+        "bitmaps_reference": "backstop_data/bitmaps_reference",
+        "bitmaps_test": "backstop_data/bitmaps_test",
+        "engine_scripts": "backstop_data/engine_scripts",
+        "html_report": "backstop_data/html_report",
+        "ci_report": "backstop_data/ci_report"
+    },
+    "report": [
+        "CI"
+    ],
+    "engine": "puppeteer",
+    "engineOptions": {
+        "args": [
+            "--no-sandbox",
+            "--disable-setuid-sandbox",
+            "--disable-dev-shm-usage",
+            "--disable-accelerated-2d-canvas",
+            "--no-first-run",
+            "--no-zygote",
+            "--disable-gpu"
+        ],
+        "protocolTimeout": 960000
+    },
+    "asyncCaptureLimit": 3,
+    "asyncCompareLimit": 50,
+    "debug": false,
+    "debugWindow": false
+}

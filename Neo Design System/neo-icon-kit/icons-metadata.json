@@ -1,0 +1,454 @@
+{
+  "metadata": {
+    "version": "5.5.0",
+    "totalIcons": 833,
+    "generatedAt": "2026-02-17",
+    "compatibleWithNeoComponentKit": "^16.0.0",
+    "description": "Metadata for Neo Icon Kit - aligned with internal component kit Vue.js design system"
+  },
+  "iconSizes": {
+    "supported": ["XXS", "XS", "S", "M", "L", "XL"],
+    "mapping": {
+      "XXS": "0.5rem",
+      "XS": "1rem",
+      "S": "1.25rem",
+      "M": "1.5rem",
+      "L": "2rem",
+      "XL": "3rem"
+    },
+    "recommended": {
+      "buttons": ["XS", "S", "M"],
+      "navigation": ["S", "M"],
+      "illustrations": ["L", "XL"],
+      "inline-text": ["XXS", "XS"]
+    }
+  },
+  "colorSystem": {
+    "supportedColors": [
+      "deep-blue-400", "deep-blue-300", "deep-blue-200", "deep-blue-100",
+      "bright-blue-400", "bright-blue-300", "bright-blue-200", "bright-blue-100",
+      "blue-grey-700", "blue-grey-600", "blue-grey-500", "blue-grey-400",
+      "green-400", "green-300", "green-200", "green-100",
+      "orange-400", "orange-300", "orange-200", "orange-100",
+      "red-400", "red-300", "red-200", "red-100",
+      "yellow-400", "yellow-300", "yellow-200", "yellow-100", "yellow-50",
+      "white"
+    ],
+    "defaultPrimaryColor": "bright-blue-300",
+    "cssClasses": {
+      "primary": "svg-primary-fill",
+      "secondary": "svg-secondary-fill"
+    }
+  },
+  "categories": {
+    "ui-controls": {
+      "description": "Basic UI interaction icons for buttons, navigation, and controls",
+      "icons": [
+        "add-plus", "close", "search", "filter", "sort", "refresh",
+        "arrow-left", "arrow-right", "arrow-up", "arrow-down",
+        "chevron-left", "chevron-right", "chevron-up", "chevron-down",
+        "caret-left", "caret-right", "caret-up", "caret-down",
+        "menu", "grid", "list", "edit", "delete", "settings"
+      ],
+      "commonUsage": ["buttons", "navigation", "toolbars", "forms"],
+      "recommendedSizes": ["XS", "S", "M"]
+    },
+    "status-feedback": {
+      "description": "Icons indicating status, state, or providing user feedback",
+      "icons": [
+        "check", "check-filled", "warning", "warning-filled",
+        "alert", "alert-filled", "error", "error-filled",
+        "info", "info-filled", "pending", "loading",
+        "success", "cancel", "favorite", "favorite-filled"
+      ],
+      "commonUsage": ["alerts", "notifications", "form-validation", "badges"],
+      "recommendedSizes": ["S", "M"],
+      "colorGuidelines": {
+        "success": ["green-300", "green-400"],
+        "warning": ["yellow-300", "orange-300"],
+        "error": ["red-300", "red-400"],
+        "info": ["bright-blue-300", "bright-blue-400"]
+      }
+    },
+    "travel-transport": {
+      "description": "Travel and transportation related icons",
+      "icons": [
+        "plane", "plane-filled", "plane-outbound", "plane-inbound",
+        "train", "train-filled", "rail", "rail-filled",
+        "hotel", "hotel-filled", "amenity-parking", "amenity-fitness",
+        "ground-transport-taxi", "ground-transport-bus", "airport",
+        "passport", "luggage", "seat", "boarding-pass"
+      ],
+      "commonUsage": ["travel-bookings", "itineraries", "amenities", "transportation"],
+      "recommendedSizes": ["S", "M", "L"]
+    },
+    "payment-financial": {
+      "description": "Payment, currency, and financial transaction icons",
+      "icons": [
+        "payment", "payment-filled", "transfer", "transfer-filled",
+        "cashback", "cashback-filled", "card", "card-filled",
+        "dollar", "euro", "pound", "yen", "currency-dollar-filled",
+        "billing", "receipt", "autopay", "refund", "wallet"
+      ],
+      "commonUsage": ["payment-forms", "financial-dashboards", "transactions"],
+      "recommendedSizes": ["S", "M"]
+    },
+    "amenities": {
+      "description": "Hotel and service amenities",
+      "icons": [
+        "amenity-accessible", "amenity-bar", "amenity-fitness",
+        "amenity-parking", "amenity-wifi", "amenity-pool",
+        "amenity-spa", "amenity-restaurant", "amenity-business-center",
+        "amenity-pet-friendly", "amenity-air-conditioning", "amenity-laundry"
+      ],
+      "commonUsage": ["hotel-listings", "service-descriptions", "facility-guides"],
+      "recommendedSizes": ["M", "L"],
+      "variants": {
+        "theme": ["default", "dark", "grey"],
+        "note": "Most amenity icons have -dark and -grey variants for different backgrounds"
+      }
+    },
+    "user-account": {
+      "description": "User profile, account, and authentication icons",
+      "icons": [
+        "account", "account-filled", "profile", "login", "logout",
+        "user-group", "permission", "security", "privacy",
+        "notification", "settings-user", "preferences"
+      ],
+      "commonUsage": ["user-menus", "profile-pages", "account-settings"],
+      "recommendedSizes": ["S", "M"]
+    }
+  },
+  "icons": {
+    "account-filled.svg": {
+      "category": "user-account",
+      "subcategory": "profile",
+      "tags": ["user", "person", "profile", "account", "filled"],
+      "description": "Filled user account/profile icon",
+      "accessibility": {
+        "defaultAltText": "User account",
+        "contextualUsage": {
+          "button": "Account settings",
+          "menu": "User profile",
+          "nav": "My account"
+        }
+      },
+      "dimensions": "48x48",
+      "hasSecondaryFill": false,
+      "variants": {
+        "outline": "account.svg",
+        "filled": "account-filled.svg"
+      },
+      "componentUsage": {
+        "nckButton": {
+          "leftIcon": "account-filled",
+          "rightIcon": "account-filled",
+          "commonSizes": ["XS", "S", "M"]
+        },
+        "nckHeader": {
+          "userMenuIcon": "account-filled"
+        }
+      }
+    },
+    "add-plus.svg": {
+      "category": "ui-controls",
+      "subcategory": "actions",
+      "tags": ["add", "plus", "create", "new", "increase"],
+      "description": "Plus/add icon for creating new items or increasing values",
+      "accessibility": {
+        "defaultAltText": "Add",
+        "contextualUsage": {
+          "button": "Add item",
+          "form": "Add new entry",
+          "toolbar": "Create"
+        }
+      },
+      "dimensions": "48x48",
+      "hasSecondaryFill": false,
+      "variants": {
+        "base": "add-plus.svg"
+      },
+      "componentUsage": {
+        "nckButton": {
+          "leftIcon": "add-plus",
+          "commonSizes": ["XS", "S", "M"],
+          "commonColors": ["bright-blue-300", "green-300"]
+        }
+      }
+    },
+    "amenity-accessible-dark.svg": {
+      "category": "amenities",
+      "subcategory": "accessibility",
+      "tags": ["accessibility", "disabled", "accessible", "amenity", "dark", "hotel"],
+      "description": "Dark variant accessibility amenity icon for hotels/services",
+      "accessibility": {
+        "defaultAltText": "Accessibility features",
+        "contextualUsage": {
+          "hotel": "Accessible facilities available",
+          "amenity": "Wheelchair accessible"
+        }
+      },
+      "dimensions": "48x48",
+      "hasSecondaryFill": true,
+      "variants": {
+        "default": "amenity-accessible.svg",
+        "dark": "amenity-accessible-dark.svg",
+        "grey": "amenity-accessible-grey.svg"
+      },
+      "componentUsage": {
+        "nckCard": {
+          "amenityIcon": "amenity-accessible-dark",
+          "recommendedSize": "M"
+        }
+      }
+    },
+    "arrow-left.svg": {
+      "category": "ui-controls",
+      "subcategory": "navigation",
+      "tags": ["arrow", "left", "back", "previous", "navigation"],
+      "description": "Left-pointing arrow for back navigation or previous actions",
+      "accessibility": {
+        "defaultAltText": "Go back",
+        "contextualUsage": {
+          "button": "Previous",
+          "navigation": "Go back",
+          "pagination": "Previous page"
+        }
+      },
+      "dimensions": "48x48",
+      "hasSecondaryFill": false,
+      "variants": {
+        "directions": ["arrow-left.svg", "arrow-right.svg", "arrow-up.svg", "arrow-down.svg"]
+      },
+      "componentUsage": {
+        "nckButton": {
+          "leftIcon": "arrow-left",
+          "commonSizes": ["XS", "S"],
+          "commonContext": "back-navigation"
+        },
+        "nckPagination": {
+          "previousIcon": "arrow-left"
+        }
+      }
+    },
+    "check-filled.svg": {
+      "category": "status-feedback",
+      "subcategory": "success",
+      "tags": ["check", "checkmark", "success", "complete", "filled", "done"],
+      "description": "Filled checkmark icon indicating success or completion",
+      "accessibility": {
+        "defaultAltText": "Success",
+        "contextualUsage": {
+          "form": "Field validated successfully",
+          "status": "Completed",
+          "confirmation": "Confirmed"
+        }
+      },
+      "dimensions": "48x48",
+      "hasSecondaryFill": false,
+      "variants": {
+        "outline": "check.svg",
+        "filled": "check-filled.svg"
+      },
+      "componentUsage": {
+        "nckBanner": {
+          "successIcon": "check-filled",
+          "recommendedColor": "green-300"
+        },
+        "nckToast": {
+          "successIcon": "check-filled"
+        }
+      }
+    },
+    "close.svg": {
+      "category": "ui-controls",
+      "subcategory": "actions",
+      "tags": ["close", "x", "cancel", "dismiss", "exit"],
+      "description": "Close/X icon for dismissing dialogs, closing panels, or canceling actions",
+      "accessibility": {
+        "defaultAltText": "Close",
+        "contextualUsage": {
+          "modal": "Close dialog",
+          "drawer": "Close panel",
+          "toast": "Dismiss notification"
+        }
+      },
+      "dimensions": "48x48",
+      "hasSecondaryFill": false,
+      "variants": {
+        "base": "close.svg",
+        "themed": "close-dark.svg"
+      },
+      "componentUsage": {
+        "nckModal": {
+          "closeIcon": "close",
+          "commonSizes": ["S", "M"]
+        },
+        "nckDrawer": {
+          "closeIcon": "close"
+        },
+        "nckToast": {
+          "dismissIcon": "close"
+        }
+      }
+    },
+    "currency-dollar-filled.svg": {
+      "category": "payment-financial",
+      "subcategory": "currency",
+      "tags": ["dollar", "currency", "money", "usd", "filled", "financial"],
+      "description": "Filled US dollar currency symbol",
+      "accessibility": {
+        "defaultAltText": "US Dollar",
+        "contextualUsage": {
+          "payment": "Amount in USD",
+          "price": "Dollar amount",
+          "financial": "US Dollar currency"
+        }
+      },
+      "dimensions": "48x48",
+      "hasSecondaryFill": false,
+      "variants": {
+        "currencies": [
+          "currency-dollar-filled.svg",
+          "currency-euro-filled.svg",
+          "currency-pound-filled.svg",
+          "currency-yen-filled.svg"
+        ]
+      },
+      "componentUsage": {
+        "nckBadge": {
+          "currencyIcon": "currency-dollar-filled",
+          "recommendedSize": "S"
+        }
+      }
+    },
+    "loading.svg": {
+      "category": "status-feedback",
+      "subcategory": "progress",
+      "tags": ["loading", "spinner", "progress", "wait", "pending"],
+      "description": "Loading/spinner icon for indicating progress or waiting states",
+      "accessibility": {
+        "defaultAltText": "Loading",
+        "contextualUsage": {
+          "button": "Loading...",
+          "form": "Processing request",
+          "page": "Loading content"
+        }
+      },
+      "dimensions": "48x48",
+      "hasSecondaryFill": false,
+      "variants": {
+        "base": "loading.svg"
+      },
+      "componentUsage": {
+        "nckButton": {
+          "loadingIcon": "loading",
+          "note": "Used internally by nckLoader component"
+        }
+      }
+    },
+    "search.svg": {
+      "category": "ui-controls",
+      "subcategory": "input",
+      "tags": ["search", "find", "magnifying-glass", "lookup", "query"],
+      "description": "Search/magnifying glass icon for search functionality",
+      "accessibility": {
+        "defaultAltText": "Search",
+        "contextualUsage": {
+          "input": "Search field",
+          "button": "Search",
+          "form": "Submit search"
+        }
+      },
+      "dimensions": "48x48",
+      "hasSecondaryFill": false,
+      "variants": {
+        "base": "search.svg",
+        "small": "search-s.svg"
+      },
+      "componentUsage": {
+        "nckButton": {
+          "searchIcon": "search",
+          "commonSizes": ["XS", "S"]
+        }
+      }
+    },
+    "warning-filled.svg": {
+      "category": "status-feedback",
+      "subcategory": "warning",
+      "tags": ["warning", "alert", "caution", "attention", "filled", "triangle"],
+      "description": "Filled warning triangle icon for alerts and cautionary messages",
+      "accessibility": {
+        "defaultAltText": "Warning",
+        "contextualUsage": {
+          "alert": "Warning message",
+          "form": "Field validation warning",
+          "banner": "Important notice"
+        }
+      },
+      "dimensions": "48x48",
+      "hasSecondaryFill": false,
+      "variants": {
+        "outline": "warning.svg",
+        "filled": "warning-filled.svg"
+      },
+      "componentUsage": {
+        "nckBanner": {
+          "warningIcon": "warning-filled",
+          "recommendedColor": "orange-300"
+        },
+        "nckToast": {
+          "warningIcon": "warning-filled"
+        }
+      }
+    }
+  },
+  "usageGuidelines": {
+    "accessibility": {
+      "iconAltText": {
+        "required": true,
+        "emptyString": "Use empty string '' for purely decorative icons",
+        "descriptive": "Provide meaningful description for functional icons",
+        "contextual": "Adapt alt text based on usage context"
+      },
+      "ariaLabeling": {
+        "implementation": "nckIcon automatically adds proper ARIA attributes",
+        "roleImg": "Icons get role='img' when alt text is provided",
+        "ariaHidden": "Decorative icons get aria-hidden='true'"
+      }
+    },
+    "performance": {
+      "caching": "Icons are cached globally via neoIconsPromiseMap",
+      "lazyLoading": "Icons load on-demand via HTTP fetch",
+      "optimization": "All icons are optimized SVG with viewBox for scaling"
+    },
+    "theming": {
+      "colorCustomization": "Use IconColors enum values that map to design tokens",
+      "primarySecondary": "Icons support both primary and secondary fill colors",
+      "cssIntegration": "Colors applied via CSS classes that reference design system tokens"
+    },
+    "componentIntegration": {
+      "nckIcon": "Always use nckIcon component, never direct SVG imports",
+      "sizing": "Use IconSize enum values for consistent sizing",
+      "responsiveness": "Components often render multiple sizes for responsive design"
+    }
+  },
+  "developmentGuidelines": {
+    "addingNewIcons": {
+      "fileNaming": "Follow pattern: {category}-{descriptor}-{modifier}-{variant}.svg",
+      "svgRequirements": [
+        "Must have viewBox attribute",
+        "Use class='svg-primary-fill' for customizable colors",
+        "Optionally class='svg-secondary-fill' for two-color icons",
+        "No hardcoded colors that can't be overridden"
+      ],
+      "metadataUpdate": "Add entry to this icons-metadata.json file",
+      "testing": "Test with nckIcon component in various sizes and colors"
+    },
+    "categoryCreation": {
+      "semantic": "Create semantic categories based on usage context",
+      "componentAlignment": "Ensure categories align with component usage patterns",
+      "guidelines": "Include usage guidelines and recommended sizes/colors"
+    }
+  }
+}

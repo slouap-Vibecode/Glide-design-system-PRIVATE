@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "neo-design-system": {
+      "command": "neo-design-system-mcp",
+      "args": ["--stdio"],
+      "env": {
+        "NEO_COMPONENT_KIT_PATH": "../Neo Design System/neo-component-kit-ai-enhanced",
+        "NEO_ICON_KIT_PATH": "../Neo Design System/neo-icon-kit",
+        "NEO_MCP_CACHE_DIR": "./.neo-mcp-cache",
+        "NEO_MCP_ENABLE_WATCHER": "true",
+        "NEO_MCP_DEBUG": "false"
+      }
+    }
+  }
+}

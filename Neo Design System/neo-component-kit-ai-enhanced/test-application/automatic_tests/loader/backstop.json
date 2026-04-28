@@ -1,0 +1,142 @@
+{
+  "id": "backstop_loader",
+  "viewports": [
+    {
+      "label": "phone",
+      "width": 320,
+      "height": 2240
+    },
+    {
+      "label": "tablet",
+      "width": 1024,
+      "height": 1610
+    },
+    {
+      "label": "desktop",
+      "width": 1920,
+      "height": 1610
+    }
+  ],
+  "onBeforeScript": "puppet/onBefore.js",
+  "onReadyScript": "puppet/onReady.js",
+  "scenarios": [
+    {
+      "label": "1. NCK loader - default display",
+      "url": "http://localhost:8080/#loader?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "display the default state of all the loaders on the page",
+      "postInteractionWait": 600
+    },
+    {
+      "label": "2.1 NCK loader - display of TC 9 loading area",
+      "url": "http://localhost:8080/#/loader",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "display the loading area of TC 9 after the loading finishes",
+      "delay": 11000,
+      "selectors": ["[data-test-case=\"9\"]"]
+    },
+    {
+      "label": "2.2 NCK loader - CLICK TC 6 button",
+      "url": "http://localhost:8080/#loader?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click TC6 button in order to display the loading and see it while is loading",
+      "postInteractionWait": 500,
+      "clickSelector": "[data-test-case=\"6\"] button",
+      "selectors": ["[data-test-case=\"6\"]"]
+    },
+    {
+      "label": "2.3 NCK loader - CLICK twice TC 6 button",
+      "url": "http://localhost:8080/#loader?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "after clicking once, click again on the TC6 button",
+      "clickSelector1": "[data-test-case=\"6\"] button",
+      "onReadyScript": "clickWaitAndClick.js",
+      "waitInBetween": 12000,
+      "clickSelector2": "[data-test-case=\"6\"] button",
+      "selectors": ["[data-test-case=\"6\"]"]
+    },
+    {
+      "label": "2.4 NCK loader - CLICK TC 8 button",
+      "url": "http://localhost:8080/#loader?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click TC8 button in order to display the text and see it while is loading",
+      "postInteractionWait": 500,
+      "clickSelector": "[data-test-case=\"8\"] button",
+      "selectors": ["[data-test-case=\"8\"]"]
+    },
+    {
+      "label": "2.5 NCK loader - Display text after click TC 8 button",
+      "url": "http://localhost:8080/#loader?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "display the text after clicking once on TC8 button",
+      "clickSelector": "[data-test-case=\"8\"] button",
+      "selectors": ["[data-test-case=\"8\"]"],
+      "postInteractionWait": 12000
+    },
+    {
+      "label": "2.6 NCK loader - CLICK TC 13 button",
+      "url": "http://localhost:8080/#loader?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click TC13 button in order to display the text and see it while is loading",
+      "postInteractionWait": 500,
+      "clickSelector": "[data-test-case=\"13\"] button",
+      "selectors": ["[data-test-case=\"13\"]"],
+      "onReadyScript": "clickAndMoveMouse.js"
+    },
+    {
+      "label": "2.7 NCK loader - Display text after click TC 13 button",
+      "url": "http://localhost:8080/#loader?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "display the text after clicking once on TC13 button",
+      "clickSelector": "[data-test-case=\"13\"] button",
+      "selectors": ["[data-test-case=\"13\"]"],
+      "postInteractionWait": 12000,
+      "onReadyScript": "clickAndMoveMouse.js"
+    },
+    {
+      "label": "2.8 NCK loader - Click tc 14 button and wait",
+      "url": "http://localhost:8080/#loader?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click tc14 button and wait to see the focus remains on the button after the content has loaded",
+      "focusAndPressEnterSelector": "[data-test-case=\"14\"] button",
+      "selectors": ["[data-test-case=\"14\"]"],
+      "postInteractionWait": 3000,
+      "onReadyScript": "focusAndPressEnter.js"
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "report": ["CI"],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args":[
+    "--no-sandbox",
+    "--disable-setuid-sandbox",
+    "--disable-dev-shm-usage",
+    "--disable-accelerated-2d-canvas",
+    "--no-first-run",
+    "--no-zygote",
+
+    "--disable-gpu"
+  ],
+    "protocolTimeout": 960000
+  },
+  "asyncCaptureLimit": 3,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false
+}

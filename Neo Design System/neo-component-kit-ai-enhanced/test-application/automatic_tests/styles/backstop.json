@@ -1,0 +1,137 @@
+{
+    "id": "backstop_styles",
+    "viewports": [
+        {
+            "label": "phone",
+            "width": 320,
+            "height": 5600
+        },
+        {
+            "label": "tablet",
+            "width": 1024,
+            "height": 3000
+        },
+        {
+            "label": "desktop",
+            "width": 1920,
+            "height": 2600
+            
+        }
+    ],
+    "onBeforeScript": "puppet/onBefore.js",
+    "onReadyScript": "puppet/onReady.js",
+    "scenarios": [
+        {
+            "label": "1. NCK styles - default display of the page",
+            "url": "http://localhost:8080/#/styles",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "display the default state of all the sliders on the page"
+        },
+        {
+            "label": "2.1 NCK styles - Hover TC2 style 1",
+            "url": "http://localhost:8080/#/styles",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Hover on the first style of TC2",
+            "hoverSelector": "[data-test-case=\"2\"] .background-color-hover-bright-blue-100",
+            "selectors": "[data-test-case=\"2\"]"
+        },
+        {
+            "label": "2.2 NCK styles - Hover TC2 style 2",
+            "url": "http://localhost:8080/#/styles",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Hover on the second style of TC2",
+            "hoverSelector": "[data-test-case=\"2\"] .background-color-hover-red-200",
+            "selectors": "[data-test-case=\"2\"]"
+        },
+        {
+            "label": "2.3 NCK styles - Hover TC2 style 3",
+            "url": "http://localhost:8080/#/styles",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Hover on the third style of TC2",
+            "hoverSelector": "[data-test-case=\"2\"] .background-color-hover-green-300",
+            "selectors": "[data-test-case=\"2\"]"
+        },
+        {
+            "label": "2.4 NCK styles - Hover TC5 link",
+            "url": "http://localhost:8080/#/styles",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Hover on the link of TC5",
+            "hoverSelector": "[data-test-case=\"5\"] .nck-link",
+            "selectors": "[data-test-case=\"5\"]"
+        },
+        {
+            "label": "2.5 NCK styles - Hover TC5 button",
+            "url": "http://localhost:8080/#/styles",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Hover on the button of TC5",
+            "hoverSelector": "[data-test-case=\"5\"] .nck-button-with-link-aspect",
+            "selectors": "[data-test-case=\"5\"]"
+        },
+        {
+            "label": "3.1 NCK styles - FOCUS TC4 style 1",
+            "url": "http://localhost:8080/#/styles",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Focus on the first style of TC4",
+            "onReadyScript": "focus.js",
+            "focusSelector": "[data-test-case=\"4\"] .outside-focus",
+            "selectors": "[data-test-case=\"4\"]"
+        },
+        {
+            "label": "3.2 NCK styles - FOCUS TC4 style 2",
+            "url": "http://localhost:8080/#/styles",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Focus on the second style of TC4",
+            "onReadyScript": "focus.js",
+            "focusSelector": "[data-test-case=\"4\"] .inside-focus",
+            "selectors": "[data-test-case=\"4\"]"
+        },
+        {
+            "label": "4.1 NCK styles - Click TC5 link",
+            "url": "http://localhost:8080/#/styles",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on the link of TC5",
+            "clickSelector": "[data-test-case=\"5\"] .nck-link",
+            "selectorExpansion": true,
+            "selectors": "[data-test-case=\"5\"]"
+        },
+        {
+            "label": "4.2 NCK styles - Click TC5 button",
+            "url": "http://localhost:8080/#/styles",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on the button of TC5",
+            "clickSelector": "[data-test-case=\"5\"] .nck-button-with-link-aspect",
+            "selectors": "[data-test-case=\"5\"]"
+        }
+    ],
+    "paths": {
+      "bitmaps_reference": "backstop_data/bitmaps_reference",
+      "bitmaps_test": "backstop_data/bitmaps_test",
+      "engine_scripts": "backstop_data/engine_scripts",
+      "html_report": "backstop_data/html_report",
+      "ci_report": "backstop_data/ci_report"
+  },
+  "report": [
+      "CI"
+  ],
+  "engine": "puppeteer",
+  "engineOptions": {
+      "args": [
+          "--no-sandbox"
+      ],
+      "protocolTimeout": 960000
+  },
+  "asyncCaptureLimit": 3,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false
+}

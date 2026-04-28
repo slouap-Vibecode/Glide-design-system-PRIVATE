@@ -1,0 +1,1270 @@
+{
+    "id": "backstop_table",
+    "viewports": [
+        {
+            "label": "phone",
+            "width": 320,
+            "height": 23900
+        },
+        {
+            "label": "tablet",
+            "width": 1024,
+            "height": 15170
+        },
+        {
+            "label": "desktop",
+            "width": 1920,
+            "height": 11703
+        }
+    ],
+    "onBeforeScript": "puppet/onBefore.js",
+    "onReadyScript": "puppet/onReady.js",
+    "scenarios": [
+        {
+            "label": "1. NCK table - default",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "display the default state of all the tables, for all the 13 test cases",
+            "selectors": ["#app"]
+        },
+        {
+            "label": "2.1 NCK table - HOVER test case 0 for table row number 1",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "hover row 1 of the table from Test case 0 table",
+            "hoverSelector": "[data-test-case=\"0\"] .nck-table .table-row:nth-child(1)",
+            "selectors": [
+                "[data-test-case=\"0\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "2.2 NCK table - HOVER test case 0 for table row number 2",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "hover row 2 of the table from Test case 0 table",
+            "hoverSelector": "[data-test-case=\"0\"] .nck-table .table-row:nth-child(2)",
+            "selectors": [
+                "[data-test-case=\"0\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "2.3 NCK table - HOVER test case 0 for table row number 3",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "hover row 3 of the table from Test case 0 table",
+            "hoverSelector": "[data-test-case=\"0\"] .nck-table .table-row:nth-child(3)",
+            "selectors": [
+                "[data-test-case=\"0\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "2.4 NCK table - HOVER test case 1 for table row number 1",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "hover row 1 of the table from Test case 1 table",
+            "hoverSelector": "[data-test-case=\"1\"] .nck-table .table-row:nth-child(1)",
+            "selectors": [
+                "[data-test-case=\"1\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "2.5 NCK table - HOVER test case 1 for table row number 2",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "hover row 2 of the table from Test case 1 table",
+            "hoverSelector": "[data-test-case=\"1\"] .nck-table .table-row:nth-child(2)",
+            "selectors": [
+                "[data-test-case=\"1\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "2.6 NCK table - HOVER test case 1 for table row number 3",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "hover row 3 of the table from Test case 1 table",
+            "hoverSelector": "[data-test-case=\"1\"] .nck-table .table-row:nth-child(3)",
+            "selectors": [
+                "[data-test-case=\"1\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "2.7 NCK table - HOVER test case 15 for table row number 1",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "hover row 1 of the table from Test case 15 table",
+            "hoverSelector": "[data-test-case=\"15\"] .nck-table tbody tr:nth-child(1) .selection-cell .nck-checkbox",
+            "selectors": [
+                "[data-test-case=\"15\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "2.8 NCK table - HOVER test case 17 for table column 1",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "hover column 1 button of header TC17 table",
+            "hoverSelector": "[data-test-case=\"17\"] .nck-table thead th.header .sort-button.inside-focus.center-aligned",
+            "selectors": [
+                "[data-test-case=\"17\"]"
+            ],
+            "selectorExpansion": false,
+            "viewports": [
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 14150
+                },
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 10735
+                }
+            ]
+        },
+        {
+            "label": "2.9 NCK table - HOVER test case 17 for table column 2",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "hover column 2 button of header TC17 table",
+            "hoverSelector": "[data-test-case=\"17\"] .nck-table thead th.header .sort-button.inside-focus.left-aligned",
+            "selectors": [
+                "[data-test-case=\"17\"]"
+            ],
+            "selectorExpansion": false,
+            "viewports": [
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 14150
+                },
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 10735
+                }
+            ]
+        },
+        {
+            "label": "2.10 NCK table - HOVER test case 17 for table column 4",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "hover column 4 button of header TC17 table",
+            "hoverSelector": "[data-test-case=\"17\"] .nck-table thead th.header .sort-button.inside-focus.right-aligned",
+            "selectors": [
+                "[data-test-case=\"17\"]"
+            ],
+            "selectorExpansion": false,
+            "viewports": [
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 14150
+                },
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 10735
+                }
+            ]
+        },
+        {
+            "label": "2.11 NCK table - HOVER test case 20 for table row  4",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "hover row 4 of the table from Test case 20 table",
+            "hoverSelector": "[data-test-case=\"20\"] .nck-table tbody tr:nth-child(3)",
+            "selectors": [
+                "[data-test-case=\"20\"]"
+            ],
+            "selectorExpansion": true
+        },
+        {
+            "label": "2.12 NCK table - HOVER test case 21 for table row  3",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "hover row 3 of the table from Test case 21 table",
+            "hoverSelector": "[data-test-case=\"21\"] .nck-table tbody tr:nth-child(2)",
+            "selectors": [
+                "[data-test-case=\"21\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.1 NCK table - FOCUS Test case 0 for table row number 1",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "focus on the row of the table from Test case 0 table",
+            "onReadyScript": "focus.js",
+            "focusSelector": "[data-test-case=\"0\"] .nck-table .table-row:nth-child(1)",
+            "selectors": [
+                "[data-test-case=\"0\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.2 NCK table - FOCUS Test case 0 for table row number 2",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "focus on the row of the table from Test case 0 table",
+            "onReadyScript": "focus.js",
+            "focusSelector": "[data-test-case=\"0\"] .nck-table .table-row:nth-child(2)",
+            "selectors": [
+                "[data-test-case=\"0\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.3 NCK table - FOCUS Test case 0 for table row number 3",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "focus on the row of the table from Test case 0 table",
+            "onReadyScript": "focus.js",
+            "focusSelector": "[data-test-case=\"0\"] .nck-table .table-row:nth-child(3)",
+            "selectors": [
+                "[data-test-case=\"0\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.4 NCK table - FOCUS Test case 1 for table row number 1",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "focus on the row of the table from Test case 1 table",
+            "onReadyScript": "focus.js",
+            "focusSelector": "[data-test-case=\"1\"] .nck-table .table-row:nth-child(1)",
+            "selectors": [
+                "[data-test-case=\"1\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.5 NCK table - FOCUS Test case 1 for table row number 2",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "focus on the row of the table from Test case 1 table",
+            "onReadyScript": "focus.js",
+            "focusSelector": "[data-test-case=\"1\"] .nck-table .table-row:nth-child(2)",
+            "selectors": [
+                "[data-test-case=\"1\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.6 NCK table - FOCUS Test case 1 for table row number 3",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "focus on the row of the table from Test case 1 table",
+            "onReadyScript": "focus.js",
+            "focusSelector": "[data-test-case=\"1\"] .nck-table .table-row:nth-child(3)",
+            "selectors": [
+                "[data-test-case=\"1\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.7 NCK table - FOCUS header column 1 for TC17",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "focus on the column 1 of the header TC17 table",
+            "onReadyScript": "focus.js",
+            "focusSelector": "[data-test-case=\"17\"] .nck-table thead th.header .sort-button.inside-focus.center-aligned",
+            "selectors": [
+                "[data-test-case=\"17\"]"
+            ],
+            "selectorExpansion": false,
+            "viewports": [
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 12779
+                },
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 10735
+                }
+            ]
+        },
+        {
+            "label": "3.8 NCK table - FOCUS header column 2 for TC17",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "focus on the column 2 of the header TC17 table",
+            "onReadyScript": "focus.js",
+            "focusSelector": "[data-test-case=\"17\"] .nck-table thead th.header .sort-button.inside-focus.left-aligned",
+            "selectors": [
+                "[data-test-case=\"17\"]"
+            ],
+            "selectorExpansion": false,
+            "viewports": [
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 12779
+                },
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 10735
+                }
+            ]
+        },
+        {
+            "label": "3.9 NCK table - FOCUS header column 4 for TC17",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "focus on the column 4 of the header TC17 table",
+            "onReadyScript": "focus.js",
+            "focusSelector": "[data-test-case=\"17\"] .nck-table thead th.header .sort-button.inside-focus.right-aligned",
+            "selectors": [
+                "[data-test-case=\"17\"]"
+            ],
+            "selectorExpansion": false,
+            "viewports": [
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 12779
+                },
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 10735
+                }
+            ]
+        },
+        {
+            "label": "3.10 NCK table - FOCUS Test case 20 for table row number 4",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "focus on the row of the table from Test case 20 table",
+            "onReadyScript": "focus.js",
+            "focusSelector": "[data-test-case=\"20\"] .nck-table .table-row:nth-child(3)",
+            "selectors": [
+                "[data-test-case=\"20\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.11 NCK table - FOCUS Test case 21 for table row number 2",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "focus on the row of the table from Test case 21 table",
+            "onReadyScript": "focus.js",
+            "focusSelector": "[data-test-case=\"21\"] .nck-table .table-row:nth-child(2)",
+            "selectors": [
+                "[data-test-case=\"21\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "4.1 NCK table - FOCUS+ENTER Test case 1 for table row  number 1",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "focus + enter on the row of the table from Test case 1 table",
+            "onReadyScript": "focusAndPressEnter.js",
+            "focusAndPressEnterSelector": "[data-test-case=\"1\"] .nck-table .table-row:nth-child(1)",
+            "selectors": [
+                "[data-test-case=\"1\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "4.2 NCK table - FOCUS+ENTER Test case 1 for table row  number 2",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "focus + enter on the row of the table from Test case 1 table",
+            "onReadyScript": "focusAndPressEnter.js",
+            "focusAndPressEnterSelector": "[data-test-case=\"1\"] .nck-table .table-row:nth-child(2)",
+            "selectors": [
+                "[data-test-case=\"1\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "4.3 NCK table - FOCUS+ENTER Test case 1 for table row  number 3",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "focus + enter on the row of the table from Test case 1 table",
+            "onReadyScript": "focusAndPressEnter.js",
+            "focusAndPressEnterSelector": "[data-test-case=\"1\"] .nck-table .table-row:nth-child(3)",
+            "selectors": [
+                "[data-test-case=\"1\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "4.4 NCK table - FOCUS+ENTER Test case 2 for table row  number 1",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "focus + enter on the row of the table from Test case 2 table",
+            "onReadyScript": "focusAndPressEnter.js",
+            "focusAndPressEnterSelector": "[data-test-case=\"2\"] .nck-table .table-row:nth-child(1)",
+            "selectors": [
+                "[data-test-case=\"2\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "4.5 NCK table - FOCUS+ENTER Test case 2 for table row  number 2",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "focus + enter on the row of the table from Test case 2 table",
+            "onReadyScript": "focusAndPressEnter.js",
+            "focusAndPressEnterSelector": "[data-test-case=\"2\"] .nck-table .table-row:nth-child(2)",
+            "selectors": [
+                "[data-test-case=\"2\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "4.6 NCK table - FOCUS+ENTER Test case 2 for table row  number 3",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "focus + enter on the row of the table from Test case 2 table",
+            "onReadyScript": "focusAndPressEnter.js",
+            "focusAndPressEnterSelector": "[data-test-case=\"2\"] .nck-table .table-row:nth-child(3)",
+            "selectors": [
+                "[data-test-case=\"2\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "4.7 NCK table - FOCUS+ENTER header column 1 of header table TC17",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "focus + enter on the 1 column of header TC17",
+            "onReadyScript": "focusAndPressEnter.js",
+            "focusAndPressEnterSelector": "[data-test-case=\"17\"] .nck-table thead th.header .sort-button.inside-focus.center-aligned",
+            "selectors": [
+                "[data-test-case=\"17\"]"
+            ],
+            "selectorExpansion": false,
+            "viewports": [
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 12779
+                },
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 10735
+                }
+            ]
+        },
+
+        {
+            "label": "5.1 NCK table - FOCUS+SPACE Test case 1 for table row  number 1",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "focus + space on the row of the table from Test case 1 table",
+            "onReadyScript": "focusAndPressSpace.js",
+            "focusAndPressSpaceSelector": "[data-test-case=\"1\"] .nck-table .table-row:nth-child(1)",
+            "selectors": [
+                "[data-test-case=\"1\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "5.2 NCK table - FOCUS+SPACE Test case 1 for table row  number 2",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "focus + space on the row of the table from Test case 1 table",
+            "onReadyScript": "focusAndPressSpace.js",
+            "focusAndPressSpaceSelector": "[data-test-case=\"1\"] .nck-table .table-row:nth-child(2)",
+            "selectors": [
+                "[data-test-case=\"1\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "5.3 NCK table - FOCUS+SPACE Test case 1 for table row  number 3",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "focus + space on the row of the table from Test case 1 table",
+            "onReadyScript": "focusAndPressSpace.js",
+            "focusAndPressSpaceSelector": "[data-test-case=\"1\"] .nck-table .table-row:nth-child(3)",
+            "selectors": [
+                "[data-test-case=\"1\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "5.4 NCK table - FOCUS+SPACE Test case 2 for table row  number 1",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "focus + space on the row of the table from Test case 2 table",
+            "onReadyScript": "focusAndPressSpace.js",
+            "focusAndPressSpaceSelector": "[data-test-case=\"2\"] .nck-table .table-row:nth-child(1)",
+            "selectors": [
+                "[data-test-case=\"2\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "5.5 NCK table - FOCUS+SPACE Test case 2 for table row  number 2",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "focus + space on the row of the table from Test case 2 table",
+            "onReadyScript": "focusAndPressSpace.js",
+            "focusAndPressSpaceSelector": "[data-test-case=\"2\"] .nck-table .table-row:nth-child(2)",
+            "selectors": [
+                "[data-test-case=\"2\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "5.6 NCK table - FOCUS+SPACE Test case 2 for table row  number 3",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "focus + space on the row of the table from Test case 2 table",
+            "onReadyScript": "focusAndPressSpace.js",
+            "focusAndPressSpaceSelector": "[data-test-case=\"2\"] .nck-table .table-row:nth-child(3)",
+            "selectors": [
+                "[data-test-case=\"2\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "5.7 NCK table - FOCUS+SPACE header column 1 of header table TC17",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "focus + space on the 1 column of header TC17",
+            "onReadyScript": "focusAndPressSpace.js",
+            "focusAndPressSpaceSelector": "[data-test-case=\"17\"] .nck-table thead th.header .sort-button.inside-focus.center-aligned",
+            "selectors": [
+                "[data-test-case=\"17\"]"
+            ],
+            "selectorExpansion": false,
+            "viewports": [
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 12779
+                },
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 10735
+                }
+            ]
+        },
+        {
+            "label": "5.8 NCK table - FOCUS+SPACE Test case 20 for checkbox number 1",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "focus + space on the row 1",
+            "onReadyScript": "focusAndPressSpace.js",
+            "focusAndPressSpaceSelector": "[data-test-case=\"20\"] .nck-table tbody tr:nth-child(1) .selection-cell .nck-checkbox input",
+            "selectors": [
+                "[data-test-case=\"20\"]"
+            ],
+            "selectorExpansion": false
+
+        },
+        {
+            "label": "5.9 NCK table - FOCUS+SPACE Test case 14 for button Display table",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "focus + space on the button Display table",
+            "onReadyScript": "focusAndPressSpace.js",
+            "focusAndPressSpaceSelector": "[data-test-case=\"14\"] .display-table",
+            "selectors": [
+                "[data-test-case=\"14\"]"
+            ],
+            "selectorExpansion": false
+
+        },
+        {
+            "label": "6.1 NCK table - CLICK Test case 1 for table row number 1",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "left mouse click on the row of the table from Test case 1 table",
+            "clickSelector": "[data-test-case=\"1\"] .nck-table .table-row:nth-child(1)",
+            "selectors": [
+                "[data-test-case=\"1\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "6.2 NCK table - CLICK Test case 1 for table row number 2",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "left mouse click on the row of the table from Test case 1 table",
+            "clickSelector": "[data-test-case=\"1\"] .nck-table .table-row:nth-child(2)",
+            "selectors": [
+                "[data-test-case=\"1\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "6.3 NCK table - CLICK Test case 1 for table row number 3",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "left mouse click on the row of the table from Test case 1 table",
+            "clickSelector": "[data-test-case=\"1\"] .nck-table .table-row:nth-child(3)",
+            "selectors": [
+                "[data-test-case=\"1\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "6.4 NCK table - CLICK Test case 2 for table row number 1",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "left mouse click on the row of the table from Test case 2 table",
+            "clickSelector": "[data-test-case=\"2\"] .nck-table .table-row:nth-child(1)",
+            "selectors": [
+                "[data-test-case=\"2\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "6.5 NCK table - CLICK Test case 2 for table row number 2",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "left mouse click on the row of the table from Test case 2 table",
+            "clickSelector": "[data-test-case=\"2\"] .nck-table .table-row:nth-child(2)",
+            "selectors": [
+                "[data-test-case=\"2\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "6.6 NCK table - CLICK Test case 2 for table row number 3",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "left mouse click on the row of the table from Test case 2 table",
+            "clickSelector": "[data-test-case=\"2\"] .nck-table .table-row:nth-child(3)",
+            "selectors": [
+                "[data-test-case=\"2\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "6.7 NCK table - CLICK Test case 14 button",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "click on display table button of TC 14",
+            "clickSelector": "[data-test-case=\"14\"] .display-table",
+            "selectors": [
+                "[data-test-case=\"14\"]"
+            ]
+        },
+        {
+            "label": "6.8 NCK table - CLICK Test case 15 for table header",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "click the table header of TC 15",
+            "clickSelector": "[data-test-case=\"15\"] .nck-table thead",
+            "selectors": [
+                "[data-test-case=\"15\"]"
+            ]
+        },
+        {
+            "label": "6.9 NCK table - CLICK Test case 15 for table row number 1",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "click on the row 1 of the table of TC 15",
+            "clickSelector": "[data-test-case=\"15\"] .nck-table tbody tr:nth-child(1)",
+            "selectors": [
+                "[data-test-case=\"15\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "6.10 NCK table - CLICK&Mouse down TC15 for table row 1",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "click and then mouse down on TC15 raw 1",
+            "onReadyScript": "clickAndHoverAndPressMouseSelector.js",
+            "hoverAndPressMouseSelector": "[data-test-case=\"15\"] .nck-table tbody tr:nth-child(1)",
+            "clickSelector": "[data-test-case=\"15\"] .nck-table tbody tr:nth-child(1)",
+            "selectors": [
+                "[data-test-case=\"15\"]"
+            ]
+        },
+        {
+            "label": "6.11 NCK table - CLICK&CLICK on TC15 header checkbox",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "double click on TC15 header checkbox",
+            "onReadyScript": "ClickTwice.js",
+            "clickSelector": "[data-test-case=\"15\"] .nck-table thead .selection-cell .nck-checkbox",
+            "clickSelector2": "[data-test-case=\"15\"] .nck-table thead .selection-cell .nck-checkbox",
+            "selectors": [
+                "[data-test-case=\"15\"]"
+            ],
+            "viewports":[
+                {
+                  "label": "phone",
+                  "width": 320,
+                  "height": 19000
+                }
+            ]
+        },
+        {
+            "label": "6.12 NCK table - CLICK on header checkbox & on row1 checkbox TC15",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "1 click on header checkbox and 1 click on row1 checkbox of TC15",
+            "onReadyScript": "ClickTwice.js",
+            "clickSelector": "[data-test-case=\"15\"] .nck-table thead .selection-cell .nck-checkbox",
+            "clickSelector2": "[data-test-case=\"15\"] .nck-table tbody tr:nth-child(1) .selection-cell .nck-checkbox",
+            "selectors": [
+                "[data-test-case=\"15\"]"
+            ],
+            "viewports":[
+                {
+                  "label": "phone",
+                  "width": 320,
+                  "height": 19000
+                }
+            ]
+        },
+        {
+            "label": "6.13 NCK table - CLICK once on TC15 header checkbox",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "single click on TC15 header checkbox",
+            "clickSelector": "[data-test-case=\"15\"] .nck-table thead .selection-cell .nck-checkbox",
+            "selectors": [
+                "[data-test-case=\"15\"]"
+            ],
+            "viewports":[
+                {
+                  "label": "phone",
+                  "width": 320,
+                  "height": 19000
+                }
+            ]
+        },
+        {
+            "label": "6.14 NCK table - CLICK once on TC15 row1 checkbox",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "single click on TC15 row1 checkbox",
+            "clickSelector": "[data-test-case=\"15\"] .nck-table tbody tr:nth-child(1) .selection-cell .nck-checkbox",
+            "selectors": [
+                "[data-test-case=\"15\"]"
+            ]
+        },
+        {
+            "label": "6.15 NCK table - CLICK once on TC17 1st column",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "single click on TC17 first column",
+            "clickSelector": "[data-test-case=\"17\"] .nck-table thead th.header .sort-button.inside-focus.center-aligned",
+            "selectors": [
+                "[data-test-case=\"17\"]"
+            ],
+            "viewports": [
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 12779
+                },
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 10735
+                }
+            ]
+        },
+        {
+            "label": "6.16 NCK table - CLICK once on TC17 2nd column",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "single click on TC17 second column",
+            "clickSelector": "[data-test-case=\"17\"] .nck-table thead th.header .sort-button.inside-focus.left-aligned",
+            "selectors": [
+                "[data-test-case=\"17\"]"
+            ],
+            "viewports": [
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 12779
+                },
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 10735
+                }
+            ]
+        },
+        {
+            "label": "6.17 NCK table - CLICK once on TC17 4th column",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "single click on TC17 fourth column",
+            "clickSelector": "[data-test-case=\"17\"] .nck-table thead th.header .sort-button.inside-focus.right-aligned",
+            "selectors": [
+                "[data-test-case=\"17\"]"
+            ],
+            "viewports": [
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 12779
+                },
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 10735
+                }
+            ]
+        },
+        {
+            "label": "6.18 NCK table - CLICK&CLICK on TC17 1st column twice",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "double click on TC17 1st column",
+            "onReadyScript": "ClickTwice.js",
+            "clickSelector": "[data-test-case=\"17\"] .nck-table thead th.header .sort-button.inside-focus.center-aligned",
+            "clickSelector2": "[data-test-case=\"17\"] .nck-table thead th.header .sort-button.inside-focus.center-aligned",
+            "selectors": [
+                "[data-test-case=\"17\"]"
+            ],
+            "viewports": [
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 12779
+                },
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 10735
+                }
+            ]
+        },
+        {
+            "label": "6.19 NCK table - CLICK&CLICK on TC17 1st&2nd column",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "click on TC17 1st column and click on 2nd column",
+            "onReadyScript": "ClickTwice.js",
+            "clickSelector": "[data-test-case=\"17\"] .nck-table thead th.header .sort-button.inside-focus.center-aligned",
+            "clickSelector2": "[data-test-case=\"17\"] .nck-table thead th.header .sort-button.inside-focus.left-aligned",
+            "selectors": [
+                "[data-test-case=\"17\"]"
+            ],
+            "viewports": [
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 12779
+                },
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 10735
+                }
+            ]
+        },
+        {
+            "label": "6.20 NCK table - CLICK&CLICK on TC17 1st row checkbox & 1st column",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "check on TC17 1st row and sort the 1st column",
+            "onReadyScript": "ClickTwice.js",
+            "clickSelector": "[data-test-case=\"17\"] .nck-table tbody tr:nth-child(1) .selection-cell .nck-checkbox",
+            "clickSelector2": "[data-test-case=\"17\"] .nck-table thead th.header .sort-button.inside-focus.center-aligned",
+            "selectors": [
+                "[data-test-case=\"17\"]"
+            ],
+            "viewports": [
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 12779
+                },
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 10735
+                }
+            ]
+        },
+        {
+            "label": "6.21 NCK table - CLICK&CLICK on TC17 header checkbox & 1st column",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "check all on TC17 and sort the 1st column",
+            "onReadyScript": "ClickTwice.js",
+            "clickSelector": "[data-test-case=\"17\"] .nck-table thead .selection-cell .nck-checkbox",
+            "clickSelector2": "[data-test-case=\"17\"] .nck-table thead th.header .sort-button.inside-focus.center-aligned",
+            "selectors": [
+                "[data-test-case=\"17\"]"
+            ],
+            "viewports": [
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 12779
+                },
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 10735
+                }
+            ]
+        },
+        {
+            "label": "6.22 NCK table - CLICK&CLICK on TC17 1st row checkbox & clear button",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "viewports": [
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 12779
+                },
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 10735
+                }
+            ],
+            "description": "click on TC17 1st row and click clear button",
+            "onReadyScript": "ClickTwice.js",
+            "clickSelector": "[data-test-case=\"17\"] .nck-table tbody tr:nth-child(1) .selection-cell .nck-checkbox",
+            "clickSelector2": "[data-test-case=\"17\"] .nck-table-container .action-bar-area button",
+            "selectors": [
+                "[data-test-case=\"17\"]"
+            ]
+        },
+        {
+            "label": "6.23 NCK table - CLICK once on TC18 1st column",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "single click on TC18 first column",
+            "clickSelector": "[data-test-case=\"18\"] .nck-table thead th.header .sort-button.inside-focus.center-aligned",
+            "selectors": [
+                "[data-test-case=\"18\"]"
+            ]
+        },
+        {
+            "label": "6.24 NCK table - CLICK on TC18 1st column twice",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "double click on TC18 first column",
+            "onReadyScript": "ClickTwice.js",
+            "clickSelector": "[data-test-case=\"18\"] .nck-table thead th.header .sort-button.inside-focus.center-aligned",
+            "clickSelector2": "[data-test-case=\"18\"] .nck-table thead th.header .sort-button.inside-focus.center-aligned",
+            "selectors": [
+                "[data-test-case=\"18\"]"
+            ]
+        },
+        {
+            "label": "6.25 NCK table - CLICK once on TC18 2nd column",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "single click on TC18 second column",
+            "clickSelector": "[data-test-case=\"18\"] .nck-table thead th:nth-child(2)",
+            "selectors": [
+                "[data-test-case=\"18\"]"
+            ]
+        },
+        {
+            "label": "6.26 NCK table - CLICK once on TC19 checkbox and then 2nd column",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "click on TC19 checkbox -Fail sort operation- then on the second column",
+            "onReadyScript": "ClickTwice.js",
+            "clickSelector": "[data-test-case=\"19\"] #failSortOperationCheckbox",
+            "clickSelector2": "[data-test-case=\"19\"] .nck-table thead th.header .sort-button.inside-focus.center-aligned",
+            "selectors": [
+                "[data-test-case=\"19\"]"
+            ]
+        },
+        {
+            "label": "6.27 NCK table - CLICK on TC19 2nd column twice",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"19\"] .nck-table thead th.header .sort-button.inside-focus.center-aligned"
+                },
+                {
+                    "type": "waitForTimeout",
+                    "delay": 400
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"19\"] .nck-table thead th.header .sort-button.inside-focus.center-aligned"
+                },
+                {
+                    "type": "waitForTimeout",
+                    "delay": 400
+                }
+            ],
+            "selectors": "[data-test-case=\"19\"]"
+        },
+                {
+            "label": "7.1 NCK table - HOVER+DOWN Test case 1 for table row number 1",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "hover and keep press left mouse click on the row of the table from Test case 1 tabs",
+            "onReadyScript": "hoverAndPressMouseSelector.js",
+            "hoverAndPressMouseSelector": "[data-test-case=\"1\"] .nck-table .table-row:nth-child(1)",
+            "selectors": [
+                "[data-test-case=\"1\"]"
+            ]
+        },
+        {
+            "label": "7.2 NCK table - HOVER+DOWN Test case 1 for table row number 2",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "hover and keep press left mouse click on the row of the table from Test case 1 tabs",
+            "onReadyScript": "hoverAndPressMouseSelector.js",
+            "hoverAndPressMouseSelector": "[data-test-case=\"1\"] .nck-table .table-row:nth-child(2)",
+            "selectors": [
+                "[data-test-case=\"1\"]"
+            ]
+        },
+        {
+            "label": "7.3 NCK table - HOVER+DOWN Test case 1 for table row number 3",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "hover and keep press left mouse click on the row of the table from Test case 1 tabs",
+            "onReadyScript": "hoverAndPressMouseSelector.js",
+            "hoverAndPressMouseSelector": "[data-test-case=\"1\"] .nck-table .table-row:nth-child(3)",
+            "selectors": [
+                "[data-test-case=\"1\"]"
+            ]
+        },
+        {
+            "label": "8.1 NCK table - CLICK+SCROLL Test case 16 ",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "click header and scroll into the table till the end of tc 16",
+            "onReadyScript": "clickAndScroll.js",
+            "clickSelector": "[data-test-case=\"16\"] .nck-table thead .selection-cell .nck-checkbox",
+            "scrollSelector": "[data-test-case=\"16\"] .nck-table",
+            "yScroll": 500,
+            "selectors": [
+                "[data-test-case=\"16\"]"
+            ],
+            "viewports": [
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 12779
+                },
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 10735
+                }
+            ]
+        },
+        {
+            "label": "9.1 NCK table - CLICK once on TC20 select all checkbox",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "single click on TC20 select all checkbox",
+            "clickSelector": "[data-test-case=\"20\"] .nck-table thead .selection-cell .nck-checkbox",
+            "selectors": [
+                "[data-test-case=\"20\"]"
+            ]
+        },
+        {
+            "label": "9.2 NCK table - CLICK once on TC21 select all checkbox",
+            "url": "http://localhost:8080/#/table",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 100,
+            "description": "single click on TC21 select all checkbox",
+            "clickSelector": "[data-test-case=\"21\"] .nck-table thead .selection-cell .nck-checkbox",
+            "selectors": [
+                "[data-test-case=\"21\"]"
+            ]
+        }
+
+    ],
+    "paths": {
+        "bitmaps_reference": "backstop_data/bitmaps_reference",
+        "bitmaps_test": "backstop_data/bitmaps_test",
+        "engine_scripts": "backstop_data/engine_scripts",
+        "html_report": "backstop_data/html_report",
+        "ci_report": "backstop_data/ci_report"
+    },
+    "report": [
+        "CI"
+    ],
+    "engine": "puppeteer",
+    "engineOptions": {
+        "args": [
+    "--no-sandbox",
+    "--disable-setuid-sandbox",
+    "--disable-dev-shm-usage",
+    "--disable-accelerated-2d-canvas",
+    "--no-first-run",
+    "--no-zygote",
+
+    "--disable-gpu"
+  ],
+        "ignoreDefaultArgs": [
+            "--hide-scrollbars"
+        ],
+        "protocolTimeout": 960000
+    },
+    "asyncCaptureLimit": 3,
+    "asyncCompareLimit": 50,
+    "debug": false,
+    "debugWindow": false
+}

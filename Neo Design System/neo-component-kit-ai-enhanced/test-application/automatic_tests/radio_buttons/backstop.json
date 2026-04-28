@@ -1,0 +1,392 @@
+{
+    "id": "backstop_radiobuttons",
+    "viewports": [
+        {
+            "label": "phone",
+            "width": 320,
+            "height": 2148
+        },
+        {
+            "label": "tablet",
+            "width": 1024,
+            "height": 1527
+        },
+        {
+            "label": "desktop",
+            "width": 1920,
+            "height": 10000
+        }
+    ],
+    "onBeforeScript": "puppet/onBefore.js",
+    "onReadyScript": "puppet/onReady.js",
+    "scenarios": [
+        {
+            "label": "1. NCK radio_buttons - default display all",
+            "url": "http://localhost:8080/#/radiobuttons",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "display the default state of all the radio buttons"
+        },
+        {
+            "label": "2.1 NCK radio_buttons - CLICK on the 1 radio button of TC0 ",
+            "url": "http://localhost:8080/#/radiobuttons",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on the 1 radio button of TC0",
+            "clickSelector": "[data-test-case=\"0\"] .radio-container:nth-child(1)",
+            "selectors": [
+                "[data-test-case=\"0\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "2.2 NCK radio_buttons - CLICK on the 2 radio button of TC0 ",
+            "url": "http://localhost:8080/#/radiobuttons",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on the 2 radio button of the TC0",
+            "clickSelector": "[data-test-case=\"0\"] .radio-container:nth-child(2)",
+            "selectors": [
+                "[data-test-case=\"0\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "2.3 NCK radio_buttons - CLICK on the 3 radio button of TC0 ",
+            "url": "http://localhost:8080/#/radiobuttons",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on the 3 radio button of TC0",
+            "clickSelector": "[data-test-case=\"0\"] .radio-container:nth-child(3)",
+            "selectors": [
+                "[data-test-case=\"0\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "2.4 NCK radio_buttons - CLICK on the 4 radio button of TC0 ",
+            "url": "http://localhost:8080/#/radiobuttons",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on the 4 radio button of TC0",
+            "clickSelector": "[data-test-case=\"0\"] .radio-container:nth-child(4)",
+            "selectors": [
+                "[data-test-case=\"0\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "2.5 NCK radio_buttons - CLICK on all the input buttons ",
+            "url": "http://localhost:8080/#/radiobuttons",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on all of the input validate buttons",
+            "clickAllSelectors": ".validate-input",
+            "onReadyScript": "clickAll.js"
+        },
+        {
+            "label": "2.6 NCK radio_buttons - TC5 - CLICK on Add values button",
+            "url": "http://localhost:8080/#/radiobuttons",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on the Add values for radio buttons",
+            "clickSelector": "[data-test-case=\"5\"] .add-values",
+            "selectors": [
+                "[data-test-case=\"5\"]"
+            ],
+            "selectorExpansion": true
+        },
+        {
+            "label": "2.7 NCK radio_buttons -  TC5 - CLICK on second then on first button",
+            "url": "http://localhost:8080/#/radiobuttons",
+            "onReadyScript": "actions.js",
+            "requireSameDimensions": true,
+            "misMatchThreshold": 0,
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"5\"] .add-values"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"5\"] .validate-input"
+                },
+                {
+                    "type": "mouseMove",
+                    "coordinate": {
+                        "x": 0,
+                        "y": 0
+                    }
+                }
+            ],
+            "selectors": [
+                "[data-test-case=\"5\"]"
+            ]
+        },
+        {
+            "label": "3.1 NCK radio_buttons - HOVER on the 1 radio button of TC0 ",
+            "url": "http://localhost:8080/#/radiobuttons",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "HOVER on the 1 radio button of TC0",
+            "hoverSelector": "[data-test-case=\"0\"] .radio-container:nth-child(1)",
+            "selectors": [
+                "[data-test-case=\"0\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.2 NCK radio_buttons - HOVER on the 2 radio button of TC0 ",
+            "url": "http://localhost:8080/#/radiobuttons",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "HOVER on the 2 radio button of the content switcher of TC0",
+            "hoverSelector": "[data-test-case=\"0\"] .radio-container:nth-child(2)",
+            "selectors": [
+                "[data-test-case=\"0\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.3 NCK radio_buttons - HOVER on the 3 radio button of TC0 ",
+            "url": "http://localhost:8080/#/radiobuttons",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "HOVER on the 3 radio button of the content switcher of TC0",
+            "hoverSelector": "[data-test-case=\"0\"] .radio-container:nth-child(3)",
+            "selectors": [
+                "[data-test-case=\"0\"]"
+            ],
+            "selectorExpansion": false
+        },
+        {
+            "label": "4.1 NCK radio_buttons - FOCUS and Tab on selcted radio button of TC1 ",
+            "url": "http://localhost:8080/#/radiobuttons",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "FOCUS and press Tab on the radio selcted button of TC1",
+            "focusSelector": "[data-test-case=\"1\"] .before-radio-buttons",
+            "selectors": [
+                "[data-test-case=\"1\"]"
+            ],
+            "onReadyScript": "focusAndPressTab.js"
+        },
+        {
+            "label": "4.2 NCK radio_buttons - FOCUS and Tab on selcted radio button of TC3 ",
+            "url": "http://localhost:8080/#/radiobuttons",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "FOCUS and press Tab on the selcted radio button of TC3",
+            "focusSelector": "[data-test-case=\"3\"] .before-radio-buttons",
+            "selectors": [
+                "[data-test-case=\"3\"]"
+            ],
+            "onReadyScript": "focusAndPressTab.js"
+        },
+        {
+            "label": "5.1 NCK radio_buttons - FOCUS&right arrow once on radio button 1 of TC0 ",
+            "url": "http://localhost:8080/#/radiobuttons",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "FOCUS and press right Arrow Key once on the 1 radio button of TC0",
+            "focusSelector": "[data-test-case=\"0\"] .radio-container:nth-child(1) input",
+            "selectors": [
+                "[data-test-case=\"0\"]"
+            ],
+            "onReadyScript": "focusAndPressArrowKey.js",
+            "keyDirection": "right",
+            "pressKeyXTimes": 1
+        },
+        {
+            "label": "5.2 NCK radio_buttons - FOCUS&right arrow twice on radio button 1 of TC0 ",
+            "url": "http://localhost:8080/#/radiobuttons",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "FOCUS and press right Arrow Key twice on the 1 radio button of TC0",
+            "focusSelector": "[data-test-case=\"0\"] .radio-container:nth-child(1) input",
+            "selectors": [
+                "[data-test-case=\"0\"]"
+            ],
+            "onReadyScript": "focusAndPressArrowKey.js",
+            "keyDirection": "right",
+            "pressKeyXTimes": 2
+        },
+        {
+            "label": "5.3 NCK radio_buttons - FOCUS&right arrow 2 times on radio button 2 of TC1 ",
+            "url": "http://localhost:8080/#/radiobuttons",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "FOCUS and press right Arrow Key 2 times on the 1 radio button of TC1",
+            "focusSelector": "[data-test-case=\"1\"] .radio-container:nth-child(2) input",
+            "selectors": [
+                "[data-test-case=\"1\"]"
+            ],
+            "onReadyScript": "focusAndPressArrowKey.js",
+            "keyDirection": "right",
+            "pressKeyXTimes": 2
+        },
+        {
+            "label": "5.4 NCK radio_buttons - FOCUS&left arrow once on radio button 2 of TC1 ",
+            "url": "http://localhost:8080/#/radiobuttons",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "FOCUS and press left Arrow Key once on the 2 radio button of TC1",
+            "focusSelector": "[data-test-case=\"1\"] .radio-container:nth-child(2) input",
+            "selectors": [
+                "[data-test-case=\"1\"]"
+            ],
+            "onReadyScript": "focusAndPressArrowKey.js",
+            "keyDirection": "left",
+            "pressKeyXTimes": 1
+        },
+        {
+            "label": "5.5 NCK radio_buttons - FOCUS&left arrow once on radio button 1 of TC0 ",
+            "url": "http://localhost:8080/#/radiobuttons",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "FOCUS and press left Arrow Key once on the 1 radio button of TC0",
+            "focusSelector": "[data-test-case=\"0\"] .radio-container:nth-child(1) input",
+            "selectors": [
+                "[data-test-case=\"0\"]"
+            ],
+            "onReadyScript": "focusAndPressArrowKey.js",
+            "keyDirection": "left",
+            "pressKeyXTimes": 1
+        },
+        {
+            "label": "6.1 NCK radio_buttons - HOVER+DOWN on the 1 radio button of TC0 ",
+            "url": "http://localhost:8080/#/radiobuttons",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "HOVER+DOWN on the 1 radio button of TC0",
+            "hoverAndPressMouseSelector": "[data-test-case=\"0\"] .radio-container:nth-child(1)",
+            "selectors": [
+                "[data-test-case=\"0\"]"
+            ],
+            "onReadyScript": "hoverAndPressMouseSelector.js"
+        },
+        {
+            "label": "6.2 NCK radio_buttons - HOVER+DOWN on the 2 radio button of TC0 ",
+            "url": "http://localhost:8080/#/radiobuttons",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "HOVER+DOWN on the 2 radio button of TC0",
+            "hoverAndPressMouseSelector": "[data-test-case=\"0\"] .radio-container:nth-child(2)",
+            "selectors": [
+                "[data-test-case=\"0\"]"
+            ],
+            "onReadyScript": "hoverAndPressMouseSelector.js"
+        },
+        {
+            "label": "7 NCK radio_buttons - CLICK on TC0 Focus button",
+            "url": "http://localhost:8080/#/radiobuttons",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on TC0 Focus button",
+            "clickSelector": "[data-test-case=\"0\"] [data-focus-input]",
+            "selectors": [
+                "[data-test-case=\"0\"]"
+            ]
+        },
+        {
+            "label": "8.1 NCK chip_radio_buttons - click on 1st Chip radio button TC7",
+            "url": "http://localhost:8080/#/radiobuttons",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on 1st Chip radio button TC7",
+            "clickSelector": "[data-test-case=\"7\"] .radio-container:nth-child(1)",
+            "selectors": [
+                "[data-test-case=\"7\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "8.2 NCK chip_radio_buttons - click on 2nd Chip radio button TC7",
+            "url": "http://localhost:8080/#/radiobuttons",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on 2nd Chip radio button TC7",
+            "clickSelector": "[data-test-case=\"7\"] .radio-container:nth-child(2)",
+            "selectors": [
+                "[data-test-case=\"7\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "8.3 NCK chip_radio_buttons - click on 3rd (DISABLED) Chip radio button TC7",
+            "url": "http://localhost:8080/#/radiobuttons",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on 3rd (DISABLED) Chip radio button TC7",
+            "clickSelector": "[data-test-case=\"7\"] .radio-container:nth-child(3)",
+            "selectors": [
+                "[data-test-case=\"7\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "8.4 NCK chip_radio_buttons - click on 4th Chip radio button TC7",
+            "url": "http://localhost:8080/#/radiobuttons",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on 4th Chip radio button TC7",
+            "clickSelector": "[data-test-case=\"7\"] .radio-container:nth-child(4)",
+            "selectors": [
+                "[data-test-case=\"7\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "9 NCK chip_radio_buttons - no selected chip, valid input? TC10",
+            "url": "http://localhost:8080/#/radiobuttons",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "No selected chip, valid input?",
+            "clickSelector": "[data-test-case=\"10\"] .validate-input",
+            "selectors": [
+                "[data-test-case=\"10\"]"
+            ],
+            "onReadyScript": "clickAndMoveMouse.js"
+        },
+        {
+            "label": "10 NCK chip_radio_buttons - TC12 - CLICK on Add values button",
+            "url": "http://localhost:8080/#/radiobuttons",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on the Add values for chip radio buttons",
+            "clickSelector": "[data-test-case=\"12\"] .add-values",
+            "selectors": [
+                "[data-test-case=\"12\"]"
+            ],
+            "selectorExpansion": true
+        }
+    ],
+    "paths": {
+        "bitmaps_reference": "backstop_data/bitmaps_reference",
+        "bitmaps_test": "backstop_data/bitmaps_test",
+        "engine_scripts": "backstop_data/engine_scripts",
+        "html_report": "backstop_data/html_report",
+        "ci_report": "backstop_data/ci_report"
+    },
+    "report": [
+        "CI"
+    ],
+    "engine": "puppeteer",
+    "engineOptions": {
+        "args": [
+    "--no-sandbox",
+    "--disable-setuid-sandbox",
+    "--disable-dev-shm-usage",
+    "--disable-accelerated-2d-canvas",
+    "--no-first-run",
+    "--no-zygote",
+
+    "--disable-gpu"
+  ],
+        "protocolTimeout": 960000
+    },
+    "asyncCaptureLimit": 3,
+    "asyncCompareLimit": 50,
+    "debug": false,
+    "debugWindow": false
+}

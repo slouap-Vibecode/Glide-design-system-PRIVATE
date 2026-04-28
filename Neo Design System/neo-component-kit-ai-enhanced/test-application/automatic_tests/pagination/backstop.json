@@ -1,0 +1,625 @@
+{
+  "id": "backstop_pagination",
+  "viewports": [
+    {
+      "label": "phone",
+      "width": 320,
+      "height": 480
+    },
+    {
+      "label": "tablet",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "label": "desktop",
+      "width": 1920,
+      "height": 1080
+    }
+  ],
+  "onBeforeScript": "puppet/onBefore.js",
+  "onReadyScript": "puppet/onReady.js",
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "report": ["CI"],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args":[
+    "--no-sandbox",
+    "--disable-setuid-sandbox",
+    "--disable-dev-shm-usage",
+    "--disable-accelerated-2d-canvas",
+    "--no-first-run",
+    "--no-zygote",
+
+    "--disable-gpu"
+  ],
+    "protocolTimeout": 960000
+  },
+  "asyncCaptureLimit": 3,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false,
+  "scenarios": [
+    {
+      "label": "1.0 NCK pagination - default EN",
+      "url": "http://localhost:8080/#/pagination",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Global page verification"
+    },
+
+    {
+      "label": "1.1 NCK pagination - default fr",
+      "url": "http://localhost:8080/#/pagination?lang=fr",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Global page verification in french"
+    },
+
+    {
+      "label": "2.0 NCK pagination - hover on item 1 of TC1",
+      "url": "http://localhost:8080/#/pagination",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover on item 1 of TC1",
+      "hoverSelector": "[data-test-case=\"1\"] .nck-pagination li:nth-child(1)",
+      "selectors": ["[data-test-case=\"1\"]"],
+      "selectorExpansion": false
+    },
+
+    {
+      "label": "2.1 NCK pagination - hover on item 2 of TC1",
+      "url": "http://localhost:8080/#/pagination",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover on item 2 of TC1",
+      "hoverSelector": "[data-test-case=\"1\"] .nck-pagination li:nth-child(2",
+      "selectors": ["[data-test-case=\"1\"]"],
+      "selectorExpansion": false
+    },
+
+    {
+      "label": "2.3 NCK pagination - hover on item Arrow of TC1",
+      "url": "http://localhost:8080/#/pagination",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover on item Arrow of TC1",
+      "hoverSelector": "[data-test-case=\"1\"] .nck-pagination li:nth-child(3)",
+      "selectors": ["[data-test-case=\"1\"]"],
+      "selectorExpansion": false
+    },
+
+    {
+      "label": "2.4 NCK pagination - hover on item Arrow of TC2",
+      "url": "http://localhost:8080/#/pagination",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover on item Arrow of TC2",
+      "hoverSelector": "[data-test-case=\"2\"] .nck-pagination li:nth-child(1)",
+      "selectors": ["[data-test-case=\"2\"]"],
+      "selectorExpansion": false
+    },
+
+    {
+      "label": "2.5 NCK pagination - hover on item ... of TC3",
+      "url": "http://localhost:8080/#/pagination",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover on item ... of TC3",
+      "hoverSelector": "[data-test-case=\"3\"] .nck-pagination li:nth-child(4)",
+      "selectors": ["[data-test-case=\"3\"]"],
+      "selectorExpansion": false
+    },
+
+    {
+      "label": "2.6 NCK pagination - hover on TC14 dropdown",
+      "url": "http://localhost:8080/#/pagination",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover on TC14 dropdown",
+      "hoverSelector": "[data-test-case=\"14\"] .nck-dropdown.pagination-dropdown button",
+      "selectors": ["[data-test-case=\"14\"]"],
+      "selectorExpansion": false,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 2020
+        }
+      ]
+    },
+
+    {
+      "label": "3.0 NCK pagination - click on item 1 of TC1",
+      "url": "http://localhost:8080/#/pagination",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on item 1 of TC1",
+      "clickSelector": "[data-test-case=\"1\"] .nck-pagination li:nth-child(1)",
+      "selectors": ["[data-test-case=\"1\"]"],
+      "selectorExpansion": false
+    },
+
+    {
+      "label": "3.1 NCK pagination - click on item 2 of TC1",
+      "url": "http://localhost:8080/#/pagination",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on item 2 of TC1",
+      "clickSelector": "[data-test-case=\"1\"] .nck-pagination li:nth-child(2)",
+      "selectors": ["[data-test-case=\"1\"]"],
+      "selectorExpansion": false,
+      "onReadyScript": "clickAndMoveMouse.js"
+    },
+
+    {
+      "label": "3.2 NCK pagination - click on item Arrow of TC1",
+      "url": "http://localhost:8080/#/pagination",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on item Arrow of TC1",
+      "clickSelector": "[data-test-case=\"1\"] .nck-pagination li:nth-child(3)",
+      "selectors": ["[data-test-case=\"1\"]"],
+      "selectorExpansion": false
+    },
+
+    {
+      "label": "3.3 NCK pagination - click on item Arrow of TC2",
+      "url": "http://localhost:8080/#/pagination",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on item Arrow of TC2",
+      "clickSelector": "[data-test-case=\"2\"] .nck-pagination li:nth-child(1)",
+      "selectors": ["[data-test-case=\"2\"]"],
+      "selectorExpansion": false
+    },
+
+    {
+      "label": "3.4 NCK pagination - click on item 1 of TC2",
+      "url": "http://localhost:8080/#/pagination",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on item 1 of TC2",
+      "clickSelector": "[data-test-case=\"2\"] .nck-pagination li:nth-child(2)",
+      "selectors": ["[data-test-case=\"2\"]"],
+      "selectorExpansion": false,
+      "onReadyScript": "clickAndMoveMouse.js"
+    },
+
+    {
+      "label": "3.5 NCK pagination - click on item 2 of TC2",
+      "url": "http://localhost:8080/#/pagination",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on item 2 of TC2",
+      "clickSelector": "[data-test-case=\"2\"] .nck-pagination li:nth-child(3)",
+      "selectors": ["[data-test-case=\"2\"]"],
+      "selectorExpansion": false
+    },
+
+    {
+      "label": "3.6 NCK pagination - click on item 2 of TC3",
+      "url": "http://localhost:8080/#/pagination",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on item 2 of TC3",
+      "clickSelector": "[data-test-case=\"3\"] .nck-pagination li:nth-child(2)",
+      "selectors": ["[data-test-case=\"3\"]"],
+      "selectorExpansion": false
+    },
+
+    {
+      "label": "3.7 NCK pagination - click on item 3 of TC3",
+      "url": "http://localhost:8080/#/pagination",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on item 3 of TC3",
+      "clickSelector": "[data-test-case=\"3\"] .nck-pagination li:nth-child(3)",
+      "selectors": ["[data-test-case=\"3\"]"],
+      "selectorExpansion": false
+    },
+
+    {
+      "label": "3.8 NCK pagination - click on item ... of TC3",
+      "url": "http://localhost:8080/#/pagination",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on item ... of TC3",
+      "clickSelector": "[data-test-case=\"3\"] .nck-pagination li:nth-child(4)",
+      "selectors": ["[data-test-case=\"3\"]"],
+      "selectorExpansion": false
+    },
+
+    {
+      "label": "3.9 NCK pagination - click on item 9 of TC3",
+      "url": "http://localhost:8080/#/pagination",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on item 9 of TC3",
+      "clickSelector": "[data-test-case=\"3\"] .nck-pagination li:nth-child(5)",
+      "selectors": ["[data-test-case=\"3\"]"],
+      "selectorExpansion": false,
+      "onReadyScript": "clickAndMoveMouse.js"
+    },
+
+    {
+      "label": "3.10 NCK pagination - click on item Arrow of TC4",
+      "url": "http://localhost:8080/#/pagination",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on item Arrow of TC4",
+      "clickSelector": "[data-test-case=\"4\"] .nck-pagination li:nth-child(1)",
+      "selectors": ["[data-test-case=\"4\"]"],
+      "selectorExpansion": false
+    },
+
+    {
+      "label": "3.11 NCK pagination - click on item 1 of TC4",
+      "url": "http://localhost:8080/#/pagination",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on item 1 of TC4",
+      "clickSelector": "[data-test-case=\"4\"] .nck-pagination li:nth-child(2)",
+      "selectors": ["[data-test-case=\"4\"]"],
+      "selectorExpansion": false
+    },
+
+    {
+      "label": "3.12 NCK pagination - click on item Arrow of TC12",
+      "url": "http://localhost:8080/#/pagination",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on item Arrow of TC12",
+      "clickSelector": "[data-test-case=\"12\"] .nck-pagination li:nth-child(1)",
+      "selectors": ["[data-test-case=\"12\"]"],
+      "selectorExpansion": false,
+      "onReadyScript": "clickAndMoveMouse.js"
+    },
+
+    {
+      "label": "3.13 NCK pagination - Click TC14 dropdown",
+      "url": "http://localhost:8080/#/pagination",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click TC14 dropdown",
+      "clickSelector": "[data-test-case=\"14\"] .nck-dropdown.pagination-dropdown button",
+      "selectorExpansion": true,
+      "postInteractionWait": 200,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 2020
+        }
+      ]
+    },
+
+    {
+      "label": "3.14 NCK pagination - click on item 11 of TC14",
+      "url": "http://localhost:8080/#/pagination",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on item 11 of TC14",
+      "clickSelector": "[data-test-case=\"14\"] .nck-pagination li:nth-child(6)",
+      "selectors": ["[data-test-case=\"14\"]"],
+      "selectorExpansion": false
+    },
+
+    {
+      "label": "3.15 NCK pagination - Click TC15 dropdown",
+      "url": "http://localhost:8080/#/pagination",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click TC15 dropdown",
+      "clickSelector": "[data-test-case=\"15\"] .nck-dropdown.pagination-dropdown button",
+      "selectorExpansion": true,
+      "postInteractionWait": 200,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 2020
+        }
+      ]
+    },
+
+    {
+      "label": "4.0 NCK pagination - focus on item 2 of TC1",
+      "url": "http://localhost:8080/#/pagination",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on item 2 of TC1",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"1\"] .nck-pagination li:nth-child(2) a",
+      "selectors": ["[data-test-case=\"1\"]"],
+      "selectorExpansion": false
+    },
+
+    {
+      "label": "4.1 NCK pagination - focus on item Arrow of TC1",
+      "url": "http://localhost:8080/#/pagination",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on item Arrow of TC1",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"1\"] .nck-pagination li:nth-child(3) a",
+      "selectors": ["[data-test-case=\"1\"]"],
+      "selectorExpansion": false
+    },
+
+    {
+      "label": "4.2 NCK pagination - focus on item Arrow of TC2",
+      "url": "http://localhost:8080/#/pagination",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on item Arrow of TC2",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"2\"] .nck-pagination li:nth-child(1) a",
+      "selectors": ["[data-test-case=\"2\"]"],
+      "selectorExpansion": false
+    },
+
+    {
+      "label": "4.3 NCK pagination - focus on item 1 of TC2",
+      "url": "http://localhost:8080/#/pagination",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on item 1 of TC2",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"2\"] .nck-pagination li:nth-child(2) a",
+      "selectors": ["[data-test-case=\"2\"]"],
+      "selectorExpansion": false
+    },
+
+    {
+      "label": "4.4 NCK pagination - focus on item 2 of TC2",
+      "url": "http://localhost:8080/#/pagination",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on item 2 of TC2",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"2\"] .nck-pagination li:nth-child(3)",
+      "selectors": ["[data-test-case=\"2\"]"],
+      "selectorExpansion": false
+    },
+
+    {
+      "label": "4.5 NCK pagination - focus on item ... of TC3",
+      "url": "http://localhost:8080/#/pagination",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on item ... of TC3",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"3\"] .nck-pagination li:nth-child(4)",
+      "selectors": ["[data-test-case=\"3\"]"],
+      "selectorExpansion": false
+    },
+
+    {
+      "label": "4.6 NCK pagination - focus on item 2 of TC6",
+      "url": "http://localhost:8080/#/pagination",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on item 2 of TC6",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"6\"] .nck-pagination li:nth-child(3) a",
+      "selectors": ["[data-test-case=\"6\"]"],
+      "selectorExpansion": false
+    },
+
+    {
+      "label": "4.7 NCK pagination - focus on TC14 dropdown",
+      "url": "http://localhost:8080/#/pagination",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on TC14 dropdown",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"14\"] .nck-dropdown.pagination-dropdown button",
+      "selectors": ["[data-test-case=\"14\"]"],
+      "selectorExpansion": false,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 2020
+        }
+      ]
+    },
+
+    {
+      "label": "5.0 NCK pagination - focus and press enter on item 2 of TC1",
+      "url": "http://localhost:8080/#/pagination",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus and press enter on item 2 of TC1",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"1\"] .nck-pagination li:nth-child(2) a",
+      "selectors": ["[data-test-case=\"1\"]"],
+      "selectorExpansion": false
+    },
+
+    {
+      "label": "5.1 NCK pagination - focus and press enter on item Arrow of TC1",
+      "url": "http://localhost:8080/#/pagination",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus and press enter on item Arrow of TC1",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"1\"] .nck-pagination li:nth-child(3) a",
+      "selectors": ["[data-test-case=\"1\"]"],
+      "selectorExpansion": false
+    },
+
+    {
+      "label": "5.2 NCK pagination - focus and press enter on item Arrow of TC2",
+      "url": "http://localhost:8080/#/pagination",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus and press enter on item Arrow of TC2",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"2\"] .nck-pagination li:nth-child(1) a",
+      "selectors": ["[data-test-case=\"2\"]"],
+      "selectorExpansion": false
+    },
+
+    {
+      "label": "5.3 NCK pagination - focus and press enter on dropdown of TC14",
+      "url": "http://localhost:8080/#/pagination",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus and press enter on dropdown of TC14",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"14\"] .nck-dropdown.pagination-dropdown button",
+      "selectorExpansion": false,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 2020
+        }
+      ]
+    },
+
+    {
+      "label": "6.0 NCK pagination - focus+space on TC14 dropdown",
+      "url": "http://localhost:8080/#/pagination",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus+space on TC14 dropdown",
+      "onReadyScript": "focusAndPressSpace.js",
+      "focusAndPressSpaceSelector": "[data-test-case=\"14\"] .nck-dropdown.pagination-dropdown button",
+      "selectorExpansion": false,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 2020
+        }
+      ]
+     },
+
+     {
+      "label": "7.0 NCK pagination - click TC14 value 4 of the list",
+      "url": "http://localhost:8080/#/pagination",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click TC14 value 4 of the list",
+      "onReadyScript": "ClickTwice.js",
+      "clickSelector": "[data-test-case=\"14\"] .nck-dropdown button",
+      "clickSelector2": "[data-test-case=\"14\"] .nck-dropdown .nck-dropdown-menu li:nth-child(4)",
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 2020
+        }
+      ]
+     },
+
+     {
+      "label": "7.1 NCK Test pagination - click TC15 value 2 of the list",
+      "url": "http://localhost:8080/#/pagination",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click TC15 value 2 of the list",
+      "onReadyScript": "ClickTwice.js",
+      "clickSelector": "[data-test-case=\"15\"] .nck-dropdown button",
+      "clickSelector2": "[data-test-case=\"15\"] .nck-dropdown .nck-dropdown-menu li:nth-child(2)",
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 2020
+        }
+      ]
+    },
+
+     {
+      "label": "8.0 NCK pagination - Click and press down arrow on TC14",
+      "url": "http://localhost:8080/#/pagination",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click and press down arrow key on TC14 dropdown",
+      "onReadyScript": "clickAndPressArrowKey.js",
+      "clickSelector": "[data-test-case=\"14\"] .nck-dropdown button",
+      "keyDirection": "down",
+      "pressKeyXTimes": 1,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 2020
+        }
+      ]
+    },
+
+    {
+      "label": "9.0 NCK pagination - Click TC14 to open then click outside to close",
+      "url": "http://localhost:8080/#/pagination",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "onReadyScript": "actions.js",
+      "actions": [
+          {
+              "type": "click",
+              "selector": "[data-test-case=\"14\"] .nck-dropdown button"
+          },
+          {
+              "type": "clickAtPosition",
+              "coordinate": {
+                  "x": 5,
+                  "y": 5
+              }
+          }
+      ],
+      "selectorExpansion": false,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 2020
+        }
+      ]
+    },
+
+    {
+      "label": "9.1 NCK pagination - Click TC15 to open then click outside to close",
+      "url": "http://localhost:8080/#/pagination",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "onReadyScript": "actions.js",
+      "actions": [
+          {
+              "type": "click",
+              "selector": "[data-test-case=\"15\"] .nck-dropdown button"
+          },
+          {
+              "type": "clickAtPosition",
+              "coordinate": {
+                  "x": 5,
+                  "y": 5
+              }
+          }
+      ],
+      "selectorExpansion": false,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 2020
+        }
+      ]
+    }
+
+
+  ]
+
+}

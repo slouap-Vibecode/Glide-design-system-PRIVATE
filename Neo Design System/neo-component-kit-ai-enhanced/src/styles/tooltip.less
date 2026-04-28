@@ -1,0 +1,70 @@
+@import (reference) "./colorsVariables.less";
+@import (reference) "./sizeVariables.less";
+@import (reference) "./typography.less";
+
+/* dimensions or spacings */
+@tooltipPadding: 0.3125rem;
+@arrowSide: 0.5rem;
+@borderSize: @thin-border * 1rem;
+
+.nck-tooltip,
+.nck-style.nck-tooltip {
+  position: absolute;
+  width: max-content;
+  top: 0;
+  left: 0;
+
+  opacity: 1;
+  .text-m();
+  color: var(--ink-100);
+  z-index: 1070;
+  text-align: left;
+
+  .nck-tooltip-inner {
+    background-color: white;
+    padding: 0.625rem 0.9375rem;
+    border-radius: 0.1875rem;
+    border: @borderSize solid var(--blue-grey-300);
+    max-width: 20rem;
+    box-sizing: border-box;
+    outline: none;
+    & div.nck-tooltip-heading {
+      .text-m-semibold();
+    }
+    & button {
+      margin-top: 0.5rem;
+    }
+  }
+
+  .nck-tooltip-arrow {
+    position: absolute;
+    box-sizing: border-box;
+    width: @arrowSide;
+    height: @arrowSide;
+    background-color: white;
+    border: @borderSize solid var(--blue-grey-300);
+    transform: rotate(45deg);
+    z-index: -1;
+  }
+
+  .nck-tooltip-arrow-overlay {
+    position: absolute;
+    width: @arrowSide;
+    height: @arrowSide;
+    background-color: white;
+    transform: rotate(45deg);
+    z-index: 1;
+  }
+}
+
+.nck-trigger-moz:-moz-focusring {
+  outline: 0.0625rem dotted;
+}
+
+#nck-tooltip-backdrop {
+  position: fixed;
+  z-index: 1050;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}

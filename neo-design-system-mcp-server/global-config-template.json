@@ -1,0 +1,34 @@
+{
+  "mcpServers": {
+    "neo-design-system": {
+      "command": "npx",
+      "args": ["@neotechnologygroup/neo-design-system-mcp-server"],
+      "env": {
+        "NEO_COMPONENT_KIT_PATH": "./node_modules/@neotechnologygroup/neo-component-kit",
+        "NEO_ICON_KIT_PATH": "./node_modules/@neotechnologygroup/neo-icon-kit",
+        "NEO_MCP_CACHE_DIR": "./.neo-mcp-cache",
+        "NEO_MCP_ENABLE_WATCHER": "true"
+      }
+    },
+    "neo-design-system-local": {
+      "command": "node",
+      "args": ["./node_modules/@neotechnologygroup/neo-design-system-mcp-server/build/index.js"],
+      "env": {
+        "NEO_COMPONENT_KIT_PATH": "./node_modules/@neotechnologygroup/neo-component-kit",
+        "NEO_ICON_KIT_PATH": "./node_modules/@neotechnologygroup/neo-icon-kit",
+        "NEO_MCP_CACHE_DIR": "./.neo-mcp-cache",
+        "NEO_MCP_ENABLE_WATCHER": "true"
+      }
+    },
+    "neo-design-system-dev": {
+      "command": "node",
+      "args": ["../Glide-workspace/neo-design-system-mcp-server/build/index.js"],
+      "env": {
+        "NEO_COMPONENT_KIT_PATH": "../Glide-workspace/Neo Design System/neo-component-kit-ai-enhanced",
+        "NEO_ICON_KIT_PATH": "../Glide-workspace/Neo Design System/neo-icon-kit",
+        "NEO_MCP_CACHE_DIR": "./.neo-mcp-cache",
+        "NEO_MCP_ENABLE_WATCHER": "true"
+      }
+    }
+  }
+}

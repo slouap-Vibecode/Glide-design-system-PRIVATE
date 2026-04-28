@@ -1,0 +1,1233 @@
+{
+    "id": "backstop_modal",
+    "viewports": [
+        {
+            "label": "phone",
+            "width": 320,
+            "height": 600
+        },
+        {
+            "label": "tablet",
+            "width": 1024,
+            "height": 1080
+        },
+        {
+            "label": "desktop",
+            "width": 1920,
+            "height": 1080
+        }
+    ],
+    "onBeforeScript": "puppet/onBefore.js",
+    "onReadyScript": "puppet/onReady.js",
+    "paths": {
+        "bitmaps_reference": "backstop_data/bitmaps_reference",
+        "bitmaps_test": "backstop_data/bitmaps_test",
+        "engine_scripts": "backstop_data/engine_scripts",
+        "html_report": "backstop_data/html_report",
+        "ci_report": "backstop_data/ci_report"
+    },
+    "report": [
+        "CI"
+    ],
+    "engine": "puppeteer",
+    "engineOptions": {
+        "args": [
+    "--no-sandbox",
+    "--disable-setuid-sandbox",
+    "--disable-dev-shm-usage",
+    "--disable-accelerated-2d-canvas",
+    "--no-first-run",
+    "--no-zygote",
+
+    "--disable-gpu"
+  ],
+        "ignoreDefaultArgs": [
+            "--hide-scrollbars"
+        ],
+        "protocolTimeout": 960000
+    },
+    "asyncCaptureLimit": 3,
+    "asyncCompareLimit": 50,
+    "debug": false,
+    "debugWindow": false,
+    "scenarios": [
+        {
+            "label": "1.1 NCK modal- CLICK on the TC0 button",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click on the button of TC0",
+            "clickSelector": "[data-test-case=\"0\"] button",
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "1.2 NCK modal- CLICK on the TC1 button",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click on the button of TC1",
+            "clickSelector": "[data-test-case=\"1\"] button",
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "1.3 NCK modal- CLICK on the TC2 button",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click on the button of TC2",
+            "clickSelector": "[data-shadow-dom-anchor]",
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "1.4 NCK modal- CLICK on the TC3 button",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "keyPressSelector": {
+                "selector": "#name",
+                "keyPress": "Ada"
+            },
+            "description": "click on the button of TC3",
+            "clickSelector": "[data-test-case=\"3\"] button",
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "1.5 NCK modal- CLICK on the TC4 button",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click on the button of TC4",
+            "clickSelector": "[data-test-case=\"4\"] button",
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "1.6 NCK modal- CLICK on the TC5 button",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click on the button of TC5",
+            "clickSelector": "[data-test-case=\"5\"] button",
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "1.7 NCK modal- CLICK on the TC7 button",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click on the button of TC7",
+            "clickSelector": "[data-test-case=\"7\"] button",
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "1.8 NCK modal- CLICK on the TC8 button",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click on the button of TC8",
+            "clickSelector": "[data-test-case=\"8\"] button",
+            "postInteractionWait": 3000,
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "2.1 NCK modal- CLICK on the X of TC1 modal desktop",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "to dismiss-click on the X of the TC1 modal for desktop",
+            "clickSelectors": [
+                "[data-test-case=\"1\"] button",
+                ".nck-modal .right-button"
+            ],
+            "viewports": [
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 1080
+                }
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "2.1 NCK modal- CLICK on the X of TC1 modal phone and tab",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "to dismiss-click on the X of the TC1 modal for phone and tab",
+            "clickSelectors": [
+                "[data-test-case=\"1\"] button",
+                ".nck-modal .left-button"
+            ],
+            "viewports": [
+                {
+                    "label": "phone",
+                    "width": 320,
+                    "height": 480
+                },
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 1080
+                }
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "2.2 NCK modal- CLICK on the Bye modal of TC1 modal",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "to dismiss-click on the Bye modal button of TC1 modal",
+            "clickSelectors": [
+                "[data-test-case=\"1\"] button",
+                ".nck-modal .nck-modal-footer .action-buttons button:nth-child(1)"
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "2.3 NCK modal- CLICK on the Confirm of TC1 modal",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "to dismiss-click on the Confirm of the TC1 modal",
+            "clickSelectors": [
+                "[data-test-case=\"1\"] button",
+                ".nck-modal .nck-modal-footer .action-buttons button:nth-child(2)"
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "2.4 NCK modal- CLICK outside of the TC2 modal",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "to dismiss-click outside of the TC2 modal",
+            "onReadyScript": "clickAndMoveMouseAndClick.js",
+            "clickSelector": "[data-shadow-dom-anchor]",
+            "viewports": [
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 1080
+                },
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 1080
+                }
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "2.5 NCK modal- ESC on the TC1 modal",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "to dismiss-esc on the TC1 modal",
+            "onReadyScript": "clickAndPressEsc.js",
+            "clickSelector": "[data-test-case=\"1\"] button",
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "2.6 NCK modal- CLICK on top button TC1 modal",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on the Even i can be here button",
+            "clickSelectors": [
+                "[data-test-case=\"1\"] button",
+                ".test-outside-event"
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "2.7 NCK modal- CLICK on the X of TC7 modal desktop",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "to dismiss-click on the X of the TC7 modal for desktop",
+            "clickSelectors": [
+                "[data-test-case=\"7\"] button",
+                ".nck-modal .right-button"
+            ],
+            "viewports": [
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 1080
+                }
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "2.7 NCK modal- CLICK on the X of TC7 modal phone and tab",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "to dismiss-click on the X of the TC7 modal for phone and tab",
+            "clickSelectors": [
+                "[data-test-case=\"7\"] button",
+                ".nck-modal .left-button"
+            ],
+            "viewports": [
+                {
+                    "label": "phone",
+                    "width": 320,
+                    "height": 600
+                },
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 1080
+                }
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "2.8 NCK modal- ESC on the TC4 modal",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "to dismiss-esc on the TC4 modal",
+            "onReadyScript": "clickAndPressEsc.js",
+            "clickSelector": "[data-test-case=\"4\"] button",
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "2.9 NCK modal- CLICK outside of the TC4 modal",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "to dismiss-click outside of the TC4 modal",
+            "onReadyScript": "clickAndMoveMouseAndClick.js",
+            "clickSelector": "[data-test-case=\"4\"] button",
+            "viewports": [
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 1080
+                },
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 1080
+                }
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "3.1 NCK modal- FOCUS+ENTER on the X of TC1 modal phone and tablet",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "to dismiss-focus+enter on the X TC1 modal phone and tablet",
+            "onReadyScript": "puppet/actions.js",
+            "clickSelector": "[data-test-case=\"1\"] button",
+            "actions": [
+                {
+                    "type": "focus",
+                    "selector": ".nck-modal-header .left-button"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Enter"
+                }
+            ],
+            "viewports": [
+                {
+                    "label": "phone",
+                    "width": 320,
+                    "height": 600
+                },
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 1080
+                }
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "3.2 NCK modal- FOCUS+ENTER on the X of TC1 modal desktop",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "to dismiss-focus+enter on the X TC1 modal desktop",
+            "onReadyScript": "puppet/actions.js",
+            "clickSelector": "[data-test-case=\"1\"] button",
+            "actions": [
+                {
+                    "type": "focus",
+                    "selector": ".nck-modal-header .right-button"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Enter"
+                }
+            ],
+            "viewports": [
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 1080
+                }
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "3.3 NCK modal- FOCUS+SPACE on the X of TC5 modal desktop",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "to dismiss-focus+space on the X TC5 modal desktop",
+            "onReadyScript": "puppet/actions.js",
+            "clickSelector": "[data-test-case=\"5\"] button",
+            "actions": [
+                {
+                    "type": "focus",
+                    "selector": ".nck-modal-header .right-button"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Space"
+                }
+            ],
+            "viewports": [
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 1080
+                }
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "3.4 NCK modal- FOCUS+SPACE on the X of TC5 modal phone and tablet",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "to dismiss-focus+space on the X TC5 modal phone and tablet",
+            "onReadyScript": "puppet/actions.js",
+            "clickSelector": "[data-test-case=\"5\"] button",
+            "actions": [
+                {
+                    "type": "focus",
+                    "selector": ".nck-modal-header .left-button"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Space"
+                }
+            ],
+            "viewports": [
+                {
+                    "label": "phone",
+                    "width": 320,
+                    "height": 600
+                },
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 1080
+                }
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "4.1 NCK modal- CLICK on the TC1 button then open another modal",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click on the button of TC1 then open another modal",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"1\"] button"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-open-other-modal]"
+                }
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "4.2 NCK modal- CLICK on the TC1 button then open another modal without trigger",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click on the button of TC1 then open another modal without trigger",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"1\"] button"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-open-other-modal-without-trigger]"
+                }
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "4.3 NCK modal- CLICK on the TC1 button then open another modal and extra modal",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click on the button of TC1 then open another modal and extra modal",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"1\"] button"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-open-other-modal]"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-open-extra-modal]"
+                }
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "4.4 NCK modal- CLICK on the TC1 button then press the 'test routeur' button",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click on the button of TC1 then press the 'test routeur' button",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"1\"] button"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-use-router-button]"
+                },
+                {
+                    "type": "waitForTimeout",
+                    "delay": 500
+                }
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "5.1 NCK modal- CLICK on the TC1 button then open another modal + Escape",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click on the button of TC1 then open another modal and Escape",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"1\"] button"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-open-other-modal]"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Escape"
+                }
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "5.2 NCK modal- CLICK on the TC1 button then open another modal without trigger + Escape",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click on the button of TC1 then open another modal without trigger then press Escape",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"1\"] button"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-open-other-modal-without-trigger]"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Escape"
+                },
+                {
+                    "type": "mouseMove",
+                    "coordinate": {
+                        "x": 0,
+                        "y": 0
+                    }
+                }
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "6.1 NCK modal- CLICK on the TC1 button + open another modal + extra modal + Escape",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click on the button of TC1 then open another modal and extra modal then press Escape",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"1\"] button"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-open-other-modal]"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-open-extra-modal]"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Escape"
+                }
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "6.2 NCK modal- CLICK on the TC1 button + open another modal + extra modal + Escape x 2",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click on the button of TC1 then open another modal and extra modal then press Escape twice",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"1\"] button"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-open-other-modal]"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-open-extra-modal]"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Escape"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Escape"
+                }
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "6.3 NCK modal- CLICK on the TC1 button + open another modal + extra modal + Escape x 3",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click on the button of TC1 then open another modal and extra modal then press Escape three times",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"1\"] button"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-open-other-modal]"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-open-extra-modal]"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Escape"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Escape"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Escape"
+                }
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "7.1 NCK modal- Mouse down on the Bye button of TC4 modal and release outside",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Mouse down on the Bye button of TC4 modal and release outside",
+            "onReadyScript": "puppet/mouseDownAndMouseReleaseOutside.js",
+            "clickSelector": "[data-test-case=\"4\"] button",
+            "mousedownSelector": ".nck-modal .nck-modal-footer .action-buttons button",
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "8.1 NCK modal- CLICK on the TC6 button then CLICK on the first dropdown",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on the TC6 button to open the modal then click to open the first dropdown",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"6\"] button"
+                },
+                {
+                    "type": "click",
+                    "selector": "#dropdownInModalFullSize button"
+                },
+                {
+                    "type": "mouseMove",
+                    "coordinate": {
+                        "x": 0,
+                        "y": 0
+                    }
+                }
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "8.3 NCK modal- CLICK on the TC6 button then CLICK on the autocomplete",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on the TC6 button to open the modal then click to open the autocomplete",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"6\"] button"
+                },
+                {
+                    "type": "click",
+                    "selector": ".nck-modal .nck-modal-body .nck-autocomplete .nck-input-container .nck-text-input"
+                },
+                {
+                    "type": "waitForTimeout",
+                    "delay": 500
+                }
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "8.4 NCK modal- CLICK on the TC6 button then CLICK on the date picker Start Date_mobile",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on the TC6 button to open the modal then click The beginning to open the datepicker on a mobile resolution",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"6\"] button"
+                },
+                {
+                    "type": "click",
+                    "selector": ".nck-modal .nck-modal-body .nck-datepicker-trigger-container:nth-child(1) button"
+                },
+                {
+                    "type": "mouseMove",
+                    "coordinate": {
+                        "x": 0,
+                        "y": 0
+                    }
+                }
+            ],
+            "viewports": [
+                {
+                    "label": "phone",
+                    "width": 320,
+                    "height": 800
+                },
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 500
+                }
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "8.5 NCK modal- CLICK on the TC6 button then CLICK on the date picker Start Date_desktop",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on the TC6 button to open the modal then click The beginning to open the datepicker on a desktop resolution",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"6\"] button"
+                },
+                {
+                    "type": "click",
+                    "selector": ".nck-modal .nck-modal-body .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+                }
+            ],
+            "viewports": [
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 1000
+                }
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "8.6 NCK modal- CLICK on the TC6 button then CLICK on the date picker End Date_desktop",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on the TC6 button to open the modal then click The End to open the datepicker on a desktop resolution",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"6\"] button"
+                },
+                {
+                    "type": "click",
+                    "selector": ".nck-modal .nck-modal-body .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(2) .popover-trigger button"
+                }
+            ],
+            "viewports": [
+                {
+                    "label": "desktop",
+                    "width": 1920,
+                    "height": 1000
+                }
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "9.1 NCK modal- On the TC6 modal, CLICK on the first dropdown then Escape",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on the TC6 button to open the modal then click to open the first dropdown, then escape to close the dropdown",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"6\"] button"
+                },
+                {
+                    "type": "click",
+                    "selector": "#dropdownInModalFullSize button"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Escape"
+                }
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "9.2 NCK modal- On the TC6 modal, CLICK on the autocomplete then Escape",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on the TC6 button to open the modal then click to open the autocomplete, then press Escape to close the autocomplete",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"6\"] button"
+                },
+                {
+                    "type": "click",
+                    "selector": ".nck-modal .nck-modal-body .nck-autocomplete .nck-input-container .nck-text-input"
+                },
+                {
+                    "type": "waitForTimeout",
+                    "delay": 350
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Escape"
+                }
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "9.3 NCK modal- Click on the Bye button of TC4 modal",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click the Bye button of TC4 modal ",
+            "clickSelector": [
+                "[data-test-case=\"4\"] button",
+                ".nck-modal .nck-modal-footer .action-buttons button"
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "9.4 NCK modal- On the TC6 modal, CLICK on the first chip-popover",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on the TC6 button to open the modal then click to open the chip popover",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"6\"] button"
+                },
+                {
+                    "type": "click",
+                    "selector": ".nck-modal .nck-modal-body .nck-chip-popover:nth-child(1)"
+                }
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "9.5 NCK modal- On the TC6 modal, CLICK on the first chip-popover then Escape",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on the TC6 button to open the modal then click to open the chip-popover, then press Escape",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"6\"] button"
+                },
+                {
+                    "type": "click",
+                    "selector": ".nck-modal .nck-modal-body .nck-chip-popover:nth-child(1)"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Escape"
+                },
+                {
+                    "type": "waitForTimeout",
+                    "delay": 200
+                }
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "9.6 NCK modal- On the TC6 modal, CLICK on the 2nd chip-popover",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on the TC6 button to open the modal then click to open the chip popover",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"6\"] button"
+                },
+                {
+                    "type": "click",
+                    "selector": ".nck-modal .nck-modal-body .nck-chip-popover:nth-child(2)"
+                },
+                {
+                    "type": "mouseMove",
+                    "coordinate": {
+                      "x": 0,
+                      "y": 0
+                    }
+                }
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "9.7 NCK modal- On the TC6 modal, CLICK on the 3rd chip-popover",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on the TC6 button to open the modal then click to open the chip popover",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"6\"] button"
+                },
+                {
+                    "type": "click",
+                    "selector": ".nck-modal .nck-modal-body .nck-chip-popover:nth-child(3)"
+                },
+                {
+                    "type": "mouseMove",
+                    "coordinate": {
+                      "x": 0,
+                      "y": 0
+                    }
+                }
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "9.8 NCK modal- On the TC6 modal, CLICK on the 4th chip-popover",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on the TC6 button to open the modal then click to open the chip popover",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"6\"] button"
+                },
+                {
+                    "type": "click",
+                    "selector": ".nck-modal .nck-modal-body .nck-chip-popover:nth-child(4)"
+                },
+                {
+                    "type": "mouseMove",
+                    "coordinate": {
+                      "x": 0,
+                      "y": 0
+                    }
+                }
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "9.9 NCK modal- On the TC6 modal, CLICK on the 5th chip-popover",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on the TC6 button to open the modal then click to open the chip popover",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"6\"] button"
+                },
+                {
+                    "type": "click",
+                    "selector": ".nck-modal .nck-modal-body .nck-chip-popover:nth-child(5)"
+                }
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "10.0 NCK modal- CLICK on the action button of TC7 modal for tablet",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "to click on the action button of the TC7 modal for tablet",
+            "clickSelectors": [
+                "[data-test-case=\"7\"] button",
+                ".nck-modal .left-button:last-child"
+            ],
+            "viewports": [
+                {
+                    "label": "tablet",
+                    "width": 1024,
+                    "height": 1080
+                }
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "11.0 NCK modal- CLICK on the TC0 button then CLICK on Dismiss modal",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on the TC0 button then CLICK on Dismiss modal",
+            "clickSelectors": [
+                "[data-test-case=\"0\"] button",
+                ".nck-modal:nth-child(1) .nck-modal-footer .action-buttons button:nth-child(1)"
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "11.1 NCK modal- CLICK on the TC0 button then CLICK on Dismiss modal then on Continue Editing",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on the TC0 button then CLICK on Dismiss modal then on Continue Editing",
+            "clickSelectors": [
+                "[data-test-case=\"0\"] button",
+                ".nck-modal:nth-child(1) .nck-modal-footer .action-buttons button:nth-child(1)",
+                ".nck-modal:nth-child(2) .nck-modal-footer .action-buttons button:nth-child(1)"
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "11.2 NCK modal- CLICK on the TC0 button then CLICK on Dismiss modal then on Discard Changes",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on the TC0 button then CLICK on Dismiss modal then on Discard Changes",
+            "clickSelectors": [
+                "[data-test-case=\"0\"] button",
+                ".nck-modal:nth-child(1) .nck-modal-footer .action-buttons button:nth-child(1)",
+                ".nck-modal:nth-child(2) .nck-modal-footer .action-buttons button:nth-of-type(2)"
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "12.0 NCK modal- CLICK on the TC1 button then CLICK on Dismiss modal then Escape",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on the TC1 button then CLICK on Dismiss modal then Escape",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"1\"] button"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-open-alertdialog-modal]"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Escape"
+                }
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "12.1 NCK modal- CLICK on the TC1 button then CLICK on Dismiss modal then mouse click outside",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on the TC1 button then CLICK on Dismiss modal then mouse click outside",
+            "clickSelectors": [
+                "[data-test-case=\"1\"] button",
+                "[data-open-alertdialog-modal]",
+                ".nck-modal:nth-child(1) .nck-modal-footer .action-buttons button:nth-child(1)"
+            ],
+            "selectors": [
+                "#app"
+            ]
+        },
+        {
+            "label": "13.0 NCK modal - CLICK on the TC9 button and only has one scrollbar",
+            "url": "http://localhost:8080/#/modal",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "CLICK on the TC9 button and only has one scrollbar",
+            "clickSelectors": [
+              "[data-test-case=\"9\"] button"
+            ],
+            "selectors": [
+                "#app"
+            ]
+        }
+    ]
+}

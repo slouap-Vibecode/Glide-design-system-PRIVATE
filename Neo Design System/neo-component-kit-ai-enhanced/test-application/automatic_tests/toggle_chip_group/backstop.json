@@ -1,0 +1,410 @@
+{
+  "id": "backstop_default",
+  "viewports": [
+    {
+      "label": "phone",
+      "width": 380,
+      "height": 1590
+    },
+    {
+      "label": "tablet",
+      "width": 1024,
+      "height": 1470
+    },
+    {
+      "label": "desktop",
+      "width": 1920,
+      "height": 10000
+    }
+  ],
+  "onBeforeScript": "puppet/onBefore.js",
+  "onReadyScript": "puppet/onReady.js",
+  "scenarios": [
+    {
+      "label": "1. NCK toggle chip group - default display",
+      "url": "http://localhost:8080/#/toggle-chip-group",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "display the default state of all toggle chip group"
+    },
+    {
+      "label": "2.0. NCK toggle chip group - CLICK on 'chip1' of TC0",
+      "url": "http://localhost:8080/#/toggle-chip-group",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on 'chip1' of TC0",
+      "clickSelector": "[data-test-case=\"0\"]  li:nth-child(1) .nck-chip button",
+      "selectors": ["[data-test-case=\"0\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "2.1 NCK toggle chip group  - CLICK on all chips of TC0",
+      "url": "http://localhost:8080/#/toggle-chip-group",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on all chips of TC0",
+      "selectors": "[data-test-case=\"0\"]",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] li:nth-child(1) .nck-chip button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] li:nth-child(2) .nck-chip button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] li:nth-child(3) .nck-chip button"
+        }
+      ]
+    },
+    {
+      "label": "2.2 NCK toggle chip group  - CLICK twice on 'chip1' of TC0",
+      "url": "http://localhost:8080/#/toggle-chip-group",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "postInteractionWait": 100,
+      "description": "click twice on 'chip1' of TC0",
+      "onReadyScript": "ClickTwice.js",
+      "clickSelector": "[data-test-case=\"0\"] li:nth-child(1) .nck-chip button",
+      "clickSelector2": "[data-test-case=\"0\"] li:nth-child(1) .nck-chip button",
+      "selectors": ["[data-test-case=\"0\"]"]
+    },
+    {
+      "label": "2.3 NCK toggle chip group - CLICK on 'checked' of TC1",
+      "url": "http://localhost:8080/#/toggle-chip-group",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on 'checked' of TC1",
+      "clickSelector": "[data-test-case=\"1\"]  li:nth-child(1) .nck-chip button",
+      "selectors": ["[data-test-case=\"1\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "2.4 NCK toggle chip group - CLICK on 'unchecked' of TC1",
+      "url": "http://localhost:8080/#/toggle-chip-group",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on 'unchecked' of TC1",
+      "clickSelector": "[data-test-case=\"1\"]  li:nth-child(2) .nck-chip button",
+      "selectors": ["[data-test-case=\"1\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "2.5 NCK toggle chip group - CLICK on 'chip4' of TC2",
+      "url": "http://localhost:8080/#/toggle-chip-group",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on 'chip4' of TC2",
+      "clickSelector": "[data-test-case=\"2\"]  li:nth-child(2) .nck-chip button",
+      "selectors": ["[data-test-case=\"2\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "2.6 NCK toggle chip group  - CLICK twice on 'chip4' of TC2",
+      "url": "http://localhost:8080/#/toggle-chip-group",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "postInteractionWait": 100,
+      "description": "click twice on 'chip4' of TC2",
+      "onReadyScript": "ClickTwice.js",
+      "clickSelector": "[data-test-case=\"2\"]  li:nth-child(2) .nck-chip button",
+      "clickSelector2": "[data-test-case=\"2\"]  li:nth-child(2) .nck-chip button",
+      "selectors": ["[data-test-case=\"2\"]"]
+    },
+    {
+      "label": "2.7 NCK toggle chip group - CLICK on 'checkbox1' of TC3",
+      "url": "http://localhost:8080/#/toggle-chip-group",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on 'checkbox1' of TC3",
+      "clickSelector": "[data-test-case=\"3\"]  li:nth-child(1) .nck-chip button",
+      "selectors": ["[data-test-case=\"3\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "2.8 NCK toggle chip group  - CLICK twice on 'checkbox1' of TC3",
+      "url": "http://localhost:8080/#/toggle-chip-group",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "postInteractionWait": 100,
+      "description": "click twice on 'checkbox1' of TC3",
+      "onReadyScript": "ClickTwice.js",
+      "clickSelector": "[data-test-case=\"3\"]  li:nth-child(1) .nck-chip button",
+      "clickSelector2": "[data-test-case=\"3\"]  li:nth-child(1) .nck-chip button",
+      "selectors": ["[data-test-case=\"3\"]"]
+    },
+    {
+      "label": "2.9 NCK toggle chip group - CLICK on 'checkbox1' of TC4",
+      "url": "http://localhost:8080/#/toggle-chip-group",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on 'checkbox1' of TC4",
+      "clickSelector": "[data-test-case=\"4\"]  li:nth-child(1) .nck-chip button",
+      "selectors": ["[data-test-case=\"4\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "3.0 NCK toggle chip group - FOCUS on 'chip1' of TC0",
+      "url": "http://localhost:8080/#/toggle-chip-group",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on 'chip1' of TC0",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"0\"] li:nth-child(1) .nck-chip button",
+      "selectors": ["[data-test-case=\"0\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "3.1 NCK toggle chip group - FOCUS on 'chip2' of TC0",
+      "url": "http://localhost:8080/#/toggle-chip-group",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Focus on 'chip2' of TC0",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"0\"] li:nth-child(2) .nck-chip button",
+      "selectors": ["[data-test-case=\"0\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "3.2 NCK toggle chip group - FOCUS on 'checked' of TC1",
+      "url": "http://localhost:8080/#/toggle-chip-group",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Focus on 'checked' of TC1",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"1\"] li:nth-child(1) .nck-chip button",
+      "selectors": ["[data-test-case=\"1\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "3.3 NCK toggle chip group - FOCUS on 'unchecked' of TC1",
+      "url": "http://localhost:8080/#/toggle-chip-group",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Focus on 'unchecked' of TC1",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"1\"] li:nth-child(2) .nck-chip button",
+      "selectors": ["[data-test-case=\"1\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "3.4 NCK toggle chip group - FOCUS on 'chip4' of TC2",
+      "url": "http://localhost:8080/#/toggle-chip-group",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Focus on 'chip4' of TC2",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"2\"] li:nth-child(2) .nck-chip button",
+      "selectors": ["[data-test-case=\"2\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "4.0 NCK toggle chip group - FOCUS+ENTER on 'chip1' of TC0",
+      "url": "http://localhost:8080/#/toggle-chip-group",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Focus and press Enter on the 'chip1' of TC0",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"0\"] li:nth-child(1) .nck-chip button",
+      "selectors": ["[data-test-case=\"0\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "4.1 NCK toggle chip group - FOCUS+ENTER on 'checked' of TC1",
+      "url": "http://localhost:8080/#/toggle-chip-group",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Focus and press Enter on the 'checked' of TC1",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"1\"] li:nth-child(1) .nck-chip button",
+      "selectors": ["[data-test-case=\"1\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "4.2 NCK toggle chip group - FOCUS+ENTER on 'unchecked' of TC1",
+      "url": "http://localhost:8080/#/toggle-chip-group",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Focus and press Enter on the 'unchecked' of TC1",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"1\"] li:nth-child(2) .nck-chip button",
+      "selectors": ["[data-test-case=\"1\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "4.3 NCK toggle chip group - FOCUS+ENTER on 'chip4' of TC2",
+      "url": "http://localhost:8080/#/toggle-chip-group",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Focus and press Enter on the 'chip4' of TC2",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"2\"] li:nth-child(2) .nck-chip button",
+      "selectors": ["[data-test-case=\"2\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "4.4 NCK toggle chip group - FOCUS+ENTER on 'checkbox1' of TC3",
+      "url": "http://localhost:8080/#/toggle-chip-group",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Focus and press Enter on the 'checkbox1' of TC3",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"3\"] li:nth-child(1) .nck-chip button",
+      "selectors": ["[data-test-case=\"3\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "5.0. NCK toggle chip group - FOCUS+SPACE on 'chip2' of TC0",
+      "url": "http://localhost:8080/#/toggle-chip-group",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus+space on 'chip2' of TC0",
+      "onReadyScript": "focusAndPressSpace.js",
+      "focusAndPressSpaceSelector": "[data-test-case=\"0\"] li:nth-child(2) .nck-chip button",
+      "selectors": ["[data-test-case=\"0\"]"]
+    },
+    {
+      "label": "5.1. NCK toggle chip group - FOCUS+SPACE on 'checked' of TC1",
+      "url": "http://localhost:8080/#/toggle-chip-group",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus+space on 'checked' of TC1",
+      "onReadyScript": "focusAndPressSpace.js",
+      "focusAndPressSpaceSelector": "[data-test-case=\"1\"] li:nth-child(1) .nck-chip button",
+      "selectors": ["[data-test-case=\"1\"]"]
+    },
+    {
+      "label": "5.2. NCK toggle chip group - FOCUS+SPACE on 'unchecked' of TC1",
+      "url": "http://localhost:8080/#/toggle-chip-group",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus+space on 'unchecked' of TC1",
+      "onReadyScript": "focusAndPressSpace.js",
+      "focusAndPressSpaceSelector": "[data-test-case=\"1\"] li:nth-child(2) .nck-chip button",
+      "selectors": ["[data-test-case=\"1\"]"]
+    },
+    {
+      "label": "5.3. NCK toggle chip group - FOCUS+SPACE on 'chip4' of TC2",
+      "url": "http://localhost:8080/#/toggle-chip-group",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus+space on 'chip4' of TC2",
+      "onReadyScript": "focusAndPressSpace.js",
+      "focusAndPressSpaceSelector": "[data-test-case=\"2\"] li:nth-child(2) .nck-chip button",
+      "selectors": ["[data-test-case=\"2\"]"]
+    },
+    {
+      "label": "6.0 NCK toggle chip group - HOVER on 'chip1' of TC0",
+      "url": "http://localhost:8080/#/toggle-chip-group",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the 'chip1' of TC0",
+      "hoverSelector": "[data-test-case=\"0\"] li:nth-child(1) .nck-chip button",
+      "selectors": ["[data-test-case=\"0\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "6.1 NCK toggle chip group - HOVER on 'checked' of TC1",
+      "url": "http://localhost:8080/#/toggle-chip-group",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the 'checked' of TC1",
+      "hoverSelector": "[data-test-case=\"1\"] li:nth-child(1) .nck-chip button",
+      "selectors": ["[data-test-case=\"1\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "6.2 NCK toggle chip group - HOVER on 'unchecked' of TC1",
+      "url": "http://localhost:8080/#/toggle-chip-group",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the 'unchecked' of TC1",
+      "hoverSelector": "[data-test-case=\"1\"] li:nth-child(2) .nck-chip button",
+      "selectors": ["[data-test-case=\"1\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "6.3 NCK toggle chip group - HOVER on 'chip4' of TC2",
+      "url": "http://localhost:8080/#/toggle-chip-group",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the 'chip' of TC2",
+      "hoverSelector": "[data-test-case=\"2\"] li:nth-child(2) .nck-chip button",
+      "selectors": ["[data-test-case=\"2\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "7.0 NCK toggle chip group - HOVER+DOWN on 'chip3' of TC0",
+      "url": "http://localhost:8080/#/toggle-chip-group",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover and press left mouse click on the 'chip3' of TC 0",
+      "onReadyScript": "hoverAndPressMouseSelector.js",
+      "hoverAndPressMouseSelector": "[data-test-case=\"0\"] li:nth-child(3) .nck-chip",
+      "selectors": ["[data-test-case=\"0\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "7.1 NCK toggle chip group - HOVER+DOWN on 'checked' of TC1",
+      "url": "http://localhost:8080/#/toggle-chip-group",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover and press left mouse click on the 'checked' of TC 1",
+      "onReadyScript": "hoverAndPressMouseSelector.js",
+      "hoverAndPressMouseSelector": "[data-test-case=\"1\"] li:nth-child(1) .nck-chip",
+      "selectors": ["[data-test-case=\"1\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "7.2 NCK toggle chip group - HOVER+DOWN on 'unchecked' of TC1",
+      "url": "http://localhost:8080/#/toggle-chip-group",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover and press left mouse click on the 'unchecked' of TC 1",
+      "onReadyScript": "hoverAndPressMouseSelector.js",
+      "hoverAndPressMouseSelector": "[data-test-case=\"1\"] li:nth-child(2) .nck-chip",
+      "selectors": ["[data-test-case=\"1\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "7.3 NCK toggle chip group - HOVER+DOWN on 'checkbox1' of TC3",
+      "url": "http://localhost:8080/#/toggle-chip-group",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover and press left mouse click on the 'checkbox1' of TC 3",
+      "onReadyScript": "hoverAndPressMouseSelector.js",
+      "hoverAndPressMouseSelector": "[data-test-case=\"3\"] li:nth-child(1) .nck-chip",
+      "selectors": ["[data-test-case=\"3\"]"],
+      "selectorExpansion": false
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "report": ["CI"],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args":[
+    "--no-sandbox",
+    "--disable-setuid-sandbox",
+    "--disable-dev-shm-usage",
+    "--disable-accelerated-2d-canvas",
+    "--no-first-run",
+    "--no-zygote",
+
+    "--disable-gpu"
+  ],
+    "protocolTimeout": 960000
+  },
+  "asyncCaptureLimit": 3,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false
+}

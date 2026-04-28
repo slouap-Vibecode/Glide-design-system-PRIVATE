@@ -1,0 +1,559 @@
+{
+    "id": "backstop_menu",
+    "viewports": [
+        {
+            "label": "phone",
+            "width": 320,
+            "height": 4800
+        },
+        {
+            "label": "tablet",
+            "width": 1024,
+            "height": 4260
+        },
+        {
+            "label": "desktop",
+            "width": 1920,
+            "height": 4300
+        }
+    ],
+    "onBeforeScript": "puppet/onBefore.js",
+    "onReadyScript": "puppet/onReady.js",
+    "scenarios": [
+        {
+            "label": "1. NCK menu - default display of the page",
+            "url": "http://localhost:8080/#/menu",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "display the default state of all the menus on the page"
+        },
+        {
+            "label": "2.1 NCK menu - HOVER on TC0 menu value 1",
+            "url": "http://localhost:8080/#/menu",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "HOVER on TC0 menu ",
+            "hoverSelector": "[data-test-case=\"0\"] .nck-menu li:nth-child(1)",
+            "selectors": "[data-test-case=\"0\"]",
+            "selectorExpansion": false
+        },
+        {
+            "label": "2.2 NCK menu - HOVER on TC1 menu value 3",
+            "url": "http://localhost:8080/#/menu",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "HOVER on TC1 menu ",
+            "hoverSelector": "[data-test-case=\"1\"] .nck-menu li:nth-child(3)",
+            "selectors": "[data-test-case=\"1\"]",
+            "selectorExpansion": false
+        },
+        {
+            "label": "2.3 NCK menu - HOVER on TC2 menu value 1",
+            "url": "http://localhost:8080/#/menu",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "HOVER on TC2 menu - negative testing",
+            "hoverSelector": "[data-test-case=\"2\"] .nck-menu li:nth-child(1)",
+            "selectors": "[data-test-case=\"2\"]",
+            "selectorExpansion": false
+        },
+        {
+            "label": "2.4 NCK menu - HOVER on TC3 menu value 1",
+            "url": "http://localhost:8080/#/menu",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "HOVER on TC3 menu - negative testing",
+            "hoverSelector": "[data-test-case=\"3\"] .nck-menu li:nth-child(1)",
+            "selectors": "[data-test-case=\"3\"]",
+            "selectorExpansion": false
+        },
+        {
+            "label": "3.1 NCK menu - CLICK TC0 menu value 1",
+            "url": "http://localhost:8080/#/menu",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click TC1 TC0 menu value 1",
+            "clickSelector": "[data-test-case=\"0\"] .nck-menu li:nth-child(1)",
+            "selectorExpansion": true,
+            "selectors": "[data-test-case=\"0\"]",
+            "postInteractionWait": 200
+        },
+        {
+            "label": "3.2 NCK menu - CLICK TC1 menu value 3",
+            "url": "http://localhost:8080/#/menu",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click TC1 menu value 3",
+            "clickSelector": "[data-test-case=\"1\"] .nck-menu li:nth-child(3)",
+            "selectorExpansion": true,
+            "selectors": "[data-test-case=\"1\"]",
+            "postInteractionWait": 200
+        },
+        {
+            "label": "3.3 NCK menu - CLICK TC2 menu value 1",
+            "url": "http://localhost:8080/#/menu",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click TC2 menu value 1",
+            "clickSelector": "[data-test-case=\"2\"] .nck-menu li:nth-child(1)",
+            "selectorExpansion": true,
+            "selectors": "[data-test-case=\"2\"]",
+            "postInteractionWait": 200
+        },
+        {
+            "label": "3.4 NCK menu - CLICK TC3 menu value 1",
+            "url": "http://localhost:8080/#/menu",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click TC3 menu value 1",
+            "clickSelector": "[data-test-case=\"3\"] .nck-menu li:nth-child(1)",
+            "selectorExpansion": true,
+            "selectors": "[data-test-case=\"3\"]",
+            "postInteractionWait": 200
+        },
+        {
+            "label": "3.5 NCK menu - CLICK TC7 menu value 1",
+            "url": "http://localhost:8080/#/menu",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click TC7 menu value 1",
+            "clickSelector": "[data-test-case=\"7\"] .nck-menu li:nth-child(1)",
+            "selectorExpansion": true,
+            "selectors": "[data-test-case=\"7\"]",
+            "postInteractionWait": 200
+        },
+        {
+            "label": "3.6 NCK menu - CLICK TC8 menu value 4",
+            "url": "http://localhost:8080/#/menu",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "click TC8 menu value 4",
+            "clickSelector": "[data-test-case=\"8\"] .nck-menu li:nth-child(4)",
+            "selectorExpansion": true,
+            "selectors": "[data-test-case=\"8\"]",
+            "postInteractionWait": 200
+        },
+        {
+            "label": "4.1 NCK menu - Click Focus button and press down arrow on TC0",
+            "url": "http://localhost:8080/#/menu",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click Focus button and press down arrow key on TC0 menu",
+            "onReadyScript": "clickAndPressArrowKey.js",
+            "clickSelector": "[data-test-case=\"0\"] [data-focus-menu-action]",
+            "keyDirection": "down",
+            "pressKeyXTimes": 1,
+            "selectors": "[data-test-case=\"0\"]"
+        },
+        {
+            "label": "4.3 NCK menu - Click Focus button and press down arrow twice on TC2",
+            "url": "http://localhost:8080/#/menu",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click Focus button and press down arrow key twice on TC2 menu",
+            "onReadyScript": "clickAndPressArrowKey.js",
+            "clickSelector": "[data-test-case=\"2\"] [data-focus-menu-action]",
+            "keyDirection": "down",
+            "pressKeyXTimes": 2,
+            "selectors": "[data-test-case=\"2\"]"
+        },
+        {
+            "label": "4.4 NCK menu - Click Focus button and press down arrow twice on TC9",
+            "url": "http://localhost:8080/#/menu",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click Focus button and press down arrow key twice on TC9 menu",
+            "onReadyScript": "clickAndPressArrowKey.js",
+            "clickSelector": "[data-test-case=\"9\"] [data-focus-menu-action]",
+            "keyDirection": "down",
+            "pressKeyXTimes": 2,
+            "selectors": "[data-test-case=\"9\"]"
+        },
+        {
+            "label": "5.1 NCK menu - Click Focus then press A twice on TC0",
+            "url": "http://localhost:8080/#/menu",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click and press the letter A twice on TC0 menu",
+            "onReadyScript": "clickAndPressAKey.js",
+            "clickSelector": "[data-test-case=\"0\"] [data-focus-menu-action]",
+            "pressKeyXTimes": 2,
+            "selectors": "[data-test-case=\"0\"]"
+        },
+        {
+            "label": "5.2 NCK menu - Click Focus then press S twice on TC2",
+            "url": "http://localhost:8080/#/menu",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click and press the letter S twice on TC2 menu",
+            "onReadyScript": "clickAndPressSKey.js",
+            "clickSelector": "[data-test-case=\"2\"] [data-focus-menu-action]",
+            "pressKeyXTimes": 2,
+            "selectors": "[data-test-case=\"2\"]"
+        },
+        {
+            "label": "5.3 NCK menu - Click Focus then press A on TC3",
+            "url": "http://localhost:8080/#/menu",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click and press the letter A on TC3 menu",
+            "onReadyScript": "clickAndPressAKey.js",
+            "clickSelector": "[data-test-case=\"3\"] [data-focus-menu-action]",
+            "pressKeyXTimes": 1,
+            "selectors": "[data-test-case=\"3\"]"
+        },
+        {
+            "label": "5.4 NCK menu - Click Focus then press A on TC7",
+            "url": "http://localhost:8080/#/menu",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click and press the letter A on TC7 menu",
+            "onReadyScript": "clickAndPressAKey.js",
+            "clickSelector": "[data-test-case=\"7\"] [data-focus-menu-action]",
+            "pressKeyXTimes": 1,
+            "selectors": "[data-test-case=\"7\"]"
+        },
+        {
+            "label": "5.5 NCK menu - Click Focus then press A on TC9",
+            "url": "http://localhost:8080/#/menu",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click and press the letter A on TC9 menu",
+            "onReadyScript": "clickAndPressAKey.js",
+            "clickSelector": "[data-test-case=\"9\"] [data-focus-menu-action]",
+            "pressKeyXTimes": 1,
+            "selectors": "[data-test-case=\"9\"]"
+        },
+        {
+            "label": "7.1 NCK menu - Click Focus button + down arrow + enter on TC0",
+            "url": "http://localhost:8080/#/menu",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+			"selectors": "[data-test-case=\"0\"]",
+            "onReadyScript": "actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"0\"] [data-focus-menu-action]"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowDown"
+                },
+                {
+                    "type": "pressKey",
+                    "selector": "Enter",
+                    "key": "Enter"
+                }
+            ]
+        },
+        {
+            "label": "7.2 NCK menu - Click Focus button + down arrow + enter on TC1",
+            "url": "http://localhost:8080/#/menu",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+			"selectors": "[data-test-case=\"1\"]",
+            "onReadyScript": "actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"1\"] [data-focus-menu-action]"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowDown"
+                },
+                {
+                    "type": "pressKey",
+                    "selector": "Enter",
+                    "key": "Enter"
+                }
+            ]
+        },
+        {
+            "label": "7.3 NCK menu - Click Focus button + down arrow + enter on TC3",
+            "url": "http://localhost:8080/#/menu",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+			"selectors": "[data-test-case=\"3\"]",
+            "onReadyScript": "actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"3\"] [data-focus-menu-action]"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowDown"
+                },
+                {
+                    "type": "pressKey",
+                    "selector": "Enter",
+                    "key": "Enter"
+                }
+            ]
+        },
+        {
+            "label": "7.4 NCK menu - MultiSelection - TC7",
+            "url": "http://localhost:8080/#/menu",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+			"selectors": "[data-test-case=\"7\"]",
+            "description": "click Focus + arrow down + enter + arrow down + enter + arrow down + enter + arrow up + enter",
+            "onReadyScript": "actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"7\"] [data-focus-menu-action]"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowDown"
+                },
+                {
+                    "type": "pressKey",
+                    "selector": "Enter",
+                    "key": "Enter"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowDown"
+                },
+                {
+                    "type": "pressKey",
+                    "selector": "Enter",
+                    "key": "Enter"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowDown"
+                },
+                {
+                    "type": "pressKey",
+                    "selector": "Enter",
+                    "key": "Enter"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowUp"
+                },
+                {
+                    "type": "pressKey",
+                    "selector": "Enter",
+                    "key": "Enter"
+                }
+            ]
+        },
+        {
+            "label": "7.5 NCK menu - MultiSelection - TC8",
+            "url": "http://localhost:8080/#/menu",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+			"selectors": "[data-test-case=\"8\"]",
+            "description": "Click Focus + enter + arrow up + enter ",
+            "onReadyScript": "actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"8\"] [data-focus-menu-action]"
+                },
+                {
+                    "type": "pressKey",
+                    "selector": "Enter",
+                    "key": "Enter"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowUp"
+                },
+                {
+                    "type": "pressKey",
+                    "selector": "Enter",
+                    "key": "Enter"
+                }
+            ]
+        },
+        {
+            "label": "8.1 NCK menu - Click Focus button + down arrow + Escape on TC0",
+            "url": "http://localhost:8080/#/menu",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+			"selectors": "[data-test-case=\"0\"]",
+            "onReadyScript": "actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"0\"] [data-focus-menu-action]"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowDown"
+                },
+                {
+                    "type": "pressKey",
+                    "selector": "Escape",
+                    "key": "Escape"
+                }
+            ]
+        },
+        {
+            "label": "8.2 NCK menu - Click Focus button + Up arrow + Escape on TC8",
+            "url": "http://localhost:8080/#/menu",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+			"selectors": "[data-test-case=\"8\"]",
+            "onReadyScript": "actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"8\"] [data-focus-menu-action]"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowUp"
+                },
+                {
+                    "type": "pressKey",
+                    "selector": "Escape",
+                    "key": "Escape"
+                }
+            ]
+        },
+        {
+            "label": "10.1 NCK menu - MultiSelection - Case 2 - TC7",
+            "url": "http://localhost:8080/#/menu",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+			"selectors": "[data-test-case=\"7\"]",
+            "description": "click Focus + arrow down + space + arrow down + space + arrow down + space + arrow up + space",
+            "onReadyScript": "actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"7\"] [data-focus-menu-action]"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowDown"
+                },
+                {
+                    "type": "pressKey",
+                    "selector": "Space",
+                    "key": "Space"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowDown"
+                },
+                {
+                    "type": "pressKey",
+                    "selector": "Space",
+                    "key": "Space"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowDown"
+                },
+                {
+                    "type": "pressKey",
+                    "selector": "Space",
+                    "key": "Space"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowUp"
+                },
+                {
+                    "type": "pressKey",
+                    "selector": "Space",
+                    "key": "Space"
+                }
+            ]
+        },
+        {
+            "label": "10.2 NCK menu - MultiSelection - Case 2 - TC8",
+            "url": "http://localhost:8080/#/menu",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+			"selectors": "[data-test-case=\"8\"]",
+            "description": "Click Focus + space + arrow up + space + arrow up + space ",
+            "onReadyScript": "actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"8\"] [data-focus-menu-action]"
+                },
+                {
+                    "type": "pressKey",
+                    "selector": "Space",
+                    "key": "Space"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowUp"
+                },
+                {
+                    "type": "pressKey",
+                    "selector": "Space",
+                    "key": "Space"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowUp"
+                },
+                {
+                    "type": "pressKey",
+                    "selector": "Space",
+                    "key": "Space"
+                }
+            ]
+        },
+        {
+            "label": "11.1 Click the anchor link on TC2 then press Tab key",
+            "url": "http://localhost:8080/#/menu",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "selectorExpansion": true,
+            "selectors": "[data-test-case=\"2\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"2\"] .before-menu"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Tab"
+                }
+            ]
+        }
+    ],
+    "paths": {
+        "bitmaps_reference": "backstop_data/bitmaps_reference",
+        "bitmaps_test": "backstop_data/bitmaps_test",
+        "engine_scripts": "backstop_data/engine_scripts",
+        "html_report": "backstop_data/html_report",
+        "ci_report": "backstop_data/ci_report"
+    },
+    "report": [
+        "CI"
+    ],
+    "engine": "puppeteer",
+    "engineOptions": {
+        "args": [
+    "--no-sandbox",
+    "--disable-setuid-sandbox",
+    "--disable-dev-shm-usage",
+    "--disable-accelerated-2d-canvas",
+    "--no-first-run",
+    "--no-zygote",
+
+    "--disable-gpu"
+  ],
+        "protocolTimeout": 960000
+    },
+    "asyncCaptureLimit": 3,
+    "asyncCompareLimit": 50,
+    "debug": false,
+    "debugWindow": false
+}

@@ -1,0 +1,397 @@
+{
+  "id": "backstop_checkbox",
+  "viewports": [
+    {
+      "label": "phone",
+      "width": 320,
+      "height": 1754
+    },
+    {
+      "label": "tablet",
+      "width": 1024,
+      "height": 1457
+    },
+    {
+      "label": "desktop",
+      "width": 1920,
+      "height": 10000
+    }
+  ],
+  "onBeforeScript": "puppet/onBefore.js",
+  "onReadyScript": "puppet/onReady.js",
+
+  "scenarios": [
+    {
+      "label": "1. NCK checkbox - default display",
+      "url": "http://localhost:8080/#/checkbox",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "display the default state of all the checkboxes on the page"
+    },
+
+    {
+      "label": "2.1 NCK checkbox - CLICK TC0 checkbox",
+      "url": "http://localhost:8080/#/checkbox",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click TC0 checkbox",
+      "delay": 11000,
+      "clickSelector": "[data-test-case=\"0\"] label",
+      "selectors": ["[data-test-case=\"0\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "2.2 NCK checkbox - CLICK TC3 checkbox",
+      "url": "http://localhost:8080/#/checkbox",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click TC3 checkbox",
+      "clickSelector": "[data-test-case=\"3\"] label",
+      "selectors": ["[data-test-case=\"3\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "2.3 NCK checkbox - CLICK TC5 checkbox",
+      "url": "http://localhost:8080/#/checkbox",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click TC5 checkbox-negative testing",
+      "clickSelector": "[data-test-case=\"5\"] label",
+      "selectors": ["[data-test-case=\"5\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "2.4 NCK checkbox - CLICK TC6 checkbox",
+      "url": "http://localhost:8080/#/checkbox",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click TC6 checkbox",
+      "clickSelector": "[data-test-case=\"6\"] label",
+      "selectors": ["[data-test-case=\"6\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "2.5 NCK checkbox - CLICK TC7 checkbox",
+      "url": "http://localhost:8080/#/checkbox",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click TC6 checkbox-negative testing",
+      "clickSelector": "[data-test-case=\"7\"] label",
+      "selectors": ["[data-test-case=\"7\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "2.6 NCK checkbox - CLICK TC8 checkbox",
+      "url": "http://localhost:8080/#/checkbox",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click TC8 checkbox-negative testing",
+      "clickSelector": "[data-test-case=\"8\"] label",
+      "selectors": ["[data-test-case=\"8\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "2.7 NCK checkbox - CLICK TC9 checkbox",
+      "url": "http://localhost:8080/#/checkbox",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click TC9 checkbox",
+      "clickSelector": "[data-test-case=\"9\"] label",
+      "selectors": ["[data-test-case=\"9\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "2.8 NCK checkbox - CLICK TC10 checkbox",
+      "url": "http://localhost:8080/#/checkbox",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click TC10 checkbox",
+      "clickSelector": "[data-test-case=\"10\"] label",
+      "selectors": ["[data-test-case=\"10\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "2.9 NCK checkbox - CLICK TC11 checkbox",
+      "url": "http://localhost:8080/#/checkbox",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click TC11 checkbox",
+      "clickSelector": "[data-test-case=\"11\"] label",
+      "selectors": ["[data-test-case=\"11\"]"],
+      "selectorExpansion": true
+    },
+
+    {
+      "label": "3.1 NCK checkbox - HOVER+DOWN on the TC0 checkbox",
+      "url": "http://localhost:8080/#/checkbox",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "HOVER+DOWN on the TC0 checkbox",
+      "hoverAndPressMouseSelector": "[data-test-case=\"0\"] label",
+      "selectors": ["[data-test-case=\"0\"]"],
+      "onReadyScript": "hoverAndPressMouseSelector.js"
+    },
+    {
+      "label": "3.2 NCK checkbox - HOVER+DOWN on the TC3 checkbox",
+      "url": "http://localhost:8080/#/checkbox",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "HOVER+DOWN on the TC3 checkbox",
+      "hoverAndPressMouseSelector": "[data-test-case=\"3\"] label",
+      "selectors": ["[data-test-case=\"3\"]"],
+      "onReadyScript": "hoverAndPressMouseSelector.js"
+    },
+    {
+      "label": "3.3 NCK checkbox - HOVER+DOWN on the TC9 checkbox",
+      "url": "http://localhost:8080/#/checkbox",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "HOVER+DOWN on the TC9 checkbox",
+      "hoverAndPressMouseSelector": "[data-test-case=\"9\"] label",
+      "selectors": ["[data-test-case=\"9\"]"],
+      "onReadyScript": "hoverAndPressMouseSelector.js"
+    },
+    {
+      "label": "3.4 NCK checkbox - HOVER+DOWN on the TC10 checkbox",
+      "url": "http://localhost:8080/#/checkbox",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "HOVER+DOWN on the TC10 checkbox",
+      "hoverAndPressMouseSelector": "[data-test-case=\"10\"] label",
+      "selectors": ["[data-test-case=\"10\"]"],
+      "onReadyScript": "hoverAndPressMouseSelector.js"
+    },
+    {
+      "label": "3.5 NCK checkbox - HOVER+DOWN on the TC6 checkbox",
+      "url": "http://localhost:8080/#/checkbox",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "HOVER+DOWN on the TC6 checkbox",
+      "hoverAndPressMouseSelector": "[data-test-case=\"6\"] label",
+      "selectors": ["[data-test-case=\"6\"]"],
+      "onReadyScript": "hoverAndPressMouseSelector.js"
+    },
+
+    {
+      "label": "4.1 NCK checkbox - HOVER TC0 checkbox",
+      "url": "http://localhost:8080/#/checkbox",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click TC0 checkbox",
+      "hoverSelector": "[data-test-case=\"0\"] label",
+      "selectors": ["[data-test-case=\"0\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "4.2 NCK checkbox - HOVER TC3 checkbox",
+      "url": "http://localhost:8080/#/checkbox",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click TC3 checkbox",
+      "hoverSelector": "[data-test-case=\"3\"] label",
+      "selectors": ["[data-test-case=\"3\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "4.3 NCK checkbox - HOVER TC6 checkbox",
+      "url": "http://localhost:8080/#/checkbox",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click TC6 checkbox",
+      "hoverSelector": "[data-test-case=\"6\"] label",
+      "selectors": ["[data-test-case=\"6\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "4.4 NCK checkbox - HOVER TC9 checkbox",
+      "url": "http://localhost:8080/#/checkbox",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click TC9 checkbox",
+      "hoverSelector": "[data-test-case=\"9\"] label",
+      "selectors": ["[data-test-case=\"9\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "4.5 NCK checkbox - HOVER TC10 checkbox",
+      "url": "http://localhost:8080/#/checkbox",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click TC9 checkbox",
+      "hoverSelector": "[data-test-case=\"10\"] label",
+      "selectors": ["[data-test-case=\"10\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "4.6 NCK checkbox - HOVER TC2 checkbox",
+      "url": "http://localhost:8080/#/checkbox",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click TC2 disabled checkbox",
+      "hoverSelector": "[data-test-case=\"2\"] label",
+      "selectors": ["[data-test-case=\"2\"]"],
+      "selectorExpansion": true
+    },
+
+    {
+      "label": "5.1 NCK checkbox - FOCUS TC0 checkbox",
+      "url": "http://localhost:8080/#/checkbox",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the TC0 checkbox",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"0\"] label",
+      "selectors": ["[data-test-case=\"0\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "5.2 NCK checkbox - FOCUS TC3 checkbox",
+      "url": "http://localhost:8080/#/checkbox",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the TC3 checkbox",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"3\"] label",
+      "selectors": ["[data-test-case=\"3\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "5.3 NCK checkbox - FOCUS TC6 checkbox",
+      "url": "http://localhost:8080/#/checkbox",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the TC6 checkbox",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"6\"] label",
+      "selectors": ["[data-test-case=\"6\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "5.4 NCK checkbox - FOCUS TC9 checkbox",
+      "url": "http://localhost:8080/#/checkbox",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the TC9 checkbox",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"9\"] label",
+      "selectors": ["[data-test-case=\"9\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "5.4 NCK checkbox - FOCUS TC10 checkbox",
+      "url": "http://localhost:8080/#/checkbox",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the TC10 checkbox",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"10\"] label",
+      "selectors": ["[data-test-case=\"10\"]"],
+      "selectorExpansion": true
+    },
+
+    {
+      "label": "6.1 NCK checkbox - FOCUS+SPACE TC0 checkbox",
+      "url": "http://localhost:8080/#/checkbox",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus+space on the TC0 checkbox",
+      "onReadyScript": "focusAndPressSpace.js",
+      "focusAndPressSpaceSelector": "[data-test-case=\"0\"] label",
+      "selectors": ["[data-test-case=\"0\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "6.2 NCK checkbox - FOCUS+SPACE TC3 checkbox",
+      "url": "http://localhost:8080/#/checkbox",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus+space on the TC3 checkbox",
+      "onReadyScript": "focusAndPressSpace.js",
+      "focusAndPressSpaceSelector": "[data-test-case=\"3\"] label",
+      "selectors": ["[data-test-case=\"3\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "6.3 NCK checkbox - FOCUS+SPACE TC6 checkbox",
+      "url": "http://localhost:8080/#/checkbox",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus+space on the TC6 checkbox",
+      "onReadyScript": "focusAndPressSpace.js",
+      "focusAndPressSpaceSelector": "[data-test-case=\"6\"] label",
+      "selectors": ["[data-test-case=\"6\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "6.4 NCK checkbox - FOCUS+SPACE TC9 checkbox",
+      "url": "http://localhost:8080/#/checkbox",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus+space on the TC9 checkbox",
+      "onReadyScript": "focusAndPressSpace.js",
+      "focusAndPressSpaceSelector": "[data-test-case=\"9\"] label",
+      "selectors": ["[data-test-case=\"9\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "6.3 NCK checkbox - FOCUS+SPACE TC10 checkbox",
+      "url": "http://localhost:8080/#/checkbox",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus+space on the TC10 checkbox",
+      "onReadyScript": "focusAndPressSpace.js",
+      "focusAndPressSpaceSelector": "[data-test-case=\"10\"] label",
+      "selectors": ["[data-test-case=\"10\"]"],
+      "selectorExpansion": true
+    },
+
+
+    {
+      "label": "7.1 NCK checkbox - CLICK TC0 Focus button",
+      "url": "http://localhost:8080/#/checkbox",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click TC0 Focus button",
+      "clickSelector": "[data-test-case=\"0\"] [data-focus-input]",
+      "selectors": ["[data-test-case=\"0\"]"],
+      "selectorExpansion": true
+    },
+
+    {
+      "label": "8 NCK checkbox - no selected checkbox, mandatory input - TC11",
+      "url": "http://localhost:8080/#/checkbox",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "No selected checkbox, mandatory input",
+      "clickSelector": "[data-test-case=\"11\"] .validate-input",
+      "selectors": ["[data-test-case=\"11\"]"],
+      "onReadyScript": "clickAndMoveMouse.js"
+  }
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "report": ["CI"],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args":[
+    "--no-sandbox",
+    "--disable-setuid-sandbox",
+    "--disable-dev-shm-usage",
+    "--disable-accelerated-2d-canvas",
+    "--no-first-run",
+    "--no-zygote",
+
+    "--disable-gpu"
+  ],
+    "protocolTimeout": 960000
+  },
+  "asyncCaptureLimit": 3,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false
+}

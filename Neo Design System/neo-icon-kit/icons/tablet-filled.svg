@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <g class="neo-icon-kit--tablet-filled">
+    <path fill="#006FCF" fill-rule="evenodd" d="M42 3C42 1.34315 40.6569 0 39 0H9C7.34315 0 6 1.34315 6 3V45C6 46.6569 7.34315 48 9 48H39C40.6569 48 42 46.6569 42 45V3ZM22 40C22 38.8954 22.8954 38 24 38C25.1046 38 26 38.8954 26 40C26 41.1046 25.1046 42 24 42C22.8954 42 22 41.1046 22 40Z" class="svg-primary-fill" clip-rule="evenodd"/>
+  </g>
+</svg>

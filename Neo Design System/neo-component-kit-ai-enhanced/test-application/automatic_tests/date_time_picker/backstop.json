@@ -1,0 +1,3306 @@
+{
+  "id": "backstop_date_time_picker",
+  "viewports": [
+    {
+      "label": "phone",
+      "width": 320,
+      "height": 12500
+    },
+    {
+      "label": "tablet",
+      "width": 1024,
+      "height": 11000
+    },
+    {
+      "label": "desktop",
+      "width": 1920,
+      "height": 10000
+    }
+  ],
+  "onBeforeScript": "puppet/onBefore.js",
+  "onReadyScript": "puppet/onReady.js",
+  "scenarios": [
+    {
+      "label": "1. Default display of the page",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "display the default state the date_time_picker test page"
+    },
+    {
+      "label": "2.1 CLICK TC0 Date_desktop",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC0 Date on desktop",
+      "selectorExpansion": true,
+      "selectors": "[data-test-case=\"0\"]",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "mouseMove",
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ]
+    },
+    {
+      "label": "2.2 CLICK TC0 Date then Click on Time _desktop",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC0 Date on desktop",
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .nck-autocomplete.timepicker"
+        },
+        {
+          "type": "mouseMove",
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ]
+    },
+    {
+      "label": "2.3 CLICK TC1 Date then Click on Time _desktop",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC0 Date on desktop",
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"1\"]",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"1\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"1\"] .nck-autocomplete.timepicker"
+        },
+        {
+          "type": "mouseMove",
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ]
+    },
+    {
+      "label": "2.4 CLICK TC0 Time_mobile",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC0 Time on a mobile device",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .nck-timepicker-trigger button"
+        },
+        {
+          "type": "mouseMove",
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 300
+        }
+      ],
+      "selectors": [
+        ".nck-modal"
+      ]
+    },
+    {
+      "label": "3.1 Click TC0 Date then Done_desktop",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC0 Date then on Done button on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-popover-footer .nck-button:nth-child(3)"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "3.2 Click TC1 Date then Done_desktop",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC1 Date then on Done button on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"1\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"1\"] .datepicker-popover-footer .nck-button:nth-child(3)"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"1\"]"
+    },
+    {
+      "label": "3.3 Click TC0 + Click Outside_desktop",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC0 Date then click outside on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "clickAtPosition",
+          "coordinate": {
+            "x": 5,
+            "y": 5
+          }
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "3.4 Click TC1 + Click Outside_desktop",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC1 Date then click outside on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"1\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "clickAtPosition",
+          "coordinate": {
+            "x": 5,
+            "y": 5
+          }
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"1\"]"
+    },
+    {
+      "label": "3.5 Click TC0 + Escape_desktop",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC0 Date then click on Escape on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "pressKey",
+          "key": "Escape"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "3.6 Click TC1 + Escape_desktop",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC1 Date then click on Escape on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"1\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "pressKey",
+          "key": "Escape"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"1\"]"
+    },
+    {
+      "label": "3.7 Click TC0 Time + Escape_mobile",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC0 Time then press Escape on mobile",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .nck-timepicker-trigger button"
+        },
+        {
+          "type": "pressKey",
+          "key": "Tab"
+        },
+        {
+          "type": "pressKey",
+          "key": "Escape"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 1100
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "3.8 Click TC1 Time + Escape_mobile",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC1 Time then press Escape on mobile",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"1\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .nck-timepicker-trigger button"
+        },
+        {
+          "type": "pressKey",
+          "key": "Tab"
+        },
+        {
+          "type": "pressKey",
+          "key": "Escape"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": "[data-test-case=\"1\"]"
+    },
+    {
+      "label": "3.9 Click TC0 Date then Cancel_desktop",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC0 Date then on Cancel button on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-popover-footer .nck-button"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "3.10 Click TC1 Date then Cancel_desktop",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC1 Date then on Cancel button on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"1\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"1\"] .datepicker-popover-footer .nck-button"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"1\"]"
+    },
+    {
+      "label": "3.11 Click TC0 Time then X_mobile",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC0 Time then on X button on mobile",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .nck-timepicker-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal .left-button"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "3.12 Click TC1 Time then X_mobile",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC1 Time then on X button on mobile",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"1\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .nck-timepicker-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal .left-button"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": "[data-test-case=\"1\"]"
+    },
+    {
+      "label": "4.1 Click T0 + then Focus time_desktop",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC0 Date then focus the time field on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"0\"] .nck-autocomplete.timepicker input"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "4.2 Focus TC0 Time_mobile",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Focus on TC0 Time field on mobile",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .nck-timepicker-trigger button"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "4.3 Click T0 + then Hover time_desktop",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC0 Date then hover the time field on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "hover",
+          "selector": "[data-test-case=\"0\"] .nck-autocomplete.timepicker"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "4.4 Hover TC0 Time_mobile",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Hover on TC0 Time field on mobile",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "hover",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .nck-timepicker-trigger button"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 9720
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 8730
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "4.5 TC0 - Open timepicker and hover 11AM_desktop",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": " Open TC0 timepicker and hover 11AM on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .nck-autocomplete.timepicker"
+        },
+        {
+          "type": "hover",
+          "selector": ".nck-menu li:nth-child(24)"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "4.6 TC0 - Open timepicker and hover 11AM_mobile",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Open TC0 Timepicker and hover 11AM on mobile",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .nck-timepicker-trigger button"
+        },
+        {
+          "type": "hover",
+          "selector": ".nck-menu li:nth-child(24)"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 9720
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 8730
+        }
+      ],
+      "selectors": [
+        ".nck-modal"
+      ]
+    },
+    {
+      "label": "5.1 TC0 - Click on 11AM_desktop",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": " Open TC0 timepicker and Click on 11AM on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .nck-autocomplete.timepicker"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-menu li:nth-child(24)"
+        },
+        {
+          "type": "mouseMove",
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "5.2 TC0 - Click on 11AM_mobile",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Open TC0 Timepicker and Click on 11AM on mobile",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .nck-timepicker-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-menu li:nth-child(24)"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal-footer .nck-button"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "5.3 TC1 - Click on 6AM + Done_desktop",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": " Open TC1 timepicker and Click on 6AM on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"1\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"1\"] .nck-autocomplete.timepicker"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-menu li:nth-child(25)"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"1\"] .datepicker-popover-footer .nck-button:nth-child(3)"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"1\"]"
+    },
+    {
+      "label": "5.4 TC1 - Click on 6AM_mobile",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Open TC1 Timepicker and Click on 6AM on mobile",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"1\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .nck-timepicker-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-menu li:nth-child(25)"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal-footer .nck-button"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": "[data-test-case=\"1\"]"
+    },
+    {
+      "label": "5.5 TC0 - Click on 26Jan & 11AM + Done_desktop",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": " Open TC0 and Click on 26th of January then on 11AM, then on Done button on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .flatpickr-days .flatpickr-day[aria-label=\"January 26, 2022\"]"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .nck-autocomplete.timepicker"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-menu li:nth-child(24)"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-popover-footer .nck-button:nth-child(3)"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "5.6 TC0 - Click on 26Jan & 11AM_mobile",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "On TC0 Select 26th of January and 11AM on mobile",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(1) .modal-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-datepicker-modal .flatpickr-days .flatpickr-day[aria-label=\"January 26, 2022\"]"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal-footer .nck-button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .nck-timepicker-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-menu li:nth-child(24)"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal-footer .nck-button"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "5.7 TC1 - Click on 26Jan & 6AM + Done_desktop",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": " Open TC1 and Click on 26th of January then on 6AM, then on Done button on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"1\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"1\"] .flatpickr-days .flatpickr-day[aria-label=\"January 26, 2022\"]"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"1\"] .nck-autocomplete.timepicker"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-menu li:nth-child(25)"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"1\"] .datepicker-popover-footer .nck-button:nth-child(3)"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"1\"]"
+    },
+    {
+      "label": "5.8 TC1 - Click on 26Jan & 6AM_mobile",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "On TC1 Select 26th of January and 6AM on mobile",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"1\"] .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(1) .modal-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-datepicker-modal .flatpickr-days .flatpickr-day[aria-label=\"January 26, 2022\"]"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal-footer .nck-button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"1\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .nck-timepicker-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-menu li:nth-child(26)"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal-footer .nck-button"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": "[data-test-case=\"1\"]"
+    },
+    {
+      "label": "5.9 TC4 - Click on 26Jan & Night + Done_desktop",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": " Open TC4 and Click on 26th of January then on Night, then on Done button on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"4\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"4\"] .flatpickr-days .flatpickr-day[aria-label=\"January 26, 2022\"]"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"4\"] .nck-autocomplete.timepicker"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-menu li:nth-child(25)"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"4\"] .datepicker-popover-footer .nck-button:nth-child(3)"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"4\"]"
+    },
+    {
+      "label": "5.10 TC4 - Click on 26Jan & Night_mobile",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "On TC4 Select 26th of January and Night on mobile",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"4\"] .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(1) .modal-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-datepicker-modal .flatpickr-days .flatpickr-day[aria-label=\"January 26, 2022\"]"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal-footer .nck-button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"4\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .nck-timepicker-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-menu li:nth-child(26)"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal-footer .nck-button"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": "[data-test-case=\"4\"]"
+    },
+    {
+      "label": "6.1 TC1 - Click on 26Jan + Done_desktop",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": " Open TC1 and Click on 26th of January then on Done button on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"1\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"1\"] .flatpickr-days .flatpickr-day[aria-label=\"January 26, 2022\"]"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"1\"] .datepicker-popover-footer .nck-button:nth-child(3)"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"1\"]"
+    },
+    {
+      "label": "6.2 TC1 - Select date 26Jan + Validate_mobile",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "On TC1 Select 26th of January then click Validate button on mobile",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"1\"] .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(1) .modal-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-datepicker-modal .flatpickr-days .flatpickr-day[aria-label=\"January 26, 2022\"]"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal-footer .nck-button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"1\"] .button-validate"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": "[data-test-case=\"1\"]"
+    },
+    {
+      "label": "6.3 Click TC2 Date then Done_desktop",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC2 Date then on Done button on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"2\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"2\"] .datepicker-popover-footer .nck-button:nth-child(3)"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"2\"]"
+    },
+    {
+      "label": "6.4 TC1 - date on Monday + 6AM + Done_desktop",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": " Open TC1 and select date on a Monday, select 6AM, then click on Done button on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"1\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"1\"] .flatpickr-days .flatpickr-day[aria-label=\"January 31, 2022\"]"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"1\"] .nck-autocomplete.timepicker"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-menu li:nth-child(25)"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"1\"] .datepicker-popover-footer .nck-button:nth-child(3)"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"1\"]"
+    },
+    {
+      "label": "6.5 TC1 - date on Monday + Done_mobile",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "On TC1 select date on a Monday, then click on Done button on mobile",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"1\"] .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(1) .modal-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-datepicker-modal .flatpickr-days .flatpickr-day[aria-label=\"January 31, 2022\"]"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal-footer .nck-button"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": ".nck-modal"
+    },
+    {
+      "label": "6.6 TC5 - Invalid dates + Done_desktop",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": " Open TC5 and Select The 1st of the month and a Sunday, then 12:00 as time, then click Done button on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"5\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"5\"] .flatpickr-days .flatpickr-day[aria-label=\"January 1, 2022\"]"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"5\"] .flatpickr-days .flatpickr-day[aria-label=\"January 2, 2022\"]"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"5\"] .datepicker-popover-body .datepicker-dates .date-group:nth-child(1) .timepicker input"
+        },
+        {
+          "type": "click",
+          "selector": ".datepicker-popover-body .datepicker-dates .date-group:nth-child(1) .timepicker .nck-menu li:nth-child(1)"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"5\"] .datepicker-popover-body .datepicker-dates .date-group:nth-child(2) .timepicker input"
+        },
+        {
+          "type": "click",
+          "selector": ".datepicker-popover-body .datepicker-dates .date-group:nth-child(2) .timepicker .nck-menu li:nth-child(1)"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"5\"] .datepicker-popover-footer .nck-button:nth-child(3)"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"5\"]"
+    },
+    {
+      "label": "6.7 TC5 - Invalid dates + Done_mobile",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Open TC5 and Select The 1st of the month and a Sunday, then All day as time, then click Done button on mobile",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "focus",
+          "selector": "[data-test-case=\"5\"] .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(1) .modal-trigger button"
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        },
+        {
+          "type": "pressKey",
+          "key": "Tab"
+        },
+        {
+          "type": "pressKey",
+          "key": "Tab"
+        },
+        {
+          "type": "type",
+          "text": "01/01/2022"
+        },
+        {
+          "type": "pressKey",
+          "key": "Tab"
+        },
+        {
+          "type": "type",
+          "text": "02/01/2022"
+        },
+        {
+          "type": "pressKey",
+          "key": "Tab"
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": ".nck-modal"
+    },
+    {
+      "label": "7.1 CLICK TC0 Date then Click on Time _desktop_RO",
+      "url": "http://localhost:8080/#/datepickers-with-time?lang=ro",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC0 Date on desktop with RO date format",
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .nck-autocomplete.timepicker"
+        },
+        {
+          "type": "mouseMove",
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ]
+    },
+    {
+      "label": "7.2 CLICK TC0 Time_mobile_RO",
+      "url": "http://localhost:8080/#/datepickers-with-time?lang=ro",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC0 Time on a mobile device with RO date format",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .nck-timepicker-trigger button"
+        },
+        {
+          "type": "mouseMove",
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 300
+        }
+      ],
+      "selectors": [
+        ".nck-modal"
+      ]
+    },
+    {
+      "label": "7.3 TC0 - Open timepicker + hover 13:00_desktop_RO",
+      "url": "http://localhost:8080/#/datepickers-with-time?lang=ro",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": " Open TC0 timepicker and hover 13:00 on desktop with RO date format",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .nck-autocomplete.timepicker"
+        },
+        {
+          "type": "hover",
+          "selector": ".nck-menu li:nth-child(28)"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "7.4 TC0 - Open timepicker and hover 13:00_mobile_RO",
+      "url": "http://localhost:8080/#/datepickers-with-time?lang=ro",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Open TC0 Timepicker and hover 13:00 on mobile with RO date format",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .nck-timepicker-trigger button"
+        },
+        {
+          "type": "hover",
+          "selector": ".nck-menu li:nth-child(28)"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 9720
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 8730
+        }
+      ],
+      "selectors": [
+        ".nck-modal"
+      ]
+    },
+    {
+      "label": "7.5 TC0 - Click on 13:00_desktop_RO",
+      "url": "http://localhost:8080/#/datepickers-with-time?lang=ro",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": " Open TC0 timepicker and Click on 13:00 on desktop with RO date format",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .nck-autocomplete.timepicker"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-menu li:nth-child(28)"
+        },
+        {
+          "type": "mouseMove",
+          "coordinate": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "7.6 TC0 - Click on 1PM_mobile_RO",
+      "url": "http://localhost:8080/#/datepickers-with-time?lang=ro",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Open TC0 Timepicker and Click on 13:00 on mobile with RO date format",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .nck-timepicker-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-menu li:nth-child(28)"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal-footer .nck-button"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "7.7 TC11  NCK date_picker - CLICK Start Date_mobile",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC11 Start Date on a mobile device",
+      "clickSelector": "[data-test-case=\"11\"] .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(1) .modal-trigger button",
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 500
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 300
+        }
+      ],
+      "selectors": [
+        ".nck-modal"
+      ]
+    },
+    {
+      "label": "7.8 TC11 NCK date_picker - CLICK Start Date_desktop",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC11 Start Date on desktop",
+      "clickSelector": "[data-test-case=\"11\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button",
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"11\"]"
+    },
+    {
+      "label": "7.9 TC11 NCK date_picker - CLICK Focus button",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC11 Focus button",
+      "clickSelector": "[data-test-case=\"11\"] .button-focus",
+      "selectors": [
+        "[data-test-case=\"11\"]"
+      ]
+    },
+    {
+      "label": "8.1 CLICK TC0 Validate button",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC0 Validate button",
+      "clickSelector": "[data-test-case=\"0\"] .button-validate",
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "8.2 CLICK TC0 isValid button",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC0 isValid button",
+      "clickSelector": "[data-test-case=\"0\"] .button-isvalid",
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "8.3 CLICK TC1 Validate button",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC1 Validate button",
+      "clickSelector": "[data-test-case=\"1\"] .button-validate",
+      "selectors": "[data-test-case=\"1\"]"
+    },
+    {
+      "label": "8.4 CLICK TC1 isValid button",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC1 isValid button",
+      "clickSelector": "[data-test-case=\"1\"] .button-isvalid",
+      "selectors": "[data-test-case=\"1\"]"
+    },
+    {
+      "label": "8.5 CLICK TC2 Validate button",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC2 Validate button",
+      "clickSelector": "[data-test-case=\"2\"] .button-validate",
+      "selectors": "[data-test-case=\"2\"]"
+    },
+    {
+      "label": "8.6 CLICK TC2 isValid button",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC2 isValid button",
+      "clickSelector": "[data-test-case=\"2\"] .button-isvalid",
+      "selectors": "[data-test-case=\"2\"]"
+    },
+    {
+      "label": "8.7 CLICK TC0 Focus button",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC0 Focus button",
+      "clickSelector": "[data-test-case=\"0\"] .button-focus",
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "8.8 TC12 NCK date_picker - CLICK Validate button",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC12 Validate button",
+      "clickSelector": "[data-test-case=\"12\"] .button-validate",
+      "selectors": [
+        "[data-test-case=\"12\"]"
+      ]
+    },
+    {
+      "label": "8.9 CLICK TC17 Validate button",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC17 Validate button",
+      "clickSelector": "[data-test-case=\"17\"] .button-validate",
+      "selectors": "[data-test-case=\"17\"]"
+    },
+    {
+      "label": "8.10 CLICK TC17 isValid button",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on TC17 isValid button",
+      "clickSelector": "[data-test-case=\"17\"] .button-isvalid",
+      "selectors": "[data-test-case=\"17\"]"
+    },
+    {
+      "label": "9.1 TC15 - Click on 20Jan & 7AM_desktop",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": " Open TC15 and Click on 20th of January then on 7AM",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"15\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"15\"] .flatpickr-days .flatpickr-day[aria-label=\"January 20, 2022\"]"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"15\"] .nck-autocomplete.timepicker"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-menu li:nth-child(8)"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"15\"]"
+    },
+    {
+      "label": "9.2 TC15 - Click on 20Jan & 7AM + Validate_mobile",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "On TC15 Select 20th of January and 7AM on mobile",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"15\"] .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(1) .modal-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-datepicker-modal .flatpickr-days .flatpickr-day[aria-label=\"January 20, 2022\"]"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal-footer .nck-button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"15\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .nck-timepicker-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-menu li:nth-child(9)"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal-footer .nck-button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"15\"] .button-validate"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": "[data-test-case=\"15\"]"
+    },
+    {
+      "label": "9.3 TC15 - Click on 20Jan & 8AM + Done_desktop",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": " Open TC15 and Click on 20th of January then on 8AM, then on Done button on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"15\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"15\"] .flatpickr-days .flatpickr-day[aria-label=\"January 20, 2022\"]"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"15\"] .nck-autocomplete.timepicker"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-menu li:nth-child(9)"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"15\"] .datepicker-popover-footer .nck-button:nth-child(3)"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"15\"]"
+    },
+    {
+      "label": "9.4 TC15 - Click on 20Jan & 8AM + Validate_mobile",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "On TC15 Select 20th of January and 8AM on mobile",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"15\"] .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(1) .modal-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-datepicker-modal .flatpickr-days .flatpickr-day[aria-label=\"January 20, 2022\"]"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal-footer .nck-button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"15\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .nck-timepicker-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-menu li:nth-child(10)"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal-footer .nck-button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"15\"] .button-validate"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": "[data-test-case=\"15\"]"
+    },
+    {
+      "label": "9.5 TC15 - Click on 30Jan & 5PM + Done_desktop",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": " Open TC15 and Click on 30th of January then on 5PM, then on Done button on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"15\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"15\"] .flatpickr-days .flatpickr-day[aria-label=\"January 30, 2022\"]"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"15\"] .nck-autocomplete.timepicker"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-menu li:nth-child(18)"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"15\"] .datepicker-popover-footer .nck-button:nth-child(3)"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"15\"]"
+    },
+    {
+      "label": "9.6 TC15 - Click on 30Jan & 5PM + Validate_mobile",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "On TC15 Select 30th of January and 5PM on mobile",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"15\"] .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(1) .modal-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-datepicker-modal .flatpickr-days .flatpickr-day[aria-label=\"January 30, 2022\"]"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal-footer .nck-button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"15\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .nck-timepicker-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-menu li:nth-child(19)"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal-footer .nck-button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"15\"] .button-validate"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": "[data-test-case=\"15\"]"
+    },
+    {
+      "label": "9.7 TC15 - Click on 30Jan & 6PM_desktop",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": " Open TC15 and Click on 30th of January then on 6PM, then on Done button on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"15\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"15\"] .flatpickr-days .flatpickr-day[aria-label=\"January 30, 2022\"]"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"15\"] .nck-autocomplete.timepicker"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-menu li:nth-child(19)"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"15\"]"
+    },
+    {
+      "label": "9.8 TC15 - Click on 30Jan & 6PM + Validate_mobile",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "On TC15 Select 20th of January and 6PM on mobile then validate",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"15\"] .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(1) .modal-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-datepicker-modal .flatpickr-days .flatpickr-day[aria-label=\"January 30, 2022\"]"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal-footer .nck-button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"15\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .nck-timepicker-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-menu li:nth-child(20)"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal-footer .nck-button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"15\"] .button-validate"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": "[data-test-case=\"15\"]"
+    },
+    {
+      "label": "9.9 TC16 - Select 20Jan/7AM + 30Jan/6PM + Done_desktop",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": " Open TC16 and select Start on 20th of January at 7AM and End on 30th of January at 6PM, then click on Done button on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"16\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"16\"] .flatpickr-days .flatpickr-day[aria-label=\"January 20, 2022\"]"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"16\"] .flatpickr-days .flatpickr-day[aria-label=\"January 30, 2022\"]"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"16\"] .datepicker-popover-body .datepicker-dates .date-group:nth-child(1) .timepicker input"
+        },
+        {
+          "type": "click",
+          "selector": ".datepicker-popover-body .datepicker-dates .date-group:nth-child(1) .timepicker .nck-menu li:nth-child(8)"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"16\"] .datepicker-popover-body .datepicker-dates .date-group:nth-child(2) .timepicker input"
+        },
+        {
+          "type": "click",
+          "selector": ".datepicker-popover-body .datepicker-dates .date-group:nth-child(2) .timepicker .nck-menu li:nth-child(19)"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"16\"]"
+    },
+    {
+      "label": "9.10 TC16 - Select 20Jan/7AM + 30Jan/6PM + Validate_mobile",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Open TC16 and select Start on 20th of January at 7AM and End on 30th of January at 6PM, then click on Validate ",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"16\"] .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(1) .modal-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-datepicker-modal .flatpickr-days .flatpickr-day[aria-label=\"January 20, 2022\"]"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-datepicker-modal .flatpickr-days .flatpickr-day[aria-label=\"January 30, 2022\"]"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal-footer .nck-button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"16\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .nck-timepicker-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-menu li:nth-child(9)"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal-footer .nck-button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"16\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(2) .nck-timepicker-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-menu li:nth-child(20)"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal-footer .nck-button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"16\"] .button-validate"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": "[data-test-case=\"16\"]"
+    },
+    {
+      "label": "9.11 TC16 - Select 20Jan/8AM + 30Jan/5PM + Done_desktop",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": " Open TC16 and select Start on 20th of January at 8AM and End on 30th of January at 5PM, then click on Done button on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"16\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"16\"] .flatpickr-days .flatpickr-day[aria-label=\"January 20, 2022\"]"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"16\"] .flatpickr-days .flatpickr-day[aria-label=\"January 30, 2022\"]"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"16\"] .datepicker-popover-body .datepicker-dates .date-group:nth-child(1) .timepicker input"
+        },
+        {
+          "type": "click",
+          "selector": ".datepicker-popover-body .datepicker-dates .date-group:nth-child(1) .timepicker .nck-menu li:nth-child(9)"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"16\"] .datepicker-popover-body .datepicker-dates .date-group:nth-child(2) .timepicker input"
+        },
+        {
+          "type": "click",
+          "selector": ".datepicker-popover-body .datepicker-dates .date-group:nth-child(2) .timepicker .nck-menu li:nth-child(18)"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"16\"] .datepicker-popover-footer .nck-button:nth-child(3)"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"16\"]"
+    },
+    {
+      "label": "9.12 TC16 - Select 20Jan/8AM + 30Jan/5PM + Validate_mobile",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Open TC16 and select Start on 20th of January at 8AM and End on 30th of January at 5PM, then click on Validate ",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"16\"] .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(1) .modal-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-datepicker-modal .flatpickr-days .flatpickr-day[aria-label=\"January 20, 2022\"]"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-datepicker-modal .flatpickr-days .flatpickr-day[aria-label=\"January 30, 2022\"]"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal-footer .nck-button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"16\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .nck-timepicker-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-menu li:nth-child(10)"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal-footer .nck-button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"16\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(2) .nck-timepicker-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-menu li:nth-child(19)"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal-footer .nck-button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"16\"] .button-validate"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": "[data-test-case=\"16\"]"
+    },
+    {
+      "label": "9.13 TC16 - Select 20Jan/7AM + 30Jan/5PM + Done_desktop",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": " Open TC16 and select Start on 20th of January at 7AM and End on 30th of January at 5PM, then click on Done button on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"16\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"16\"] .flatpickr-days .flatpickr-day[aria-label=\"January 20, 2022\"]"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"16\"] .flatpickr-days .flatpickr-day[aria-label=\"January 30, 2022\"]"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"16\"] .datepicker-popover-body .datepicker-dates .date-group:nth-child(1) .timepicker input"
+        },
+        {
+          "type": "click",
+          "selector": ".datepicker-popover-body .datepicker-dates .date-group:nth-child(1) .timepicker .nck-menu li:nth-child(8)"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"16\"] .datepicker-popover-body .datepicker-dates .date-group:nth-child(2) .timepicker input"
+        },
+        {
+          "type": "click",
+          "selector": ".datepicker-popover-body .datepicker-dates .date-group:nth-child(2) .timepicker .nck-menu li:nth-child(18)"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"16\"]"
+    },
+    {
+      "label": "9.14 TC16 - Select 20Jan/7AM + 30Jan/5PM + Validate_mobile",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Open TC16 and select Start on 20th of January at 7AM and End on 30th of January at 5PM, then click on Validate ",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"16\"] .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(1) .modal-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-datepicker-modal .flatpickr-days .flatpickr-day[aria-label=\"January 20, 2022\"]"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-datepicker-modal .flatpickr-days .flatpickr-day[aria-label=\"January 30, 2022\"]"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal-footer .nck-button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"16\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .nck-timepicker-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-menu li:nth-child(9)"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal-footer .nck-button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"16\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(2) .nck-timepicker-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-menu li:nth-child(19)"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal-footer .nck-button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"16\"] .button-validate"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": "[data-test-case=\"16\"]"
+    },
+    {
+      "label": "9.15 TC3 - Select 24Jan/5AM + 30Jan/All Day + Done_desktop",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": " Open TC3 and select Start on 24th of January at 5AM and End on 30th of January All Day, then click on Done button on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"3\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"3\"] .flatpickr-days .flatpickr-day[aria-label=\"January 24, 2022\"]"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"3\"] .flatpickr-days .flatpickr-day[aria-label=\"January 30, 2022\"]"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"3\"] .datepicker-popover-body .datepicker-dates .date-group:nth-child(1) .timepicker input"
+        },
+        {
+          "type": "click",
+          "selector": ".datepicker-popover-body .datepicker-dates .date-group:nth-child(1) .timepicker .nck-menu li:nth-child(7)"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"3\"] .datepicker-popover-body .datepicker-dates .date-group:nth-child(2) .timepicker input"
+        },
+        {
+          "type": "click",
+          "selector": ".datepicker-popover-body .datepicker-dates .date-group:nth-child(2) .timepicker .nck-menu li:nth-child(26)"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-popover-footer .nck-button:nth-child(3)"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"3\"]"
+    },
+    {
+      "label": "9.16 TC3 - Select 24Jan/5AM + 30Jan/All Day + Validate_mobile",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Open TC3 and select Start on 24th of January at 5AM and End on 30th of January All Day, then click on Validate ",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"3\"] .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(1) .modal-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-datepicker-modal .flatpickr-days .flatpickr-day[aria-label=\"January 24, 2022\"]"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-datepicker-modal .flatpickr-days .flatpickr-day[aria-label=\"January 30, 2022\"]"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal-footer .nck-button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"3\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .nck-timepicker-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-menu li:nth-child(7)"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal-footer .nck-button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"3\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(2) .nck-timepicker-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-menu li:nth-child(26)"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal-footer .nck-button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"3\"] .button-validate"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": "[data-test-case=\"3\"]"
+    },
+    {
+      "label": "9.17 TC3 - Select 24Jan/6AM + 30Jan/5PM + Validate_desktop",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": " Open TC3 and select Start on 24th of January at 6AM and End on 30th of January at 5 pm, then click on Validate button on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"3\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"3\"] .flatpickr-days .flatpickr-day[aria-label=\"January 24, 2022\"]"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"3\"] .flatpickr-days .flatpickr-day[aria-label=\"January 30, 2022\"]"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"3\"] .datepicker-popover-body .datepicker-dates .date-group:nth-child(1) .timepicker input"
+        },
+        {
+          "type": "click",
+          "selector": ".datepicker-popover-body .datepicker-dates .date-group:nth-child(1) .timepicker .nck-menu li:nth-child(8)"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"3\"] .datepicker-popover-body .datepicker-dates .date-group:nth-child(2) .timepicker input"
+        },
+        {
+          "type": "click",
+          "selector": ".datepicker-popover-body .datepicker-dates .date-group:nth-child(2) .timepicker .nck-menu li:nth-child(19)"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-popover-footer .nck-button:nth-child(3)"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"3\"] .button-validate"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"3\"]"
+    },
+    {
+      "label": "9.18 TC3 - Select 24Jan/6AM + 30Jan/5PM + Validate_mobile",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Open TC3 and select Start on 24th of January at 6AM and End on 30th of January at 5PM, then click on Validate ",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"3\"] .datepicker-triggers > .nck-datepicker-trigger-container:nth-child(1) .modal-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-datepicker-modal .flatpickr-days .flatpickr-day[aria-label=\"January 24, 2022\"]"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-datepicker-modal .flatpickr-days .flatpickr-day[aria-label=\"January 30, 2022\"]"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal-footer .nck-button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"3\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .nck-timepicker-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-menu li:nth-child(8)"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal-footer .nck-button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"3\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(2) .nck-timepicker-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-menu li:nth-child(19)"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal-footer .nck-button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"3\"] .button-validate"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": "[data-test-case=\"3\"]"
+    },
+    {
+      "label": "9.19 TC2 - Validate button then enter coherent times_mobile",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Click on Validate button, then fix the incoherent times to show that validation error message disappears immediately",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"2\"] .button-validate"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"2\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .nck-timepicker-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-menu li:nth-child(34)"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal-footer .nck-button"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 800
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 500
+        }
+      ],
+      "selectors": "[data-test-case=\"2\"]"
+    },
+
+
+    {
+      "label": "10.1 TC0 - Clear prefilled time + enter custom time_desktop",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "TC 0 - Clear prefilled time and enter custom time on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .nck-autocomplete.timepicker .clear-input-button"
+        },
+        {
+          "type": "type",
+          "text": "10:10 AM"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "10.2 TC0 - Clear prefilled time + enter custom time_mobile",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "TC 0 - Enter date and custom time on mobile",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .nck-timepicker-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-autocomplete .clear-input-button"
+        },
+        {
+          "type": "type",
+          "text": "10:10 AM"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 1500
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 1500
+        }
+      ],
+      "selectors": ".nck-modal"
+    },
+    {
+      "label": "10.3 TC0 - Enter custom time + Done_desktop",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "TC 0 - Enter custom time and press Done button on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .nck-autocomplete.timepicker .clear-input-button"
+        },
+        {
+          "type": "type",
+          "text": "10:10 AM"
+        },
+        {
+          "type": "waitForTimeout",
+          "delay": 50
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-popover-footer .nck-button:nth-child(3)"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "10.4 TC0 - Enter custom time + Done_mobile",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "TC 0 - Enter custom time and press Done button on mobile",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .nck-timepicker-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-autocomplete .clear-input-button"
+        },
+        {
+          "type": "type",
+          "text": "10:10 AM"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-modal-footer .nck-button"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 1500
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 1500
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "10.5 TC0 - Clear + type predifined time_desktop",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "TC 0 -  on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .nck-autocomplete.timepicker .clear-input-button"
+        },
+        {
+          "type": "type",
+          "text": "10:30 AM"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "10.6 TC0 - Clear + type predifined time_mobile",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "TC 0 - Clear prefilled time then type an predifined time on mobile",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .nck-timepicker-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-autocomplete .clear-input-button"
+        },
+        {
+          "type": "type",
+          "text": "10:30 AM"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 1500
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 1500
+        }
+      ],
+      "selectors": ".nck-modal"
+    },
+    {
+      "label": "10.7 TC0 - Enter invalid time format + Enter_desktop",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "TC 0 - Enter invalid time format then Enter on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .nck-autocomplete.timepicker .clear-input-button"
+        },
+        {
+          "type": "type",
+          "text": "10:10AM"
+        },
+        {
+          "type": "waitForTimeout",
+          "delay": 50
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "10.8 TC0 - Enter invalid time format + Enter_mobile",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "TC 0 - Enter invalid time format then Enter on mobile",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .nck-timepicker-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-autocomplete .clear-input-button"
+        },
+        {
+          "type": "type",
+          "text": "10:10AM"
+        },
+        {
+          "type": "waitForTimeout",
+          "delay": 50
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 1500
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 1500
+        }
+      ],
+      "selectors": ".nck-modal"
+    },
+    {
+      "label": "10.9 TC0 - Enter time starting with a single digit + Enter_desktop",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "TC 0 - Enter time starting with a single digit then Enter on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .nck-autocomplete.timepicker .clear-input-button"
+        },
+        {
+          "type": "type",
+          "text": "9:10 AM"
+        },
+        {
+          "type": "waitForTimeout",
+          "delay": 50
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "10.10 TC0 - Enter time starting with a single digit + Enter_mobile",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "TC 0 - Enter time starting with a single digit then Enter on mobile",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .nck-timepicker-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-autocomplete .clear-input-button"
+        },
+        {
+          "type": "type",
+          "text": "9:10 AM"
+        },
+        {
+          "type": "waitForTimeout",
+          "delay": 50
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 1500
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 1500
+        }
+      ],
+      "selectors": ".nck-modal"
+    },
+    {
+      "label": "10.11 TC0 - Enter time in lowercase + Enter_desktop",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "TC 0 - Enter time in lowercase then Enter on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .popover-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .nck-autocomplete.timepicker .clear-input-button"
+        },
+        {
+          "type": "type",
+          "text": "10:10 am"
+        },
+        {
+          "type": "waitForTimeout",
+          "delay": 50
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"0\"]"
+    },
+    {
+      "label": "10.12 TC0 - Enter time in lowercase + Enter_mobile",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "TC 0 - Enter time in lowercase then Enter on mobile",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"0\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .nck-timepicker-trigger button"
+        },
+        {
+          "type": "click",
+          "selector": ".nck-autocomplete .clear-input-button"
+        },
+        {
+          "type": "type",
+          "text": "10:10 am"
+        },
+        {
+          "type": "waitForTimeout",
+          "delay": 50
+        },
+        {
+          "type": "pressKey",
+          "key": "Enter"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 1500
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 1500
+        }
+      ],
+      "selectors": ".nck-modal"
+    },
+    {
+      "label": "10.13 TC17 - Change time options + Validate_desktop",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "TC 17 - Change arrival and departure time options then validate on desktop",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"17\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .nck-dropdown"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"17\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .nck-dropdown-menu :nth-child(2)"
+        },
+         {
+          "type": "click",
+          "selector": "[data-test-case=\"17\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(2) .nck-dropdown"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"17\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(2) .nck-dropdown-menu :nth-child(1)"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"17\"] .button-validate"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "desktop",
+          "width": 1920,
+          "height": 1000
+        }
+      ],
+      "selectors": "[data-test-case=\"17\"]"
+    },
+    {
+      "label": "10.14 TC17 - Change time options + Validate_mobile",
+      "url": "http://localhost:8080/#/datepickers-with-time",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "TC17 - Change arrival and departure time options then validate",
+      "onReadyScript": "puppet/actions.js",
+      "actions": [
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"17\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .dropdown-container"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"17\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(1) .nck-dropdown-menu :nth-child(2)"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"17\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(2) .dropdown-container"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"17\"] .datepicker-triggers .nck-datepicker-trigger-container:nth-child(2) .nck-dropdown-menu :nth-child(1)"
+        },
+        {
+          "type": "click",
+          "selector": "[data-test-case=\"17\"] .button-validate"
+        }
+      ],
+      "selectorExpansion": true,
+      "viewports": [
+        {
+          "label": "phone",
+          "width": 320,
+          "height": 1500
+        },
+        {
+          "label": "tablet",
+          "width": 1024,
+          "height": 1500
+        }
+      ],
+      "selectors": "[data-test-case=\"17\"]"
+    }
+
+
+
+
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "report": [
+    "CI"
+  ],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args": [
+      "--no-sandbox"
+    ],
+    "protocolTimeout": 960000
+  },
+  "asyncCaptureLimit": 3,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false
+}

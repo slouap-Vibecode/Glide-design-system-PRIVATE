@@ -1,0 +1,38 @@
+{
+  "name": "@neotechnologygroup/neo-icon-kit",
+  "version": "5.5.0",
+  "description": "A package for Neo app icons",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "copyIcons": "node ./helperScripts/copyIcons",
+    "postinstall": "node ./generatePreloadedIcons.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.kdsneo.kds.com:neo/neo-icon-kit.git"
+  },
+  "keywords": [
+    "icons",
+    "icon",
+    "ux",
+    "neo"
+  ],
+  "author": "Studio UX",
+  "license": "UNLICENSED",
+  "publishConfig": {
+    "registry": "https://nexus.prod.build.kds.com/repository/npm-hosted/"
+  },
+  "dependencies": {
+    "fs-extra": "^11.1.1"
+  },
+  "files": [
+    "helperScripts/*",
+    "icons/*",
+    "generatePreloadedIcons.js",
+    "package.json",
+    "README.md"
+  ],
+  "bin": {
+    "nik-copy": "helperScripts/copyIcons.js"
+  }
+}

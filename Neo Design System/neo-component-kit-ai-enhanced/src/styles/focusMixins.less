@@ -1,0 +1,14 @@
+.outline-focus-ring-for-high-contrast-display() {
+  outline: var(--nck-focus-width-m) solid transparent;
+}
+
+.outside-focus-mixin() {
+  box-shadow: var(--box-shadow-focus);
+  .outline-focus-ring-for-high-contrast-display();
+}
+
+.inside-focus-mixin() {
+  box-shadow: inset var(--box-shadow-focus);
+  .outline-focus-ring-for-high-contrast-display();
+  outline-offset: calc(-1 * var(--nck-focus-width-m));
+}

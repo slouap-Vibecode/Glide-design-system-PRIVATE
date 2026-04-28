@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neo Design System Demo</title>
+  <style>
+    /* Neo Design System Colors */
+    :root {
+      --deep-blue-400: #001245;
+      --deep-blue-300: #00175a;
+      --bright-blue-400: #0056a0;
+      --bright-blue-300: #006fcf;
+      --blue-grey-700: #1a233e;
+      --blue-grey-600: #444b61;
+      --blue-grey-500: #848996;
+      --blue-grey-400: #c6c8d2;
+      --blue-grey-300: #e7e8ee;
+      --blue-grey-200: #f0f1f4;
+      --blue-grey-100: #f8f9fb;
+      --white: #ffffff;
+      --green-400: #005f45;
+      --green-300: #00825f;
+      --orange-400: #cc4a00;
+      --orange-300: #ff6600;
+      --red-400: #a60000;
+      --red-300: #cc0000;
+
+      /* Neo Spacing */
+      --spacing-xs: 4px;
+      --spacing-s: 8px;
+      --spacing-m: 16px;
+      --spacing-l: 24px;
+      --spacing-xl: 32px;
+
+      /* Neo Radius */
+      --radius-s: 4px;
+      --radius-m: 8px;
+      --radius-l: 12px;
+
+      /* Neo Typography */
+      --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      --font-size-xs: 12px;
+      --font-size-s: 14px;
+      --font-size-m: 16px;
+      --font-size-l: 18px;
+      --font-size-xl: 24px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-family-primary);
+      font-size: var(--font-size-m);
+      line-height: 1.5;
+      color: var(--blue-grey-700);
+      background-color: var(--blue-grey-100);
+      margin: 0;
+      padding: var(--spacing-l);
+    }
+
+    .demo-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: var(--white);
+      border-radius: var(--radius-l);
+      padding: var(--spacing-xl);
+      box-shadow: 0 2px 8px rgba(26, 35, 62, 0.08);
+    }
+
+    h1, h2, h3 {
+      color: var(--deep-blue-400);
+      margin-top: 0;
+    }
+
+    h1 {
+      font-size: var(--font-size-xl);
+      font-weight: 700;
+      margin-bottom: var(--spacing-xl);
+      text-align: center;
+    }
+
+    h2 {
+      font-size: var(--font-size-l);
+      font-weight: 600;
+      margin-bottom: var(--spacing-l);
+      border-bottom: 2px solid var(--blue-grey-200);
+      padding-bottom: var(--spacing-s);
+    }
+
+    .section {
+      margin-bottom: var(--spacing-xl);
+    }
+
+    /* Neo Button Styles */
+    .nck-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-family-primary);
+      font-size: var(--font-size-s);
+      font-weight: 600;
+      text-decoration: none;
+      border: none;
+      border-radius: var(--radius-m);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      padding: 12px var(--spacing-m);
+      margin: var(--spacing-s);
+      min-height: 44px;
+    }
+
+    .nck-button--primary {
+      background-color: var(--bright-blue-300);
+      color: var(--white);
+    }
+
+    .nck-button--primary:hover {
+      background-color: var(--bright-blue-400);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0, 111, 207, 0.3);
+    }
+
+    .nck-button--secondary {
+      background-color: var(--white);
+      color: var(--bright-blue-300);
+      border: 2px solid var(--bright-blue-300);
+    }
+
+    .nck-button--secondary:hover {
+      background-color: var(--bright-blue-100);
+      border-color: var(--bright-blue-400);
+    }
+
+    .nck-button--danger {
+      background-color: var(--red-300);
+      color: var(--white);
+    }
+
+    .nck-button--danger:hover {
+      background-color: var(--red-400);
+    }
+
+    .nck-button--success {
+      background-color: var(--green-300);
+      color: var(--white);
+    }
+
+    .nck-button--success:hover {
+      background-color: var(--green-400);
+    }
+
+    /* Neo Card Styles */
+    .nck-card {
+      background: var(--white);
+      border-radius: var(--radius-l);
+      padding: var(--spacing-l);
+      margin-bottom: var(--spacing-m);
+      border: 1px solid var(--blue-grey-300);
+      transition: box-shadow 0.2s ease;
+    }
+
+    .nck-card:hover {
+      box-shadow: 0 4px 16px rgba(26, 35, 62, 0.12);
+    }
+
+    .nck-card__header {
+      font-size: var(--font-size-l);
+      font-weight: 600;
+      color: var(--deep-blue-400);
+      margin-bottom: var(--spacing-m);
+    }
+
+    .nck-card__content {
+      color: var(--blue-grey-600);
+      line-height: 1.6;
+    }
+
+    /* Neo Badge Styles */
+    .nck-badge {
+      display: inline-flex;
+      align-items: center;
+      font-size: var(--font-size-xs);
+      font-weight: 600;
+      padding: var(--spacing-xs) var(--spacing-s);
+      border-radius: var(--radius-s);
+      margin: var(--spacing-xs);
+    }
+
+    .nck-badge--success {
+      background-color: var(--green-150);
+      color: var(--green-400);
+    }
+
+    .nck-badge--warning {
+      background-color: var(--orange-150);
+      color: var(--orange-400);
+    }
+
+    .nck-badge--error {
+      background-color: var(--red-150);
+      color: var(--red-400);
+    }
+
+    .nck-badge--info {
+      background-color: var(--bright-blue-150);
+      color: var(--bright-blue-400);
+    }
+
+    /* Neo Form Styles */
+    .nck-form {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-m);
+    }
+
+    .nck-input {
+      font-family: var(--font-family-primary);
+      font-size: var(--font-size-m);
+      padding: 12px var(--spacing-m);
+      border: 2px solid var(--blue-grey-400);
+      border-radius: var(--radius-m);
+      background: var(--white);
+      transition: border-color 0.2s ease;
+    }
+
+    .nck-input:focus {
+      outline: none;
+      border-color: var(--bright-blue-300);
+      box-shadow: 0 0 0 3px rgba(0, 111, 207, 0.1);
+    }
+
+    .nck-label {
+      font-weight: 600;
+      color: var(--blue-grey-700);
+      margin-bottom: var(--spacing-xs);
+    }
+
+    /* Color Palette Display */
+    .color-palette {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--spacing-m);
+      margin-bottom: var(--spacing-xl);
+    }
+
+    .color-swatch {
+      display: flex;
+      flex-direction: column;
+      border-radius: var(--radius-m);
+      overflow: hidden;
+      border: 1px solid var(--blue-grey-300);
+    }
+
+    .color-display {
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-weight: 600;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    }
+
+    .color-info {
+      padding: var(--spacing-s);
+      background: var(--white);
+      font-size: var(--font-size-s);
+    }
+
+    .color-name {
+      font-weight: 600;
+      color: var(--blue-grey-700);
+    }
+
+    .color-value {
+      color: var(--blue-grey-500);
+      font-family: 'Monaco', 'Consolas', monospace;
+    }
+
+    /* Component Grid */
+    .component-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--spacing-l);
+    }
+
+    /* Icons Display */
+    .icons-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: var(--spacing-m);
+      margin-top: var(--spacing-l);
+    }
+
+    .icon-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: var(--spacing-m);
+      border: 1px solid var(--blue-grey-300);
+      border-radius: var(--radius-m);
+      background: var(--white);
+      transition: all 0.2s ease;
+    }
+
+    .icon-item:hover {
+      box-shadow: 0 2px 8px rgba(0, 111, 207, 0.15);
+      border-color: var(--bright-blue-300);
+    }
+
+    .icon-display {
+      width: 24px;
+      height: 24px;
+      margin-bottom: var(--spacing-s);
+      fill: var(--bright-blue-300);
+    }
+
+    .icon-name {
+      font-size: var(--font-size-xs);
+      color: var(--blue-grey-600);
+      text-align: center;
+      word-break: break-all;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-container">
+    <h1>🎨 Neo Design System Demo</h1>
+
+    <!-- Color Palette Section -->
+    <div class="section">
+      <h2>Color Palette</h2>
+      <div class="color-palette">
+        <div class="color-swatch">
+          <div class="color-display" style="background-color: #006fcf;">Bright Blue</div>
+          <div class="color-info">
+            <div class="color-name">bright-blue-300</div>
+            <div class="color-value">#006fcf</div>
+          </div>
+        </div>
+        <div class="color-swatch">
+          <div class="color-display" style="background-color: #00175a;">Deep Blue</div>
+          <div class="color-info">
+            <div class="color-name">deep-blue-300</div>
+            <div class="color-value">#00175a</div>
+          </div>
+        </div>
+        <div class="color-swatch">
+          <div class="color-display" style="background-color: #00825f;">Green</div>
+          <div class="color-info">
+            <div class="color-name">green-300</div>
+            <div class="color-value">#00825f</div>
+          </div>
+        </div>
+        <div class="color-swatch">
+          <div class="color-display" style="background-color: #ff6600;">Orange</div>
+          <div class="color-info">
+            <div class="color-name">orange-300</div>
+            <div class="color-value">#ff6600</div>
+          </div>
+        </div>
+        <div class="color-swatch">
+          <div class="color-display" style="background-color: #cc0000;">Red</div>
+          <div class="color-info">
+            <div class="color-name">red-300</div>
+            <div class="color-value">#cc0000</div>
+          </div>
+        </div>
+        <div class="color-swatch">
+          <div class="color-display" style="background-color: #848996; color: white;">Blue Grey</div>
+          <div class="color-info">
+            <div class="color-name">blue-grey-500</div>
+            <div class="color-value">#848996</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Button Components Section -->
+    <div class="section">
+      <h2>Button Components</h2>
+      <div>
+        <button class="nck-button nck-button--primary">Primary Action</button>
+        <button class="nck-button nck-button--secondary">Secondary Action</button>
+        <button class="nck-button nck-button--success">Success Action</button>
+        <button class="nck-button nck-button--danger">Danger Action</button>
+      </div>
+    </div>
+
+    <!-- Badge Components Section -->
+    <div class="section">
+      <h2>Badge Components</h2>
+      <div>
+        <span class="nck-badge nck-badge--success">Success</span>
+        <span class="nck-badge nck-badge--warning">Warning</span>
+        <span class="nck-badge nck-badge--error">Error</span>
+        <span class="nck-badge nck-badge--info">Info</span>
+      </div>
+    </div>
+
+    <!-- Form Components Section -->
+    <div class="section">
+      <h2>Form Components</h2>
+      <div class="component-grid">
+        <div class="nck-card">
+          <div class="nck-card__header">Contact Form</div>
+          <div class="nck-card__content">
+            <form class="nck-form">
+              <div>
+                <label class="nck-label">Full Name</label>
+                <input type="text" class="nck-input" placeholder="Enter your full name">
+              </div>
+              <div>
+                <label class="nck-label">Email Address</label>
+                <input type="email" class="nck-input" placeholder="Enter your email">
+              </div>
+              <div>
+                <label class="nck-label">Message</label>
+                <textarea class="nck-input" rows="4" placeholder="Enter your message"></textarea>
+              </div>
+              <button type="submit" class="nck-button nck-button--primary">Send Message</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="nck-card">
+          <div class="nck-card__header">User Profile</div>
+          <div class="nck-card__content">
+            <p>This card demonstrates the Neo design system's card component with consistent spacing, typography, and visual hierarchy.</p>
+            <div style="margin-top: 16px;">
+              <span class="nck-badge nck-badge--success">Active</span>
+              <span class="nck-badge nck-badge--info">Premium</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sample Icons Section -->
+    <div class="section">
+      <h2>Sample Icons (from 833+ icon library)</h2>
+      <div class="icons-grid">
+        <div class="icon-item">
+          <svg class="icon-display" viewBox="0 0 24 24">
+            <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"/>
+          </svg>
+          <div class="icon-name">security</div>
+        </div>
+        <div class="icon-item">
+          <svg class="icon-display" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+          </svg>
+          <div class="icon-name">check-circle</div>
+        </div>
+        <div class="icon-item">
+          <svg class="icon-display" viewBox="0 0 24 24">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+          <div class="icon-name">star</div>
+        </div>
+        <div class="icon-item">
+          <svg class="icon-display" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
+          </svg>
+          <div class="icon-name">add-circle</div>
+        </div>
+        <div class="icon-item">
+          <svg class="icon-display" viewBox="0 0 24 24">
+            <path d="M20 6h-2.18c.11-.31.18-.65.18-1a2.996 2.996 0 0 0-5.5-1.65l-.5.67-.5-.68C10.96 2.54 10 2 10 2 10 2 4 6.27 4 12.18 4 17.92 7.05 21 12 21s8-3.08 8-8.82c0-1.01-.16-1.94-.45-2.8L20 6z"/>
+          </svg>
+          <div class="icon-name">favorite</div>
+        </div>
+        <div class="icon-item">
+          <svg class="icon-display" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+          </svg>
+          <div class="icon-name">account</div>
+        </div>
+      </div>
+      <p style="text-align: center; margin-top: 24px; color: var(--blue-grey-500);">
+        <em>The full icon library contains 833+ professionally designed SVG icons</em>
+      </p>
+    </div>
+
+    <!-- Component Overview -->
+    <div class="section">
+      <h2>Available Vue Components (40+)</h2>
+      <div class="component-grid">
+        <div class="nck-card">
+          <div class="nck-card__header">Form Components</div>
+          <div class="nck-card__content">
+            <ul style="margin: 0; padding-left: 20px;">
+              <li>nckButton</li>
+              <li>nckTextInput</li>
+              <li>nckTextArea</li>
+              <li>nckCheckbox</li>
+              <li>nckRadioButtons</li>
+              <li>nckDropdown</li>
+              <li>nckAutocomplete</li>
+              <li>nckDatepickerSingle</li>
+              <li>nckDatepickerRange</li>
+              <li>nckSlider</li>
+              <li>nckSwitch</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="nck-card">
+          <div class="nck-card__header">Layout Components</div>
+          <div class="nck-card__content">
+            <ul style="margin: 0; padding-left: 20px;">
+              <li>nckCard</li>
+              <li>nckModal</li>
+              <li>nckDrawer</li>
+              <li>nckHeader</li>
+              <li>nckTabs</li>
+              <li>nckMenu</li>
+              <li>nckPopover</li>
+              <li>nckBreadcrumb</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="nck-card">
+          <div class="nck-card__header">Data Display</div>
+          <div class="nck-card__content">
+            <ul style="margin: 0; padding-left: 20px;">
+              <li>nckTable</li>
+              <li>nckList</li>
+              <li>nckBadge</li>
+              <li>nckCounterBadge</li>
+              <li>nckTimeline</li>
+              <li>nckPagination</li>
+              <li>nckLoader</li>
+              <li>nckStatusIndicator</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="nck-card">
+          <div class="nck-card__header">Feedback Components</div>
+          <div class="nck-card__content">
+            <ul style="margin: 0; padding-left: 20px;">
+              <li>nckToast</li>
+              <li>nckBanner</li>
+              <li>nckBannerItem</li>
+              <li>nckChip</li>
+              <li>nckChipPopover</li>
+              <li>nckPlaceholder</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Design Tokens Section -->
+    <div class="section">
+      <h2>Design Token System</h2>
+      <div class="component-grid">
+        <div class="nck-card">
+          <div class="nck-card__header">Spacing Scale</div>
+          <div class="nck-card__content">
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              <div style="display: flex; align-items: center;">
+                <div style="width: 4px; height: 16px; background: var(--bright-blue-300); margin-right: 12px;"></div>
+                <code>--spacing-xs: 4px</code>
+              </div>
+              <div style="display: flex; align-items: center;">
+                <div style="width: 8px; height: 16px; background: var(--bright-blue-300); margin-right: 12px;"></div>
+                <code>--spacing-s: 8px</code>
+              </div>
+              <div style="display: flex; align-items: center;">
+                <div style="width: 16px; height: 16px; background: var(--bright-blue-300); margin-right: 12px;"></div>
+                <code>--spacing-m: 16px</code>
+              </div>
+              <div style="display: flex; align-items: center;">
+                <div style="width: 24px; height: 16px; background: var(--bright-blue-300); margin-right: 12px;"></div>
+                <code>--spacing-l: 24px</code>
+              </div>
+              <div style="display: flex; align-items: center;">
+                <div style="width: 32px; height: 16px; background: var(--bright-blue-300); margin-right: 12px;"></div>
+                <code>--spacing-xl: 32px</code>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="nck-card">
+          <div class="nck-card__header">Border Radius</div>
+          <div class="nck-card__content">
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <div style="width: 32px; height: 32px; background: var(--bright-blue-300); border-radius: 4px;"></div>
+                <code>--radius-s: 4px</code>
+              </div>
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <div style="width: 32px; height: 32px; background: var(--bright-blue-300); border-radius: 8px;"></div>
+                <code>--radius-m: 8px</code>
+              </div>
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <div style="width: 32px; height: 32px; background: var(--bright-blue-300); border-radius: 12px;"></div>
+                <code>--radius-l: 12px</code>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div style="text-align: center; padding-top: 32px; border-top: 1px solid var(--blue-grey-300); margin-top: 32px;">
+      <p style="color: var(--blue-grey-500); margin: 0;">
+        🎨 <strong>Neo Design System</strong> - Comprehensive Vue 3 component library with 40+ components, 833+ icons, and complete design token system
+      </p>
+    </div>
+  </div>
+
+  <script>
+    // Add some interactivity to demonstrate the design system
+    document.addEventListener('DOMContentLoaded', function() {
+      // Add click handlers to buttons
+      const buttons = document.querySelectorAll('.nck-button');
+      buttons.forEach(button => {
+        button.addEventListener('click', function(e) {
+          // Create a simple feedback animation
+          const ripple = document.createElement('span');
+          const rect = this.getBoundingClientRect();
+          const size = Math.max(rect.width, rect.height);
+          const x = e.clientX - rect.left - size / 2;
+          const y = e.clientY - rect.top - size / 2;
+
+          ripple.style.width = ripple.style.height = size + 'px';
+          ripple.style.left = x + 'px';
+          ripple.style.top = y + 'px';
+          ripple.style.position = 'absolute';
+          ripple.style.borderRadius = '50%';
+          ripple.style.background = 'rgba(255, 255, 255, 0.3)';
+          ripple.style.transform = 'scale(0)';
+          ripple.style.animation = 'ripple 0.6s linear';
+          ripple.style.pointerEvents = 'none';
+
+          this.style.position = 'relative';
+          this.style.overflow = 'hidden';
+          this.appendChild(ripple);
+
+          setTimeout(() => {
+            ripple.remove();
+          }, 600);
+        });
+      });
+
+      // Add focus indicators for better accessibility
+      const focusableElements = document.querySelectorAll('button, input, textarea');
+      focusableElements.forEach(element => {
+        element.addEventListener('focus', function() {
+          this.style.outline = '2px solid var(--bright-blue-300)';
+          this.style.outlineOffset = '2px';
+        });
+
+        element.addEventListener('blur', function() {
+          this.style.outline = '';
+          this.style.outlineOffset = '';
+        });
+      });
+    });
+
+    // Add CSS animation for button ripple effect
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes ripple {
+        to {
+          transform: scale(4);
+          opacity: 0;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
+</body>
+</html>

@@ -1,0 +1,269 @@
+{
+  "id": "backstop_toggle_chip",
+  "viewports": [
+    {
+      "label": "phone",
+      "width": 380,
+      "height": 885
+    },
+    {
+      "label": "tablet",
+      "width": 1024,
+      "height": 770
+    },
+    {
+      "label": "desktop",
+      "width": 1920,
+      "height": 10000
+    }
+  ],
+  "onBeforeScript": "puppet/onBefore.js",
+  "onReadyScript": "puppet/onReady.js",
+  "scenarios": [
+
+    {
+      "label": "1. NCK toggle chip - default display",
+      "url": "http://localhost:8080/#/toggleChip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "display the default state of all toggle chip"
+    },
+    {
+      "label": "2.0. NCK toggle chip - CLICK - TC0",
+      "url": "http://localhost:8080/#/toggleChip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on TC0",
+      "clickSelector": "[data-test-case=\"0\"] .nck-chip button",
+      "selectors": ["[data-test-case=\"0\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "2.1. NCK toggle chip - CLICK - Test Case 1",
+      "url": "http://localhost:8080/#/toggleChip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on TC1",
+      "clickSelector": "[data-test-case=\"1\"] .nck-chip button",
+      "selectors": ["[data-test-case=\"1\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "2.2. NCK toggle chip - CLICK - Test Case 2",
+      "url": "http://localhost:8080/#/toggleChip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on TC2",
+      "clickSelector": "[data-test-case=\"2\"] .nck-chip button",
+      "selectors": ["[data-test-case=\"2\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "2.3. NCK toggle chip - CLICK - Test Case 4",
+      "url": "http://localhost:8080/#/toggleChip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on TC2",
+      "clickSelector": "[data-test-case=\"4\"] .nck-chip button",
+      "selectors": ["[data-test-case=\"4\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "3.0 NCK toggle chip - FOCUS Test Case 0",
+      "url": "http://localhost:8080/#/toggleChip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the TC0 toggle chip",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"0\"] .nck-chip button",
+      "selectors": ["[data-test-case=\"0\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "3.1 NCK toggle chip - FOCUS Test case 2",
+      "url": "http://localhost:8080/#/toggleChip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the TC2 toggle chip",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"2\"] .nck-chip button",
+      "selectors": ["[data-test-case=\"2\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "3.2 NCK toggle chip - FOCUS Test case 4",
+      "url": "http://localhost:8080/#/toggleChip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the TC4 toggle chip",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"4\"] .nck-chip button",
+      "selectors": ["[data-test-case=\"4\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "3.3  NCK toggle chip - Click TC4 Focus button",
+      "url": "http://localhost:8080/#/toggleChip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on the TC4 focus button",
+      "clickSelector": "[data-test-focus-chip-popover]",
+      "selectors": [
+        "[data-test-case=\"4\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "4.0 NCK toggle chip - HOVER Test case 0",
+      "url": "http://localhost:8080/#/toggleChip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the TC0 toggle chip",
+      "hoverSelector": "[data-test-case=\"0\"] .nck-chip button",
+      "selectors": ["[data-test-case=\"0\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "4.1 NCK toggle chip - HOVER Test case 2",
+      "url": "http://localhost:8080/#/toggleChip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Hover upon the TC2 toggle chip",
+      "hoverSelector": "[data-test-case=\"2\"] .nck-chip button",
+      "selectors": ["[data-test-case=\"2\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "4.2 NCK toggle chip - HOVER Test case 4",
+      "url": "http://localhost:8080/#/toggleChip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Hover upon the TC4 toggle chip",
+      "hoverSelector": "[data-test-case=\"4\"] .nck-chip button",
+      "selectors": ["[data-test-case=\"4\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "5.0 NCK toggle chip - FOCUS+ENTER Test case 0",
+      "url": "http://localhost:8080/#/toggleChip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Focus and press Enter on the TC0 toggle chip",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"0\"] .nck-chip button",
+      "selectors": ["[data-test-case=\"0\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "5.1 NCK toggle chip - FOCUS+ENTER Test case 2",
+      "url": "http://localhost:8080/#/toggleChip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Focus and press Enter on the TC2 toggle chip",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"2\"] .nck-chip button",
+      "selectors": ["[data-test-case=\"2\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "5.2 NCK toggle chip - FOCUS+ENTER Test case 4",
+      "url": "http://localhost:8080/#/toggleChip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "Focus and press Enter on the TC2 toggle chip",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"4\"] .nck-chip button",
+      "selectors": ["[data-test-case=\"4\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "6.0. NCK toggle chip - FOCUS+SPACE- Test case 0",
+      "url": "http://localhost:8080/#/toggleChip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus+space on TC0 toggleChip",
+      "onReadyScript": "focusAndPressSpace.js",
+      "focusAndPressSpaceSelector": "[data-test-case=\"0\"] .nck-chip button",
+      "selectors": ["[data-test-case=\"0\"]"]
+    },
+    {
+      "label": "6.1. NCK toggle chip - FOCUS+SPACE- Test case 2",
+      "url": "http://localhost:8080/#/toggleChip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus+space on TC2 toggleChip",
+      "onReadyScript": "focusAndPressSpace.js",
+      "focusAndPressSpaceSelector": "[data-test-case=\"2\"] .nck-chip button",
+      "selectors": ["[data-test-case=\"2\"]"]
+    },
+    {
+      "label": "6.2. NCK toggle chip - FOCUS+SPACE- Test case 4",
+      "url": "http://localhost:8080/#/toggleChip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus+space on TC2 toggleChip",
+      "onReadyScript": "focusAndPressSpace.js",
+      "focusAndPressSpaceSelector": "[data-test-case=\"4\"] .nck-chip button",
+      "selectors": ["[data-test-case=\"4\"]"]
+    },
+    {
+      "label": "7.0 NCK toggle chip - HOVER+DOWN Test case 0",
+      "url": "http://localhost:8080/#/toggleChip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover and press left mouse click on the TC 0",
+      "onReadyScript": "hoverAndPressMouseSelector.js",
+      "hoverAndPressMouseSelector": "[data-test-case=\"0\"] .nck-chip button",
+      "selectors": ["[data-test-case=\"0\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "7.1 NCK toggle chip - HOVER+DOWN Test case 2",
+      "url": "http://localhost:8080/#/toggleChip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover and press left mouse click on the TC 2",
+      "onReadyScript": "hoverAndPressMouseSelector.js",
+      "hoverAndPressMouseSelector": "[data-test-case=\"2\"] .nck-chip button",
+      "selectors": ["[data-test-case=\"2\"]"],
+      "selectorExpansion": true
+    },
+    {
+      "label": "7.2 NCK toggle chip - HOVER+DOWN Test case 4",
+      "url": "http://localhost:8080/#/toggleChip",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover and press left mouse click on the TC 4",
+      "onReadyScript": "hoverAndPressMouseSelector.js",
+      "hoverAndPressMouseSelector": "[data-test-case=\"4\"] .nck-chip button",
+      "selectors": ["[data-test-case=\"4\"]"],
+      "selectorExpansion": true
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "report": ["CI"],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args":[
+    "--no-sandbox",
+    "--disable-setuid-sandbox",
+    "--disable-dev-shm-usage",
+    "--disable-accelerated-2d-canvas",
+    "--no-first-run",
+    "--no-zygote",
+
+    "--disable-gpu"
+  ],
+    "protocolTimeout": 960000
+  },
+  "asyncCaptureLimit": 3,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false
+}

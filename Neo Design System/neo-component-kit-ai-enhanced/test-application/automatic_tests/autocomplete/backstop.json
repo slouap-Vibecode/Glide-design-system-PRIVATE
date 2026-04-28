@@ -1,0 +1,1851 @@
+{
+    "id": "backstop_autocomplete",
+    "viewports": [
+        {
+            "label": "phone",
+            "width": 320,
+            "height": 15165
+        },
+        {
+            "label": "tablet",
+            "width": 1024,
+            "height": 13996
+        },
+        {
+            "label": "desktop",
+            "width": 1920,
+            "height": 13996
+        }
+    ],
+    "onBeforeScript": "puppet/onBefore.js",
+    "onReadyScript": "puppet/onReady.js",
+    "scenarios": [
+        {
+            "label": "1. NCK autocomplete - default display of the page",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "display the default state of all the autocompletes on the page"
+        },
+        {
+            "label": "2.1 NCK autocomplete - CLICK TC0 Prefill button",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on TC0 Prefill button",
+            "clickSelector": "[data-test-case=\"0\"] [data-prefill-action]",
+            "selectors": "[data-test-case=\"0\"]"
+        },
+        {
+            "label": "2.2 NCK autocomplete - CLICK TC1 autocomplete",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on TC1 autocomplete",
+            "clickSelector": "[data-test-case=\"1\"] .nck-input-container .nck-text-input",
+            "selectors": "[data-test-case=\"1\"]"
+        },
+        {
+            "label": "2.3 NCK autocomplete - CLICK TC1 Prefill button",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on TC1 Prefill button",
+            "clickSelector": "[data-test-case=\"1\"] [data-prefill-action]",
+            "selectors": "[data-test-case=\"1\"]"
+        },
+        {
+            "label": "2.4 NCK autocomplete - CLICK TC2 autocomplete",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0.01,
+            "requireSameDimensions": true,
+            "description": "Click on TC2 autocomplete",
+            "clickSelector": "[data-test-case=\"2\"] .nck-input-container .nck-text-input",
+            "selectors": "[data-test-case=\"2\"]",
+            "postInteractionWait": 350
+        },
+        {
+            "label": "2.5 NCK autocomplete - CLICK TC2 autocomplete clear button",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0.01,
+            "requireSameDimensions": true,
+            "description": "Click on TC2 autocomplete clear button",
+            "clickSelector": "[data-test-case=\"2\"] .clear-input-button",
+            "selectors": "[data-test-case=\"2\"]",
+            "postInteractionWait": 350
+        },
+        {
+            "label": "2.6 NCK autocomplete - CLICK TC2 Prefill button",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0.01,
+            "requireSameDimensions": true,
+            "description": "Click on TC2 Prefill button",
+            "clickSelector": "[data-test-case=\"2\"] [data-prefill-action]",
+            "selectors": "[data-test-case=\"2\"]"
+        },
+        {
+            "label": "2.7 NCK autocomplete - CLICK TC4 autocomplete",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on TC4 autocomplete",
+            "clickSelector": "[data-test-case=\"4\"] .nck-input-container .nck-text-input",
+            "selectors": "[data-test-case=\"4\"]",
+            "postInteractionWait": 200
+        },
+        {
+            "label": "2.8 NCK autocomplete - CLICK TC4 Validate button",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on TC4 Validate button",
+            "clickSelector": "[data-test-case=\"4\"] [data-validate-action]",
+            "selectors": "[data-test-case=\"4\"]"
+        },
+        {
+            "label": "2.9 NCK autocomplete - CLICK TC8 autocomplete",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on TC4 autocomplete",
+            "clickSelector": "[data-test-case=\"8\"] .nck-input-container .nck-text-input",
+            "selectors": "[data-test-case=\"8\"]",
+            "postInteractionWait": 350
+        },
+        {
+            "label": "2.10 NCK autocomplete - CLICK TC10 autocomplete",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on TC10 autocomplete",
+            "clickSelector": "[data-test-case=\"10\"] .nck-input-container .nck-text-input",
+            "selectors": "[data-test-case=\"10\"]",
+            "postInteractionWait": 350
+        },
+        {
+            "label": "2.11 NCK autocomplete - CLICK TC11 autocomplete",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on TC11 autocomplete then the loader is displayed",
+            "clickSelector": "[data-test-case=\"11\"] .nck-input-container .nck-text-input",
+            "selectors": "[data-test-case=\"11\"]",
+            "postInteractionWait": 350
+        },
+        {
+            "label": "2.12 NCK autocomplete - CLICK TC12 autocomplete",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on TC12 autocomplete",
+            "clickSelector": "[data-test-case=\"12\"] .nck-input-container .nck-text-input",
+            "selectors": "[data-test-case=\"12\"]",
+            "postInteractionWait": 350
+        },
+        {
+            "label": "2.13 NCK autocomplete - CLICK TC14 autocomplete",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on TC14 autocomplete and no value should be selected",
+            "clickSelector": "[data-test-case=\"14\"] .nck-input-container .nck-text-input",
+            "selectors": "[data-test-case=\"14\"]",
+            "postInteractionWait": 350
+        },
+        {
+            "label": "2.14 NCK autocomplete - CLICK TC15 autocomplete",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on TC15 autocomplete and no value should be selected",
+            "clickSelector": "[data-test-case=\"15\"] .nck-input-container .nck-text-input",
+            "selectors": "[data-test-case=\"15\"]",
+            "postInteractionWait": 350
+        },
+        {
+            "label": "2.15 NCK autocomplete - CLICK TC17 autocomplete",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on TC17 autocomplete and results should be displayed and take the whole container height",
+            "clickSelector": "[data-test-case=\"17\"] .nck-input-container .nck-text-input",
+            "selectors": "[data-test-case=\"17\"]",
+            "postInteractionWait": 1000
+        },
+        {
+            "label": "2.16 NCK autocomplete - CLICK TC17 autocomplete",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on TC17 autocomplete and spiner is displayed",
+            "clickSelector": "[data-test-case=\"17\"] .nck-input-container .nck-text-input",
+            "selectors": "[data-test-case=\"17\"]",
+            "postInteractionWait": 200
+        },
+        {
+            "label": "2.17 NCK autocomplete - CLICK TC18 autocomplete",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on TC18 autocomplete",
+            "clickSelector": "[data-test-case=\"18\"] .nck-input-container .nck-text-input",
+            "selectors": "[data-test-case=\"18\"]",
+            "postInteractionWait": 200
+        },
+        {
+            "label": "3.1 NCK autocomplete - Focus TC1 autocomplete",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Focus on TC1 autocomplete",
+            "selectorExpansion": false,
+            "onReadyScript": "focus.js",
+            "focusSelector": "[data-test-case=\"1\"] .nck-input-container .nck-text-input",
+            "selectors": "[data-test-case=\"1\"]"
+        },
+        {
+            "label": "3.2 NCK autocomplete - Focus TC4 autocomplete",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Focus on TC4 autocomplete",
+            "selectorExpansion": false,
+            "onReadyScript": "focus.js",
+            "focusSelector": "[data-test-case=\"4\"] .nck-input-container .nck-text-input",
+            "selectors": "[data-test-case=\"4\"]",
+            "postInteractionWait": 350
+        },
+        {
+            "label": "3.3 NCK autocomplete - Focus TC8 autocomplete",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Focus on TC8 autocomplete",
+            "selectorExpansion": false,
+            "onReadyScript": "focus.js",
+            "focusSelector": "[data-test-case=\"8\"] .nck-input-container .nck-text-input",
+            "selectors": "[data-test-case=\"8\"]",
+            "postInteractionWait": 350
+        },
+        {
+            "label": "3.4 NCK autocomplete - Focus TC10 autocomplete",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Focus on TC10 autocomplete",
+            "selectorExpansion": false,
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"10\"] .nck-input-container .nck-text-input"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": ".proposals-menu"
+                }
+            ],
+            "selectors": "[data-test-case=\"10\"]",
+            "postInteractionWait": 350
+        },
+        {
+            "label": "3.5 NCK autocomplete - Focus TC11 autocomplete",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Focus on TC11 autocomplete",
+            "selectorExpansion": false,
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"11\"] .nck-input-container .nck-text-input"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": "[data-test-autocomplete-results-loader]:not(.hidden-loader)"
+                }
+            ],
+            "selectors": "[data-test-case=\"11\"]",
+            "postInteractionWait": 350
+        },
+        {
+            "label": "3.6 NCK autocomplete - Focus TC12 autocomplete",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Focus on TC12 autocomplete",
+            "selectorExpansion": false,
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"12\"] .nck-input-container .nck-text-input"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": "[data-test-error-retrieval-text]"
+                }
+            ],
+            "selectors": "[data-test-case=\"12\"]",
+            "postInteractionWait": 350
+        },
+        {
+            "label": "3.7 NCK autocomplete - Focus TC14 autocomplete",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Focus on TC14 autocomplete",
+            "selectorExpansion": false,
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"14\"] .nck-input-container .nck-text-input"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": ".proposals-menu"
+                }
+            ],
+            "focusSelector": "[data-test-case=\"14\"] .nck-input-container .nck-text-input",
+            "selectors": "[data-test-case=\"14\"]",
+            "postInteractionWait": 350
+        },
+        {
+            "label": "4.1 NCK autocomplete - Hover TC2 autocomplete",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0.01,
+            "requireSameDimensions": true,
+            "description": "Hover on TC2 autocomplete",
+            "selectorExpansion": false,
+            "hoverSelector": "[data-test-case=\"2\"] .nck-input-container .nck-text-input",
+            "selectors": "[data-test-case=\"2\"]",
+            "postInteractionWait": 200
+        },
+        {
+            "label": "5.1 NCK autocomplete - TC2 - CLICK clear button then INSERT CONTENT",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0.01,
+            "requireSameDimensions": true,
+            "description": "Click on TC2 autocomplete clear button then insert content",
+            "clickSelector": "[data-test-case=\"2\"] .clear-input-button",
+            "selectors": "[data-test-case=\"2\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "type",
+                    "text": "Par"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": ".proposals-menu"
+                },
+                {
+                    "type": "waitForTimeout",
+                    "delay": 200
+                }
+            ]
+        },
+        {
+            "label": "5.2 NCK autocomplete - TC2 - CLICK clear button then INSERT SHORT CONTENT",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0.01,
+            "requireSameDimensions": true,
+            "description": "Click on TC2 autocomplete clear button then insert too short content",
+            "clickSelector": "[data-test-case=\"2\"] .clear-input-button",
+            "selectors": "[data-test-case=\"2\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "type",
+                    "text": "Lo"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": ".proposals-menu"
+                }
+            ]
+        },
+        {
+            "label": "5.3 NCK autocomplete - TC2 - CLICK clear button + INSERT invalid content",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0.01,
+            "requireSameDimensions": true,
+            "description": "Click on TC2 autocomplete clear button then insert invalid content",
+            "selectors": "[data-test-case=\"2\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"2\"] .clear-input-button"
+                },
+                {
+                    "type": "type",
+                    "text": "Lonn"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": "[data-test-no-match-text]"
+                }
+            ]
+        },
+        {
+            "label": "5.4 NCK autocomplete - CLICK TC4 autocomplete then INSERT CONTENT",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on TC4 autocomplete then insert content",
+            "clickSelector": "[data-test-case=\"4\"] .nck-input-container .nck-text-input",
+            "selectors": "[data-test-case=\"4\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "type",
+                    "text": "Koh"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": ".proposals-menu"
+                }
+            ]
+        },
+        {
+            "label": "5.5 NCK autocomplete - CLICK TC4 autocomplete then INSERT SHORT CONTENT",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on TC4 autocomplete then insert too short content",
+            "clickSelector": "[data-test-case=\"4\"] .nck-input-container .nck-text-input",
+            "selectors": "[data-test-case=\"4\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "type",
+                    "text": "Ko"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": ".proposals-menu"
+                }
+            ]
+        },
+        {
+            "label": "5.6 NCK autocomplete - CLICK TC4 autocomplete + INSERT invalid content",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on TC4 autocomplete  then insert invalid content",
+            "selectors": "[data-test-case=\"4\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"4\"] .nck-input-container"
+                },
+                {
+                    "type": "type",
+                    "text": "Kohh"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": "[data-test-no-match-text]"
+                }
+            ]
+        },
+        {
+            "label": "5.7 NCK autocomplete - CLICK TC6 autocomplete then INSERT CONTENT",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on TC6 autocomplete then insert content",
+            "clickSelector": "[data-test-case=\"6\"] .nck-input-container .nck-text-input",
+            "selectors": "[data-test-case=\"6\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "type",
+                    "text": "Koh"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": ".proposals-menu"
+                },
+                {
+                    "type": "waitForTimeout",
+                    "delay": 200
+                }
+            ]
+        },
+        {
+            "label": "5.8 NCK autocomplete - CLICK TC8 autocomplete then INSERT CONTENT",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on TC4 autocomplete then insert content",
+            "clickSelector": "[data-test-case=\"8\"] .nck-input-container .nck-text-input",
+            "selectors": "[data-test-case=\"8\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "type",
+                    "text": "Koh"
+                }
+            ]
+        },
+        {
+            "label": "5.9 NCK autocomplete - CLICK TC8 autocomplete then INSERT SHORT CONTENT",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on TC8 autocomplete then insert too short content",
+            "clickSelector": "[data-test-case=\"8\"] .nck-input-container .nck-text-input",
+            "selectors": "[data-test-case=\"8\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "type",
+                    "text": "Ko"
+                },
+                {
+                    "type": "waitForTimeout",
+                    "delay": 400
+                }
+            ]
+        },
+        {
+            "label": "5.10 NCK autocomplete - TC10 - CLICK then insert short content",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0.01,
+            "requireSameDimensions": true,
+            "description": "Click on TC10 autocomplete then insert too short content",
+            "clickSelector": "[data-test-case=\"10\"] .nck-input-container .nck-text-input",
+            "selectors": "[data-test-case=\"10\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "type",
+                    "text": "P"
+                },
+                {
+                    "type": "waitForTimeout",
+                    "delay": 400
+                }
+            ]
+        },
+        {
+            "label": "5.11 NCK autocomplete - TC11 - CLICK autocomplete then insert content",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0.01,
+            "requireSameDimensions": true,
+            "description": "Click on TC11 autocomplete then insert content afterward the loader is displayed before autocomplete",
+            "clickSelector": "[data-test-case=\"11\"] .nck-input-container .nck-text-input",
+            "selectors": "[data-test-case=\"11\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "type",
+                    "text": "Pancras"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": "[data-test-autocomplete-results-loader]:not(.hidden-loader)"
+                }
+            ]
+        },
+        {
+            "label": "5.12 NCK autocomplete - TC12 - CLICK autocomplete then insert content",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0.01,
+            "requireSameDimensions": true,
+            "description": "Click on TC12 autocomplete then insert content NO AUTOCOMPLETE",
+            "clickSelector": "[data-test-case=\"12\"] .nck-input-container .nck-text-input",
+            "selectors": "[data-test-case=\"12\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "type",
+                    "text": "Par"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": "[data-test-error-retrieval-text]"
+                }
+            ],
+            "postInteractionWait": 350
+        },
+        {
+            "label": "5.13 NCK autocomplete - TC14 - CLICK autocomplete then insert content",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0.01,
+            "requireSameDimensions": true,
+            "description": "Click on TC14 autocomplete then insert content then the dropdown is displayed with the values matches but nothing is selected",
+            "clickSelector": "[data-test-case=\"14\"] .nck-input-container .nck-text-input",
+            "selectors": "[data-test-case=\"14\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "type",
+                    "text": "Par"
+                },
+                {
+                    "type": "waitForTimeout",
+                    "delay": 400
+                }
+            ],
+            "postInteractionWait": 350
+        },
+        {
+            "label": "5.14 NCK autocomplete - TC14 - CLICK + INSERT invalid content",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0.01,
+            "requireSameDimensions": true,
+            "description": "Click on TC14 autocomplete insert invalid then no matching message should be displayed below",
+            "selectors": "[data-test-case=\"14\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"14\"] .nck-input-container .nck-text-input"
+                },
+                {
+                    "type": "type",
+                    "text": "Hong"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": "[data-test-no-match-text]"
+                }
+            ]
+        },
+        {
+            "label": "5.15 NCK autocomplete - TC15 - CLICK + INSERT content not available",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0.01,
+            "requireSameDimensions": true,
+            "description": "Click on TC15 autocomplete insert invalid then no matching message should be displayed below",
+            "selectors": "[data-test-case=\"15\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"15\"] .nck-input-container .nck-text-input"
+                },
+                {
+                    "type": "type",
+                    "text": "Hong"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": ".proposals-menu"
+                },
+                {
+                    "type": "waitForTimeout",
+                    "delay": 200
+                }
+            ]
+        },
+        {
+            "label": "5.16 NCK autocomplete - TC15 - CLICK + INSERT content",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0.01,
+            "requireSameDimensions": true,
+            "description": "Click on TC15 autocomplete insert content so we can see the height of the popover",
+            "selectors": "[data-test-case=\"15\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"15\"] .nck-input-container .nck-text-input"
+                },
+                {
+                    "type": "type",
+                    "text": "PAR"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": ".proposals-menu"
+                },
+                {
+                    "type": "waitForTimeout",
+                    "delay": 200
+                }
+            ]
+        },
+        {
+            "label": "5.17 NCK autocomplete - TC16 - CLICK + INSERT content",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0.01,
+            "requireSameDimensions": true,
+            "description": "Click on TC16 autocomplete insert content so we can see the hight of the popover",
+            "selectors": "[data-test-case=\"16\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"16\"] .nck-input-container .nck-text-input"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": ".proposals-menu"
+                }
+            ]
+        },
+        {
+            "label": "6.1 NCK autocomplete - TC2 - CLICK clear + INSERT CONTENT + click outside",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0.01,
+            "requireSameDimensions": true,
+            "description": "Click on TC2 autocomplete clear button, insert content then click outside",
+            "selectors": "[data-test-case=\"2\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"2\"] .clear-input-button"
+                },
+                {
+                    "type": "type",
+                    "text": "Par"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": ".proposals-menu"
+                },
+                {
+                    "type": "waitForTimeout",
+                    "delay": 200
+                },
+                {
+                    "type": "clickAtPosition",
+                    "coordinate": {
+                        "x": 5,
+                        "y": 5
+                    }
+                }
+            ]
+        },
+        {
+            "label": "6.2 NCK autocomplete - TC2 - CLICK clear + INSERT invalid + click outside",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0.01,
+            "requireSameDimensions": true,
+            "description": "Click on TC2 autocomplete clear button, insert invalid content then click outside",
+            "selectors": "[data-test-case=\"2\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"2\"] .clear-input-button"
+                },
+                {
+                    "type": "type",
+                    "text": "Parrr"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": "[data-test-no-match-text]"
+                },
+                {
+                    "type": "clickAtPosition",
+                    "coordinate": {
+                        "x": 5,
+                        "y": 5
+                    }
+                }
+            ]
+        },
+        {
+            "label": "6.3 NCK autocomplete - TC2 - CLICK clear + INSERT invalid content + VALIDATE ",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0.01,
+            "requireSameDimensions": true,
+            "selectors": "[data-test-case=\"2\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"2\"] .clear-input-button"
+                },
+                {
+                    "type": "type",
+                    "text": "Lonn"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": "[data-test-no-match-text]"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"2\"] [data-validate-action]"
+                }
+            ]
+        },
+        {
+            "label": "6.4 NCK autocomplete - TC2 - CLICK clear + INSERT invalid content + IS VALID ",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0.01,
+            "requireSameDimensions": true,
+            "selectors": "[data-test-case=\"2\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"2\"] .clear-input-button"
+                },
+                {
+                    "type": "type",
+                    "text": "Lonn"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": "[data-test-no-match-text]"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"2\"] [data-validate-action]"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"2\"] [data-check-validity-action]"
+                }
+            ]
+        },
+        {
+            "label": "6.5 NCK autocomplete - CLICK TC4 + INSERT CONTENT + VALIDATE",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on TC4 autocomplete,  insert content then validate",
+            "clickSelector": "[data-test-case=\"4\"] .nck-input-container .nck-text-input",
+            "selectors": "[data-test-case=\"4\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "type",
+                    "text": "Koh"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": ".proposals-menu"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"4\"] [data-validate-action]"
+                }
+            ]
+        },
+        {
+            "label": "6.6 NCK autocomplete - CLICK TC4 + INSERT invalid content + VALIDATE",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "selectors": "[data-test-case=\"4\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"4\"] .nck-input-container"
+                },
+                {
+                    "type": "type",
+                    "text": "Kohh"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": "[data-test-no-match-text]"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"4\"] [data-validate-action]"
+                }
+            ]
+        },
+        {
+            "label": "6.7 NCK autocomplete - CLICK TC4 + INSERT content + IS VALID ",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "selectors": "[data-test-case=\"4\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"4\"] .nck-input-container"
+                },
+                {
+                    "type": "type",
+                    "text": "Koh"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": ".proposals-menu"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"4\"] [data-validate-action]"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"4\"] [data-check-validity-action]"
+                }
+            ]
+        },
+        {
+            "label": "6.8 NCK autocomplete - CLICK TC4 + INSERT invalid content + IS VALID ",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "selectors": "[data-test-case=\"4\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"4\"] .nck-input-container"
+                },
+                {
+                    "type": "type",
+                    "text": "Kohh"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": "[data-test-no-match-text]"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"4\"] [data-validate-action]"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"4\"] [data-check-validity-action]"
+                }
+            ]
+        },
+        {
+            "label": "6.9 NCK autocomplete - TC10 - CLICK clear + INSERT invalid + click outside",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0.01,
+            "requireSameDimensions": true,
+            "description": "Click on TC10 autocomplete clear button, insert invalid content then click outside",
+            "clickSelector": "[data-test-case=\"10\"] .nck-input-container .nck-text-input",
+            "selectors": "[data-test-case=\"10\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "type",
+                    "text": "Parrr"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": "[data-test-no-match-text]"
+                },
+                {
+                    "type": "clickAtPosition",
+                    "coordinate": {
+                        "x": 5,
+                        "y": 5
+                    }
+                }
+            ]
+        },
+        {
+            "label": "6.10 NCK autocomplete - CLICK TC18 autocomplete then click outside",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0.01,
+            "requireSameDimensions": true,
+            "description": "Click on TC18 autocomplete then click outside to blur",
+            "selectors": "[data-test-case=\"18\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"18\"] .nck-input-container .nck-text-input"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": ".proposals-menu"
+                },
+                {
+                    "type": "clickAtPosition",
+                    "coordinate": {
+                        "x": 5,
+                        "y": 5
+                    }
+                }
+            ]
+        },
+        {
+            "label": "6.11 NCK autocomplete - CLICK TC18 + INSERT invalid content + VALIDATE",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "selectors": "[data-test-case=\"18\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"18\"] .nck-input-container"
+                },
+                {
+                    "type": "type",
+                    "text": "Paris"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": ".proposals-menu"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowDown"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Enter"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"18\"] [data-validate-action]"
+                }
+            ]
+        },
+        {
+            "label": "6.12 NCK autocomplete - CLICK TC18 + INSERT valid content + VALIDATE",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "selectors": "[data-test-case=\"18\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"18\"] .nck-input-container"
+                },
+                {
+                    "type": "type",
+                    "text": "Koh"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": ".proposals-menu"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowDown"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Enter"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"18\"] [data-validate-action]"
+                }
+            ]
+        },
+        {
+            "label": "7.1 NCK autocomplete - TC2 - CLICK FAIL button then click autocomplete",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0.01,
+            "requireSameDimensions": true,
+            "onReadyScript": "puppet/actions.js",
+            "selectors": "[data-test-case=\"2\"]",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"2\"] [data-force-retrieval-error]"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"2\"] .nck-input-container"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": "[data-test-error-retrieval-text]"
+                }
+            ]
+        },
+        {
+            "label": "7.2 NCK autocomplete - TC4 - CLICK FAIL button then INSERT CONTENT",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "onReadyScript": "puppet/actions.js",
+            "selectors": "[data-test-case=\"4\"]",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"4\"] [data-force-retrieval-error]"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"4\"] .nck-input-container"
+                },
+                {
+                    "type": "type",
+                    "text": "Par"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": "[data-test-error-retrieval-text]"
+                }
+            ]
+        },
+        {
+            "label": "8.1 NCK autocomplete - TC2 - Click clear button + arrow down twice + Enter",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0.01,
+            "requireSameDimensions": true,
+            "selectors": "[data-test-case=\"2\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"2\"] .clear-input-button"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": ".proposals-menu"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowDown"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowDown"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Enter"
+                }
+            ],
+            "postInteractionWait": 350
+        },
+        {
+            "label": "8.2 NCK autocomplete - TC2 - Click clear button + arrow UP twice + Enter",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0.01,
+            "requireSameDimensions": true,
+            "selectors": "[data-test-case=\"2\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"2\"] .clear-input-button"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": ".proposals-menu"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowUp"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowUp"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Enter"
+                }
+            ]
+        },
+        {
+            "label": "8.3 NCK autocomplete - Click TC4 + arrow down 3 times + Enter",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "selectors": "[data-test-case=\"4\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"4\"] .nck-input-container"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": ".proposals-menu"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowDown"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowDown"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowDown"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Enter"
+                }
+            ],
+            "postInteractionWait": 350
+        },
+        {
+            "label": "8.4 NCK autocomplete - Click TC6 + arrow down twice",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "selectors": "[data-test-case=\"6\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"6\"] .nck-input-container"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": ".proposals-menu"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowDown"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowDown"
+                }
+            ],
+            "postInteractionWait": 350
+        },
+        {
+            "label": "8.5 NCK autocomplete - Click TC6 + Insert + arrow down + Enter",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "selectors": "[data-test-case=\"6\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"6\"] .nck-input-container"
+                },
+                {
+                    "type": "type",
+                    "text": "Lon"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": ".proposals-menu"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowDown"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Enter"
+                }
+            ],
+            "postInteractionWait": 350
+        },
+        {
+            "label": "8.6 NCK autocomplete - Click TC11 + Insert + arrow down + Enter",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "clickSelector": "[data-test-case=\"11\"] .nck-input-container ",
+            "selectors": "[data-test-case=\"11\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "type",
+                    "text": "Lon"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": ".proposals-menu"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowDown"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Enter"
+                }
+            ],
+            "postInteractionWait": 350
+        },
+        {
+            "label": "8.7 NCK autocomplete - Click TC14 + Insert + arrow down + Enter",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on TC14 autocomplete then insert content then popover is displayed then press arrow and Enter the value should be selected",
+            "clickSelector": "[data-test-case=\"14\"] .nck-input-container .nck-text-input",
+            "selectors": "[data-test-case=\"14\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "type",
+                    "text": "Lon"
+                },
+                {
+                    "type": "waitForTimeout",
+                    "delay": 400
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowDown"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Enter"
+                }
+            ],
+            "postInteractionWait": 350
+        },
+        {
+            "label": "8.8 NCK autocomplete - Click TC14 + Insert + arrow down + arrow down",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on TC14 autocomplete then insert content then popover is displayed then press arrow 2 times and nothing should be selected",
+            "clickSelector": "[data-test-case=\"14\"] .nck-input-container ",
+            "selectors": "[data-test-case=\"14\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "type",
+                    "text": "Lon"
+                },
+                {
+                    "type": "waitForTimeout",
+                    "delay": 450
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowDown"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowDown"
+                }
+            ],
+            "postInteractionWait": 350
+        },
+        {
+            "label": "8.9 NCK autocomplete - TC14 - Click focus + Enter",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0.01,
+            "requireSameDimensions": true,
+            "description": "Click inside the container on TC14 and click on enter then the autocomplete should be stayed open",
+            "selectors": "[data-test-case=\"14\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"14\"] .nck-input-container "
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": ".proposals-menu"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Enter"
+                }
+            ],
+            "postInteractionWait": 550
+        },
+        {
+            "label": "8.10 NCK autocomplete - TC15 - Click focus + Enter",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0.01,
+            "requireSameDimensions": true,
+            "description": "Click on TC15 inside the container and click on enter then the autocomplete should be closed",
+            "selectors": "[data-test-case=\"15\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"15\"] .nck-input-container "
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": ".proposals-menu"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Enter"
+                }
+            ],
+            "postInteractionWait": 550
+        },
+        {
+            "label": "8.11 NCK autocomplete - TC14 - CLICK + INSERT INSERT arbitrary input  + Enter",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0.01,
+            "requireSameDimensions": true,
+            "description": "Click on TC14 autocomplete insert invalid then press enter the dropdown should be closed and below there are an error message",
+            "selectors": "[data-test-case=\"14\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"14\"] .nck-input-container .nck-text-input"
+                },
+                {
+                    "type": "type",
+                    "text": "Hong-Kong"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": "[data-test-no-match-text]"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Enter"
+                }
+            ],
+            "postInteractionWait": 550
+        },
+        {
+            "label": "8.12 NCK autocomplete - TC15 - CLICK + INSERT arbitrary input + Enter",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0.01,
+            "requireSameDimensions": true,
+            "description": "Click on TC15 autocomplete insert invalid then press enter the dropdown should be closed without no error message",
+            "selectors": "[data-test-case=\"15\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"15\"] .nck-input-container .nck-text-input"
+                },
+                {
+                    "type": "type",
+                    "text": "Hong-Kong"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": ".proposals-menu"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Enter"
+                }
+            ],
+            "postInteractionWait": 550
+        },
+        {
+            "label": "8.13 NCK autocomplete - TC17 - Click in input + arrow down five times",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "selectors": "[data-test-case=\"17\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"17\"] .nck-input-container .nck-text-input"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": ".proposals-menu"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowDown"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowDown"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowDown"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowDown"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "ArrowDown"
+                }
+            ]
+        },
+        {
+            "label": "9.1 NCK autocomplete - CLICK TC4 + INSERT content + CLEAR button",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "selectors": "[data-test-case=\"4\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"4\"] .nck-input-container"
+                },
+                {
+                    "type": "type",
+                    "text": "lon"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"4\"] .clear-input-button"
+                },
+                {
+                    "type": "waitForTimeout",
+                    "delay": 400
+                }
+            ]
+        },
+        {
+            "label": "9.2 NCK autocomplete - CLICK TC4 autocomplete, INSERT CONTENT then Escape",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on TC4 autocomplete then insert content and press ESCAPE",
+            "clickSelector": "[data-test-case=\"4\"] .nck-input-container .nck-text-input",
+            "selectors": "[data-test-case=\"4\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "type",
+                    "text": "Koh"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": ".proposals-menu"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Escape"
+                }
+            ]
+        },
+        {
+            "label": "9.3 NCK autocomplete - CLICK TC8 autocomplete, INSERT CONTENT then Escape",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on TC8 autocomplete then insert content and press ESCAPE",
+            "clickSelector": "[data-test-case=\"8\"] .nck-input-container .nck-text-input",
+            "selectors": "[data-test-case=\"8\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "type",
+                    "text": "Par"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": ".proposals-menu"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Escape"
+                }
+            ]
+        },
+        {
+            "label": "9.4 NCK autocomplete - CLICK TC4 + INSERT CONTENT + Escape twice",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on TC4 autocomplete then insert content and press ESCAPE twice",
+            "clickSelector": "[data-test-case=\"4\"] .nck-input-container .nck-text-input",
+            "selectors": "[data-test-case=\"4\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "type",
+                    "text": "Koh"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": ".proposals-menu"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Escape"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Escape"
+                }
+            ]
+        },
+        {
+            "label": "9.5 NCK autocomplete - CLICK TC8 + INSERT CONTENT + Escape twice",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on TC8 autocomplete then insert content and press ESCAPE twice",
+            "clickSelector": "[data-test-case=\"8\"] .nck-input-container .nck-text-input",
+            "selectors": "[data-test-case=\"8\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "type",
+                    "text": "Koh"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": ".proposals-menu"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Escape"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Escape"
+                }
+            ]
+        },
+        {
+            "label": "9.6 NCK autocomplete - CLICK TC4 then INSERT CONTENT then Backspace",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on TC4 autocomplete then insert content then backspace",
+            "clickSelector": "[data-test-case=\"4\"] .nck-input-container .nck-text-input",
+            "selectors": "[data-test-case=\"4\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "type",
+                    "text": "Par"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": ".proposals-menu"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Backspace"
+                }
+            ]
+        },
+        {
+            "label": "9.7 NCK autocomplete - CLICK TC8 then INSERT CONTENT then Backspace",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on TC8 autocomplete then insert content then backspace",
+            "clickSelector": "[data-test-case=\"8\"] .nck-input-container .nck-text-input",
+            "selectors": "[data-test-case=\"8\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "type",
+                    "text": "Par"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": ".proposals-menu"
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Backspace"
+                }
+            ]
+        },
+        {
+            "label": "10.1 NCK autocomplete - Validate + Click TC9 + Insert content",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 350,
+            "selectors": "[data-test-case=\"9\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"9\"] [data-validate-action]"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"9\"] .nck-input-container"
+                },
+                {
+                    "type": "type",
+                    "text": "Koh"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": ".proposals-menu"
+                }
+            ]
+        },
+        {
+            "label": "10.2 NCK autocomplete - Validate + Click TC9 + Insert + Validate",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 350,
+            "selectors": "[data-test-case=\"9\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"9\"] [data-validate-action]"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"9\"] .nck-input-container"
+                },
+                {
+                    "type": "type",
+                    "text": "Koh"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": ".proposals-menu"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"9\"] [data-validate-action]"
+                }
+            ]
+        },
+        {
+            "label": "10.3 NCK autocomplete - Insert invalid + Validate + Clear + Insert + Validate",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "postInteractionWait": 350,
+            "selectors": "[data-test-case=\"9\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"9\"] .nck-input-container"
+                },
+                {
+                    "type": "type",
+                    "text": "Kohh"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": "[data-test-no-match-text]"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"9\"] [data-validate-action]"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"9\"] .clear-input-button"
+                },
+                {
+                    "type": "type",
+                    "text": "Koh"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": ".proposals-menu"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"9\"] [data-validate-action]"
+                }
+            ]
+        },
+        {
+            "label": "10.4 NCK autocomplete - Click TC1 Prefill button then click autocomplete",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "selectors": "[data-test-case=\"1\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"1\"] [data-prefill-action]"
+                },
+                {
+                    "type": "click",
+                    "selector": "[data-test-case=\"1\"] .nck-input-container .nck-text-input"
+                },
+                {
+                    "type": "waitForTimeout",
+                    "delay": 400
+                }
+            ]
+        },
+        {
+            "label": "11 NCK autocomplete - TC13 - CLICK clear button + INSERT content + Enter",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0.01,
+            "requireSameDimensions": true,
+            "description": "Click on TC13 autocomplete clear button then insert content",
+            "clickSelector": "[data-test-case=\"13\"] .clear-input-button",
+            "selectors": "[data-test-case=\"13\"]",
+            "onReadyScript": "puppet/actions.js",
+            "actions": [
+                {
+                    "type": "type",
+                    "text": "Par"
+                },
+                {
+                    "type": "waitForSelector",
+                    "selector": ".proposals-menu"
+                },
+                {
+                    "type": "waitForTimeout",
+                    "delay": 300
+                },
+                {
+                    "type": "pressKey",
+                    "key": "Enter"
+                }
+            ]
+        },
+        {
+            "label": "12.1 NCK autocomplete - CLICK TC1 Focus button",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on TC1 Focus button",
+            "clickSelector": "[data-test-case=\"1\"] [data-focus-input]",
+            "selectors": "[data-test-case=\"1\"]"
+        },
+        {
+            "label": "12.2 NCK autocomplete - CLICK TC2 Focus button",
+            "url": "http://localhost:8080/#/autocomplete",
+            "misMatchThreshold": 0,
+            "requireSameDimensions": true,
+            "description": "Click on TC2 Focus button",
+            "clickSelector": "[data-test-case=\"2\"] [data-focus-input]",
+            "selectors": "[data-test-case=\"2\"]",
+            "postInteractionWait": 350
+        }
+    ],
+    "paths": {
+        "bitmaps_reference": "backstop_data/bitmaps_reference",
+        "bitmaps_test": "backstop_data/bitmaps_test",
+        "engine_scripts": "backstop_data/engine_scripts",
+        "html_report": "backstop_data/html_report",
+        "ci_report": "backstop_data/ci_report"
+    },
+    "report": [
+        "CI"
+    ],
+    "engine": "puppeteer",
+    "engineOptions": {
+        "args": [
+            "--no-sandbox",
+            "--disable-setuid-sandbox",
+            "--disable-dev-shm-usage",
+            "--disable-accelerated-2d-canvas",
+            "--no-first-run",
+            "--no-zygote",
+            "--disable-gpu"
+        ],
+        "protocolTimeout": 960000
+    },
+    "asyncCaptureLimit": 3,
+    "asyncCompareLimit": 50,
+    "debug": false,
+    "debugWindow": false
+}

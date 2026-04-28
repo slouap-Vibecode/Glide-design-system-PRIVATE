@@ -1,0 +1,200 @@
+{
+  "id": "backstop_badge",
+  "viewports": [
+    {
+      "label": "phone",
+      "width": 320,
+      "height": 4500
+    },
+    {
+      "label": "tablet",
+      "width": 1024,
+      "height": 3550
+    },
+    {
+      "label": "desktop",
+      "width": 1920,
+      "height": 3500
+    }
+  ],
+  "onBeforeScript": "puppet/onBefore.js",
+  "onReadyScript": "puppet/onReady.js",
+  "scenarios": [
+    {
+      "label": "1. NCK badge - display all the badges",
+      "url": "http://localhost:8080/#/badge",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "display the default state of all the badges, for all the test cases"
+    },
+    {
+      "label": "2.33 NCK badge - HOVER tc 7",
+      "url": "http://localhost:8080/#/badge",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover (tc 7)",
+      "onReadyScript": "hoverWithDelay.js",
+      "hoverSelector": "[data-test-case=\"7\"] .nck-badge",
+      "selectors": "[data-test-case=\"7\"]",
+      "selectorExpansion": false
+    },
+    {
+      "label": "2.34 NCK badge - HOVER tc 8",
+      "url": "http://localhost:8080/#/badge",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover (tc 8)",
+      "onReadyScript": "hoverWithDelay.js",
+      "hoverSelector": "[data-test-case=\"8\"] .nck-badge",
+      "selectors": "[data-test-case=\"8\"]",
+      "selectorExpansion": false
+    },
+    {
+      "label": "2.35 NCK badge - HOVER tc 9",
+      "url": "http://localhost:8080/#/badge",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover (tc 9)",
+      "onReadyScript": "hoverWithDelay.js",
+      "hoverSelector": "[data-test-case=\"9\"] .nck-badge",
+      "selectors": "[data-test-case=\"9\"]",
+      "selectorExpansion": false
+    },
+    {
+      "label": "2.36 NCK badge - HOVER tc 10",
+      "url": "http://localhost:8080/#/badge",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover (tc 10)",
+      "onReadyScript": "hoverWithDelay.js",
+      "hoverSelector": "[data-test-case=\"10\"] .nck-badge",
+      "selectors": "[data-test-case=\"10\"]",
+      "selectorExpansion": false
+    },
+    {
+      "label": "2.37 NCK badge - HOVER tc 12",
+      "url": "http://localhost:8080/#/badge",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover (tc 12)",
+      "onReadyScript": "hoverWithDelay.js",
+      "hoverSelector": "[data-test-case=\"12\"] .nck-badge",
+      "selectors": "[data-test-case=\"12\"]",
+      "selectorExpansion": false
+    },
+    {
+      "label": "2.38 NCK badge - HOVER tc 14",
+      "url": "http://localhost:8080/#/badge",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover (tc 14)",
+      "onReadyScript": "hoverWithDelay.js",
+      "hoverSelector": "[data-test-case=\"14\"] .nck-badge",
+      "selectors": "[data-test-case=\"14\"]",
+      "selectorExpansion": false
+    },
+    {
+      "label": "2.39 NCK badge - HOVER tc 17",
+      "url": "http://localhost:8080/#/badge",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover (tc 17)",
+      "onReadyScript": "hoverWithDelay.js",
+      "hoverSelector": "[data-test-case=\"17\"] .nck-badge",
+      "selectors": "[data-test-case=\"17\"]",
+      "selectorExpansion": false
+    },
+    {
+      "label": "2.40 NCK badge - HOVER tc 22",
+      "url": "http://localhost:8080/#/badge",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover (tc 22)",
+      "onReadyScript": "hoverWithDelay.js",
+      "hoverSelector": "[data-test-case=\"22\"] .nck-badge",
+      "selectors": "[data-test-case=\"22\"]",
+      "selectorExpansion": false
+    },
+    {
+      "label": "2.41 NCK badge - HOVER tc 26",
+      "url": "http://localhost:8080/#/badge",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover (tc 26)",
+      "onReadyScript": "hoverWithDelay.js",
+      "hoverSelector": "[data-test-case=\"26\"] .nck-badge",
+      "selectors": "[data-test-case=\"26\"]",
+      "selectorExpansion": false
+    },
+    {
+      "label": "2.42 NCK badge - HOVER tc 27",
+      "url": "http://localhost:8080/#/badge",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover (tc 27)",
+      "onReadyScript": "hoverWithDelay.js",
+      "hoverSelector": "[data-test-case=\"27\"] .nck-badge",
+      "selectors": "[data-test-case=\"27\"]",
+      "selectorExpansion": false
+    },
+    {
+      "label": "2.43 NCK badge - HOVER tc 29",
+      "url": "http://localhost:8080/#/badge",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover (tc 29)",
+      "onReadyScript": "hoverWithDelay.js",
+      "hoverSelector": "[data-test-case=\"29\"] .nck-badge",
+      "selectors": "[data-test-case=\"29\"]",
+      "selectorExpansion": false
+    },
+    {
+      "label": "3.1 NCK badge - FOCUS the badge with info tooltip as the directive",
+      "url": "http://localhost:8080/#/badge",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "FOCUS the badge with info tooltip as the directive",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"7\"] .nck-badge",
+      "selectors": ["[data-test-case=\"7\"]"],
+      "selectorExpansion": false
+    },
+    {
+      "label": "3.2 NCK badge - FOCUS badge which is set focusable and interactive",
+      "url": "http://localhost:8080/#/badge",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "FOCUS the badge which is set focusable and interactive",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"8\"] .nck-badge",
+      "selectors": ["[data-test-case=\"8\"]"],
+      "selectorExpansion": false
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "report": ["CI"],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args":[
+    "--no-sandbox",
+    "--disable-setuid-sandbox",
+    "--disable-dev-shm-usage",
+    "--disable-accelerated-2d-canvas",
+    "--no-first-run",
+    "--no-zygote",
+
+    "--disable-gpu"
+  ],
+    "protocolTimeout": 960000
+  },
+  "asyncCaptureLimit": 3,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false
+}

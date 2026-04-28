@@ -1,0 +1,28 @@
+@import (reference) "./radiusVariables.less";
+@import (reference) "./typography.less";
+
+.nck-base-badge {
+  .badge-font();
+
+  background-clip: padding-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3125rem 0.5rem;
+  border-radius: var(--nck-radius-pill);
+  box-sizing: border-box;
+  max-width: 100%;
+  vertical-align: top;
+
+  &.with-border {
+    border-style: solid;
+    border-width: var(--nck-border-width-s);
+    padding: 0.25rem 0.6875rem;
+  }
+
+  & > span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

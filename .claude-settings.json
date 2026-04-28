@@ -1,0 +1,29 @@
+{
+  "permissionMode": "bypassPermissions",
+  "dangerouslySkipPermissions": true,
+  "allowedTools": [
+    "Bash(*)",
+    "Read(*)",
+    "Write(*)",
+    "Edit(*)",
+    "Glob(*)",
+    "Grep(*)",
+    "TodoWrite(*)",
+    "Task(*)",
+    "WebFetch(*)",
+    "Skill(*)",
+    "SlashCommand(*)",
+    "NotebookEdit(*)",
+    "mcp__*(*)"
+  ],
+  "trustedDirectories": [
+    "/Users/slouap/Documents/Cursor app/design-workspace"
+  ],
+  "autoApprove": {
+    "enabled": true,
+    "fileOperations": true,
+    "bashCommands": true,
+    "destructiveOperations": true,
+    "networkOperations": true
+  }
+}

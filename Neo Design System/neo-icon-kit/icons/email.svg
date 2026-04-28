@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <g class="neo-icon-kit--email">
+    <path fill="#006FCF" fill-rule="evenodd" d="M45 6C46.6569 6 48 7.34315 48 9V39C48 40.6569 46.6569 42 45 42H3C1.34315 42 0 40.6569 0 39V9C0 7.34315 1.34315 6 3 6H45ZM45 10.981L25.0226 29.5974C24.4849 30.0984 23.6711 30.1318 23.0967 29.6976L22.9774 29.5974L3 10.982V39H45V10.981ZM5.273 9H42.725L24 26.4497L5.273 9Z" class="svg-primary-fill" clip-rule="evenodd"/>
+  </g>
+</svg>

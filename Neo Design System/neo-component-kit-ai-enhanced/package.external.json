@@ -1,0 +1,128 @@
+{
+  "name": "@neo-design/component-kit",
+  "version": "16.1.0",
+  "description": "Vue 3 component library with design tokens, accessibility-first components, and AI-optimized development experience",
+  "keywords": [
+    "vue",
+    "vue3",
+    "components",
+    "design-system",
+    "typescript",
+    "accessibility",
+    "ui-library",
+    "ai-optimized"
+  ],
+  "homepage": "https://github.com/neo-design/component-kit",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neo-design/component-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/neo-design/component-kit/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Neo Design Team",
+    "email": "design-system@neo-design.com"
+  },
+  "type": "module",
+  "main": "dist/neo-component-kit.common.js",
+  "module": "dist/neo-component-kit.esm.js",
+  "types": "types/main.d.ts",
+  "style": "dist/neo-component-kit.css",
+  "files": ["dist/*", "types/*", "templates/*", "ai-metadata/*", "README.md", "CHANGELOG.md"],
+  "exports": {
+    ".": {
+      "import": "./dist/neo-component-kit.esm.js",
+      "require": "./dist/neo-component-kit.common.js",
+      "types": "./types/main.d.ts"
+    },
+    "./ai": {
+      "import": "./dist/ai-main.esm.js",
+      "require": "./dist/ai-main.common.js",
+      "types": "./types/ai-main.d.ts"
+    },
+    "./templates": {
+      "import": "./templates/index.js",
+      "require": "./templates/index.js"
+    },
+    "./metadata": {
+      "import": "./ai-metadata/index.json",
+      "require": "./ai-metadata/index.json"
+    },
+    "./styles": "./dist/neo-component-kit.css",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "npm run typecheck && npm run format:check && npm run lint && npm run build:external && npm run buildTypes",
+    "build:external": "vue-cli-service build --target lib --name neo-component-kit src/main.ts --config vue.config.external.js",
+    "build:ai": "vue-cli-service build --target lib --name ai-main src/ai-main.ts --config vue.config.external.js",
+    "build:all": "npm run build:external && npm run build:ai",
+    "buildTypes": "rimraf types && vue-tsc --declaration --declarationDir types --emitDeclarationOnly",
+    "dev": "vue-cli-service serve",
+    "lint": "eslint . && stylelint \"./**/*.{vue,css,less}\"",
+    "lint:fix": "eslint . --fix && stylelint \"./**/*.{vue,css,less}\" --fix",
+    "format:check": "prettier . --check",
+    "format:write": "prettier . --write",
+    "typecheck": "vue-tsc --noEmit",
+    "generate:metadata": "node scripts/generateAIMetadata.js",
+    "generate:templates": "node scripts/generateTemplates.js",
+    "test": "vitest",
+    "test:unit": "vitest --run",
+    "test:watch": "vitest --watch",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress dev docs",
+    "release": "semantic-release",
+    "prepare": "husky install"
+  },
+  "peerDependencies": {
+    "vue": "^3.3.0",
+    "@neotechnologygroup/neo-icon-kit": "^5.0.0 || ^6.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@neotechnologygroup/neo-icon-kit": {
+      "optional": false
+    }
+  },
+  "dependencies": {
+    "@floating-ui/dom": "^1.7.4",
+    "@vee-validate/rules": "^4.15.1",
+    "dayjs": "^1.11.18",
+    "flatpickr": "^4.6.13",
+    "nouislider": "^15.8.1",
+    "vee-validate": "^4.15.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.46.1",
+    "@vue/cli-plugin-babel": "^5.0.9",
+    "@vue/cli-plugin-typescript": "^5.0.9",
+    "@vue/cli-service": "^5.0.9",
+    "@vue/eslint-config-standard-with-typescript": "^9.2.0",
+    "@vue/eslint-config-typescript": "^14.6.0",
+    "@vue/test-utils": "^2.4.0",
+    "eslint": "^9.37.0",
+    "eslint-config-prettier": "^10.1.8",
+    "husky": "^9.1.7",
+    "jsdom": "^23.0.0",
+    "less": "^4.4.2",
+    "less-loader": "^12.3.0",
+    "lint-staged": "^16.2.4",
+    "prettier": "^3.6.2",
+    "rimraf": "^6.0.1",
+    "semantic-release": "^22.0.0",
+    "typescript": "^5.9.3",
+    "vitepress": "^1.0.0",
+    "vitest": "^1.0.0",
+    "vue-tsc": "^2.2.12"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "sideEffects": ["*.css", "*.less", "dist/*.css"]
+}

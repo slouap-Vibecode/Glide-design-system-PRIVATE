@@ -1,0 +1,952 @@
+{
+    "id": "button",
+    "viewports": [
+        {
+            "label": "phone",
+            "width": 320,
+            "height": 16837
+        },
+        {
+            "label": "tablet",
+            "width": 1024,
+            "height": 9775
+        },
+        {
+            "label": "desktop",
+            "width": 1920,
+            "height": 8455
+        }
+    ],
+    "onBeforeScript": "puppet/onBefore.js",
+    "onReadyScript": "puppet/onReady.js",
+    "paths": {
+        "bitmaps_reference": "backstop_data/bitmaps_reference",
+        "bitmaps_test": "backstop_data/bitmaps_test",
+        "engine_scripts": "backstop_data/engine_scripts",
+        "html_report": "backstop_data/html_report",
+        "ci_report": "backstop_data/ci_report"
+    },
+    "report": [
+        "CI"
+    ],
+    "engine": "puppeteer",
+    "engineOptions": {
+        "args": [
+          "--no-sandbox",
+          "--disable-setuid-sandbox",
+          "--disable-dev-shm-usage",
+          "--disable-accelerated-2d-canvas",
+          "--no-first-run",
+          "--no-zygote",
+
+          "--disable-gpu"
+        ],
+        "protocolTimeout": 960000
+    },
+    "asyncCaptureLimit": 3,
+    "asyncCompareLimit": 50,
+    "debug": false,
+    "debugWindow": false,
+  "scenarios": [
+    {
+      "label": "1. - default display",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "display the default state of all buttons"
+    },
+    {
+      "label": "2. - click all buttons",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "display the state of all buttons after they are clicked",
+      "onReadyScript": "clickAll.js",
+      "clickAllSelectors": ".nck-button"
+    },
+    {
+      "label": "3.1 - hover Test case 0",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the TC0 button",
+      "hoverSelector": "[data-test-case=\"0\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"0\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "3.2 - hover Test case 1",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the TC 1 button just to test it does not change",
+      "hoverSelector": "[data-test-case=\"1\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"1\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "3.3 - hover Test case 2",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the TC 2 button",
+      "hoverSelector": "[data-test-case=\"2\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"2\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "3.4 - HOVER Test case 5",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the TC 5 button",
+      "hoverSelector": "[data-test-case=\"5\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"5\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "3.5 - HOVER Test case 11",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the TC 11 button",
+      "hoverSelector": "[data-test-case=\"11\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"11\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "3.6 - HOVER Test case 12",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the TC 12 button",
+      "hoverSelector": "[data-test-case=\"12\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"12\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "3.7 - HOVER Test case 16",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the TC 16 button",
+      "hoverSelector": "[data-test-case=\"16\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"16\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "3.8 - HOVER Test case 19",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the TC 19 button",
+      "hoverSelector": "[data-test-case=\"19\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"19\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "3.9 - HOVER Test case 21",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the TC 21 button",
+      "hoverSelector": "[data-test-case=\"21\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"21\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "3.10 - HOVER Test case 22",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the TC 22 button",
+      "hoverSelector": "[data-test-case=\"22\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"22\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "3.11 - HOVER Test case 23",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the TC 23 ghost button",
+      "hoverSelector": "[data-test-case=\"23\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"23\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "3.12 - HOVER Test case 24",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the TC 24 ghost button",
+      "hoverSelector": "[data-test-case=\"24\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"24\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "3.13 - HOVER Test case 25",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the TC 25 ghost button",
+      "hoverSelector": "[data-test-case=\"25\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"25\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "3.14 - HOVER Test case 26",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the TC 26 ghost button",
+      "hoverSelector": "[data-test-case=\"26\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"26\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "3.15 - HOVER Test case 27",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the TC 27 ghost button",
+      "hoverSelector": "[data-test-case=\"27\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"27\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "3.16 - HOVER Test case 30",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the TC 30 ghost button",
+      "hoverSelector": "[data-test-case=\"30\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"30\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "3.17 - HOVER Test case 32",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "",
+      "hoverSelector": "[data-test-case=\"32\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"32\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "3.18 - HOVER Test case 34",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the TC 34 ghost button",
+      "hoverSelector": "[data-test-case=\"34\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"34\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "3.19 - HOVER Test case 39",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the TC 39 ghost button",
+      "hoverSelector": "[data-test-case=\"39\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"39\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "3.20 - HOVER Test case 42",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the TC 42 ghost button",
+      "hoverSelector": "[data-test-case=\"42\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"42\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "3.21 - HOVER Test case 64",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover upon the TC 64 ghost button",
+      "hoverSelector": "[data-test-case=\"64\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"64\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "4.1 - focus Test case 0",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the TC 0 button",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"0\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"0\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "4.2 - focus Test case 1",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the TC 1 button just to see it does not work",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"1\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"1\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "4.3 - focus Test case 2",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the TC 2 button",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"2\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"2\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "4.4 - FOCUS Test case 5",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the TC 5 button",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"5\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"5\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "4.5 - FOCUS Test case 11",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the TC 11 button",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"11\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"11\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "4.6 - FOCUS Test case 12",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus on the TC 12 button",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"12\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"12\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "4.7 - FOCUS Test case 16",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus upon the TC 16 button",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"16\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"16\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "4.8 - FOCUS Test case 19",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus upon the TC 19 button",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"19\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"19\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "4.9 - FOCUS Test case 21",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus upon the TC 21 button",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"21\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"21\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "4.10 - FOCUS Test case 22",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus upon the TC 22 button",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"22\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"22\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "4.11 - FOCUS Test case 23",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus upon the TC 23 ghost button",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"23\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"23\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "4.12 - FOCUS Test case 24",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus upon the TC 24 ghost button",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"24\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"24\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "4.13 - FOCUS Test case 25",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus upon the TC 25 ghost button",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"25\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"25\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "4.14 - FOCUS Test case 26",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus upon the TC 26 ghost button",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"26\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"26\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "4.15 - FOCUS Test case 28",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus upon the TC 28 ghost button",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"28\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"28\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "4.16 - FOCUS Test case 31",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus upon the TC 31 ghost button",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"31\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"31\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "4.17 - FOCUS Test case 33",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus upon the TC 33 ghost button",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"33\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"33\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "4.18 - FOCUS Test case 36",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus upon the TC 36 ghost button",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"36\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"36\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "4.19 - FOCUS Test case 38",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus upon the TC 38 ghost button",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"38\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"38\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "4.20 - FOCUS Test case 43",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus upon the TC 43 ghost button",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"43\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"43\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "4.21 - FOCUS Test case 51",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus upon the TC 51 ghost button",
+      "onReadyScript": "focus.js",
+      "focusSelector": "[data-test-case=\"51\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"51\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "5.1 - FOCUS+SPACE Test case 2",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus and press space on the TC 2 button",
+      "onReadyScript": "focusAndPressSpace.js",
+      "focusAndPressSpaceSelector": "[data-test-case=\"2\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"2\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "5.2 - focus+space Test case 1",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus and press space on the TC1 button just to see it does not work",
+      "onReadyScript": "focusAndPressSpace.js",
+      "focusAndPressSpaceSelector": "[data-test-case=\"1\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"1\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "5.3 - FOCUS+SPACE Test case 23",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus and press space on the TC23 ghost button",
+      "onReadyScript": "focusAndPressSpace.js",
+      "focusAndPressSpaceSelector": "[data-test-case=\"23\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"23\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "5.4 - FOCUS+SPACE Test case 30",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus and press space on the TC 30 ghost button",
+      "onReadyScript": "focusAndPressSpace.js",
+      "focusAndPressSpaceSelector": "[data-test-case=\"30\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"30\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "5.5 - FOCUS+SPACE Test case 34",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus and press space on the TC 34 ghost button",
+      "onReadyScript": "focusAndPressSpace.js",
+      "focusAndPressSpaceSelector": "[data-test-case=\"34\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"34\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "5.6 - FOCUS+SPACE Test case 44",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus and press space on the TC 44 ghost button",
+      "onReadyScript": "focusAndPressSpace.js",
+      "focusAndPressSpaceSelector": "[data-test-case=\"44\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"44\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "5.7 - FOCUS+SPACE Test case 67    ",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus and press space on the TC 67 ghost button",
+      "onReadyScript": "focusAndPressSpace.js",
+      "focusAndPressSpaceSelector": "[data-test-case=\"67\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"67\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "6.1 - focus+enter Test case 0",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus and press enter on the Test case 0 link button",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"0\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"0\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "6.2 - focus+enter Test case 1",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus and press enter on the TC 1 button just to see it doesn not work",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"1\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"1\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "6.3 - focus+enter Test case 2",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus and press enter on the TC 2 button",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"2\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"2\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "6.4 - FOCUS+ENTER Test case 23",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus and press enter on the TC 23 button",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"23\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"23\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "6.5 - FOCUS+ENTER Test case 24",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus and press enter on the TC 24 button",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"24\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"24\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "6.6 - FOCUS+ENTER Test case 29",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus and press enter on the TC 29 button",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"29\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"29\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "6.7 - FOCUS+ENTER Test case 35",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus and press enter on the TC 35 button",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"35\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"35\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "6.8 - FOCUS+ENTER Test case 42",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus and press enter on the TC 42 button",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"42\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"42\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "6.9 - FOCUS+ENTER Test case 62",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "focus and press enter on the TC 62 button",
+      "onReadyScript": "focusAndPressEnter.js",
+      "focusAndPressEnterSelector": "[data-test-case=\"62\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"62\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "7.1 - HOVER+DOWN Test case 0",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover and press left mouse click on the TC 0 button",
+      "onReadyScript": "hoverAndPressMouseSelector.js",
+      "hoverAndPressMouseSelector": "[data-test-case=\"0\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"0\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "7.2 - HOVER+DOWN Test case 28",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "hover and press left mouse click on the TC 28 button",
+      "onReadyScript": "hoverAndPressMouseSelector.js",
+      "hoverAndPressMouseSelector": "[data-test-case=\"28\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"28\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "7.3 - HOVER+DOWN Test case 33",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "postInteractionWait": 100,
+      "description": "hover and keep press left mouse click on the button from Test case ",
+      "onReadyScript": "hoverAndPressMouseSelector.js",
+      "hoverAndPressMouseSelector": "[data-test-case=\"33\"] .nck-button",
+      "selectors": [
+          "[data-test-case=\"33\"]"
+      ]
+  },
+    {
+      "label": "8.1 - CLICK+HOVER Test case 23",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on the TC 23 button then hover it",
+      "onReadyScript": "clickAndHover.js",
+      "clickAndHoverSelector": "[data-test-case=\"23\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"23\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "8.2 - CLICK+HOVER Test case 35",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on the TC 35 button then hover it",
+      "onReadyScript": "clickAndHover.js",
+      "clickAndHoverSelector": "[data-test-case=\"35\"] .nck-button",
+      "selectors": [
+        "[data-test-case=\"35\"]"
+      ],
+      "selectorExpansion": true
+    },
+    {
+      "label": "9.1 - Click Test case 5 toggle disable button",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on the TC 5 toggle disable button",
+      "clickSelector": "[data-test-case=\"5\"] [data-toggle-disable]",
+      "selectors": [
+        "[data-test-case=\"5\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    },
+    {
+      "label": "9.2 - Click Test case 26 toggle loading button",
+      "url": "http://localhost:8080/#/button?disableAnimation=1",
+      "misMatchThreshold": 0,
+      "requireSameDimensions": true,
+      "description": "click on the TC 26 toggle loading button",
+      "clickSelector": "[data-test-case=\"26\"] [data-toggle-loading]",
+      "selectors": [
+        "[data-test-case=\"26\"]"
+      ],
+      "selectorExpansion": true,
+      "delay": 100
+    }
+  ]
+}

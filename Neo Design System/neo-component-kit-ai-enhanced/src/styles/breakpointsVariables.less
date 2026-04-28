@@ -1,0 +1,7 @@
+@screen-max-phone: 45rem;
+@screen-max-tablet: 64rem;
+@screen-min-tablet: (@screen-max-phone + 0.001rem);
+@screen-min-desktop: (@screen-max-tablet + 0.001rem);
+@desktop: ~"screen and (min-width: @{screen-min-desktop})";
+@tablet: ~"screen and (min-width: @{screen-min-tablet}) and (max-width: @{screen-max-tablet})";
+@phone: ~"screen and (max-width: @{screen-max-phone})";

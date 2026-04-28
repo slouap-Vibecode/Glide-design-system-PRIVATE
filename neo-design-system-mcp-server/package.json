@@ -1,0 +1,60 @@
+{
+  "name": "neo-design-system-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for Neo Design System - AI-accessible component and icon discovery",
+  "main": "build/index.js",
+  "bin": {
+    "neo-design-system-mcp": "./build/index.js",
+    "setup-neo-project": "./setup-neo-project.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node build/index.js",
+    "clean": "rimraf build",
+    "prebuild": "npm run clean"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "design-system",
+    "neo-design-system",
+    "ai",
+    "components",
+    "icons"
+  ],
+  "author": "Neo Technology Group",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "chokidar": "^4.0.1",
+    "fast-glob": "^3.3.2",
+    "fs-extra": "^11.2.0",
+    "gray-matter": "^4.0.3",
+    "yaml": "^2.4.1"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^20.11.24",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.4.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@neotechnologygroup/neo-component-kit": {
+      "optional": true
+    },
+    "@neotechnologygroup/neo-icon-kit": {
+      "optional": true
+    }
+  },
+  "files": [
+    "build",
+    "setup-neo-project.js",
+    "global-config-template.json",
+    "README.md",
+    "LICENSE"
+  ]
+}

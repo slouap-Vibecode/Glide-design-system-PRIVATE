@@ -1,0 +1,146 @@
+{
+  "name": "@neotechnologygroup/neo-component-kit",
+  "version": "16.0.0",
+  "scripts": {
+    "build": "npm run typecheck && npm run format:check && npm run lint && vue-cli-service build --target lib --name neo-component-kit src/main.ts && npm run buildTypes",
+    "build:ai": "npm run typecheck && npm run format:check && npm run lint && vue-cli-service build --target lib --name neo-component-kit-ai src/ai-main.ts && npm run buildTypes:ai",
+    "build:both": "npm run build && npm run build:ai",
+    "lint": "eslint . && stylelint \"./**/*.{vue,css,less}\"",
+    "lint:fix": "eslint . --fix && stylelint \"./**/*.{vue,css,less}\" --fix",
+    "format:check": "prettier . --check",
+    "format:write": "prettier . --write",
+    "build:no-clean": "vue-cli-service build --no-clean --target lib --name neo-component-kit src/main.ts && npm run buildTypes",
+    "buildTypes": "rimraf types && vue-tsc --declaration --declarationDir types --emitDeclarationOnly",
+    "buildTypes:ai": "vue-tsc --declaration --declarationDir types-ai --emitDeclarationOnly --rootDir src --outDir types-ai src/ai-main.ts",
+    "generate:ai-metadata": "node scripts/generateAIMetadata.js",
+    "validate:ai-interfaces": "node scripts/validateAIInterfaces.js",
+    "ci:cleanSuccessfulReports": "node cleanSuccessfulReportsForCi.js",
+    "doc:build": "npm run importNeoIconKitIcons && vue-cli-service styleguidist:build",
+    "doc:publish": "npm run doc:build && node ./documentation/publish.js",
+    "doc:serve": "npm run importNeoIconKitIcons && vue-cli-service styleguidist",
+    "importNeoIconKitIcons": "nik-copy documentation/assets/icons",
+    "installAndBuild:all": "npm run installAndBuild:lib && npm run installAndBuild:testApp",
+    "installAndBuild:lib": "npm ci && npm run build",
+    "installAndBuild:testApp": "cd ./test-application && npm run installAndBuild",
+    "installBuildAndServe:all": "npm run installAndBuild:lib && cd ./test-application && npm run installAndServe",
+    "test:a11y": "cd ./test-application && node accessibilityPartialTests.js",
+    "test:vrt:docker:ci": "cd ./test-application && node testRunner.js --ci",
+    "test:vrt:docker:local": "cd ./test-application && node testRunner.js",
+    "test:vrt": "powershell ./localScripts/dockerVrtTests.ps1",
+    "test:vrt:approve": "cd ./test-application && node testRunner.js --approve",
+    "test:vrt:report": "cd ./test-application && node testRunner.js --report",
+    "typecheck": "vue-tsc --noEmit",
+    "updateAndCheckDependencies": "npx update-browserslist-db@latest && npx npm-check-updates --interactive --format group && npx --yes check-outdated --columns name,current,wanted,latest",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{css,less}": [
+      "stylelint --fix",
+      "prettier --write"
+    ],
+    "*.{js,jsx,cjs,mjs,ts,tsx,cts,mts}": [
+      "eslint --fix --no-warn-ignored",
+      "prettier --write"
+    ],
+    "*.vue": [
+      "stylelint --fix",
+      "eslint --fix --no-warn-ignored",
+      "prettier --write"
+    ],
+    "!(*.vue|*.js|*.jsx|*.cjs|*.mjs|*.ts|*.tsx|*.cts|*.mts|*.css|*.less)": [
+      "prettier --write --ignore-unknown"
+    ]
+  },
+  "main": "dist/neo-component-kit.common.js",
+  "module": "dist/neo-component-kit.common.js",
+  "files": [
+    "dist/*",
+    "types/*",
+    "types-ai/*",
+    "ai-metadata.json"
+  ],
+  "dependencies": {
+    "@floating-ui/dom": "^1.7.4",
+    "@vee-validate/rules": "^4.15.1",
+    "core-js": "^3.46.0",
+    "dayjs": "^1.11.18",
+    "flatpickr": "^4.6.13",
+    "nouislider": "^15.8.1",
+    "vee-validate": "^4.15.1",
+    "vue": "^3.5.22"
+  },
+  "devDependencies": {
+    "@neotechnologygroup/neo-icon-kit": "^5.5.0",
+    "@typescript-eslint/eslint-plugin": "^8.46.1",
+    "@vue/cli-plugin-babel": "^5.0.9",
+    "@vue/cli-plugin-typescript": "^5.0.9",
+    "@vue/cli-service": "^5.0.9",
+    "@vue/eslint-config-standard-with-typescript": "^9.2.0",
+    "@vue/eslint-config-typescript": "^14.6.0",
+    "eslint": "^9.37.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-n": "^17.23.1",
+    "eslint-plugin-promise": "^7.2.1",
+    "eslint-plugin-vue": "^10.5.0",
+    "globals": "^16.4.0",
+    "husky": "^9.1.7",
+    "less": "^4.4.2",
+    "less-loader": "^12.3.0",
+    "lint-staged": "^16.2.4",
+    "postcss": "^8.5.6",
+    "postcss-less": "^6.0.0",
+    "prettier": "^3.6.2",
+    "rimraf": "^6.0.1",
+    "stylelint": "^16.25.0",
+    "stylelint-config-recommended-vue": "^1.6.1",
+    "stylelint-no-unsupported-browser-features": "^8.0.5",
+    "typescript": "^5.9.3",
+    "vue-cli-plugin-styleguidist": "~4.72.4",
+    "vue-tsc": "^2.2.12"
+  },
+  "peerDependencies": {
+    "@neotechnologygroup/neo-icon-kit": "^4.0.0 || ^5.0.0"
+  },
+  "contributors": [
+    {
+      "name": "Alexandra Dumitrica",
+      "email": "adumitrica-ext@kds.com"
+    },
+    {
+      "name": "Ana-Maria Magirescu",
+      "email": "amene-akela@kds.com"
+    },
+    {
+      "name": "Baptiste Vauchelle",
+      "email": "bvauchelle@kds.com"
+    },
+    {
+      "name": "Laurent Vidal",
+      "email": "lvidal@kds.com"
+    },
+    {
+      "name": "Vincent Francolin",
+      "email": "vfrancolin@kds.com"
+    }
+  ],
+  "engines": {
+    "node": "^22.14.0",
+    "npm": "^10.9.2"
+  },
+  "homepage": "https://github.com/GBT-NEO/neo-component-kit",
+  "license": "UNLICENSED",
+  "publishConfig": {
+    "registry": "https://nexus.prod.build.kds.com/repository/npm-hosted/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GBT-NEO/neo-component-kit.git"
+  },
+  "style": "dist/neo-component-kit.css",
+  "types": "types/main.d.ts",
+  "overrides": {
+    "braces": "^3.0.3",
+    "node-forge": "^1.0.0"
+  }
+}
