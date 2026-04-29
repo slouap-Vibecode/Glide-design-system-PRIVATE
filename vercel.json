@@ -1,10 +1,11 @@
 {
+  "rootDirectory": "Neo Design System/neo-component-kit-ai-enhanced",
   "framework": null,
   "installCommand": "npm install",
-  "buildCommand": "vue-cli-service build --target lib --name neo-component-kit src/main.ts && npm run doc:build",
+  "buildCommand": "npm run doc:build",
   "outputDirectory": "documentation/styleguide",
   "rewrites": [
-    { "source": "/", "destination": "/index.html" }
+    { "source": "/(.*)", "destination": "/index.html" }
   ],
   "headers": [
     {
