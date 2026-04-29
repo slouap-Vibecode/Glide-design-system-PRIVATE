@@ -353,13 +353,11 @@ watch(
 <docs>
 A simple chip.
 ```jsx
-<TokenPlayground component-name="nck-chip" label="Chip token overrides">
-  <div style="display:flex; gap:0.5rem; flex-wrap:wrap; align-items:center">
-    <nck-chip label="Default chip" />
-    <nck-chip label="Active chip" :active="true" />
-    <nck-chip label="Disabled chip" :disabled="true" />
-  </div>
-</TokenPlayground>
+<div style="display:flex; gap:0.5rem; flex-wrap:wrap; align-items:center">
+  <nck-chip label="Default chip" />
+  <nck-chip label="Active chip" :active="true" />
+  <nck-chip label="Disabled chip" :disabled="true" />
+</div>
 ```
 
 A chip can be active.

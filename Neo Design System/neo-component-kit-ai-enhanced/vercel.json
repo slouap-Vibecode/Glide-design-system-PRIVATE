@@ -1,0 +1,23 @@
+{
+  "framework": null,
+  "installCommand": "npm install",
+  "buildCommand": "vue-cli-service build --target lib --name neo-component-kit src/main.ts && npm run doc:build",
+  "outputDirectory": "documentation/styleguide",
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/build/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+    },
+    {
+      "source": "/icons/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+    },
+    {
+      "source": "/(.*).html",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }]
+    }
+  ]
+}

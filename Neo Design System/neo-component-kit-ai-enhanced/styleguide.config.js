@@ -3,6 +3,11 @@ const express = require("express");
 const version = process.env.npm_package_version;
 
 module.exports = {
+  // Global wrapper injected around every example preview.
+  // Auto-detects the nck component via CSS class → looks up token manifest
+  // → shows a collapsible token override accordion with scoped CSS var overrides.
+  renderRootJsx: path.join(__dirname, "documentation/renderRootJsx.js"),
+
   // Enable separate pages per section instead of single scrolling page
   pagePerSection: true,
   // Keep sidebar visible for better navigation
@@ -23,7 +28,10 @@ module.exports = {
   title: "Neo Component Kit Style Guide",
   version,
   styleguideDir: "./documentation/styleguide",
-  styleguidePublicPath: "/" + version + "/",
+  // On Vercel the static files are served from the root — no version sub-path needed.
+  // On the internal SCP server the publish script copies files into static/{version}/ so
+  // the version-prefixed path is still used there.
+  styleguidePublicPath: process.env.VERCEL ? "/" : "/" + version + "/",
   copyCodeButton: true,
   usageMode: "expand",
   exampleMode: "expand",
@@ -100,7 +108,8 @@ module.exports = {
             {
               name: "Semantic colors (L2)",
               content: "documentation/cssVariables/l2SemanticColors.md",
-              description: "Named color aliases mapping the L1 palette to semantic roles. Use L3 contextual tokens in component code.",
+              description:
+                "Named color aliases mapping the L1 palette to semantic roles. Use L3 contextual tokens in component code.",
             },
             {
               name: "Contextual tokens (L3)",

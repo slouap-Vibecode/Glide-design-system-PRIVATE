@@ -1,0 +1,20 @@
+# Dependencies — installed remotely by Vercel
+node_modules
+
+# Pre-built artefacts — Vercel builds these remotely from source
+dist
+documentation/styleguide
+
+# Test application — not needed for the doc site build
+test-application
+
+# Visual regression test data
+backstop_data
+
+# CI images and scripts
+ciImages
+ciScripts
+
+# Local scripts not needed at build time
+localScripts
+scripts

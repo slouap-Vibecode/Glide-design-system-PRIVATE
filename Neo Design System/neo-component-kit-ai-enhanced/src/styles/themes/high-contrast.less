@@ -1,0 +1,34 @@
+@import (reference) "../colorsVariables.less";
+
+/**
+ * High Contrast theme — L2 semantic token overrides
+ *
+ * Apply via:  document.documentElement.setAttribute('data-theme', 'high-contrast')
+ * Remove via: document.documentElement.removeAttribute('data-theme')
+ *
+ * Only L2 tokens are overridden here. All L3 contextual tokens (--nck-surface-*,
+ * --nck-text-*, --nck-icon-*, --nck-border-*, --nck-effect-*) inherit the new
+ * values automatically through CSS custom property cascade.
+ *
+ * Target: WCAG AA compliance minimum, WCAG AAA where possible.
+ * Prototype & validate this mapping in Styleguidist > Foundations > L2 Semantic Colors > Theme Editor.
+ */
+
+[data-theme="high-contrast"] {
+  /* ---- Primary — shifted from bright-blue to deep-blue for higher contrast on white ----
+     Default p400 (#006fcf) contrast on white: ~4.6:1 (AA)
+     Override p400 (#00175a) contrast on white: ~14.7:1 (AAA)                              */
+  --nck-color-p400: var(--deep-blue-300); /* #006fcf → #00175a */
+  --nck-color-p500: var(--deep-blue-400); /* #0056a0 → #001245 */
+  --nck-color-p300: var(--bright-blue-300); /* #7dc3ff → #006fcf (link-reverse, chip active) */
+  --nck-color-p200: var(--bright-blue-200); /* stays as-is, subtle bg only */
+  --nck-color-p400-transparent: #00175a66; /* focus ring matches new p400 */
+
+  /* ---- Neutral text — one step darker for additional body text contrast ---- */
+  --nck-color-n600: var(--blue-grey-700); /* #444b61 → #1a233e */
+  --nck-color-n500: var(--blue-grey-600); /* #848996 → #444b61 */
+
+  /* ---- Negative — already AAA compliant, keeping as-is ---- */
+
+  /* ---- Success — already AAA compliant, keeping as-is ---- */
+}
