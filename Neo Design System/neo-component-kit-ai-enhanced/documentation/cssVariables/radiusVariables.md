@@ -1,5 +1,9 @@
 Available variables used for radius and border widths along with their initial values.
 
+```jsx
+<TokenRadiusShowcase />
+```
+
 #### Border radius
 - `--nck-radius-none`: 0
 - `--nck-radius-s`: 0.25rem

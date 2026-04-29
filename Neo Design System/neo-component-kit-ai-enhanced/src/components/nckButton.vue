@@ -996,13 +996,16 @@ function emitClicksIfInteractive($event: Event) {
 <docs>
 Buttons have the primary color (blue), a light one (white one), a positive one (green) and a negative one (red).
 
-```js
-<div>
-  <nck-button :color="ButtonColor.PRIMARY" label="This is the primary color"></nck-button>
-  <nck-button label="This is the default color (light)"></nck-button>
-  <nck-button :color="ButtonColor.POSITIVE" label="This is the positive color (green)"></nck-button>
-  <nck-button :color="ButtonColor.NEGATIVE" label="This is the negative color (red)"></nck-button>
-</div>
+```jsx
+<TokenPlayground component-name="nck-button" label="Button token overrides">
+  <div style="display:flex; gap:0.5rem; flex-wrap:wrap; align-items:center">
+    <nck-button :color="ButtonColor.PRIMARY" label="Primary"></nck-button>
+    <nck-button label="Light (default)"></nck-button>
+    <nck-button :color="ButtonColor.POSITIVE" label="Positive"></nck-button>
+    <nck-button :color="ButtonColor.NEGATIVE" label="Negative"></nck-button>
+    <nck-button :color="ButtonColor.PRIMARY" label="Disabled" disabled></nck-button>
+  </div>
+</TokenPlayground>
 ```
 
 Buttons can be disabled.

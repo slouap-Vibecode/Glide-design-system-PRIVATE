@@ -15,9 +15,9 @@
     "generate:ai-metadata": "node scripts/generateAIMetadata.js",
     "validate:ai-interfaces": "node scripts/validateAIInterfaces.js",
     "ci:cleanSuccessfulReports": "node cleanSuccessfulReportsForCi.js",
-    "doc:build": "npm run importNeoIconKitIcons && vue-cli-service styleguidist:build",
+    "doc:build": "npm run generate:token-manifest && vue-cli-service styleguidist:build",
     "doc:publish": "npm run doc:build && node ./documentation/publish.js",
-    "doc:serve": "npm run importNeoIconKitIcons && vue-cli-service styleguidist",
+    "doc:serve": "npm run generate:token-manifest && vue-cli-service styleguidist",
     "importNeoIconKitIcons": "nik-copy documentation/assets/icons",
     "installAndBuild:all": "npm run installAndBuild:lib && npm run installAndBuild:testApp",
     "installAndBuild:lib": "npm ci && npm run build",
@@ -31,7 +31,8 @@
     "test:vrt:report": "cd ./test-application && node testRunner.js --report",
     "typecheck": "vue-tsc --noEmit",
     "updateAndCheckDependencies": "npx update-browserslist-db@latest && npx npm-check-updates --interactive --format group && npx --yes check-outdated --columns name,current,wanted,latest",
-    "prepare": "husky"
+    "prepare": "husky",
+    "generate:token-manifest": "node documentation/scripts/generate-token-manifest.js"
   },
   "lint-staged": {
     "*.{css,less}": [
