@@ -1,5 +1,9 @@
 L2 semantic color aliases. These map raw palette values (L1) to named roles. Always prefer L3 contextual tokens (`--nck-surface-*`, `--nck-text-*`, etc.) in component code — use L2 only when no L3 token fits.
 
+```jsx
+<TokenColorGrid :groups="L2_COLOR_TOKENS" />
+```
+
 #### Primary (bright-blue)
 - `--nck-color-p100`: var(--bright-blue-100) — #ECF6FF
 - `--nck-color-p200`: var(--bright-blue-150) — #DCF0FF

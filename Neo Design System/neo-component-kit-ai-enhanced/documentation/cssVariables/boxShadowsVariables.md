@@ -1,5 +1,9 @@
 Available variables for box shadows
 
+```jsx
+<TokenShadowShowcase />
+```
+
 - `--box-shadow-focus`: 0 0 0 var(--nck-focus-width-m) var(--nck-effect-focus-primary)
 - `--box-shadow-invalid`: 0 0 0 var(--nck-focus-width-m) var(--nck-effect-focus-negative)
 - "--box-shadow-level-1": 0 .0625rem .25rem .0625rem fade(@blue-grey-700, 10%);

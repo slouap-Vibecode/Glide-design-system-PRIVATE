@@ -316,6 +316,17 @@ onMounted(() => {
 The basic usage requires only the _heading_ property : this will give you the default banner type.
 Or you can precise the banner type, with the _type_ property.
 
+```jsx
+<TokenPlayground component-name="nck-banner" label="Banner token overrides">
+  <div style="display:flex; flex-direction:column; gap:0.5rem">
+    <nck-banner heading="Default banner"></nck-banner>
+    <nck-banner :type="BannerType.INFO" heading="Information banner."></nck-banner>
+    <nck-banner :type="BannerType.SUCCESS" heading="Success banner."></nck-banner>
+    <nck-banner :type="BannerType.WARNING" heading="Warning banner."></nck-banner>
+  </div>
+</TokenPlayground>
+```
+
 _Default_ banner.
 
 ```js

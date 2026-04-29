@@ -49,6 +49,14 @@ import { TimelineType } from "../src/constants/timelineType";
 
 import ToastDocExample from "./components/ToastDocExample.vue"
 import ModalDocExample from "./components/ModalDocExample.vue"
+import TokenColorGrid from "./components/TokenColorGrid.vue"
+import TokenSpacingScale from "./components/TokenSpacingScale.vue"
+import TokenTypographyScale from "./components/TokenTypographyScale.vue"
+import TokenShadowShowcase from "./components/TokenShadowShowcase.vue"
+import TokenRadiusShowcase from "./components/TokenRadiusShowcase.vue"
+import TokenPlayground from "./components/TokenPlayground.vue"
+import tokenManifest from "./token-manifest.json"
+import { L2_COLOR_TOKENS } from "./token-data"
 
 export default (app: App) => {
   Object.assign(app.config.globalProperties, {
@@ -99,6 +107,18 @@ export default (app: App) => {
 
   app.component("modal-doc-example", ModalDocExample);
   app.component("toast-doc-example", ToastDocExample);
+
+  // Token visualisation & playground components
+  app.component("TokenColorGrid", TokenColorGrid);
+  app.component("TokenSpacingScale", TokenSpacingScale);
+  app.component("TokenTypographyScale", TokenTypographyScale);
+  app.component("TokenShadowShowcase", TokenShadowShowcase);
+  app.component("TokenRadiusShowcase", TokenRadiusShowcase);
+  app.component("TokenPlayground", TokenPlayground);
+
+  // Expose token manifest and L2 data for use in doc examples
+  app.config.globalProperties.$tokenManifest = tokenManifest;
+  app.config.globalProperties.L2_COLOR_TOKENS = L2_COLOR_TOKENS;
 
   initialize({
     translations: {

@@ -1,5 +1,9 @@
 L3 contextual design tokens. These are the **primary tokens to use in component code** — they express semantic intent (e.g. "the surface of a primary element") rather than raw color values. All reference L2 semantic aliases.
 
+```jsx
+<TokenColorGrid />
+```
+
 #### Surface
 | Token | Maps to | Usage |
 |---|---|---|

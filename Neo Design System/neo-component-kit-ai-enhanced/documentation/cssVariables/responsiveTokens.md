@@ -1,5 +1,13 @@
 Responsive design tokens for spacing, font sizes, icon sizes, and focus ring widths. Use these in component styles instead of raw `rem` values.
 
+```jsx
+<TokenSpacingScale />
+```
+
+```jsx
+<TokenTypographyScale />
+```
+
 #### Spacing
 | Token | Value | px equivalent |
 |---|---|---|
