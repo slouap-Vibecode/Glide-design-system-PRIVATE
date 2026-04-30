@@ -107,7 +107,7 @@ import { L1_PRIMITIVES, L2_TOKEN_GROUPS, type L1Primitive } from '../themeTokenD
 
 const PRESETS = [
   { label: 'Default',        value: '' },
-  { label: 'High Contrast',  value: 'high-contrast' },
+  { label: 'Dark',           value: 'dark' },
   { label: 'New Brand',      value: 'brand-new' },
 ] as const
 

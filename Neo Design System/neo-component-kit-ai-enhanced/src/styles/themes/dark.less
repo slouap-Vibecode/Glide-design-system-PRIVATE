@@ -1,0 +1,97 @@
+@import (reference) "../colorsVariables.less";
+
+/**
+ * Dark theme — L2 semantic token overrides + targeted L3 surface fixes
+ *
+ * Apply via:  document.documentElement.setAttribute('data-theme', 'dark')
+ * Remove via: document.documentElement.removeAttribute('data-theme')
+ *
+ * Strategy:
+ *  1. Invert the neutral scale (n100–n700 + white) so all surfaces become dark navy.
+ *  2. Invert the ink text tokens so body copy is light on dark.
+ *  3. Shift interactive brand/semantic colours to lighter primitive variants so
+ *     they remain legible as text, icons and borders on dark surfaces.
+ *  4. Pin solid button/badge backgrounds (info, success, negative) to their
+ *     original dark values via direct L3 override — white reverse text stays AA.
+ *  5. Restore --nck-text-reverse and --nck-icon-reverse to true white, since
+ *     --nck-color-white was remapped to a dark surface above.
+ */
+
+:root[data-theme="dark"] {
+
+  /* ── Neutral scale (inverted) ───────────────────────────────────────────────
+     Light  : white=#FFF … n100=#F8F9FB … n700=#1A233E
+     Dark   : white=surface … n100=deeper surface … n700=deepest                */
+  --nck-color-white:            var(--deep-blue-300);   /* #00175A – page / card surface          */
+  --nck-color-n100:             var(--deep-blue-400);   /* #001245 – secondary / sidebar surface  */
+  --nck-color-n200:             var(--blue-grey-700);   /* #1A233E – hover surface                */
+  --nck-color-n300:             var(--blue-grey-700);   /* #1A233E – disabled surface / border    */
+  --nck-color-n400:             var(--blue-grey-600);   /* #444B61 – disabled icons               */
+  --nck-color-n500:             var(--blue-grey-400);   /* #C6C8D2 – subtle icons / border-hover  */
+  --nck-color-n600:             var(--blue-grey-300);   /* #E7E8EE – neutral icons on dark        */
+  --nck-color-n700:             var(--deep-blue-400);   /* #001245 – reverse / inset panel surface */
+  --nck-color-n700-transparent: #001245b2;              /* modal overlay                          */
+
+  /* ── Text (ink) — inverted to be light on dark surfaces ────────────────────
+     Default #282D3A (near-black) → white / light grey                          */
+  --nck-color-ikp100:           var(--white);           /* #FFFFFF – default text                 */
+  --nck-color-iks200:           var(--blue-grey-300);   /* #E7E8EE – secondary text               */
+  --nck-color-ikt300:           var(--blue-grey-500);   /* #848996 – disabled / tertiary text     */
+
+  /* ── Primary (bright-blue) — lighter for legibility on dark surfaces ────────
+     p400 drives text-brand, icon-brand, border-active, focus-ring.
+     Solid button backgrounds are pinned via the L3 block below.               */
+  --nck-color-p100:             var(--blue-grey-700);   /* #1A233E – info subtle surface          */
+  --nck-color-p200:             var(--blue-grey-700);   /* #1A233E – info subtle hover surface    */
+  --nck-color-p300:             var(--bright-blue-200); /* #7DC3FF – link-reverse / icon-reverse  */
+  --nck-color-p400:             var(--bright-blue-200); /* #7DC3FF – brand text / links / borders */
+  --nck-color-p500:             var(--bright-blue-150); /* #DCF0FF – brand hover text             */
+  --nck-color-p400-transparent: #7dc3ff40;              /* focus ring                             */
+
+  /* ── Secondary (deep-blue) ──────────────────────────────────────────────────*/
+  --nck-color-s100:             var(--blue-grey-700);   /* #1A233E – highlight subtle surface     */
+  --nck-color-s600:             var(--deep-blue-200);   /* #99ACE3 – highlight solid              */
+  --nck-color-s700:             var(--deep-blue-150);   /* #D0DBFF – highlight solid hover        */
+
+  /* ── Semantic subtle surfaces ───────────────────────────────────────────────
+     No dark-tinted semantic primitives exist in this palette; all subtle
+     backgrounds collapse to the darkest neutral so they read as quiet insets.  */
+  --nck-color-su100:            var(--blue-grey-700);   /* #1A233E – success subtle               */
+  --nck-color-w100:             var(--blue-grey-700);   /* #1A233E – warning subtle               */
+  --nck-color-e100:             var(--blue-grey-700);   /* #1A233E – negative subtle              */
+  --nck-color-g100:             var(--blue-grey-700);   /* #1A233E – gain subtle                  */
+
+  /* ── Success — lighter for text / icon / border on dark ────────────────────*/
+  --nck-color-su300:            var(--green-150);       /* #CAEEE4 – accent                       */
+  --nck-color-su600:            var(--green-200);       /* #94D8C5 – success text / icon / border */
+  --nck-color-su700:            var(--green-400);       /* #005F45 – success button hover bg      */
+  --nck-color-su600-transparent: #94d8c540;             /* focus ring                             */
+
+  /* ── Warning — lighter for text / icon / border on dark ────────────────────*/
+  --nck-color-w300:             var(--orange-150);      /* #FFD2C0 – accent                       */
+  --nck-color-w500:             var(--orange-200);      /* #FFB69A – warning icon / border        */
+  --nck-color-w600:             var(--orange-200);      /* #FFB69A – warning text                 */
+
+  /* ── Negative — lighter for text / icon / border on dark ───────────────────*/
+  --nck-color-e300:             var(--red-150);         /* #FFC3C3 – accent                       */
+  --nck-color-e600:             var(--red-200);         /* #FE9D9D – negative text / icon / border*/
+  --nck-color-e700:             var(--red-400);         /* #9E0000 – negative button hover bg     */
+  --nck-color-e600-transparent: #fe9d9d40;              /* focus ring                             */
+
+  /* ── Gain (yellow) ──────────────────────────────────────────────────────────*/
+  --nck-color-g600:             var(--yellow-300);      /* #FFBA00 – gain solid                   */
+  --nck-color-g700:             var(--yellow-200);      /* #FFE399 – gain text on dark            */
+
+  /* ── L3 direct overrides ────────────────────────────────────────────────────
+     --nck-color-white is remapped to deep-blue-300 (surface) above, which breaks
+     nck-text-reverse and nck-icon-reverse (they inherit white via that token).
+     Restore them to true white; also pin solid button backgrounds to their
+     original dark values so white reverse text keeps sufficient contrast.       */
+  --nck-text-reverse:                 var(--white);           /* white text on coloured buttons     */
+  --nck-icon-reverse:                 var(--white);           /* white icons on coloured buttons    */
+
+  --nck-surface-info-solid:           var(--bright-blue-300); /* #006FCF – primary button           */
+  --nck-surface-info-solid-hover:     var(--bright-blue-400); /* #0056A0 – primary button hover     */
+  --nck-surface-success-solid:        var(--green-300);       /* #00825F – success button           */
+  --nck-surface-negative-solid:       var(--red-300);         /* #CF0000 – negative button          */
+}
