@@ -127,6 +127,11 @@ module.exports = {
             },
           ],
         },
+        {
+          name: "Theme Editor",
+          content: "documentation/themeEditor.md",
+          description: "Remap L2 semantic tokens to different L1 primitives and export a custom theme.",
+        },
       ],
     },
     // === FORM COMPONENTS CATEGORY ===
