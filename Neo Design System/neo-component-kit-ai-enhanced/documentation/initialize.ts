@@ -55,8 +55,10 @@ import TokenTypographyScale from "./components/TokenTypographyScale.vue"
 import TokenShadowShowcase from "./components/TokenShadowShowcase.vue"
 import TokenRadiusShowcase from "./components/TokenRadiusShowcase.vue"
 import TokenPlayground from "./components/TokenPlayground.vue"
+import ThemeEditor from "./components/ThemeEditor.vue"
 import tokenManifest from "./token-manifest.json"
 import { L2_COLOR_TOKENS } from "./token-data"
+import { L1_PRIMITIVES, L2_TOKEN_GROUPS } from "./themeTokenData"
 
 export default (app: App) => {
   Object.assign(app.config.globalProperties, {
@@ -115,10 +117,13 @@ export default (app: App) => {
   app.component("TokenShadowShowcase", TokenShadowShowcase);
   app.component("TokenRadiusShowcase", TokenRadiusShowcase);
   app.component("TokenPlayground", TokenPlayground);
+  app.component("ThemeEditor", ThemeEditor);
 
-  // Expose token manifest and L2 data for use in doc examples
+  // Expose token manifest and token data for use in doc examples
   app.config.globalProperties.$tokenManifest = tokenManifest;
   app.config.globalProperties.L2_COLOR_TOKENS = L2_COLOR_TOKENS;
+  app.config.globalProperties.$l1Primitives = L1_PRIMITIVES;
+  app.config.globalProperties.$l2TokenGroups = L2_TOKEN_GROUPS;
 
   initialize({
     translations: {

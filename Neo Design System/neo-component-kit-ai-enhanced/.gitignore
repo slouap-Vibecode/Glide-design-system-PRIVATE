@@ -32,3 +32,4 @@ xunit.xml
 
 # Generated token manifest (rebuild with: npm run generate:token-manifest)
 /documentation/token-manifest.json
+.vercel
