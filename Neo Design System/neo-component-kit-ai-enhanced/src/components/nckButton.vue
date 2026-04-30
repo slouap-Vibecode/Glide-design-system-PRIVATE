@@ -509,7 +509,7 @@
     border: none;
 
     & /deep/ .nck-style.nck-loader circle.moving-circle {
-      stroke: var(--white);
+      stroke: var(--nck-icon-reverse);
     }
 
     color: var(--nck-text-reverse);
