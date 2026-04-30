@@ -62,7 +62,7 @@
 
 <script setup lang="ts">
 import { ref, computed, getCurrentInstance } from 'vue'
-import { ALL_COLOR_CATEGORIES, L3_COLOR_TOKENS, L2_COLOR_TOKENS, RADIUS_TOKENS, BORDER_WIDTH_TOKENS, RESPONSIVE_TOKENS } from '../token-data'
+import { ALL_COLOR_CATEGORIES, L3_COLOR_TOKENS, RADIUS_TOKENS, BORDER_WIDTH_TOKENS, RESPONSIVE_TOKENS, ANIMATION_TOKENS, TYPOGRAPHY_TOKENS } from '../token-data'
 
 interface Props {
   /** Explicit list of CSS variable names to surface in the panel */
@@ -144,22 +144,31 @@ function resetAll(): void {
  * Only returns categories that contain the token, plus all other L3 color categories.
  */
 function alternativesFor(tokenName: string): Record<string, string[]> {
-  // Find which category the token belongs to
+  // Color tokens — L3 contextual and L2 semantic
   for (const [categoryName, tokens] of Object.entries(ALL_COLOR_CATEGORIES)) {
-    if (tokens.includes(tokenName)) {
-      // Return the whole category as one group
-      return { [categoryName]: tokens }
-    }
+    if (tokens.includes(tokenName)) return { [categoryName]: tokens }
   }
 
-  // Fallback: token is a spacing/radius/border-width → offer sibling tokens
+  // Sizing / structural tokens
   if (RADIUS_TOKENS.includes(tokenName)) return { 'Radius': RADIUS_TOKENS }
   if (BORDER_WIDTH_TOKENS.includes(tokenName)) return { 'Border width': BORDER_WIDTH_TOKENS }
 
-  const spacingGroup = RESPONSIVE_TOKENS['Spacing']
-  if (spacingGroup.includes(tokenName)) return { 'Spacing': spacingGroup }
+  // Responsive tokens (spacing, font-size, icon-size, focus-ring)
+  for (const [groupName, groupTokens] of Object.entries(RESPONSIVE_TOKENS)) {
+    if (groupTokens.includes(tokenName)) return { [groupName]: groupTokens }
+  }
 
-  // No alternatives found — offer all L3 color tokens
+  // Animation tokens (duration + easing)
+  for (const [groupName, groupTokens] of Object.entries(ANIMATION_TOKENS)) {
+    if (groupTokens.includes(tokenName)) return { [groupName]: groupTokens }
+  }
+
+  // Typography tokens (font-weight + line-height)
+  for (const [groupName, groupTokens] of Object.entries(TYPOGRAPHY_TOKENS)) {
+    if (groupTokens.includes(tokenName)) return { [groupName]: groupTokens }
+  }
+
+  // No match — offer all L3 color tokens as a reasonable fallback
   return L3_COLOR_TOKENS
 }
 </script>

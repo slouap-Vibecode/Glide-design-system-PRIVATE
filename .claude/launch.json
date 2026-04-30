@@ -5,7 +5,7 @@
       "name": "neo-styleguidist",
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "doc:serve"],
-      "cwd": "/Users/slouap/Documents/Cursor app/glide-workspace/Neo Design System/neo-component-kit-ai-enhanced",
+      "cwd": "Neo Design System/neo-component-kit-ai-enhanced",
       "port": 6060
     }
   ]

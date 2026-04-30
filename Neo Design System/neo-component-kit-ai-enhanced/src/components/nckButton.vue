@@ -512,40 +512,40 @@
       stroke: var(--white);
     }
 
-    color: var(--white);
+    color: var(--nck-text-reverse);
 
     &.primary {
-      .filled-background-mixin(@bright-blue-300, @bright-blue-400);
+      .filled-background-mixin(var(--nck-surface-info-solid), var(--nck-surface-info-solid-hover));
     }
 
     &.light {
-      color: var(--ink-100);
+      color: var(--nck-text-default);
 
       &:not(.floating) {
-        background: var(--white);
-        border: @buttonBorderSize solid var(--blue-grey-300);
+        background: var(--nck-surface-page);
+        border: @buttonBorderSize solid var(--nck-border-neutral);
 
         &:hover:not(.loading),
         &:active:not(.loading) {
-          border-color: var(--blue-grey-500);
+          border-color: var(--nck-border-neutral-hover);
         }
       }
 
       &.floating {
-        .filled-background-mixin(@white, @blue-grey-200);
+        .filled-background-mixin(var(--nck-surface-page), var(--nck-surface-primary-hover));
       }
 
       & /deep/ .nck-style.nck-loader circle.moving-circle {
-        stroke: var(--blue-grey-600);
+        stroke: var(--nck-icon-neutral);
       }
     }
 
     &.positive {
-      .filled-background-mixin(@green-300, @green-400);
+      .filled-background-mixin(var(--nck-surface-success-solid), var(--nck-surface-success-solid-hover));
     }
 
     &.negative {
-      .filled-background-mixin(@red-300, @red-400);
+      .filled-background-mixin(var(--nck-surface-negative-solid), var(--nck-surface-negative-solid-hover));
     }
   }
 
@@ -560,23 +560,23 @@
   &.outline:not(.disabled),
   &.ghost:not(.disabled) {
     &.primary {
-      .outline-and-ghost-color(@bright-blue-300);
+      .outline-and-ghost-color(var(--nck-text-brand));
     }
 
     &.light {
-      color: var(--ink-100);
+      color: var(--nck-text-default);
 
       & /deep/ .nck-style.nck-loader circle.moving-circle {
-        stroke: var(--blue-grey-600);
+        stroke: var(--nck-icon-neutral);
       }
     }
 
     &.positive {
-      .outline-and-ghost-color(@green-300);
+      .outline-and-ghost-color(var(--nck-text-positive));
     }
 
     &.negative {
-      .outline-and-ghost-color(@red-300);
+      .outline-and-ghost-color(var(--nck-text-negative));
     }
   }
 
@@ -590,23 +590,23 @@
   }
 
   &.outline:not(.disabled) {
-    background: var(--white);
-    border: @buttonBorderSize solid var(--blue-grey-300);
+    background: var(--nck-surface-page);
+    border: @buttonBorderSize solid var(--nck-border-neutral);
 
     &.primary {
-      .outline-border-color-mixin(@bright-blue-300);
+      .outline-border-color-mixin(var(--nck-border-active));
     }
 
     &.light {
-      .outline-border-color-mixin(@blue-grey-500);
+      .outline-border-color-mixin(var(--nck-border-neutral-hover));
     }
 
     &.positive {
-      .outline-border-color-mixin(@green-300);
+      .outline-border-color-mixin(var(--nck-border-positive));
     }
 
     &.negative {
-      .outline-border-color-mixin(@red-300);
+      .outline-border-color-mixin(var(--nck-border-negative));
     }
   }
 
@@ -625,23 +625,23 @@
     background: transparent;
 
     &.floating {
-      background: var(--white);
+      background: var(--nck-surface-page);
     }
 
     &.primary {
-      .ghost-hover-background-mixin(@bright-blue-100);
+      .ghost-hover-background-mixin(var(--nck-surface-info-subtle));
     }
 
     &.light {
-      .ghost-hover-background-mixin(@blue-grey-200);
+      .ghost-hover-background-mixin(var(--nck-surface-primary-hover));
     }
 
     &.positive {
-      .ghost-hover-background-mixin(@green-100);
+      .ghost-hover-background-mixin(var(--nck-surface-success-subtle));
     }
 
     &.negative {
-      .ghost-hover-background-mixin(@red-100);
+      .ghost-hover-background-mixin(var(--nck-surface-negative-subtle));
     }
   }
 
@@ -999,13 +999,23 @@ Buttons have the primary color (blue), a light one (white one), a positive one (
 ```jsx
 <TokenPlayground component-name="nck-button" label="Button token overrides">
   <div style="display:flex; gap:0.5rem; flex-wrap:wrap; align-items:center">
-    <nck-button :color="ButtonColor.PRIMARY" label="Primary"></nck-button>
-    <nck-button label="Light (default)"></nck-button>
-    <nck-button :color="ButtonColor.POSITIVE" label="Positive"></nck-button>
-    <nck-button :color="ButtonColor.NEGATIVE" label="Negative"></nck-button>
-    <nck-button :color="ButtonColor.PRIMARY" label="Disabled" disabled></nck-button>
+    <nck-button :color="ButtonColor.PRIMARY" label="Primary" />
+    <nck-button label="Light (default)" />
+    <nck-button :color="ButtonColor.POSITIVE" label="Positive" />
+    <nck-button :color="ButtonColor.NEGATIVE" label="Negative" />
+    <nck-button :color="ButtonColor.PRIMARY" label="Disabled" disabled />
   </div>
 </TokenPlayground>
+```
+
+```jsx
+<div style="display:flex; gap:0.5rem; flex-wrap:wrap; align-items:center">
+  <nck-button :color="ButtonColor.PRIMARY" label="Primary"></nck-button>
+  <nck-button label="Light (default)"></nck-button>
+  <nck-button :color="ButtonColor.POSITIVE" label="Positive"></nck-button>
+  <nck-button :color="ButtonColor.NEGATIVE" label="Negative"></nck-button>
+  <nck-button :color="ButtonColor.PRIMARY" label="Disabled" disabled></nck-button>
+</div>
 ```
 
 Buttons can be disabled.

@@ -17,6 +17,7 @@ export const L3_COLOR_TOKENS: Record<string, string[]> = {
     '--nck-surface-info-solid-hover',
     '--nck-surface-success-subtle',
     '--nck-surface-success-solid',
+    '--nck-surface-success-solid-hover',
     '--nck-surface-warning-subtle',
     '--nck-surface-warning-solid',
     '--nck-surface-negative-subtle',
@@ -183,4 +184,62 @@ export const SHADOW_TOKENS: string[] = [
 export const ALL_COLOR_CATEGORIES: Record<string, string[]> = {
   ...L3_COLOR_TOKENS,
   ...L2_COLOR_TOKENS,
+}
+
+// ── Animation tokens (L1 primitives) ─────────────────────────────────────────
+// Defined in src/styles/animationsVariables.less.
+// Font-size tokens live in RESPONSIVE_TOKENS above; these are timing-only.
+
+export const DURATION_TOKENS: string[] = [
+  '--nck-duration-100',
+  '--nck-duration-200',
+  '--nck-duration-300',
+  '--nck-duration-400',
+  '--nck-duration-500',
+  '--nck-duration-600',
+  '--nck-duration-700',
+  '--nck-duration-800',
+  '--nck-duration-900',
+  '--nck-duration-1000',
+]
+
+export const EASING_TOKENS: string[] = [
+  '--nck-easing-out',
+  '--nck-easing-in',
+  '--nck-easing-in-out',
+]
+
+export const ANIMATION_TOKENS: Record<string, string[]> = {
+  Duration: DURATION_TOKENS,
+  Easing: EASING_TOKENS,
+}
+
+// ── Typography tokens (L1 primitives) ────────────────────────────────────────
+// Font-size is already in RESPONSIVE_TOKENS — only weight and line-height were missing.
+
+export const FONT_WEIGHT_TOKENS: string[] = [
+  '--nck-font-weight-regular',
+  '--nck-font-weight-semibold',
+  '--nck-font-weight-bold',
+]
+
+export const LINE_HEIGHT_TOKENS: string[] = [
+  '--line-height-text-l',
+  '--line-height-text-m',
+  '--line-height-text-s',
+  '--line-height-text-xs',
+  '--line-height-header-h1',
+  '--line-height-header-h2',
+  '--line-height-header-h3',
+  '--line-height-header-h4',
+  '--line-height-amount-large',
+  '--line-height-amount-medium',
+  '--line-height-amount-small',
+  '--line-height-amount-xsmall',
+  '--line-height-badge-font',
+]
+
+export const TYPOGRAPHY_TOKENS: Record<string, string[]> = {
+  'Font weight': FONT_WEIGHT_TOKENS,
+  'Line height': LINE_HEIGHT_TOKENS,
 }
